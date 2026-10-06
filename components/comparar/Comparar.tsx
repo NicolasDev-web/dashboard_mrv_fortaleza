@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import type { EmpreendimentoResumo } from "@/lib/data";
 import type { Bairro, Destino, Polo } from "@/lib/types";
@@ -26,8 +26,20 @@ export function Comparar({ dados }: Props) {
   const lista = ids.map((id) => dados.empreendimentos.find((e) => e.slug === id)).filter((e): e is EmpreendimentoResumo => !!e);
   const quiz = respondeuAlgo(r);
   const query = codificar(r);
+  const comparando = lista.length >= 2;
 
-  if (lista.length < 2) {
+  // A faixa dos nomes ganha sombra quando gruda sob o cabeçalho (o marcador logo acima dela saiu da tela).
+  const sentinela = useRef<HTMLDivElement>(null);
+  const [preso, setPreso] = useState(false);
+  useEffect(() => {
+    const el = sentinela.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setPreso(!e.isIntersecting && e.boundingClientRect.top < 100), { rootMargin: "-72px 0px 0px 0px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [comparando]);
+
+  if (!comparando) {
     return (
       <div className="contem py-16 text-center">
         <h1 className="t-h2 text-green-900">Escolha 2 ou 3 empreendimentos para comparar</h1>
@@ -64,12 +76,26 @@ export function Comparar({ dados }: Props) {
       </Link>
       <h1 className="t-h2 mt-2 text-green-900">Comparando {lista.length} empreendimentos</h1>
 
-      <div className="sticky top-14 z-10 -mx-5 mt-6 border-b border-line bg-white/95 px-5 py-3 backdrop-blur-sm md:top-16 md:mx-0 md:px-0">
+      {/* As fotos rolam com a página; só a faixa com os nomes fica presa, para as linhas terem espaço. */}
+      <div className="mt-6 grid gap-3" style={colunas}>
+        {lista.map((e) => (
+          <Link key={e.slug} href={`/empreendimentos/${e.slug}${query ? `?${query}` : ""}`} tabIndex={-1} aria-hidden className="block min-w-0">
+            <Img img={e.imagens.capa} sizes="(min-width: 768px) 30vw, 33vw" className="aspect-[16/10] rounded-md md:aspect-[2/1]" />
+          </Link>
+        ))}
+      </div>
+      <div ref={sentinela} aria-hidden />
+      <div
+        className={`sticky top-14 z-10 -mx-5 border-b bg-white/95 px-5 py-2.5 backdrop-blur-sm transition-[box-shadow,border-color] duration-[var(--t-base)] ease-mrv md:top-16 md:mx-0 md:px-0 ${
+          preso ? "border-line shadow-e2" : "border-transparent"
+        }`}
+      >
         <div className="grid gap-3" style={colunas}>
           {lista.map((e) => (
-            <Link key={e.slug} href={`/empreendimentos/${e.slug}${query ? `?${query}` : ""}`} className="group block min-w-0">
-              <Img img={e.imagens.capa} sizes="(min-width: 768px) 30vw, 33vw" className="aspect-[4/3] rounded-md" />
-              <span className="mt-2 block text-sm font-semibold leading-tight text-ink group-hover:underline md:text-base">{e.nome}</span>
+            <Link key={e.slug} href={`/empreendimentos/${e.slug}${query ? `?${query}` : ""}`} title={e.nome} className="line-clamp-2 min-w-0 text-[13px] font-semibold leading-tight text-ink hover:underline md:text-base">
+              {/* no celular a coluna é estreita: "Residencial" sai para o nome caber */}
+              <span className="md:hidden">{e.nome.replace(/^Residencial\s+/i, "")}</span>
+              <span className="hidden md:inline">{e.nome}</span>
             </Link>
           ))}
         </div>
