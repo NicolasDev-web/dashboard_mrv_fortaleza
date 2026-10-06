@@ -1,0 +1,35 @@
+import {
+  Baby, Bike, BusFront, CalendarClock, Car, Dumbbell, GraduationCap, HeartPulse, House, KeyRound, Map, MapPinned,
+  Building2, ShoppingBag, Shuffle, Smartphone, TreePalm, Trees, Trophy, User, Users, UtensilsCrossed, Waves, PawPrint, Blocks,
+  type LucideIcon,
+} from "lucide-react";
+import type { Icone } from "@/lib/quiz/questions";
+
+export const ICONES: Record<Icone, LucideIcon> = {
+  cidade: Building2,
+  regiao: MapPinned,
+  mapa: Map,
+  casa: House,
+  onibus: BusFront,
+  carro: Car,
+  bike: Bike,
+  app: Smartphone,
+  pessoa: User,
+  casal: Users,
+  familia: Baby,
+  pet: PawPrint,
+  piscina: Waves,
+  academia: Dumbbell,
+  kids: Blocks,
+  festas: UtensilsCrossed,
+  esportes: Trophy,
+  verde: Trees,
+  saude: HeartPulse,
+  escolas: GraduationCap,
+  comercio: ShoppingBag,
+  parque: TreePalm,
+  mobilidade: BusFront,
+  chave: KeyRound,
+  calendario: CalendarClock,
+  tanto_faz: Shuffle,
+};
