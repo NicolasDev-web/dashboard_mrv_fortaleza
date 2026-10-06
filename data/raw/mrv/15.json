@@ -1,0 +1,120 @@
+{
+  "ordem": 15,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-valparaiso",
+  "extraidoEm": "2026-10-05",
+  "nome": "Residencial Valparaíso",
+  "cidade": "Fortaleza",
+  "bairro": "Jangurussu",
+  "status": "Em Construção",
+  "elevador": true,
+  "lat": -3.849155647682819,
+  "lon": -38.504005171163946,
+  "cep": "60870-576",
+  "endereco": "Av. Dionísio Leonel Alencar N&deg; 1572",
+  "apresentacao": "2 quartos (Varanda)",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        38.4
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": []
+    }
+  ],
+  "unidades": 240,
+  "vagas": 88,
+  "proximoA": "Próximo ao centro da messejana, da Rodoviária de Messejana, do Vapt Vupt Messejana, próximo a escolas estaduais e municipais, da BR 116, do Supermercado Ismael, de Farmácias, da UPA 24H, de Postos de saude, do CUCA JANGURUSSU, de Academias, do Areninha (Society publico) e de postos de gasolina na região.",
+  "descricao": "Seja bem-vindo ao Residencial Valparaíso. Um empreendimento exclusivo da MRV no bairro Jangurussu!\nA próxima fase de sua vida é conquistar um apartamentos de 2 quartos com opção de varanda e área privativa no Residencial Valparaíso. Um condomínio fechado que vai proporcionar conforto e praticidade no seu dia a dia.\n\nAqui você encontrará tudo o que precisa: área de lazer com piscina adulto e infantil, para a criançada temos um espaço com playground, a área de lazer também conta com churrasqueiras para os master chefs de plantão soltarem a criatividade na cozinha, um cantinho só para nossos aumiguinhos com um pet place, área verde dentro do condomínio, bicicletário descoberto, churrasqueiras para receber os amigos e claro, uma pista de cooper para quem não abre mão de manter a saúde em dia.\n\nFaça a diferença na sua vida e realize hoje mesmo o sonho de morar num apartamento da MRV com as melhores condições do Minha Casa Minha Vida!",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Churrasqueira",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pista de Caminhada",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em mármore sintético",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão de Áreas Privativas",
+      "expira": "2025-08-31"
+    },
+    {
+      "nome": "ITBI Grátis",
+      "expira": "2026-05-25"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-06-30"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-07-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-12-31"
+    }
+  ]
+}

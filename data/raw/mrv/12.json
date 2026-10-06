@@ -1,0 +1,184 @@
+{
+  "ordem": 12,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-porto-das-mares",
+  "extraidoEm": "2026-10-05",
+  "nome": "Porto das Marés",
+  "cidade": "Fortaleza",
+  "bairro": "Barra do Ceará",
+  "status": "Em Construção",
+  "elevador": true,
+  "lat": -3.7089179,
+  "lon": -38.57386229999999,
+  "cep": "60.331200",
+  "endereco": "Av. Vinte de Janeiro, 470",
+  "apresentacao": "2 quartos (suíte)",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        43.34
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        43.76
+      ]
+    },
+    {
+      "titulo": "2 Quartos com Suíte",
+      "areas": [
+        45.14
+      ]
+    }
+  ],
+  "unidades": 576,
+  "vagas": 576,
+  "proximoA": "Próximo a Hospital Fernandes Távora, Colégio Presidente Médici, Posto Shell, Posto Ipiranga, UPA 24H – Cristo Redentor, Baratão Supermercados, Mercado do Carlito Pamplona, Praça Carlito Pamplona, Cometa Supermercados – Castelo Branco, Estádio Elzir Cabral, Calçadão Vila do Mar, ETI Nossa Senhora de Fátima. Principais vias de acesso: Av. Leste Oeste, Av. Francisco Sá, Av. 20 de Janeiro, Av. Ulisses Guimarães.",
+  "descricao": "Viva sob o mais belo pôr do Sol na Barra do Ceará! Porto das Marés é seu novo Lar. \n\nLocalizado a 5 minutos da praia na Barra do Ceará, o Porto das Marés é o lugar ideal par você que busca conforto, praticidade, lazer supercompleto e torres com elevador. Contemple cada nascer ou pôr do sol da sua varanda e tenha opção de mais conforto ao escolher um apartamento com suíte. \n\nAprecie a bela vista do mar sem abrir mão do lazer garantido para toda a família, aqui você vai celebrar momentos especiais no salão de festas e espaço gourmet, aproveitar os dias de sol na piscina, além de ter inúmeras opções de lazer a sua disposição no condomínio. \n\nConheça mais sobre o financiamento SBPE. Compre com a MRV sem sair de casa! Acesse o chat e faça agora uma simulação. Acesse o chat, faça uma simulação e compre com a MRV sem sair de casa.",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Kids",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de Festas com Copa",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Elevador",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Espaço Piquenique",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Circuito fechado de TV",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Luminária com sensor de presença na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Previsão para cancela na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso Laminado no Quarto",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento parcial das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em mármore sintético",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Varanda",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Seu 13º vale desconto",
+      "expira": "2025-12-31"
+    },
+    {
+      "nome": "Big Desconto",
+      "expira": "2026-02-28"
+    },
+    {
+      "nome": "ITBI Grátis",
+      "expira": "2026-05-25"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-06-30"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-07-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-12-31"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "ordem": 5,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-la-serena",
+  "extraidoEm": "2026-10-05",
+  "nome": "Residencial La Serena",
+  "cidade": "Fortaleza",
+  "bairro": "Jangurussu",
+  "status": "Lançamento",
+  "elevador": false,
+  "lat": -3.848692,
+  "lon": -38.508215,
+  "cep": "60000-000",
+  "endereco": "Rua C, 1754",
+  "apresentacao": "2 quartos",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        38.4
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        38.4
+      ]
+    }
+  ],
+  "unidades": 240,
+  "vagas": 85,
+  "proximoA": "Próximo ao Centro da Messejana, Rodoviária de Messejana, Vapt Vupt Messejana, Escolas estaduais e municipais, BR 116, Supermercado Ismael, Farmácias, UPA 24H, Postos de saúde, Cuca Jangurussu, Academias Areninha.",
+  "descricao": "O Residencial La Serena é seu novo refúgio no Jangurussu!\n\nUm condomínio fechado com tudo que você sempre sonhou em ter. Apartamentos de 2 quartos com opções de varanda ou área privativa. Uma área de lazer ampla e completa para todos os membros da família aproveitar e se divertir bastante com segurança. Aproveite as piscinas refrescantes, churrasqueira para encontros especiais, playground para as crianças e um pet place para seu amigo de quatro patas.\n\nFaça a diferença na sua vida e realize hoje mesmo o sonho de morar num apartamento da MRV com as melhores condições do Minha Casa Minha Vida!",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Churrasqueira",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina com Deck",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pista de Caminhada",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Circuito fechado de TV",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de gás individualizado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em louça",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão Condição Legal",
+      "expira": "2025-09-30"
+    },
+    {
+      "nome": "Seu 13º vale desconto",
+      "expira": "2025-12-31"
+    },
+    {
+      "nome": "Big Desconto",
+      "expira": "2026-02-28"
+    },
+    {
+      "nome": "ITBI Grátis",
+      "expira": "2026-05-25"
+    },
+    {
+      "nome": "ITBI e Registro Grátis",
+      "expira": "2026-05-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "ordem": 4,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-reserva-da-lagoa",
+  "extraidoEm": "2026-10-05",
+  "nome": "Reserva da Lagoa",
+  "cidade": "Fortaleza",
+  "bairro": "Passaré",
+  "status": "Em Construção",
+  "elevador": true,
+  "lat": -3.811707,
+  "lon": -38.530538,
+  "cep": "60861-322",
+  "endereco": "Rua 100, 200",
+  "apresentacao": "2 quartos",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        36.88
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        36.88
+      ]
+    }
+  ],
+  "unidades": 372,
+  "vagas": 299,
+  "proximoA": "Próximo a Arena Castelão.",
+  "descricao": "Prepare-se para investir no seu futuro, com mais segurança, qualidade de vida e oportunidades que só o Reserva da Lagoa pode te oferecer. Venha morar em um condomínio fechado, na melhor localização de Fortaleza, em Passaré.\nEleve seu estilo de vida para outro nível e more em um condomínio residencial com apartamentos de 2 quartos, com opção de varanda, mais comodidade no seu dia a dia com disponibilização de elevadores e toda segurança que um condomínio fechado pode oferecer como uma portaria 24h com cancela na guarita.\n\nAlém disso, o Reserva do Lago tem a mais completa área de lazer pra você e sua família aproveitarem cada momento juntos.\n\nPara descansar ou aproveitar os dias de sol vocês terão à disposição piscinas, área de playground para as crianças, um espaço reservado para seu pet brincar e claro, uma área gourmet com churrasqueira para receber seus amigos e parentes no conforto do seu lar.",
+  "mcmv": false,
+  "diferenciais": [
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de Festas com Copa",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Elevador",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Circuito fechado de TV",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Previsão para cancela na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento parcial das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em mármore sintético",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de gás individualizado",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão de Áreas Privativas",
+      "expira": "2025-08-31"
+    },
+    {
+      "nome": "Feirão Condição Legal",
+      "expira": "2025-09-30"
+    },
+    {
+      "nome": "Seu 13º vale desconto",
+      "expira": "2025-12-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

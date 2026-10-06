@@ -1,0 +1,106 @@
+{
+  "ordem": 1,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-fortitudine",
+  "extraidoEm": "2026-10-05",
+  "nome": "Residencial Fortitudine",
+  "cidade": "Fortaleza",
+  "bairro": "Antônio Bezerra",
+  "status": "Lançamento",
+  "elevador": true,
+  "lat": -3.739527,
+  "lon": -38.586233,
+  "cep": "60360-415",
+  "endereco": "Rua Martins Neto,  s/n",
+  "apresentacao": "2 quartos (opção de varanda)",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        43.34,
+        43.76
+      ]
+    },
+    {
+      "titulo": "2 Quartos PCD",
+      "areas": [
+        43.34,
+        45.14
+      ]
+    },
+    {
+      "titulo": "2 quartos (suíte)",
+      "areas": [
+        45.14
+      ]
+    }
+  ],
+  "unidades": 384,
+  "vagas": 116,
+  "proximoA": "Próximo a Universidade Federal do Ceará - UFC, Shopping RioMar Kennedy, Assaí Atacadista - Mister Hull, Terminal de Integração do Antônio Bezerra, Parque Rachel de Queiroz.",
+  "descricao": "Chegou a hora de investir no seu futuro com a MRV. O Residencial Fortitudine é o ponto de partida para essa nova fase!  \n\nApartamentos de 2 quartos, com opção de varanda e suíte para viver dias mais tranquilos. Muita diversão sem sair de casa com lazer completo. São mais de 9 itens, incluindo piscina adulto e infantil, churrasqueira, espaço happy hour, espaço funcional, pet place, playground e muito mais para viver o melhor da vida ao lado de quem você ama. \n\nImagina realizar o sonho de ter um apê todo seu? Mais que um imóvel, é qualidade de vida. Aproveite nossas condições facilitadas de entrada para sair do aluguel!",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Churrasqueira",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Happy Hour",
+      "tipo": null
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Suíte",
+      "tipo": null
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Espaço Funcional Descoberto",
+      "tipo": "Diferenciais de Lazer"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

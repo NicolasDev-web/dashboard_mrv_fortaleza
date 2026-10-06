@@ -1,0 +1,158 @@
+{
+  "ordem": 16,
+  "url": "https://www.mrv.com.br/imoveis/ceara/eusebio/apartamentos-eco-park",
+  "extraidoEm": "2026-10-05",
+  "nome": "Eco Park",
+  "cidade": "Eusébio",
+  "bairro": "Urucunema",
+  "status": "Em Construção",
+  "elevador": null,
+  "lat": -3.9028823,
+  "lon": -38.4552025,
+  "cep": "61762-790",
+  "endereco": "Rua Córrego do Matias, 280",
+  "apresentacao": "2 quartos",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        41.4
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        41.4
+      ]
+    }
+  ],
+  "unidades": 200,
+  "vagas": 200,
+  "proximoA": "1,2Km da Prefeitura do Eusébio",
+  "descricao": "A gente sabe: o sonho de morar no que é seu vai muito além de sair do aluguel. É poder morar em uma localização estratégica para um dia a dia mais prático. No Eco Park a vida se torna mais prática: um apartamento de 2 quartos com opção de varanda para você e sua família desfrutarem de momentos inesquecíveis!\n\n\nE o lazer é incrível! Tem piscinas adulto e infantil para dias mais refrescantes, playground para a criançada e churrasqueira e um espaçoso salão de festas, para você reunir quem você mais gosta. Além de pet place e bicicletário.\nAproveite a entrada facilitada e viva a liberdade de morar no que é seu: você pode economizar até R$51 mil reais com o novo Minha Casa Minha Vida e ainda garante as menores taxas de juros!",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Churrasqueira",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de festas",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de Festas com Copa",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Circuito fechado de TV",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Luminária com sensor de presença na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso em Cerâmica na Sala",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso em Cerâmica no Quarto",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso Laminado na Sala",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento parcial das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em mármore sintético",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Varanda",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de gás individualizado",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "ITBI e Registro Grátis",
+      "expira": "2025-12-31"
+    }
+  ]
+}

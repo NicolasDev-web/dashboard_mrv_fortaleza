@@ -1,0 +1,190 @@
+{
+  "ordem": 7,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-parque-marista",
+  "extraidoEm": "2026-10-05",
+  "nome": "Parque Marista",
+  "cidade": "Fortaleza",
+  "bairro": "Centro",
+  "status": "Lançamento",
+  "elevador": true,
+  "lat": -3.734928,
+  "lon": -38.52528,
+  "cep": "60050-080",
+  "endereco": "R. Conselheiro Tristão, nº 60",
+  "apresentacao": "2 quartos",
+  "tipologias": [
+    {
+      "titulo": "2 quartos",
+      "areas": [
+        38.8
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        40.44
+      ]
+    }
+  ],
+  "unidades": 576,
+  "vagas": 170,
+  "proximoA": "Próximo a Praia da Iracema, Beira Mar, Hospital Luís França - Emergência Pediátrica, Instituto Doutor José Frota - IJF (Hospital), Unidade Estácio, Centro de Humanidades II (UFC - Campus do Benfica), Parque da Liberdade Fortaleza, Assaí Atacadista.",
+  "descricao": "Chegou a hora de conquistar o seu futuro e transformar o sonho da casa própria em realidade! Para ficar ainda melhor, o Parque Marista tem lazer de clube e representa a liberdade da vida confortável e bem localizada que você sempre desejou. \n\n\nCom acesso facilitado pelas avenidas Domingos Olímpio, Duque de Caxias, Dom Manuel e Visconde do Rio Branco, viva no Centro de Fortaleza, ao lado da Aldeota e cercado de comodidades. Seu novo endereço está próximo do Parque da Liberdade, Hospital Luís Fraga, Instituto Doutor José Frota, Assaí Atacadista, Unidade Estácio, Praia de Iracema e Beira Mar. Você, no centro de tudo! \n\n\nPara elevar seu estilo de vida, nada melhor que um condomínio completo e um apê \nconfortável. Tenha seu apê de 2 quartos com opções de varanda ou área privativa, três elevadores por torre e a comodidade de um lazer diferenciado para a sua família. O empreendimento conta com mais de 20 itens para que vocês possam desfrutar de uma experiência completa com: piscina adulto com deck molhado, piscina infantil, academia, churrasqueiras, espaço pizza, happy hour, salão de jogos, quadra e muito mais.",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Academia Coberta",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Churrasqueira",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Piquenique",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de Jogos",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de Festas com Copa",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Quadra Recreativa",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina com Deck",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Kids",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Praça",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Horta",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Espaço Market",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Elevador",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Tanque em louça",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento parcial das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso Laminado na Sala",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Happy Hour",
+      "tipo": null
+    },
+    {
+      "titulo": "Playbaby",
+      "tipo": null
+    },
+    {
+      "titulo": "Espaço Zen",
+      "tipo": null
+    },
+    {
+      "titulo": "Espaço Pizza",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Vestiário da piscina",
+      "tipo": "Diferenciais área comum"
+    },
+    {
+      "titulo": "Mini Quadra",
+      "tipo": null
+    },
+    {
+      "titulo": "Pet Care",
+      "tipo": null
+    },
+    {
+      "titulo": "Pista de Caminhada",
+      "tipo": "Diferenciais de Lazer"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Show de Lançamentos",
+      "expira": "2026-03-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

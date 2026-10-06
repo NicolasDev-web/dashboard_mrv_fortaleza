@@ -1,0 +1,74 @@
+{
+  "ordem": 9,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-sensia-reserva-vila-do-sol",
+  "extraidoEm": "2026-10-05",
+  "nome": "Sensia Reserva Vila do Sol",
+  "cidade": "Fortaleza",
+  "bairro": "Cocó",
+  "status": "Em Construção",
+  "elevador": null,
+  "lat": -3.7588185,
+  "lon": -38.6046102,
+  "cep": "60192-800",
+  "endereco": "Rua 9 do Loteamento – Gleba 40",
+  "apresentacao": "2 quartos com suíte e varanda",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        54.8,
+        54.58
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        54.58
+      ]
+    }
+  ],
+  "unidades": 264,
+  "vagas": 293,
+  "proximoA": "A 5 min da Praia do Futuro, ao lado do Parque Ecológico do Cocó, próximo ao Shopping Iguatemi e a UNIFOR.",
+  "descricao": "O imóvel ideal precisa se adaptar ao seu estilo de vida. Os empreendimentos Sensia contam com plantas flexíveis, liberdade na escolha dos acabamentos e lazer premium para você escolher como quer viver. \n\nO Sensia Reserva Vila do Sol oferece um mundo de possiblidades. Apartamentos de dois quartos e opções com Garden para quem precisa de mais espaço, tudo isso em um condomínio moderno com lazer premium: piscina, espaço gourmet, academia, salão de festas e outras comodidades.  \n\nE que tal deixar os ambientes com a sua cara antes mesmo de se mudar? Isso é possível por meio do nosso serviço de Consultoria de Personalização. Escolha os acabamentos, adicione armários planejados e muito mais.   \n\nMore cercado pela natureza, mas com a cidade aos seus pés. Na região do Cocó, qualidade de vida é o padrão!",
+  "mcmv": false,
+  "diferenciais": [
+    {
+      "titulo": "Salão de festas",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina com Deck",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Espaço Piquenique",
+      "tipo": "Diferenciais de Lazer"
+    }
+  ],
+  "promocoes": []
+}

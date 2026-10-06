@@ -1,0 +1,196 @@
+{
+  "ordem": 14,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-reserva-brisa-do-mar",
+  "extraidoEm": "2026-10-05",
+  "nome": "Reserva Brisa do Mar",
+  "cidade": "Fortaleza",
+  "bairro": "Cocó",
+  "status": "Em Construção",
+  "elevador": true,
+  "lat": -3.7549438,
+  "lon": -38.4691782,
+  "cep": "60190-630",
+  "endereco": "Rua dos cajueiros, 450",
+  "apresentacao": "2 quartos",
+  "tipologias": [
+    {
+      "titulo": "1 Quarto",
+      "areas": [
+        38.05
+      ]
+    },
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        45.22
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        46.74
+      ]
+    }
+  ],
+  "unidades": 272,
+  "vagas": 223,
+  "proximoA": "Proximo a Escola Municipal Odinilra Cruz Moreira, Cafeteria Prosa e Queijos, Super Lagoa, Farmácia Pague Menos, , Centro Universitário Unifanor, Cidade fortal, Unifor, Centro de Eventos do Ceará, Shopping Rio Mar, a 10 minutos da Praia do Futuro e do Shopping Iguatemi. Vias de acesso: Av. Doutor Aldy Mentor, Av. Santos Dumont, Av. Sebastião de Abreu.",
+  "descricao": "Reserva Brisa do Mar: a transformação do seu mundo começa aqui. Localizado em Fortaleza, o empreendimento tem apartamentos planejados para melhorar a qualidade de vida da sua família. Venha se encantar com o novo apê da MRV! \n\n\nApartamentos com 2 quartos em condomínio fechado no Cocó, com elevador, opção de varanda, e opção de vaga de garagem. Toda a tranquilidade, segurança e conforto para você e sua família. Aqui a diversão não tem limites!\n\nMais que um apartamento, o novo jeito MRV de viver. O Reserva Brisa do Mar oferece lazer equipado, coleta seletiva, sistema de segurança, energia solar nas áreas comuns, piso laminado na sala e nos quartos, e muito mais.\n\nEsse é o momento de comprar seu novo apê, seja para morar ou investir a MRV tem a opção certa para você. Conheça as condições especiais e facilidades do programa Minha casa minha vida e faça uma simulação.",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de Festas com Copa",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Elevador",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Espaço Piquenique",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Cerca elétrica",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Circuito fechado de TV",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Luminária com sensor de presença na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Previsão para cancela na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Bancada da Cozinha em granito com cuba em inox",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Bancada do banheiro em granito com cuba em louça",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso Laminado na Sala",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso Laminado no Quarto",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento total das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em aço inox",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Varanda",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão de Áreas Privativas",
+      "expira": "2025-08-31"
+    },
+    {
+      "nome": "Seu 13º vale desconto",
+      "expira": "2025-12-31"
+    },
+    {
+      "nome": "Big Desconto",
+      "expira": "2026-02-28"
+    },
+    {
+      "nome": "ITBI Grátis",
+      "expira": "2026-05-25"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-06-30"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-07-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-12-31"
+    }
+  ]
+}

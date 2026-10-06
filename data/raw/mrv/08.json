@@ -1,0 +1,188 @@
+{
+  "ordem": 8,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-farol-do-atlantico",
+  "extraidoEm": "2026-10-05",
+  "nome": "Residencial Farol do Atlântico",
+  "cidade": "Fortaleza",
+  "bairro": "Cocó",
+  "status": "Lançamento",
+  "elevador": true,
+  "lat": -3.7547098,
+  "lon": -38.467856275,
+  "cep": "60191-335",
+  "endereco": "Rua Zuca Accioly, 830",
+  "apresentacao": "2 quartos (varanda)",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        43.34
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        43.34
+      ]
+    },
+    {
+      "titulo": "2 Quartos com Suíte",
+      "areas": [
+        45.14
+      ]
+    }
+  ],
+  "unidades": 204,
+  "vagas": 218,
+  "proximoA": "Fica a 5 minutos dos shoppings Iguatemi e Rio Mar, 5 minutos da Praia do futuro.",
+  "descricao": "Descubra um novo cenário onde o seu sonho encontra um futuro de tranquilidade, comodidade e momentos únicos em seu futuro apartamento no Residencial Farol Do Atlântico.\nLocalizado na região privilegiada de Cocó, este condomínio residencial possui apartamentos de 2 quartos com opção de suíte e varanda. Já os apês do térreo contam com opção de área privativa. More em um condomínio fechado com lazer completo e opção de vista para o mar ou para o Parque do Cocó.\n\nAlém de uma excelente localização, o condomínio também oferece ótima estrutura interna com um super lazer de clube. A área comum do condomínio conta com com um espaço gourmet, espaço com playground para as crianças aproveitarem, piscinas adulto e infantil e para quem gosta de manter uma vida saudável, o Farol do Atlântico conta com uma academia coberta e espaço crossfit.\n\nAproveite esta oportunidade o faça maior investimento de sua vida. Simule agora mesmo seu financiamento SBPE para este empreendimento e eleve sua qualidade de vida e moradia com a MRV!",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Academia Coberta",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Funcional Descoberto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Gazebo",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Opção de Garagem Coberta",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Bicicletário Coberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Opção de duas vagas",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Circuito fechado de TV",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Luminária com sensor de presença na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Previsão para cancela na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Bancada da Cozinha em granito com cuba em inox",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Bancada do banheiro em granito com cuba em louça",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso em Cerâmica na Sala",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso Laminado no Quarto",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento total das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Opção Suíte",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de gás individualizado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em louça",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Destaque BBB26",
+      "expira": "2026-04-30"
+    },
+    {
+      "nome": "Big Desconto",
+      "expira": "2026-02-28"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

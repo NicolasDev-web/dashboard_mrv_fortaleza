@@ -1,0 +1,151 @@
+{
+  "ordem": 3,
+  "url": "https://www.mrv.com.br/imoveis/ceara/caucaia/apartamentos-ville-de-lisboa",
+  "extraidoEm": "2026-10-05",
+  "nome": "Ville de Lisboa",
+  "cidade": "Caucaia",
+  "bairro": "Parque Albano",
+  "status": "Lançamento",
+  "elevador": true,
+  "lat": -3.745971,
+  "lon": -38.614737,
+  "cep": "61645-543",
+  "endereco": "Rua Banabuiu, n° 190",
+  "apresentacao": "2 quartos (varanda)",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        41.4,
+        45.4
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        41.4
+      ]
+    }
+  ],
+  "unidades": 300,
+  "vagas": 109,
+  "proximoA": "Próximo ao Sesc Caucaia, Assai Atacadista, North Shopping, Lagoa do Tabapuá, Upa Jurema.",
+  "descricao": "Dando sequência aos lançamentos do complexo Gran Ville Portugal, nosso segundo empreendimento em Caucaia é o Ville de Lisboa, o seu novo endereço para viver com bem-estar, conforto e muita comodidade. \n\n\nCom apartamentos de 2 quartos com opções de varanda e área privativa, viva com segurança de condomínio e tenha diversão para todos os dias. O lazer do seu novo endereço conta com piscinas adulto e infantil, churrasqueiras, espaço funcional, playground, playbaby, futmesa, carwash, pet place, bicicletário, market e espaço happy hour. \n\n\nCom fácil acesso pela Avenida Mister Hull, sua nova vizinhança te coloca perto de tudo em Caucaia e na região metropolitana de Fortaleza. More ao lado do Sesc Caucaia e conte com serviços essenciais como o Assaí Atacadista, North Shopping, Mix Mateus e Upa Jurema para viver com conforto no bairro Parque Albano.",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Espaço Market",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Cerâmica Cozinha e Banheiro",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Luminária com sensor de presença na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Card"
+    },
+    {
+      "titulo": "Espaço Piquenique",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Churrasqueira",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Tanque em louça",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Playbaby",
+      "tipo": null
+    },
+    {
+      "titulo": "Horta",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Happy Hour",
+      "tipo": null
+    },
+    {
+      "titulo": "Futmesa",
+      "tipo": null
+    },
+    {
+      "titulo": "Espaço Funcional Descoberto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Praça",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Espaço Zen",
+      "tipo": null
+    },
+    {
+      "titulo": "Pista de Caminhada",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Car Wash",
+      "tipo": "Diferenciais de Área Comum"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

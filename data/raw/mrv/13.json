@@ -1,0 +1,154 @@
+{
+  "ordem": 13,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-mandacaru",
+  "extraidoEm": "2026-10-05",
+  "nome": "Residencial Mandacaru",
+  "cidade": "Fortaleza",
+  "bairro": "Antônio Bezerra",
+  "status": "Em Construção",
+  "elevador": true,
+  "lat": -3.7372716909137833,
+  "lon": -38.59483262883606,
+  "cep": "60352-330",
+  "endereco": "Rua Pres. Prudente, 88",
+  "apresentacao": "2 quartos (Varanda)",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        36.88
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        36.88
+      ]
+    }
+  ],
+  "unidades": 204,
+  "vagas": 93,
+  "proximoA": "Ao lado do Terminal Rodoviário Antônio Bezerra (Viagens), a 2 min Terminal de Integração, a 3 min do Vapt Vupt, a 2 min do Assaí Atacadista, a 7 min do North Shopping, próxim do Cartório Jaime Araripe, do Supermercado Compre Max, da Farmácia Pague menos, do Hospital Frotinha Atônio Bezerra, do Parque Raquel de Queiroz, das escolas Escola José de Alencar, Escola Joaquim Nogueira e Escola Ant. Bezerra, da Universidade Federal do Ceará, do Colégio da PolÍcia Militar do Ceará, da Academia Body Coach, da Caixa Econômica Federal, próximo a postos de gasolina, da Estação Trem / VLT, de restaurantes e pizzarias.",
+  "descricao": "Residencial Mandacaru – o caminho certo para uma vida mais completa em Fortaleza.\n\nEsse incrível lançamento no Antônio Bezerra reúne o que há de melhor em moradia com uma localização excelente e um preço que cabe no seu bolso!\n\nSão apartamentos de 2 quartos com opção de varanda ou área privativa, em uma torre de 17 andares que oferece uma vista única da região. Descendo o elevador você encontra uma área de lazer completa, com piscinas, duas áreas fitness, espaço gourmet e muito mais.\n\nFaça a diferença na sua vida e realize hoje mesmo o sonho de morar num apartamento da MRV com subsídio de até R$75 mil do programa Minha Casa Minha Vida!",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Academia Coberta",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de Festas com Copa",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Elevador",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Gazebo",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Circuito fechado de TV",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Luminária com sensor de presença na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso em Cerâmica na Sala",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento parcial das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em mármore sintético",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Varanda",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Seu 13º vale desconto",
+      "expira": "2025-12-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

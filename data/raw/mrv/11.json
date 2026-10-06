@@ -1,0 +1,126 @@
+{
+  "ordem": 11,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-torre-do-mar",
+  "extraidoEm": "2026-10-05",
+  "nome": "Torre do Mar",
+  "cidade": "Fortaleza",
+  "bairro": "Região da Maraponga",
+  "status": "Em Construção",
+  "elevador": true,
+  "lat": -3.816223699999999,
+  "lon": -38.5582749,
+  "cep": "60761-515",
+  "endereco": "Rua Vereadora Zélia Correia de Sousa, 487",
+  "apresentacao": "2 quartos",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        36.88
+      ]
+    },
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        36.88
+      ]
+    }
+  ],
+  "unidades": 384,
+  "vagas": 409,
+  "proximoA": "Próximo a Atacadão Lag, EMEIF Casimiro Montenegro, Lago Montenegro, Medeiros Supermercado, Hospital Distrital Gonzaga Mota e Posto Shell Cidade Jardim. Principais vias de acesso: Av. Presidente Costa e Silva, Av. Bernardo Manuel e Av. Pref. Evandro Ayres de Moura.",
+  "descricao": "O Torre do Mar vai te surpreender com apartamento de 2 quartos que possuem ambientes integrados e opção de varanda.\nO lazer vai te proporcionar experiências em família e momentos para celebrar com amigos, com área de lazer para toda a família incluindo piscina adulto e infantil, salão de festas, espaço de gourmet e muito mais.  \n\nEsse é o momento de comprar seu novo apê, seja para morar ou investir a MRV tem a opção certa para você. Conheça as condições especiais e facilidades do programa Minha Casa Minha Vida e faça uma simulação.",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de festas",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Gazebo",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso em Cerâmica na Sala",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento parcial das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em mármore sintético",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão Condição Legal",
+      "expira": "2025-09-30"
+    },
+    {
+      "nome": "ITBI Grátis",
+      "expira": "2026-05-25"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-06-30"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-07-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    },
+    {
+      "nome": "Outlet de Apês",
+      "expira": "2026-12-31"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "ordem": 10,
+  "url": "https://www.mrv.com.br/imoveis/ceara/caucaia/apartamentos-ville-de-porto",
+  "extraidoEm": "2026-10-05",
+  "nome": "Ville de Porto",
+  "cidade": "Caucaia",
+  "bairro": "Parque Albano",
+  "status": "Lançamento",
+  "elevador": true,
+  "lat": -3.745539083651339,
+  "lon": -38.61449715131225,
+  "cep": "61645-543",
+  "endereco": "Avenida Dom Lustosa",
+  "apresentacao": "2 quartos (varanda)",
+  "tipologias": [],
+  "unidades": 320,
+  "vagas": 127,
+  "proximoA": "Em frente ao SESC Caucaia e próximo ao Assaí Atacadista, Mix Mateus, fácil acesso para a Avenida Mister Hall.",
+  "descricao": "Venha morar na cidade de Caucaia e comece a construir sua história de vida hoje no Ville de Porto!\nA MRV trouxe mais um empreendimento com infra-estrutura completa para você, que deseja sair do aluguel e conquistar um apartamento de 2 quartos, com opções de varanda ou área privativa.\n\nA área de lazer é um verdadeiro convite para viver momentos incríveis com a família e os amigos: piscinas adulto e infantil, churrasqueira, espaço funcional, playground e muito mais. Tudo isso em um condomínio fechado, que oferece segurança e bem-estar para todas as fases da vida.\n\nAproveite nossas condições especiais para conquistar a tão sonhada casa própria com auxílio dos programas Minha Casa Minha Vida com subsídio de até R$ 55 mil e incentivo do programa Entrada Moradia Ceará de R$20 mil.",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Churrasqueira",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Funcional Descoberto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Piquenique",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Market",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Circuito fechado de TV",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Luminária com sensor de presença na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em mármore sintético",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de gás individualizado",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão de Áreas Privativas",
+      "expira": "2025-08-31"
+    },
+    {
+      "nome": "Feirão Condição Legal",
+      "expira": "2025-09-30"
+    },
+    {
+      "nome": "ITBI e Registro Grátis",
+      "expira": "2025-12-31"
+    },
+    {
+      "nome": "Big Desconto",
+      "expira": "2026-02-28"
+    },
+    {
+      "nome": "ITBI Grátis",
+      "expira": "2026-05-25"
+    },
+    {
+      "nome": "ITBI e Registro Grátis",
+      "expira": "2026-05-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

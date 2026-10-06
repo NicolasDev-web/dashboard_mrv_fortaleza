@@ -1,0 +1,168 @@
+{
+  "ordem": 6,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-forte-alencar",
+  "extraidoEm": "2026-10-05",
+  "nome": "Forte Alencar",
+  "cidade": "Fortaleza",
+  "bairro": "Região do Cambeba",
+  "status": "Lançamento",
+  "elevador": true,
+  "lat": -3.810308,
+  "lon": -38.503018,
+  "cep": "60864-012",
+  "endereco": "Rua Central do Loteamento MRV Arroz Doce, 100",
+  "apresentacao": "2 quartos com varanda (opção de suíte )",
+  "tipologias": [
+    {
+      "titulo": "2 Quartos",
+      "areas": [
+        43.34
+      ]
+    },
+    {
+      "titulo": "2 Quartos (PCD)",
+      "areas": [
+        43.34
+      ]
+    },
+    {
+      "titulo": "2 Quartos com Suíte",
+      "areas": [
+        45.14
+      ]
+    }
+  ],
+  "unidades": 492,
+  "vagas": 505,
+  "proximoA": "Próximo ao Mega Atacadista, Greenlife Cambeba, academias, farmácias, Mc Donald's, Habibis Mesejana, Mall Buena Vista.",
+  "descricao": "Forte Alencar: um oásis urbano com lazer completo e ambientes que equilibram qualidade de vida, convivência e tranquilidade!\nO empreendimento chega como um marco na  Região do Cambeba: três torres imponentes com elevadores e apartamentos de 2 quartos com varanda e opção de suíte. Além de ter unidades no térreo com opção de área privativa.\n\nAqui, cada detalhe foi pensado para elevar sua experiência: opções com suíte, unidades com área privativa e uma vista livre para um futuro de conforto e exclusividade.",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Espaço Gourmet",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Kids",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Adulto",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Salão de Festas com Copa",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Elevador",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Espaço Piquenique",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Cerca elétrica",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Previsão para cancela na guarita",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso em Cerâmica na Sala",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento total das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Tanque em louça",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Feirão Condição Legal",
+      "expira": "2025-09-30"
+    },
+    {
+      "nome": "Seu 13º vale desconto",
+      "expira": "2025-12-31"
+    },
+    {
+      "nome": "Destaque BBB26",
+      "expira": "2026-04-30"
+    },
+    {
+      "nome": "Big Desconto",
+      "expira": "2026-02-28"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}

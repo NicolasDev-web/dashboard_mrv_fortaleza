@@ -1,0 +1,137 @@
+{
+  "ordem": 2,
+  "url": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-flor-do-sertao",
+  "extraidoEm": "2026-10-05",
+  "nome": "Residencial Flor do Sertão",
+  "cidade": "Fortaleza",
+  "bairro": "Jacarecanga",
+  "status": "Lançamento",
+  "elevador": true,
+  "lat": -3.7262521,
+  "lon": -38.5439494,
+  "cep": "60035-010",
+  "endereco": "Rua Júlio Pinto, 2090",
+  "apresentacao": "2 quartos (opção de varanda)",
+  "tipologias": [],
+  "unidades": 216,
+  "vagas": 46,
+  "proximoA": "Próximo ao Flor do Sertão, Centro Fashion Fortaleza, Praia de Iracema, Sesc Fortaleza, Assaí Atacadista, Shopping Rio Mar Kennedy, North Shopping Fortaleza, Hospital Geral Dr. Cesar Cals.",
+  "descricao": "O Residencial Flor do Sertão oferece apês de 2 quartos, com opções de área privativa e varanda para você viver com conforto em família. Além disso, ainda conta com um lazer completo com mais de 14 itens para dias mais leves e de muita diversão, como piscina infantil, piscina adulto com deck molhado, academia, churrasqueiras, playground, espaço kids, pet place e muito mais!\n\nTudo isso em um condomínio fechado, com segurança garantida e tudo que você sempre quis em um apê todo seu.",
+  "mcmv": true,
+  "diferenciais": [
+    {
+      "titulo": "Churrasqueira",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Espaço Piquenique",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Playground",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina Infantil",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Piscina com Deck",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Pet Place",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Academia Coberta",
+      "tipo": "Diferenciais de Lazer"
+    },
+    {
+      "titulo": "Bicicletário Descoberto",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Praça",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Horta",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Espaço Market",
+      "tipo": "Diferenciais de Área Comum"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Lazer equipado",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Célula de segurança para pedestre",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores de Energia",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e arejador)",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Coleta seletiva",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Cerca elétrica",
+      "tipo": "Diferenciais de Condomínio"
+    },
+    {
+      "titulo": "Tanque em louça",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de gás individualizado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Revestimento parcial das áreas molhadas",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para medição de água individualizada",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Previsão para ar condicionado",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Sistema de descarga)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Dispositivos Economizadores (Redutor de vazão e ar)",
+      "tipo": "Diferenciais da Unidade"
+    },
+    {
+      "titulo": "Piso da Cozinha e Banheiro em Cerâmica",
+      "tipo": "Diferenciais da Unidade"
+    }
+  ],
+  "promocoes": [
+    {
+      "nome": "Show de Lançamentos",
+      "expira": "2026-03-31"
+    },
+    {
+      "nome": "Feirão da Decisão",
+      "expira": "2026-07-19"
+    }
+  ]
+}
