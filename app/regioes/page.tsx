@@ -26,7 +26,7 @@ export default function RegioesPage() {
                     <span className="block font-semibold text-ink">{r.nome}</span>
                     <span className="text-sm text-muted">{contagens[r.slug]} empreendimento{contagens[r.slug] > 1 ? "s" : ""} · {r.resumo}</span>
                   </span>
-                  <ChevronRight className="size-5 shrink-0 text-green-900" aria-hidden />
+                  <ChevronRight className="seta size-5 shrink-0 text-green-900" aria-hidden />
                 </Link>
               </li>
             ))}

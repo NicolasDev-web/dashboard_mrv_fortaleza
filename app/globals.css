@@ -153,6 +153,44 @@ body {
 .trilho::-webkit-scrollbar { display: none; }
 .trilho > * { scroll-snap-align: start; }
 
+/*
+ * Vocabulário de movimento das páginas:
+ * - .entra: 1º contato (hero da Home), uma vez só, em cascata por --atraso
+ * - [data-revela]: seções abaixo da dobra entram na ordem de leitura ao chegar na tela (components/ui/Revela)
+ * - .desdobra: conteúdo que abre (ranking completo, "sobre", linhas extras) vem de onde foi aberto
+ * - .funde: troca de visualização (lista <-> mapa)
+ * - .seta: seta/chevron avança um pouco no hover, reforçando a direção do link
+ */
+@keyframes entra { from { opacity: 0; transform: translateY(12px); } }
+@keyframes entra-forma { from { opacity: 0; transform: rotate(-12deg) scale(0.86); } }
+@keyframes desdobra { from { opacity: 0; transform: translateY(-6px); } }
+.entra { animation: entra 560ms var(--ease-saida) var(--atraso, 0ms) both; }
+.entra-forma { animation: entra-forma 900ms var(--ease-saida) 240ms both; }
+.desdobra, details[open] > .desdobra-aberto { animation: desdobra var(--t-slow) var(--ease-saida); }
+.funde { animation: aparece var(--t-slow) var(--ease-mrv); }
+
+[data-revela] > * {
+  transition: opacity var(--t-emph) var(--ease-saida), transform var(--t-emph) var(--ease-saida);
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+[data-revela="espera"] > * { opacity: 0; transform: translateY(16px); }
+[data-revela] > :nth-child(2) { --i: 1; }
+[data-revela] > :nth-child(3) { --i: 2; }
+[data-revela] > :nth-child(4) { --i: 3; }
+[data-revela] > :nth-child(5) { --i: 4; }
+[data-revela] > :nth-child(n + 6) { --i: 5; }
+
+.seta { transition: transform var(--t-base) var(--ease-mrv); }
+@media (hover: hover) {
+  :is(a, button):hover > .seta { transform: translateX(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entra, .entra-forma, .desdobra, details[open] > .desdobra-aberto, .funde { animation: none !important; }
+  [data-revela] > * { opacity: 1 !important; transform: none !important; }
+  .seta { transform: none !important; }
+}
+
 /* Folha inferior / modal (Radix Dialog): sobe de baixo no celular, aparece no centro no desktop */
 @keyframes sobe { from { transform: translateY(100%); } }
 @keyframes desce { to { transform: translateY(100%); } }

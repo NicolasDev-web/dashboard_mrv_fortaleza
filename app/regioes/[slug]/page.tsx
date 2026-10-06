@@ -5,6 +5,7 @@ import { BusFront, Check, ChevronLeft, Clock } from "lucide-react";
 import { RegionMap } from "@/components/regiao/RegionMap";
 import { PropertyCard } from "@/components/empreendimento/PropertyCard";
 import { Rodape } from "@/components/layout/Rodape";
+import { Revela } from "@/components/ui/Revela";
 import { bairros, contagensPorRegiao, dadosScoring, daRegiao, polos, regiaoPorSlug, regioes } from "@/lib/data";
 import { minutosTexto, tempoAte } from "@/lib/scoring/score";
 import type { NotaBairro } from "@/lib/types";
@@ -109,11 +110,11 @@ export default async function RegiaoPage({ params }: PageProps<"/regioes/[slug]"
 
       <section className="contem pb-12" aria-labelledby="lista">
         <h2 id="lista" className="t-h2 text-green-900">Empreendimentos na região</h2>
-        <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <Revela as="ul" className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {lista.map((e) => (
             <li key={e.slug}><PropertyCard e={e} sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" /></li>
           ))}
-        </ul>
+        </Revela>
       </section>
       <Rodape />
     </>

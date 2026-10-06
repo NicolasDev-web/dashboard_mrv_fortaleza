@@ -17,6 +17,7 @@ import { Filme } from "@/components/filme/Filme";
 import { CidadeMapa, type DestinoMapa, type PinMapa } from "@/components/mapa/CidadeMapa";
 import { ContactCTA } from "@/components/empreendimento/ContactCTA";
 import { LinkButton } from "@/components/ui/Button";
+import { Revela } from "@/components/ui/Revela";
 import { Revelacao } from "./Revelacao";
 import { RankingCard } from "./RankingCard";
 
@@ -125,7 +126,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
             <div className="mt-4 flex gap-2">
               <div className="min-w-0 flex-1 sm:w-64 sm:flex-none"><ContactCTA nome={e1.nome} bairro={e1.bairroNome} urlOficial={e1.urlOficial} /></div>
               <LinkButton href={`/empreendimentos/${e1.slug}?${query}`} variante="inverse" className="shrink-0 px-4">
-                Detalhes <ArrowRight className="size-5" aria-hidden />
+                Detalhes <ArrowRight className="seta size-5" aria-hidden />
               </LinkButton>
             </div>
           </div>
@@ -138,7 +139,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
         <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
           {regiao && (
             <Link href={`/regioes/${regiao}`} className="inline-flex min-h-11 items-center gap-1.5 text-green-900 hover:underline">
-              Região {REGIAO_NOME[regiao]} <ArrowRight className="size-4" aria-hidden />
+              Região {REGIAO_NOME[regiao]} <ArrowRight className="seta size-4" aria-hidden />
             </Link>
           )}
           <Link href={`/descobrir?${query}&passo=1`} className="inline-flex min-h-11 items-center gap-1.5 text-muted hover:text-green-900 hover:underline">
@@ -172,7 +173,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
       {resto.length > 0 && (
         <section aria-labelledby="tambem" className="contem pb-12">
           <h2 id="tambem" className="t-h2 text-green-900">Também combinam com você</h2>
-          <ol className="mt-5 grid gap-4 lg:grid-cols-2">
+          <Revela as="ol" className="mt-5 grid gap-4 lg:grid-cols-2">
             {resto.map((rec, k) => {
               const e = porSlug.get(rec.slug)!;
               const caps = filmes[rec.slug] ?? [];
@@ -194,7 +195,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
                 </li>
               );
             })}
-          </ol>
+          </Revela>
 
           {foraDoTop.length > 0 && (
             <div className="mt-6">
@@ -203,7 +204,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
                 <ChevronDown className={`size-5 transition-transform duration-[var(--t-base)] ${completo ? "rotate-180" : ""}`} aria-hidden />
               </button>
               {completo && (
-                <ol start={top.length + 1} className="mt-3 divide-y divide-line rounded-lg border border-line">
+                <ol start={top.length + 1} className="desdobra mt-3 divide-y divide-line rounded-lg border border-line">
                   {foraDoTop.map((rec, k) => {
                     const e = porSlug.get(rec.slug)!;
                     return (

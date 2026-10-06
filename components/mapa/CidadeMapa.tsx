@@ -343,7 +343,7 @@ export function CidadeMapa({
               <p className="mt-0.5 truncate font-semibold leading-snug">{atual.nome}</p>
               <p className="truncate text-sm text-muted">{atual.bairroNome} · {atual.cidade}{atual.coordAproximada ? " · local aproximado" : ""}</p>
               <Link href={`/empreendimentos/${atual.slug}`} className="mt-1.5 inline-flex min-h-9 items-center gap-1 text-sm font-semibold text-green-900 hover:underline">
-                Conhecer <ArrowRight className="size-4" aria-hidden />
+                Conhecer <ArrowRight className="seta size-4" aria-hidden />
               </Link>
             </div>
             <button type="button" onClick={fechar} aria-label="Fechar" className="flex w-10 shrink-0 items-start justify-center pt-2 text-muted hover:text-ink">

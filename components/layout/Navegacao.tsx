@@ -59,7 +59,7 @@ export function BarraInferior() {
             <Link
               href={href}
               aria-current={ativo(path, href) ? "page" : undefined}
-              className="flex h-14 flex-col items-center justify-center gap-0.5 text-[12px] font-semibold text-muted aria-[current=page]:text-green-900"
+              className="flex h-14 flex-col items-center justify-center gap-0.5 text-[12px] font-semibold text-muted transition-colors duration-[var(--t-fast)] aria-[current=page]:text-green-900 [&>svg]:transition-transform [&>svg]:duration-[var(--t-fast)] [&>svg]:ease-mrv active:[&>svg]:scale-90"
             >
               <Icone className="size-5" strokeWidth={1.75} aria-hidden />
               {rotulo === "Empreendimentos" ? "Imóveis" : rotulo}

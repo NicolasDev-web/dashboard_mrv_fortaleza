@@ -203,7 +203,7 @@ export function QuizShell({ regioes, bairros, mapa }: Props) {
                       {regioes.map((g) => {
                         const on = r.regioes?.includes(g.slug) ?? false;
                         return (
-                          <label key={g.slug} className="inline-flex h-11 cursor-pointer items-center gap-2 rounded-full border border-line-strong bg-white px-4 text-[15px] font-semibold text-ink transition-colors has-[:checked]:border-green-900 has-[:checked]:bg-green-900 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-green-500">
+                          <label key={g.slug} className="inline-flex h-11 cursor-pointer select-none items-center gap-2 rounded-full border border-line-strong bg-white px-4 text-[15px] font-semibold text-ink transition-[background-color,border-color,color,transform] duration-[var(--t-fast)] ease-mrv active:scale-[0.97] has-[:checked]:border-green-900 has-[:checked]:bg-green-900 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-green-500">
                             <input type="checkbox" className="sr-only" checked={on} onChange={() => alternarRegiao(g.slug)} />
                             {on && <Check className="size-4" aria-hidden />}
                             {g.nome}

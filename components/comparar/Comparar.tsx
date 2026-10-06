@@ -77,7 +77,8 @@ export function Comparar({ dados }: Props) {
 
       <dl className="mt-2">
         {exibidas.map((l) => (
-          <div key={l.rotulo} className="border-b border-line py-4">
+          // as linhas iguais, quando aparecem, descem de onde estava o botão
+          <div key={l.rotulo} className={`border-b border-line py-4 ${tudo && !diferentes.includes(l) ? "desdobra" : ""}`}>
             <dt className="mb-2 text-[13px] font-semibold uppercase tracking-[0.04em] text-muted">{l.rotulo}</dt>
             <div className="grid gap-3" style={colunas}>
               {l.valores.map((v, i) => (

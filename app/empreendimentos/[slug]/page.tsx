@@ -105,7 +105,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
               </p>
             )}
             <Link href={`/regioes/${regiao.slug}`} className="mt-4 inline-flex min-h-11 items-center gap-1 font-semibold text-green-900 hover:underline">
-              Conhecer a região {regiao.nome} <ChevronRight className="size-4" aria-hidden />
+              Conhecer a região {regiao.nome} <ChevronRight className="seta size-4" aria-hidden />
             </Link>
           </Secao>
 
@@ -138,7 +138,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
                   Sobre o empreendimento
                   <ChevronRight className="size-5 transition-transform duration-[var(--t-base)] group-open:rotate-90" aria-hidden />
                 </summary>
-                <div className="mt-3 space-y-3 text-muted">
+                <div className="desdobra-aberto mt-3 space-y-3 text-muted">
                   {e.descricao.map((p) => <p key={p}>{p}</p>)}
                 </div>
               </details>
