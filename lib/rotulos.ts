@@ -1,4 +1,4 @@
-import type { Empreendimento, RegiaoSlug } from "./types";
+import type { Empreendimento, RegiaoSlug, TipoImagem } from "./types";
 
 export const STATUS_ROTULO: Record<Empreendimento["status"], string> = {
   lancamento: "Lançamento",
@@ -12,6 +12,23 @@ export const REGIAO_NOME: Record<RegiaoSlug, string> = {
   sul: "Sul",
   caucaia: "Caucaia",
   eusebio: "Eusébio",
+};
+
+/** Rótulo curto de cada tipo de foto, para chips sobre a imagem. */
+export const TIPO_IMAGEM_ROTULO: Record<TipoImagem, string> = {
+  fachada: "Fachada",
+  portaria: "Portaria",
+  aerea: "Vista aérea",
+  implantacao: "Implantação",
+  planta: "Planta",
+  piscina: "Piscina",
+  pet: "Pet place",
+  kids: "Espaço kids",
+  gourmet: "Gourmet",
+  festas: "Festas",
+  fitness: "Fitness",
+  lazer: "Lazer",
+  interno: "Apartamento",
 };
 
 const nf = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 });

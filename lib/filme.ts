@@ -39,3 +39,13 @@ export function capitulosDo(e: Pick<Empreendimento, "imagens">): Capitulo[] {
   if (iCapa > 0) caps.unshift(...caps.splice(iCapa, 1));
   return caps;
 }
+
+/** Ordem do leque do lazer: o que mais pesa na escolha vem primeiro. */
+const TIPOS_LAZER: TipoImagem[] = ["piscina", "gourmet", "festas", "kids", "fitness", "pet", "lazer"];
+
+/** Uma foto por tipo de lazer, até 5, para o leque da seção "Lazer no condomínio". */
+export function fotosDeLazer(e: Pick<Empreendimento, "imagens">): Imagem[] {
+  return TIPOS_LAZER.map((t) => e.imagens.galeria.find((f) => f.tipo === t))
+    .filter((f): f is Imagem => !!f)
+    .slice(0, 5);
+}

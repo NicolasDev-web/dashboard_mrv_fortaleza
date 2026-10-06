@@ -1,12 +1,21 @@
 "use client";
 
-import { ViewTransition, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { ViewTransition, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { Check, Expand, Pause, Play } from "lucide-react";
-import { useReducedMotion } from "motion/react";
 import type { Imagem } from "@/lib/types";
 import type { Capitulo, CapituloId } from "@/lib/filme";
 import { Img } from "@/components/ui/Img";
-import { Sheet } from "@/components/ui/Sheet";
+import { Galeria } from "@/components/ui/Galeria";
+
+// Reduced motion lido sem quebrar a hidratação: no servidor e na hidratação vale "false" (o mesmo HTML),
+// e logo depois o valor real. O useReducedMotion do Motion dá null no servidor e true no navegador,
+// e o filme escolhe classes com ele: isso gerava erro de hidratação com reduced motion ligado.
+const CONSULTA_REDUZIR = "(prefers-reduced-motion: reduce)";
+const assinarReduzir = (aviso: () => void) => {
+  const mq = window.matchMedia(CONSULTA_REDUZIR);
+  mq.addEventListener("change", aviso);
+  return () => mq.removeEventListener("change", aviso);
+};
 
 /** Tempo de cada foto. A barra de progresso (animação CSS) dita o ritmo: pausar = congelar a animação. */
 const SEGUNDOS = 4.2;
@@ -45,7 +54,7 @@ export function Filme({ slug, nome, capitulos, motivos, autoplay = true, classNa
   const [segurando, setSegurando] = useState(false);
   const [visivel, setVisivel] = useState(true);
   const [oculta, setOculta] = useState(false);
-  const reduzir = !!useReducedMotion();
+  const reduzir = useSyncExternalStore(assinarReduzir, () => window.matchMedia(CONSULTA_REDUZIR).matches, () => false);
   const raiz = useRef<HTMLDivElement>(null);
   const toque = useRef<{ t: number; timer: ReturnType<typeof setTimeout> | null; segurou: boolean }>({ t: 0, timer: null, segurou: false });
 
@@ -159,17 +168,8 @@ export function Filme({ slug, nome, capitulos, motivos, autoplay = true, classNa
           </button>
         )}
         {galeria && galeria.length > 0 && (
-          <Sheet modo="tela" titulo={`Fotos do ${nome}`} descricao="Imagens ilustrativas"
-            trigger={<button type="button" aria-label="Ver todas as fotos" onClick={() => setPausado(true)} className="flex size-11 items-center justify-center rounded-full text-white hover:bg-white/15"><Expand className="size-5" aria-hidden /></button>}>
-            <ul className="flex-1 space-y-2 overflow-y-auto px-2 pb-8 md:px-8">
-              {galeria.map((f) => (
-                <li key={f.id} className="mx-auto max-w-5xl">
-                  <Img img={f} sizes="(min-width: 1024px) 1024px, 100vw" className="w-full" fit="contain" style={{ aspectRatio: `${f.w} / ${f.h}` }} />
-                  <p className="px-2 py-2 text-sm text-white/70">{f.alt}</p>
-                </li>
-              ))}
-            </ul>
-          </Sheet>
+          <Galeria nome={nome} fotos={galeria} inicial={atual.foto.id}
+            trigger={<button type="button" aria-label="Ver todas as fotos" onClick={() => setPausado(true)} className="flex size-11 items-center justify-center rounded-full text-white hover:bg-white/15"><Expand className="size-5" aria-hidden /></button>} />
         )}
       </div>
 

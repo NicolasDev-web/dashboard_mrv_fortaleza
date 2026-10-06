@@ -6,10 +6,11 @@ import { ChevronRight, ExternalLink, MapPin } from "lucide-react";
 import { bairros, destinos, empreendimentoPorSlug, empreendimentos, polos, regiaoPorSlug, resumir } from "@/lib/data";
 import { Badge, StatusBadge } from "@/components/ui/Badge";
 import { Filme } from "@/components/filme/Filme";
-import { capitulosDo } from "@/lib/filme";
+import { capitulosDo, fotosDeLazer } from "@/lib/filme";
 import { FloorPlans } from "@/components/empreendimento/FloorPlans";
 import { AmenityList, CommuteInfo, ListaSimples, PropertyFacts } from "@/components/empreendimento/Blocos";
 import { ContactCTA } from "@/components/empreendimento/ContactCTA";
+import { LequeLazer } from "@/components/empreendimento/LequeLazer";
 import { PorQueCombina } from "@/components/resultado/PorQueCombina";
 import { Rodape } from "@/components/layout/Rodape";
 
@@ -44,6 +45,8 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
   if (!e) notFound();
   const regiao = regiaoPorSlug(e.regiao)!;
   const visaoGeral = [...e.imagens.implantacao, ...e.imagens.aerea];
+  const galeria = [...e.imagens.galeria, ...e.imagens.plantas];
+  const lazer = fotosDeLazer(e);
 
   return (
     <>
@@ -60,7 +63,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
             slug={e.slug}
             nome={e.nome}
             capitulos={capitulosDo(e)}
-            galeria={[...e.imagens.galeria, ...e.imagens.plantas]}
+            galeria={galeria}
             priority
             className="aspect-[4/3] lg:aspect-[16/10] lg:rounded-lg"
           />
@@ -110,6 +113,11 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
           </Secao>
 
           <Secao id="lazer" titulo="Lazer no condomínio">
+            {lazer.length >= 3 && (
+              <div className="mb-6">
+                <LequeLazer nome={e.nome} fotos={lazer} galeria={galeria} />
+              </div>
+            )}
             <AmenityList itens={e.lazerItens} />
           </Secao>
 

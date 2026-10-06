@@ -90,3 +90,18 @@ test("mapa da Home mostra os 16 empreendimentos e abre o cartão", async ({ page
   await page.getByRole("dialog", { name: "Eco Park" }).getByRole("link", { name: "Conhecer" }).click();
   await expect(page).toHaveURL(/\/empreendimentos\/eco-park/);
 });
+
+test("leque do lazer abre a galeria na foto tocada e devolve o foco ao fechar", async ({ page }) => {
+  await page.goto("/empreendimentos/ville-de-lisboa");
+  const carta = page.getByRole("button", { name: "Ver foto: Espaço kids" });
+  await carta.scrollIntoViewIfNeeded();
+  await carta.click();
+  const galeria = page.getByRole("dialog", { name: /Fotos do Ville de Lisboa/ });
+  await expect(galeria).toBeVisible();
+  // a foto tocada fica no topo da lista (a galeria rolou até ela)
+  const foto = galeria.locator("li", { hasText: /espaço kids/i }).first();
+  await expect(foto).toBeInViewport();
+  await page.keyboard.press("Escape");
+  await expect(galeria).toBeHidden();
+  await expect(carta).toBeFocused();
+});

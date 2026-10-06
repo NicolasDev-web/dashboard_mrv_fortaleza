@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { CidadeMapa, projetar, type DestinoMapa, type PinMapa } from "@/components/mapa/CidadeMapa";
 
 /**
@@ -49,8 +49,19 @@ export function Revelacao({ pins, top, destino, nome1, onFim }: {
       <div className="w-full max-w-[560px] transition-[transform,opacity] duration-[500ms] ease-saida" style={{ transform: zoom ? "scale(2.4)" : "scale(1)", transformOrigin: `${x1 * 100}% ${y1 * 100}%`, opacity: etapa >= 7 ? 0 : 1 }}>
         <CidadeMapa pins={comEstado} destino={destino} somenteLeitura titulo="Revelação do ranking" />
       </div>
-      <p className={`mt-5 text-center text-2xl font-extrabold transition-[opacity,transform] duration-[var(--t-emph)] ease-saida md:text-3xl ${etapa >= 6 ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}>
-        {nome1}
+      {/* o nome entra palavra por palavra (efeito do Split Text do React Bits, em CSS: sem GSAP nesta rota) */}
+      <p className="mt-5 text-center text-2xl font-extrabold md:text-3xl" aria-hidden>
+        {nome1.split(" ").map((palavra, k) => (
+          <Fragment key={k}>
+            {k > 0 && " "}
+            <span
+              className={`inline-block transition-[opacity,transform] duration-[var(--t-emph)] ease-saida ${etapa >= 6 ? "translate-y-0 opacity-100" : "translate-y-[0.4em] opacity-0"}`}
+              style={{ transitionDelay: etapa >= 6 ? `${k * 60}ms` : "0ms" }}
+            >
+              {palavra}
+            </span>
+          </Fragment>
+        ))}
       </p>
       <button type="button" onClick={onFim} className="absolute bottom-[calc(24px+env(safe-area-inset-bottom))] h-11 rounded-full px-5 text-sm font-semibold text-white/80 hover:bg-white/10">
         Pular

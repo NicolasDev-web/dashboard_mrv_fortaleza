@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { ArrowRight, ChevronDown, Info, RefreshCcw } from "lucide-react";
 import type { EmpreendimentoResumo } from "@/lib/data";
 import type { Bairro, Destino, Polo } from "@/lib/types";
@@ -20,6 +20,7 @@ import { LinkButton } from "@/components/ui/Button";
 import { Revela } from "@/components/ui/Revela";
 import { Revelacao } from "./Revelacao";
 import { RankingCard } from "./RankingCard";
+import { PreviaFlutuante } from "./PreviaFlutuante";
 
 type Props = {
   dados: { empreendimentos: EmpreendimentoResumo[]; bairros: Bairro[]; polos: Polo[]; destinos: Destino[] };
@@ -37,13 +38,17 @@ export function Resultado({ dados, filmes, pins }: Props) {
   const [completo, setCompleto] = useState(false);
 
   // Revelação só para quem acabou de terminar o quiz (não para um link compartilhado ou recarregado).
-  const [revelando, setRevelando] = useState(() => {
+  // Começa em false, como no servidor (ler o sessionStorage no useState quebrava a hidratação), e liga
+  // no useLayoutEffect, que roda antes da primeira pintura: o resultado não aparece por baixo antes da hora.
+  const [revelando, setRevelando] = useState(false);
+  useLayoutEffect(() => {
     try {
-      return sessionStorage.getItem(CHAVE_REVELAR) === query && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    } catch {
-      return false;
-    }
-  });
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- valor só existe no navegador; ver acima
+      if (sessionStorage.getItem(CHAVE_REVELAR) === query && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) setRevelando(true);
+    } catch { /* sem storage: sem revelação */ }
+    // só na chegada: a query não muda enquanto a revelação acontece
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   useEffect(() => {
     try { sessionStorage.removeItem(CHAVE_REVELAR); } catch { /* sem storage: sem revelação */ }
   }, []);
@@ -204,11 +209,12 @@ export function Resultado({ dados, filmes, pins }: Props) {
                 <ChevronDown className={`size-5 transition-transform duration-[var(--t-base)] ${completo ? "rotate-180" : ""}`} aria-hidden />
               </button>
               {completo && (
+                <PreviaFlutuante itens={foraDoTop.map((rec) => { const e = porSlug.get(rec.slug)!; return { slug: rec.slug, nome: e.nome, score: rec.score, capa: e.imagens.capa }; })}>
                 <ol start={top.length + 1} className="desdobra mt-3 divide-y divide-line rounded-lg border border-line">
                   {foraDoTop.map((rec, k) => {
                     const e = porSlug.get(rec.slug)!;
                     return (
-                      <li key={rec.slug}>
+                      <li key={rec.slug} data-previa={rec.slug}>
                         <Link href={`/empreendimentos/${rec.slug}?${query}`} className="flex min-h-14 items-center gap-3 px-4 py-2 hover:bg-selected">
                           <span className="w-6 text-sm font-semibold tabular-nums text-muted">{top.length + k + 1}</span>
                           <span className="min-w-0 flex-1">
@@ -221,6 +227,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
                     );
                   })}
                 </ol>
+                </PreviaFlutuante>
               )}
             </div>
           )}
