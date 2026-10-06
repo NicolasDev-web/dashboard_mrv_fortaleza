@@ -1,0 +1,74 @@
+[
+  {
+    "id": "centro",
+    "nome": "Centro (Praça do Ferreira)",
+    "lat": -3.7276,
+    "lon": -38.5265
+  },
+  {
+    "id": "beira_mar",
+    "nome": "Beira-Mar",
+    "lat": -3.7254,
+    "lon": -38.497
+  },
+  {
+    "id": "aldeota",
+    "nome": "Aldeota (Av. Santos Dumont)",
+    "lat": -3.7382,
+    "lon": -38.5002
+  },
+  {
+    "id": "papicu",
+    "nome": "Papicu (terminal)",
+    "lat": -3.7383,
+    "lon": -38.48518
+  },
+  {
+    "id": "iguatemi",
+    "nome": "Iguatemi",
+    "lat": -3.75543,
+    "lon": -38.48877
+  },
+  {
+    "id": "unifor",
+    "nome": "Unifor",
+    "lat": -3.7689,
+    "lon": -38.4784
+  },
+  {
+    "id": "centro_eventos",
+    "nome": "Centro de Eventos",
+    "lat": -3.76453,
+    "lon": -38.48042
+  },
+  {
+    "id": "parangaba",
+    "nome": "Parangaba (terminal)",
+    "lat": -3.7763,
+    "lon": -38.5633
+  },
+  {
+    "id": "messejana",
+    "nome": "Messejana (terminal)",
+    "lat": -3.8313,
+    "lon": -38.50194
+  },
+  {
+    "id": "ufc_benfica",
+    "nome": "UFC Benfica",
+    "lat": -3.7421,
+    "lon": -38.5386
+  },
+  {
+    "id": "ufc_pici",
+    "nome": "UFC Pici",
+    "lat": -3.7437,
+    "lon": -38.5744
+  },
+  {
+    "id": "aeroporto",
+    "nome": "Aeroporto",
+    "lat": -3.7763,
+    "lon": -38.5325
+  }
+]

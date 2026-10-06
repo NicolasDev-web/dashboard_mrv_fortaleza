@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "oeste-centro",
+    "nome": "Oeste e Centro",
+    "resumo": "Perto do Centro, da UFC Benfica e do Pici, com muito comércio e ônibus para toda a cidade."
+  },
+  {
+    "slug": "leste",
+    "nome": "Leste",
+    "resumo": "Entre o Parque do Cocó, a Unifor, o Iguatemi e a Praia do Futuro."
+  },
+  {
+    "slug": "sul",
+    "nome": "Sul",
+    "resumo": "Bairros residenciais perto de Messejana, da Maraponga e da BR-116."
+  },
+  {
+    "slug": "caucaia",
+    "nome": "Caucaia",
+    "resumo": "Região Metropolitana, com acesso rápido à Avenida Mister Hull e ao North Shopping."
+  },
+  {
+    "slug": "eusebio",
+    "nome": "Eusébio",
+    "resumo": "Região Metropolitana, cidade tranquila a leste de Fortaleza."
+  }
+]

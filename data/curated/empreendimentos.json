@@ -1,0 +1,28 @@
+{
+  "_leia": "Fonte de verdade revisada à mão. Sobrescreve o que vem de data/raw/mrv/. 'coord' substitui a coordenada oficial quando ela está errada (aproximada: true = centro do bairro, até a MRV passar a exata). 'capa' é o número (prefixo NN) da foto na pasta do empreendimento em assets-src/; 'tipos' corrige a classificação automática de uma foto; 'ocultar' tira fotos da galeria.",
+  "regioes": [
+    { "slug": "oeste-centro", "nome": "Oeste e Centro", "resumo": "Perto do Centro, da UFC Benfica e do Pici, com muito comércio e ônibus para toda a cidade." },
+    { "slug": "leste", "nome": "Leste", "resumo": "Entre o Parque do Cocó, a Unifor, o Iguatemi e a Praia do Futuro." },
+    { "slug": "sul", "nome": "Sul", "resumo": "Bairros residenciais perto de Messejana, da Maraponga e da BR-116." },
+    { "slug": "caucaia", "nome": "Caucaia", "resumo": "Região Metropolitana, com acesso rápido à Avenida Mister Hull e ao North Shopping." },
+    { "slug": "eusebio", "nome": "Eusébio", "resumo": "Região Metropolitana, cidade tranquila a leste de Fortaleza." }
+  ],
+  "empreendimentos": [
+    { "ordem": 1, "slug": "residencial-fortitudine", "nome": "Residencial Fortitudine", "bairroNome": "Antônio Bezerra", "bairroId": 40, "regiao": "oeste-centro", "capa": 9 },
+    { "ordem": 2, "slug": "residencial-flor-do-sertao", "nome": "Residencial Flor do Sertão", "bairroNome": "Jacarecanga", "bairroId": 18, "regiao": "oeste-centro", "capa": 1 },
+    { "ordem": 3, "slug": "ville-de-lisboa", "nome": "Ville de Lisboa", "bairroNome": "Parque Albano", "bairroId": null, "regiao": "caucaia", "capa": 7, "tipos": { "20": "aerea" } },
+    { "ordem": 4, "slug": "reserva-da-lagoa", "nome": "Reserva da Lagoa", "bairroNome": "Passaré", "bairroId": 88, "regiao": "sul", "capa": 7 },
+    { "ordem": 5, "slug": "residencial-la-serena", "nome": "Residencial La Serena", "bairroNome": "Jangurussu", "bairroId": 61, "regiao": "sul", "capa": 3, "tipos": { "6": "aerea" } },
+    { "ordem": 6, "slug": "forte-alencar", "nome": "Forte Alencar", "bairroNome": "Cambeba", "bairroId": 53, "regiao": "sul", "capa": 6 },
+    { "ordem": 7, "slug": "parque-marista", "nome": "Parque Marista", "bairroNome": "Centro", "bairroId": 10, "regiao": "oeste-centro", "capa": 1, "tipos": { "19": "fachada" } },
+    { "ordem": 8, "slug": "residencial-farol-do-atlantico", "nome": "Residencial Farol do Atlântico", "bairroNome": "Cocó", "bairroId": 11, "regiao": "leste", "capa": 4 },
+    { "ordem": 9, "slug": "sensia-reserva-vila-do-sol", "nome": "Sensia Reserva Vila do Sol", "linha": "sensia", "bairroNome": "Cocó", "bairroId": 11, "regiao": "leste", "capa": 1, "coord": { "lat": -3.74943, "lon": -38.4801, "aproximada": true } },
+    { "ordem": 10, "slug": "ville-de-porto", "nome": "Ville de Porto", "bairroNome": "Parque Albano", "bairroId": null, "regiao": "caucaia", "capa": 11 },
+    { "ordem": 11, "slug": "torre-do-mar", "nome": "Torre do Mar", "bairroNome": "Maraponga", "bairroId": 82, "regiao": "sul", "capa": 16 },
+    { "ordem": 12, "slug": "porto-das-mares", "nome": "Porto das Marés", "bairroNome": "Barra do Ceará", "bairroId": 6, "regiao": "oeste-centro", "capa": 1, "tipos": { "1": "fachada" } },
+    { "ordem": 13, "slug": "residencial-mandacaru", "nome": "Residencial Mandacaru", "bairroNome": "Antônio Bezerra", "bairroId": 40, "regiao": "oeste-centro", "capa": 9 },
+    { "ordem": 14, "slug": "reserva-brisa-do-mar", "nome": "Reserva Brisa do Mar", "bairroNome": "Cocó", "bairroId": 11, "regiao": "leste", "capa": 5 },
+    { "ordem": 15, "slug": "residencial-valparaiso", "nome": "Residencial Valparaíso", "bairroNome": "Jangurussu", "bairroId": 61, "regiao": "sul", "capa": 11, "tipos": { "7": "aerea" } },
+    { "ordem": 16, "slug": "eco-park", "nome": "Eco Park", "bairroNome": "Urucunema", "bairroId": null, "regiao": "eusebio", "capa": 11 }
+  ]
+}

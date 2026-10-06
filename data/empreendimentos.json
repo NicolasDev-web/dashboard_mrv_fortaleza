@@ -1,0 +1,6098 @@
+[
+ {
+  "slug": "residencial-fortitudine",
+  "ordem": 1,
+  "nome": "Residencial Fortitudine",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Antônio Bezerra",
+  "bairroId": 40,
+  "regiao": "oeste-centro",
+  "coord": {
+   "lat": -3.739527,
+   "lon": -38.586233
+  },
+  "coordAproximada": false,
+  "endereco": "Rua Martins Neto,  s/n",
+  "status": "lancamento",
+  "quartos": [
+   2
+  ],
+  "suite": true,
+  "varanda": "opcao",
+  "areaMin": 43.34,
+  "areaMax": 45.14,
+  "elevador": true,
+  "unidades": 384,
+  "vagas": 116,
+  "vagasPorUnidade": 0.3,
+  "lazer": [
+   "festas",
+   "piscina",
+   "kids",
+   "pet",
+   "academia"
+  ],
+  "lazerItens": [
+   "Churrasqueira",
+   "Piscina Infantil",
+   "Piscina Adulto",
+   "Happy Hour",
+   "Playground",
+   "Pet Place",
+   "Espaço Funcional Descoberto"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Universidade Federal do Ceará - UFC, Shopping RioMar Kennedy, Assaí Atacadista - Mister Hull, Terminal de Integração do Antônio Bezerra, Parque Rachel de Queiroz",
+  "descricao": [
+   "Chegou a hora de investir no seu futuro com a MRV. O Residencial Fortitudine é o ponto de partida para essa nova fase!",
+   "Apartamentos de 2 quartos, com opção de varanda e suíte para viver dias mais tranquilos. Muita diversão sem sair de casa com lazer completo. São mais de 9 itens, incluindo piscina adulto e infantil, churrasqueira, espaço happy hour, espaço funcional, pet place, playground e muito mais para viver o melhor da vida ao lado de quem você ama.",
+   "Imagina realizar o sonho de ter um apê todo seu? Mais que um imóvel, é qualidade de vida. Aproveite nossas condições facilitadas de entrada para sair do aluguel!"
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-fortitudine",
+  "imagens": {
+   "capa": {
+    "id": "01-09",
+    "n": 9,
+    "tipo": "piscina",
+    "alt": "Piscina do Residencial Fortitudine",
+    "w": 5000,
+    "h": 2812,
+    "cor": "#98a8b8",
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAkAA4BaJQBWABn4WbbAAP7ybLCcGhnZkH9lSpG/id1IVqtgFhiBsRVpi8OpmIr7kHuVQ2Ur2maTjJWQghOcornjIMMAAAA=",
+    "larguras": [
+     640,
+     1080,
+     1600,
+     2400
+    ],
+    "fallback": 1080,
+    "src": "/img/residencial-fortitudine/01-09"
+   },
+   "galeria": [
+    {
+     "id": "01-09",
+     "n": 9,
+     "tipo": "piscina",
+     "alt": "Piscina do Residencial Fortitudine",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#98a8b8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAkAA4BaJQBWABn4WbbAAP7ybLCcGhnZkH9lSpG/id1IVqtgFhiBsRVpi8OpmIr7kHuVQ2Ur2maTjJWQghOcornjIMMAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600,
+      2400
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-09"
+    },
+    {
+     "id": "01-01",
+     "n": 1,
+     "tipo": "portaria",
+     "alt": "Portaria do Residencial Fortitudine",
+     "w": 5000,
+     "h": 4000,
+     "cor": "#d8e8f8",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAA0AA4BaJZgCdAECwgZ2FgAA3jUcJkdgebNJvr2md0vjcIoz9SKx5jlSBXFQbwoulBZMI9CMDkVbJyvkRUpPG6GfDEaN6a5K1K2DTgAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-01"
+    },
+    {
+     "id": "01-07",
+     "n": 7,
+     "tipo": "fitness",
+     "alt": "Espaço fitness do Residencial Fortitudine",
+     "w": 5000,
+     "h": 2810,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJbACdIExGCYVqEgAAPeOCmosHQo4dxFDvnjVN9e4t7hKAd5g7ltEWvVmT2P/PP+wOCo1bCtZC3JwuErybQ+gAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-07"
+    },
+    {
+     "id": "01-08",
+     "n": 8,
+     "tipo": "pet",
+     "alt": "Pet place do Residencial Fortitudine",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#989898",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJagCdADPH6pFspQA8qQaajLDykClRbqx7MRmbJGOqeDui3o18lNVQWty66GCNvP9Iu+kNM5vuLWodx2oyq1oTTcxJj/AAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-08"
+    },
+    {
+     "id": "01-10",
+     "n": 10,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial Fortitudine",
+     "w": 5000,
+     "h": 4088,
+     "cor": "#988878",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAQCdASoQAA0AA4BaJYgCdABx58AA4AAgIc01ymu/XSgrCbqiGxi6Gz10e7DGnYZsrMV6jl1lZdAJAZlCQi6NhtuEzLuvLCNt5Z6UN+AAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-10"
+    },
+    {
+     "id": "01-11",
+     "n": 11,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial Fortitudine",
+     "w": 4096,
+     "h": 4096,
+     "cor": "#785838",
+     "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQAgCdASoQABAAA4BaJQBOgB+XuYMWB34AAP6oopAKGmIMEcQYwsTQB6bQdJ7ryTIeJBzXMlid0GrzGf1/Ukg6VfkvvgJ/rOCXLe6DlTmKjJ+eC1I50m2liftFrySILrfnRz5LJwAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-11"
+    },
+    {
+     "id": "01-12",
+     "n": 12,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Residencial Fortitudine",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#a89898",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAQCdASoQAAkAA4BaJZQAAhwu3oAA/ubhPXNTxU2neb0cFqa+qSzBOv+fYtsNi5ezl0wefiwg38pJB1cW0LayfR4HAAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-12"
+    },
+    {
+     "id": "01-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Varanda do Residencial Fortitudine",
+     "w": 4000,
+     "h": 5000,
+     "cor": "#786868",
+     "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JZQCw7BUs7N/vx1k3n2WIAP5+Ova3bOYz+apIe1EdtT+7/6uZ1lCkn1PQkcQIksMQawN20CheqazCTKnD8h8LPts3ZCW8idsKUZ6VwMp2Pa4AAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-13"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "01-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Fortitudine",
+     "w": 7087,
+     "h": 4252,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAoAA4BaJZQAAxOseIB/QAD+4fRbMTx8RO8JOGwb1y1Mcp7da6v789ezVEGTmsYnyWtRn4Wd+gLctWqf4AAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-03"
+    },
+    {
+     "id": "01-04",
+     "n": 4,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Fortitudine",
+     "w": 7087,
+     "h": 4252,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAoAA4BaJZwAAvafQgUKcwAA/vCnTlPQYzyqnXY8g7YSkf9lwUySnV6ba/gxKK+/NXzJAD5GnDCAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-04"
+    },
+    {
+     "id": "01-05",
+     "n": 5,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Fortitudine",
+     "w": 7087,
+     "h": 4252,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAoAA4BaJZQC7AEegbIaYqqAAP7g29rKddPOQ+XF1WABXRyc8SZz/JGuolgqub4GeRfJ8vfnfVzFORQFS6tckZRI4AAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-05"
+    },
+    {
+     "id": "01-06",
+     "n": 6,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Fortitudine",
+     "w": 7087,
+     "h": 4252,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAwAgCdASoQAAoAA4BaJZQC7AELz6HZc+kQAAD+67Ft43R4nb+y8izXL6olx+g0K1Rk+tP59OhR92B+LrtmPkYNQk3AAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-06"
+    }
+   ],
+   "implantacao": [],
+   "aerea": [
+    {
+     "id": "01-02",
+     "n": 2,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Residencial Fortitudine",
+     "w": 1954,
+     "h": 1200,
+     "cor": "#784898",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAoAA4BaJYgCdAELXEqzhaAA/uDbrINkGsdI/pgbWCgO6W0Pgt7SKxgZTgmKzYgadvX6E/gtSZIUCycCLQzNfYkAhfwiAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-fortitudine/01-02"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "residencial-flor-do-sertao",
+  "ordem": 2,
+  "nome": "Residencial Flor do Sertão",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Jacarecanga",
+  "bairroId": 18,
+  "regiao": "oeste-centro",
+  "coord": {
+   "lat": -3.7262521,
+   "lon": -38.5439494
+  },
+  "coordAproximada": false,
+  "endereco": "Rua Júlio Pinto, 2090",
+  "status": "lancamento",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": "opcao",
+  "areaMin": null,
+  "areaMax": null,
+  "elevador": true,
+  "unidades": 216,
+  "vagas": 46,
+  "vagasPorUnidade": 0.21,
+  "lazer": [
+   "festas",
+   "verde",
+   "kids",
+   "piscina",
+   "pet",
+   "academia"
+  ],
+  "lazerItens": [
+   "Churrasqueira",
+   "Espaço Piquenique",
+   "Playground",
+   "Piscina Infantil",
+   "Piscina com Deck",
+   "Pet Place",
+   "Academia Coberta"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Praça",
+   "Horta",
+   "Espaço Market",
+   "Lazer equipado",
+   "Célula de segurança para pedestre",
+   "Coleta seletiva",
+   "Cerca elétrica",
+   "Tanque em louça",
+   "Medição de gás individualizado",
+   "Revestimento parcial das áreas molhadas",
+   "Medição de água individualizada",
+   "Previsão para ar condicionado",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Flor do Sertão, Centro Fashion Fortaleza, Praia de Iracema, Sesc Fortaleza, Assaí Atacadista, Shopping Rio Mar Kennedy, North Shopping Fortaleza, Hospital Geral Dr. Cesar Cals",
+  "descricao": [
+   "O Residencial Flor do Sertão oferece apês de 2 quartos, com opções de área privativa e varanda para você viver com conforto em família. Além disso, ainda conta com um lazer completo com mais de 14 itens para dias mais leves e de muita diversão, como piscina infantil, piscina adulto com deck molhado, academia, churrasqueiras, playground, espaço kids, pet place e muito mais!",
+   "Tudo isso em um condomínio fechado, com segurança garantida e tudo que você sempre quis em um apê todo seu."
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-flor-do-sertao",
+  "imagens": {
+   "capa": {
+    "id": "02-01",
+    "n": 1,
+    "tipo": "portaria",
+    "alt": "Portaria do Residencial Flor do Sertão",
+    "w": 5000,
+    "h": 2812,
+    "cor": "#b8b8c8",
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAkAA4BaJZwAAf0wiWAA/mPtI+nY5jKuxBg3MVtFH3jWz+fXVCZjT8msYWuNWPGIZPvTtNaBwAAA",
+    "larguras": [
+     640,
+     1080,
+     1600,
+     2400
+    ],
+    "fallback": 1080,
+    "src": "/img/residencial-flor-do-sertao/02-01"
+   },
+   "galeria": [
+    {
+     "id": "02-01",
+     "n": 1,
+     "tipo": "portaria",
+     "alt": "Portaria do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#b8b8c8",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAkAA4BaJZwAAf0wiWAA/mPtI+nY5jKuxBg3MVtFH3jWz+fXVCZjT8msYWuNWPGIZPvTtNaBwAAA",
+     "larguras": [
+      640,
+      1080,
+      1600,
+      2400
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-01"
+    },
+    {
+     "id": "02-02",
+     "n": 2,
+     "tipo": "pet",
+     "alt": "Pet place do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#b8b8a8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJYgCdAC8+rRCuAD9vqFBqN+tI4PqVKNtQfZbP6uaknxzn+Qjv7U8uSb3sHyt/N4a4egCsEVmcnM+KQI2VD4AAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-02"
+    },
+    {
+     "id": "02-03",
+     "n": 3,
+     "tipo": "fitness",
+     "alt": "Espaço fitness do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#68a8d8",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJQBOgBxoT7ng/AAA/tUJK6z/RzbfvTgYFa00Q4AYfS7xSVfY+CUdEkt2Ewp4/4VaYIbLezTYWDrB22/HTyvflz/0b3ZsHnidgAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-03"
+    },
+    {
+     "id": "02-04",
+     "n": 4,
+     "tipo": "piscina",
+     "alt": "Piscina do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#c8d8e8",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAkAA4BaJZACdH8AF75mbWAAzj8VISmjGYKJK8ge9YM9LVD0dXmkNvyHcjIxrMzFyIbh3kNEVQeeXcJ9ElpAYKA521lYcWa8UaW2nGdAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-04"
+    },
+    {
+     "id": "02-05",
+     "n": 5,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#c8c8b8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJYwCdAD2OGx5iQAA/kw9jscht6x82pV6dvl/g4LjZ2tZzGn69EfQSh/HS8p7WnoFVUtCaUvZd4B6swy6JAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-05"
+    },
+    {
+     "id": "02-06",
+     "n": 6,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#887878",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAQCdASoQAAkAA4BaJQBOgBmIduEAAP4+HKmbcuDeTumuDLKY52MlBBhnJokVXXsA1m3tnKoW0+NRNxkTDmWzUVUrIgAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-06"
+    },
+    {
+     "id": "02-07",
+     "n": 7,
+     "tipo": "interno",
+     "alt": "Varanda do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 3750,
+     "cor": "#181818",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAwAA4BaJYwCdADv3ONQJf8wAP5m1+EUTd1ibt0eLKCP+L2aRsj/inwNd/SpabMYfPYdbErJoeYeoKlrhb4DttT2xCW3LGcu/nvQ+AA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-07"
+    },
+    {
+     "id": "02-08",
+     "n": 8,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#a8a8a8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAkAA4BaJQBOgBf2+TgA/bxNRUYDxjyZxjt+MrLAZbJIemt61gjj2n0RcVhGy/Sy/U3oRriP6mdefa3siOs/LUwAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-08"
+    },
+    {
+     "id": "02-09",
+     "n": 9,
+     "tipo": "interno",
+     "alt": "Área privativa do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJagCdAEPSQteWgAA/qvlgmr4sU2HMofw5b+KFUu6xexpcUtMa3Qe4cXKJgkfOZUFOQftheG0hljgbzQSfcL1gAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-09"
+    },
+    {
+     "id": "02-10",
+     "n": 10,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Residencial Flor do Sertão",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#b8a898",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJZgCdADwsljZzwAA994A5Hi50TCS1dHR8RnXZJk0ML/bq2NNXdFlF4Nlz+z/ktK4G37d7UVE93/LJdSWviVbTO5O4eyRQAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-10"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "02-13",
+     "n": 13,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Flor do Sertão",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAQCdASoQAAoAA4BaJZwAAuTll9AAAP7yFnhNkBdPQQTu7c68/op1NG898bmDH9sjcorbDOUe7bHTQIWgvxhThaKJQIAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-13"
+    },
+    {
+     "id": "02-14",
+     "n": 14,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Flor do Sertão",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAoAA4BaJZwAAtz/wrGbVAAA/uiiwZHle8GPlIoCKvVfP8PQHCUQG8c/yObpu9kWOeYlcE/fCKO+QcdAU8StKEAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-14"
+    },
+    {
+     "id": "02-15",
+     "n": 15,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Flor do Sertão",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAoAA4BaJZwC7ADdLMmS9cWAAP71JMPheKboBHoKvJQOkNGCa0k+PuNVYfAGjWwNoHr63WDV6S/AzJKXCRfQamJQ7KgAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-15"
+    },
+    {
+     "id": "02-16",
+     "n": 16,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Flor do Sertão",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoQAAoAA4BaJZwC7AEQEm2OQAAA/vBNT2/hnpDft3eXaXkJJIpdYm9/gQQ6uT+18Qja6+BKFIuAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-16"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "02-11",
+     "n": 11,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Residencial Flor do Sertão",
+     "w": 3200,
+     "h": 1800,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAkAA4BaJZwAD4nOL1FAUkAAAP74uTh8LbeeUPnWvScnMJpesI/VH5avDCu/YAJIIw84eUw94P3Gvi5+AAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-11"
+    },
+    {
+     "id": "02-17",
+     "n": 17,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Residencial Flor do Sertão",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAoAA4BaJZwAAua1APSgiAD+9iR4EPmaTloPm2sRqvmSLZyrBBJxmjHQklMsNJXN6ymRmApdoC+WGNC/I7XNngAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-17"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "02-12",
+     "n": 12,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Residencial Flor do Sertão",
+     "w": 3200,
+     "h": 1800,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJZQAD5Ar8Wtl9YAA/uKdLyIf9a5UP0jeq9fExXsMOm41aog0DTo/p0aBgHoqsJKJK6TgSfUa7pNT9zfzt04emsRmEABoAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-12"
+    },
+    {
+     "id": "02-18",
+     "n": 18,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Residencial Flor do Sertão",
+     "w": 2142,
+     "h": 1089,
+     "cor": "#7888b8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoQAAgAA4BaJaACdGuAt/8DzuF2tSAAyj/OUsM8qFo+d1EW41UbZYCIIFdCuGsPh+uibYEBqnoeAvJRpJHreODAw8OIHAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-flor-do-sertao/02-18"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "ville-de-lisboa",
+  "ordem": 3,
+  "nome": "Ville de Lisboa",
+  "linha": "mrv",
+  "cidade": "Caucaia",
+  "bairroNome": "Parque Albano",
+  "bairroId": null,
+  "regiao": "caucaia",
+  "coord": {
+   "lat": -3.745971,
+   "lon": -38.614737
+  },
+  "coordAproximada": false,
+  "endereco": "Rua Banabuiu, n° 190",
+  "status": "lancamento",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": "sim",
+  "areaMin": 41.4,
+  "areaMax": 45.4,
+  "elevador": true,
+  "unidades": 300,
+  "vagas": 109,
+  "vagasPorUnidade": 0.36,
+  "lazer": [
+   "verde",
+   "piscina",
+   "pet",
+   "festas",
+   "esportes",
+   "academia"
+  ],
+  "lazerItens": [
+   "Espaço Piquenique",
+   "Piscina Adulto",
+   "Pet Place",
+   "Churrasqueira",
+   "Happy Hour",
+   "Futmesa",
+   "Espaço Funcional Descoberto",
+   "Piscina Infantil",
+   "Espaço Zen",
+   "Pista de Caminhada"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Espaço Market",
+   "Medição de água individualizada",
+   "Previsão para ar condicionado",
+   "Cerâmica Cozinha e Banheiro",
+   "Luminária com sensor de presença na guarita",
+   "Playground",
+   "Tanque em louça",
+   "Playbaby",
+   "Horta",
+   "Praça",
+   "Car Wash",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Sesc Caucaia, Assai Atacadista, North Shopping, Lagoa do Tabapuá, Upa Jurema",
+  "descricao": [
+   "Dando sequência aos lançamentos do complexo Gran Ville Portugal, nosso segundo empreendimento em Caucaia é o Ville de Lisboa, o seu novo endereço para viver com bem-estar, conforto e muita comodidade.",
+   "Com apartamentos de 2 quartos com opções de varanda e área privativa, viva com segurança de condomínio e tenha diversão para todos os dias. O lazer do seu novo endereço conta com piscinas adulto e infantil, churrasqueiras, espaço funcional, playground, playbaby, futmesa, carwash, pet place, bicicletário, market e espaço happy hour.",
+   "Com fácil acesso pela Avenida Mister Hull, sua nova vizinhança te coloca perto de tudo em Caucaia e na região metropolitana de Fortaleza. More ao lado do Sesc Caucaia e conte com serviços essenciais como o Assaí Atacadista, North Shopping, Mix Mateus e Upa Jurema para viver com conforto no bairro Parque Albano."
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/caucaia/apartamentos-ville-de-lisboa",
+  "imagens": {
+   "capa": {
+    "id": "03-07",
+    "n": 7,
+    "tipo": "piscina",
+    "alt": "Piscina do Ville de Lisboa",
+    "w": 5000,
+    "h": 2812,
+    "cor": "#d8d8d8",
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAkAA4BaJagCdAEegnMmh/PEAP7KLcciNR1j0qyht8RcWcVrPhhJR8/WRQ9e7oGOGwtngaQiy8mG9kgIIdywFsMxjPNGbEji2ZFFVs8OfwAA",
+    "larguras": [
+     640,
+     1080,
+     1600,
+     2400
+    ],
+    "fallback": 1080,
+    "src": "/img/ville-de-lisboa/03-07"
+   },
+   "galeria": [
+    {
+     "id": "03-07",
+     "n": 7,
+     "tipo": "piscina",
+     "alt": "Piscina do Ville de Lisboa",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#d8d8d8",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAkAA4BaJagCdAEegnMmh/PEAP7KLcciNR1j0qyht8RcWcVrPhhJR8/WRQ9e7oGOGwtngaQiy8mG9kgIIdywFsMxjPNGbEji2ZFFVs8OfwAA",
+     "larguras": [
+      640,
+      1080,
+      1600,
+      2400
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-07"
+    },
+    {
+     "id": "03-01",
+     "n": 1,
+     "tipo": "portaria",
+     "alt": "Portaria do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#587898",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBOgMVLtULXdAD+BiOGHjE5CQV0oOng+4iBF/t2xWnLf+JFS3Bhjb6umO0w3LviURgeQeOg5eNzAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-01"
+    },
+    {
+     "id": "03-02",
+     "n": 2,
+     "tipo": "interno",
+     "alt": "Quarto do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#a88878",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJZACdACkpTvLcAD9cAnuC01etbvogXm6XLIqatltLjx6nPL3FuoCwDM9mTE0DV93xeUZ/W5oTDlduCdSr1oXwAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-02"
+    },
+    {
+     "id": "03-03",
+     "n": 3,
+     "tipo": "interno",
+     "alt": "Quarto do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#988878",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJaACdAED+0EhugAA/s9ztqwKRaAqQRFI6kbpPAz4e7Cn1e8Ud/5YBA7zChelr51lnxzLnPou+QCRYvDi1fyVW0OZ5/MkIAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-03"
+    },
+    {
+     "id": "03-04",
+     "n": 4,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#988878",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAA4BaJYgCdADIas90AAD2vabgf1hWqXDdBoTYO9wQPj8JCZhOmV+4pRy5znbyl8h9zMtM8h5u3+73phCw3iJAG7pbvWmNMib6FgAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-04"
+    },
+    {
+     "id": "03-05",
+     "n": 5,
+     "tipo": "interno",
+     "alt": "Área privativa do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#181808",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJYgCdAEWHO5jAAD+oxVHesL6eLUcjMGQdjQxi9Pe4DCbDQ7b150WrP3Wr2cTVV9/w2o/0WkJyrNkBocnLWNpcRv99BAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-05"
+    },
+    {
+     "id": "03-06",
+     "n": 6,
+     "tipo": "interno",
+     "alt": "Varanda do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#b8a898",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAkAA4BaJYgCdADZgxoAAP64BUEpahwTKX7GZvqbEBUlcowjhGPYYyA6JGQZGfFrkHk+TkYXWOQkObQAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-06"
+    },
+    {
+     "id": "03-08",
+     "n": 8,
+     "tipo": "fitness",
+     "alt": "Espaço fitness do Ville de Lisboa",
+     "w": 5000,
+     "h": 2812,
+     "cor": "#686868",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJagCdADzr70oAP6qF8DNoUyG2Zhxln7jYlux1Oup6duKmGTTK3MqZV18WxYRid81vzUEEZHqrRWDcgAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-08"
+    },
+    {
+     "id": "03-09",
+     "n": 9,
+     "tipo": "pet",
+     "alt": "Pet place do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJaACdADpE/PzhAAA/raNzDt8nRMvK4ztPCEq5+pj5U/8taTY5MpWN30GTdAmSqHO0yEBLCYw9bgL9PmLFlbvE+fotDK6aafY8AAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-09"
+    },
+    {
+     "id": "03-10",
+     "n": 10,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#888888",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJZACdAEflU7UEAAA9qXZfyvG2gpjD6vLv2DT+ryNCyUe042PGu4ixCn9z3B0YjuMWX+dC9H6Oji+LAAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-10"
+    },
+    {
+     "id": "03-11",
+     "n": 11,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJQBOgCPcWYGAAOJ8nRxi9lHUV1K/yEtNVn/Ysh056qFSxPZJE5DOZA/ajyxQhSqku9zoqoIzG53QAkAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-11"
+    },
+    {
+     "id": "03-12",
+     "n": 12,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#786868",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAkAA4BaJYwCdADEavOAAP5CN6CGKjmcetO9oVlMlqwU/q161DaG/yS+hi9y2JUIa8Wuw12Zc+XZKvSWjLwAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-12"
+    },
+    {
+     "id": "03-13",
+     "n": 13,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAkAA4BaJYwCdABrqHHAAP4lr1emhwwFqq+bKIvtFgee9kgD524+kmLANm3oMlQbzV2DdxVHalsd+nSAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-13"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "03-14",
+     "n": 14,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Ville de Lisboa",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAoAA4BaJZQAAuWpX84gAP7nr+z3epk3B0ArflY0b0b7zVx32vwTHdyfN+YWY38z9z4wELpZo6lQIAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-14"
+    },
+    {
+     "id": "03-15",
+     "n": 15,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Ville de Lisboa",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAoAA4BaJZwAAt41KT0wjuAA/u4/hczmvkbYdNvt4HS357nn7rlYPaMlcrzDbRJ5k5gv8oMYFKMMAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-15"
+    },
+    {
+     "id": "03-16",
+     "n": 16,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Ville de Lisboa",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQAAoAA4BaJZwAAvenwYrHcAAA/vgZfbzXkzCeCHP98W2v507lgDxr6S71aTEAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-16"
+    },
+    {
+     "id": "03-17",
+     "n": 17,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Ville de Lisboa",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAoAA4BaJZwAAujfEA0ya0AAAP73XBwSByPTJxF6CyF81XLgE2vgyyaaMYqrafUSSd8A4JP5d3AAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-17"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "03-18",
+     "n": 18,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Ville de Lisboa",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAkAA4BaJaQAAudAFerq4AD+8nNaLBY9A97nAM9XHKSpwmSmiM/NnLK5HMeoy9nrEZz5GNgnKW6cSrXiEAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-18"
+    },
+    {
+     "id": "03-19",
+     "n": 19,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Ville de Lisboa",
+     "w": 7087,
+     "h": 4252,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAoAA4BaJZwAAvenJu8ONAAA/vgW02zTt1Jy0foVTOxoIi6RAGo8Np+DkfvQl4WBZDLfxe9te0ELA4AAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-19"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "03-20",
+     "n": 20,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Ville de Lisboa",
+     "w": 1600,
+     "h": 1200,
+     "cor": "#f858a8",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAwAA4BaJYgCdAEO30yOSWFAAPjjDXl8Fp5i7N/ysW+v3+dW7nUl8Jz9uph/1TDahYWvQ1OaJ2jTBjcuMRid0Mx1j9qAy01T2Q4pgqcqHRZOKQAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-lisboa/03-20"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "reserva-da-lagoa",
+  "ordem": 4,
+  "nome": "Reserva da Lagoa",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Passaré",
+  "bairroId": 88,
+  "regiao": "sul",
+  "coord": {
+   "lat": -3.811707,
+   "lon": -38.530538
+  },
+  "coordAproximada": false,
+  "endereco": "Rua 100, 200",
+  "status": "em_construcao",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": null,
+  "areaMin": 36.88,
+  "areaMax": 36.88,
+  "elevador": true,
+  "unidades": 372,
+  "vagas": 299,
+  "vagasPorUnidade": 0.8,
+  "lazer": [
+   "festas",
+   "pet",
+   "piscina",
+   "kids"
+  ],
+  "lazerItens": [
+   "Espaço Gourmet",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina Infantil",
+   "Playground",
+   "Salão de Festas com Copa"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Circuito fechado de TV",
+   "Coleta seletiva",
+   "Lazer equipado",
+   "Previsão para cancela na guarita",
+   "Célula de segurança para pedestre",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Previsão para ar condicionado",
+   "Medição de água individualizada",
+   "Revestimento parcial das áreas molhadas",
+   "Tanque em mármore sintético",
+   "Medição de gás individualizado",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Arena Castelão",
+  "descricao": [
+   "Prepare-se para investir no seu futuro, com mais segurança, qualidade de vida e oportunidades que só o Reserva da Lagoa pode te oferecer. Venha morar em um condomínio fechado, na melhor localização de Fortaleza, em Passaré. Eleve seu estilo de vida para outro nível e more em um condomínio residencial com apartamentos de 2 quartos, com opção de varanda, mais comodidade no seu dia a dia com disponibilização de elevadores e toda segurança que um condomínio fechado pode oferecer como uma portaria 24h com cancela na guarita.",
+   "Além disso, o Reserva do Lago tem a mais completa área de lazer pra você e sua família aproveitarem cada momento juntos.",
+   "Para descansar ou aproveitar os dias de sol vocês terão à disposição piscinas, área de playground para as crianças, um espaço reservado para seu pet brincar e claro, uma área gourmet com churrasqueira para receber seus amigos e parentes no conforto do seu lar."
+  ],
+  "mcmv": false,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-reserva-da-lagoa",
+  "imagens": {
+   "capa": {
+    "id": "04-07",
+    "n": 7,
+    "tipo": "piscina",
+    "alt": "Piscina do Reserva da Lagoa",
+    "w": 1363,
+    "h": 767,
+    "cor": "#b8a898",
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAkAA4BaJYwC7AYtVlHEIiPdwAD6n92a4bY3kiYZJFE4ziLzi7prWDBGcf/vthyi64+3XqGRq8me8OUU+RTPS4IKDC4dAAA=",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/reserva-da-lagoa/04-07"
+   },
+   "galeria": [
+    {
+     "id": "04-07",
+     "n": 7,
+     "tipo": "piscina",
+     "alt": "Piscina do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8a898",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAwAgCdASoQAAkAA4BaJYwC7AYtVlHEIiPdwAD6n92a4bY3kiYZJFE4ziLzi7prWDBGcf/vthyi64+3XqGRq8me8OUU+RTPS4IKDC4dAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-07"
+    },
+    {
+     "id": "04-03",
+     "n": 3,
+     "tipo": "fachada",
+     "alt": "Fachada do Reserva da Lagoa",
+     "w": 767,
+     "h": 767,
+     "cor": "#788898",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQABAAA4BaJbACdACwJ0zHo+AA9C3KXvYPXWcR0uzcpc4heTWmYTJ6uISbKp8yW/uotIAwOiq4jAu2T+h5uN0BdtTkTLyyQdgAAA==",
+     "larguras": [
+      640
+     ],
+     "fallback": 767,
+     "src": "/img/reserva-da-lagoa/04-03"
+    },
+    {
+     "id": "04-04",
+     "n": 4,
+     "tipo": "piscina",
+     "alt": "Piscina do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#d8c8b8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJYwCw7CwKiap4AD+tg4iJ8PKmXTexRuLccRW3ppYd4HdYmJ6qVzimAVD2Rc1bEGkP1TfvguXJom+mDgAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-04"
+    },
+    {
+     "id": "04-05",
+     "n": 5,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b89878",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAA4BaJYgCdAClEi5SQAD0NDQb2BHIoaJij3nQ1dWyabTXMYzkOtrQIK6Gi6za7eLNG3kPxLPxcLrZ7Pi/y9zYBk3ROBOWSh1VFuAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-05"
+    },
+    {
+     "id": "04-06",
+     "n": 6,
+     "tipo": "pet",
+     "alt": "Pet place do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#888888",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAkAA4BaJQBOgBVNfiSPAAD9/F2CURPjzGo5ocQOm3BKcdKE9yksd8qstIgHKV3lM8rKbLhfcOWvyzJvMjJBDWNLhtLDYeIAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-06"
+    },
+    {
+     "id": "04-08",
+     "n": 8,
+     "tipo": "festas",
+     "alt": "Salão de festas do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8b8a8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAkAA4BaJYwCdAEUnzM8yAAA/rDd/HEQQ1xVoHLox3zz7e3J58U8dmvsQOXg9M5m3nTn5oU0Qx+y4UMAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-08"
+    },
+    {
+     "id": "04-10",
+     "n": 10,
+     "tipo": "portaria",
+     "alt": "Portaria do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#685858",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAkAA4BaJYwCdADwR9+v4AD8sWr0c2t3xC7mntLQ3M0MiPLVkJKepA2tAILFUKY9mxyTVlN2a0LBjbbASgAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-10"
+    },
+    {
+     "id": "04-11",
+     "n": 11,
+     "tipo": "fachada",
+     "alt": "Fachada do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#888898",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBOgCFxPYgmgAD+zWP25Tcf79Hx5i135YnH7RVcE6aJZoGAST+xzi4kTU8wwL3Ma/8D+ZXRfnKOQAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-11"
+    },
+    {
+     "id": "04-12",
+     "n": 12,
+     "tipo": "interno",
+     "alt": "Área privativa do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#989898",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJZQC7ACUFlIAAMtDkTjdumaWXpTZQz7j9L/xEL1XURrDW6NbIjrgyoYownMjoh6PL0omEt61UOg7EvgAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-12"
+    },
+    {
+     "id": "04-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Quarto do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#886848",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJYgCdADDqKBieADibnlDOsGPOaVHg5IAgP0MHgWmBrx/OCOjfvScHCAqZElVRcVvmxE/nxLohMMDUkIAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-13"
+    },
+    {
+     "id": "04-14",
+     "n": 14,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#584838",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAQCdASoQAAkAA4BaJQBOgBlFpUYAAP7I2VPtvWdN/6zokQKIi227kvWfE96oxiWIiSs3T+qHTNI3pkJ0ApLiFDQEXxAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-14"
+    },
+    {
+     "id": "04-15",
+     "n": 15,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJQBOgBxooR+WAAD+MX7C+scn3CyUHCycXb9mmKAh4f2ZeSkxFPdc1cm7OhBKXVnIqHBt41m58n6XXY8ugAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-15"
+    },
+    {
+     "id": "04-16",
+     "n": 16,
+     "tipo": "interno",
+     "alt": "Varanda do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#a89898",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJYgCw7ClW1xooAD+4MTIDvHaf5TJxfkx1ht61Ew5es6C8Ea8joFfYw4ADF8hD+8SaRHEhBOPWKvm9DCl85leAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-16"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "04-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Reserva da Lagoa",
+     "w": 5000,
+     "h": 3000,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoQAAoAA4BaJZwAAtzJYhXmAAD+9V8KXUAMUJLqgi+fVQ1IeLRmdVS8/BpmUCSOa1xoAAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-01"
+    },
+    {
+     "id": "04-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Reserva da Lagoa",
+     "w": 5000,
+     "h": 3000,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAAoAA4BaJaQAAxblY8Fx4AD+91wYOptS5CsBmGRmuBM93++ZLr81mwWps2i+gAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-02"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "04-09",
+     "n": 9,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Reserva da Lagoa",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAQCdASoQAAkAA4BaJZwAApGSHoJQAP74unCzh8u16ohrmHzK0nkQ2hhsYiutvmqayip9liomr29mKiYe2cMQPsPBJGMzx17Agi2b/q/56IDwgAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-09"
+    },
+    {
+     "id": "04-17",
+     "n": 17,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Reserva da Lagoa",
+     "w": 1279,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAoAA4BaJZwAAubQ4TwXpgAA/vcd24bD3ZqEMqaEKZE0lmjHYfEBdGR+ZI5D9/86NuzwJre5zRYDhMxwAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-da-lagoa/04-17"
+    }
+   ],
+   "aerea": []
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "residencial-la-serena",
+  "ordem": 5,
+  "nome": "Residencial La Serena",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Jangurussu",
+  "bairroId": 61,
+  "regiao": "sul",
+  "coord": {
+   "lat": -3.848692,
+   "lon": -38.508215
+  },
+  "coordAproximada": false,
+  "endereco": "Rua C, 1754",
+  "status": "lancamento",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": null,
+  "areaMin": 38.4,
+  "areaMax": 38.4,
+  "elevador": false,
+  "unidades": 240,
+  "vagas": 85,
+  "vagasPorUnidade": 0.35,
+  "lazer": [
+   "festas",
+   "pet",
+   "piscina",
+   "verde",
+   "kids"
+  ],
+  "lazerItens": [
+   "Churrasqueira",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina com Deck",
+   "Piscina Infantil",
+   "Pista de Caminhada",
+   "Playground"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Circuito fechado de TV",
+   "Coleta seletiva",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Previsão para ar condicionado",
+   "Medição de água individualizada",
+   "Medição de gás individualizado",
+   "Tanque em louça",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Centro da Messejana, Rodoviária de Messejana, Vapt Vupt Messejana, Escolas estaduais e municipais, BR 116, Supermercado Ismael, Farmácias, UPA 24H, Postos de saúde, Cuca Jangurussu, Academias Areninha",
+  "descricao": [
+   "O Residencial La Serena é seu novo refúgio no Jangurussu!",
+   "Um condomínio fechado com tudo que você sempre sonhou em ter. Apartamentos de 2 quartos com opções de varanda ou área privativa. Uma área de lazer ampla e completa para todos os membros da família aproveitar e se divertir bastante com segurança. Aproveite as piscinas refrescantes, churrasqueira para encontros especiais, playground para as crianças e um pet place para seu amigo de quatro patas.",
+   "Faça a diferença na sua vida e realize hoje mesmo o sonho de morar num apartamento da MRV com as melhores condições do Minha Casa Minha Vida!"
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-la-serena",
+  "imagens": {
+   "capa": {
+    "id": "05-03",
+    "n": 3,
+    "tipo": "piscina",
+    "alt": "Piscina do Residencial La Serena",
+    "w": 1363,
+    "h": 767,
+    "cor": "#b8d8e8",
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJagCdH8AFbuOJCAA/CDhdUQqM2D6v868gcaGhO8mV5o361Ace27E9uPv68dnhJdnzpotlp0EQ85AIh8oUnf4QAA=",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/residencial-la-serena/05-03"
+   },
+   "galeria": [
+    {
+     "id": "05-03",
+     "n": 3,
+     "tipo": "piscina",
+     "alt": "Piscina do Residencial La Serena",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8d8e8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJagCdH8AFbuOJCAA/CDhdUQqM2D6v868gcaGhO8mV5o361Ace27E9uPv68dnhJdnzpotlp0EQ85AIh8oUnf4QAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-03"
+    },
+    {
+     "id": "05-04",
+     "n": 4,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Residencial La Serena",
+     "w": 1363,
+     "h": 767,
+     "cor": "#182838",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJQBOgB9SljOVgAD+mpIRnAS8c9ffkYEXnXIrxLOicKgdjejLRok8EiPGvjc8qCXQ66SvurIK/kEIkUAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-04"
+    },
+    {
+     "id": "05-05",
+     "n": 5,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Residencial La Serena",
+     "w": 1363,
+     "h": 767,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAQCdASoQAAkAA4BaJZgCdACnYxhgAOAvrAfmLrTEU/4ki18XuW2KJ0yHKCWICN6uCHdeW7yUc3ge2acY1t4eB7enrXfsPgVGmT76iUS4CXC9XHVQQrw8EoAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-05"
+    },
+    {
+     "id": "05-07",
+     "n": 7,
+     "tipo": "portaria",
+     "alt": "Portaria do Residencial La Serena",
+     "w": 1363,
+     "h": 767,
+     "cor": "#a89888",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJYwCdADpE03/xUIAAPl1mDRCeqD9LB1kv6zxJathXny8auy8wAEXQZ3O0oEt8N+uVgTedlT0Nh5BZiL/JOJxgAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-07"
+    },
+    {
+     "id": "05-08",
+     "n": 8,
+     "tipo": "interno",
+     "alt": "Área privativa do Residencial La Serena",
+     "w": 1363,
+     "h": 767,
+     "cor": "#988888",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJaACdACpq2MUWAD+jS66rfTGqeUvN+Ox6n1qo4jnuBipzRvJKQbn4EsiimQ9HKWuKg/G2yHsAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-08"
+    },
+    {
+     "id": "05-09",
+     "n": 9,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial La Serena",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8a898",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAkAA4BaJYgCdADLtu/sQAD+2D7RSY2mxcieNUb6o4tknWd7gdAD4+fBgtPloTbysZzGiEpYCWxA65Q4RmrxMejTItRJYiEAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-09"
+    },
+    {
+     "id": "05-10",
+     "n": 10,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Residencial La Serena",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJZACdADperOgAP7HQT4gyTYaS8zbXXdKOZE2mG6RexbRBlHVQefSFbfbdvGUoWm554tl1B4WfYVbq7jwAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-10"
+    },
+    {
+     "id": "05-11",
+     "n": 11,
+     "tipo": "interno",
+     "alt": "Varanda do Residencial La Serena",
+     "w": 431,
+     "h": 767,
+     "cor": "#887878",
+     "blur": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADwAwCdASoQAB0APu1mqk2ppaQiMAgBMB2JQBOgAt1oKVTPcA9eJKgAAPuDFqKZvbctUON+91xXqZ6E/5klSREpV+Bd6yMnSzs550FBerkb/U7iMXX7oqTQs3V2H46BeDVuM4rxJ5NOUXtMZSeINvqARDzqBTqKwxhHdgyMT2RoOB5pMlGxyf1cHT2qOqAAAAA=",
+     "larguras": [
+      431
+     ],
+     "fallback": 431,
+     "src": "/img/residencial-la-serena/05-11"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "05-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial La Serena",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAoAA4BaJZwAAujb3L4NnWAA/u5bqjja3IKpCMptUk8QkcGqKZDF3efW6/3XyUsEPjMc/gRUicl/gAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-01"
+    },
+    {
+     "id": "05-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial La Serena",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAoAA4BaJQBdgBuVY7uC3AAA/vZoFNhR2gwdu9gVVt1Pw7Zlbe2vQ9no0reAaS38mwprYS2nMJK0zLhReAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-02"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "05-12",
+     "n": 12,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Residencial La Serena",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoQAAoAA4BaJaQAApxRlSAAAP73IBV/Nsa7m653vIx1/EFqAHaL4r3Uglws8IAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-12"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "05-06",
+     "n": 6,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Residencial La Serena",
+     "w": 1363,
+     "h": 767,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJZgCdAEO20ZM0xAA8UNehI2KOzl28dEn2m9wVAYTRLGQo/CBBGzfaxyvb6oV+3/cPqtE32dPCrDbPbPAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-la-serena/05-06"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "forte-alencar",
+  "ordem": 6,
+  "nome": "Forte Alencar",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Cambeba",
+  "bairroId": 53,
+  "regiao": "sul",
+  "coord": {
+   "lat": -3.810308,
+   "lon": -38.503018
+  },
+  "coordAproximada": false,
+  "endereco": "Rua Central do Loteamento MRV Arroz Doce, 100",
+  "status": "lancamento",
+  "quartos": [
+   2
+  ],
+  "suite": true,
+  "varanda": "sim",
+  "areaMin": 43.34,
+  "areaMax": 45.14,
+  "elevador": true,
+  "unidades": 492,
+  "vagas": 505,
+  "vagasPorUnidade": 1.03,
+  "lazer": [
+   "festas",
+   "kids",
+   "pet",
+   "piscina",
+   "verde"
+  ],
+  "lazerItens": [
+   "Espaço Gourmet",
+   "Espaço Kids",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina Infantil",
+   "Playground",
+   "Salão de Festas com Copa",
+   "Espaço Piquenique"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Cerca elétrica",
+   "Coleta seletiva",
+   "Lazer equipado",
+   "Previsão para cancela na guarita",
+   "Célula de segurança para pedestre",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Piso em Cerâmica na Sala",
+   "Previsão para ar condicionado",
+   "Medição de água individualizada",
+   "Revestimento total das áreas molhadas",
+   "Tanque em louça",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Mega Atacadista, Greenlife Cambeba, academias, farmácias, Mc Donald's, Habibis Mesejana, Mall Buena Vista",
+  "descricao": [
+   "Forte Alencar: um oásis urbano com lazer completo e ambientes que equilibram qualidade de vida, convivência e tranquilidade! O empreendimento chega como um marco na Região do Cambeba: três torres imponentes com elevadores e apartamentos de 2 quartos com varanda e opção de suíte. Além de ter unidades no térreo com opção de área privativa.",
+   "Aqui, cada detalhe foi pensado para elevar sua experiência: opções com suíte, unidades com área privativa e uma vista livre para um futuro de conforto e exclusividade."
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-forte-alencar",
+  "imagens": {
+   "capa": {
+    "id": "06-06",
+    "n": 6,
+    "tipo": "portaria",
+    "alt": "Portaria do Forte Alencar",
+    "w": 1363,
+    "h": 767,
+    "cor": "#6898c8",
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAkAA4BaJZACdACC7m2AAPYa0V3rnydqlgotgtxvJe+7ZOEljN01BrrD1grC2KcMG8NYrFy3yCIAAAA=",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/forte-alencar/06-06"
+   },
+   "galeria": [
+    {
+     "id": "06-06",
+     "n": 6,
+     "tipo": "portaria",
+     "alt": "Portaria do Forte Alencar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#6898c8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAkAA4BaJZACdACC7m2AAPYa0V3rnydqlgotgtxvJe+7ZOEljN01BrrD1grC2KcMG8NYrFy3yCIAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-06"
+    },
+    {
+     "id": "06-07",
+     "n": 7,
+     "tipo": "festas",
+     "alt": "Salão de festas do Forte Alencar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8a8a8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAkAA4BaJZQCdAELWz9Cy5AA/sjCFI3iEw9DjYSblFBOLS7SvmvNzUJchIeuT7ftPSkVIfPsWqVCD7gAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-07"
+    },
+    {
+     "id": "06-08",
+     "n": 8,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Forte Alencar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJaACdADjSn22bYAAzjkXkp1XW8pRvpAfEJdd1ASAaSMNILk6NgyvG2cC1qmE4LLPlUSitMVnHypNn+AAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-08"
+    },
+    {
+     "id": "06-09",
+     "n": 9,
+     "tipo": "pet",
+     "alt": "Pet place do Forte Alencar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#988868",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJZACdAC2Fz9RAAD+VfCgha+Z7OgSuI7GCw9ibdZ34l6DFwcqNeTZMcp6lt60F7cMicKRGJQoqWx7ssYxAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-09"
+    },
+    {
+     "id": "06-10",
+     "n": 10,
+     "tipo": "piscina",
+     "alt": "Piscina do Forte Alencar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#d8c8c8",
+     "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQAAkAA4BaJbACdAYuRzMBy/V7gAD+B6ycL3UaR/Ylj7MwOULzBkb343GP7Zee8a60fXGdtg1evSf6bsjPO92CL+dmnSyLYCJKg/bmyUSzalRNWa+Z6sbol4AAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-10"
+    },
+    {
+     "id": "06-11",
+     "n": 11,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Forte Alencar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#e8d8d8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwAgCdASoQAAkAA4BaJbAC7G1/Atdz/lxeJbfgAP7WKvoO66emyuObNqkkZ81l7Z9EeBZOBtt98uIRzNOqSNlAyWLhVrzj4MnhT76zX5QrDRSjQAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-11"
+    },
+    {
+     "id": "06-12",
+     "n": 12,
+     "tipo": "portaria",
+     "alt": "Portaria do Forte Alencar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8b8b8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJQBOgBnz50t98GAAziI24AtC2QfmB5J9P547OkGiFF3Inrtu7OmNbctVtXo6Px9OKzdyPVU91rNOKpQAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-12"
+    },
+    {
+     "id": "06-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Quarto do Forte Alencar",
+     "w": 1362,
+     "h": 767,
+     "cor": "#d8c8c8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQAgCdASoQAAkAA4BaJYgCdAYuvDlLAISYAPlbR55Wwhz5nnixfqDJtzu7gME+4+nvhZk0QNZZZts+qIw2z3HWTwb5o9fruAoRin/PSeQvuTCuAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-13"
+    },
+    {
+     "id": "06-14",
+     "n": 14,
+     "tipo": "interno",
+     "alt": "Quarto do Forte Alencar",
+     "w": 1362,
+     "h": 767,
+     "cor": "#c8a898",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAkAA4BaJZgCdAEYARCeKp8AAP62CsUZZGzvcCc9N7lYDdSJQ/nj8Ry69F09sjP9ptdmIk8BWZNT/JcYHTDxhNV96Y81FaocAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-14"
+    },
+    {
+     "id": "06-15",
+     "n": 15,
+     "tipo": "interno",
+     "alt": "Quarto do Forte Alencar",
+     "w": 1362,
+     "h": 767,
+     "cor": "#d8c8b8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJYgCdADLwYXSAAD+yPFpgOHpgpVrN/CFfenI/2s8YZeURcr5DMHMnjZHF+uvRhjCbh0ku0K+abqB1FLEx28CLtlzUU0AAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-15"
+    },
+    {
+     "id": "06-16",
+     "n": 16,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Forte Alencar",
+     "w": 1362,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAkAA4BaJQBOgBjy+scWOAD+lKvE1DC2QPZXqqUXGcpi7Wwf8Q3V6q3X2JOUI4GTegG42HXA95ET/fTskbiPOtyc0iMjPgAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-16"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "06-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Forte Alencar",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAoAA4BaJZwAAvmHz0r5wiMAAP7rvPsJwne+lr1d8dmn8d6zNCb+gc6muth5/NXdb5aifOgj4mM0MmlaCf0RSJVKL4AA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-01"
+    },
+    {
+     "id": "06-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Forte Alencar",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAoAA4BaJZwAAu19LKoiNwAA/uJZJgWjMW7lJjJA6SneCSb1znmwG/w8GCMCuX1iJWgQd/P7dh1moDU5aMG9Zk5vUDUAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-02"
+    },
+    {
+     "id": "06-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Forte Alencar",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAoAA4BaJZwAAuVtexXYAAD+8/xTUC2ebVKcdW7rqqOAdg0qh8g2Eq1rWygZhIgyNp5DhkEhAAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-03"
+    },
+    {
+     "id": "06-04",
+     "n": 4,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Forte Alencar",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAoAA4BaJZwAAvmGpjuBeQAA/vC1aLvKFm8gCWILOhUrIb0DhDH9cgMDYm47kAEju1NhtCe4Yi7IAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-04"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "06-05",
+     "n": 5,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Forte Alencar",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAoAA4BaJZwAApOFGwvDAAD+9/v1nrNo28hy0eYmza0zRXcFVYHI00zh8neZiVN+ExRWAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-05"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "06-17",
+     "n": 17,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Forte Alencar",
+     "w": 5383,
+     "h": 2622,
+     "cor": "#086838",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAgAA4BaJZgCdH8ADTz+3oAA/fBhd8htVgo8CDBaJrOq5gZVIBlnrVr04iZ/DRZ39bMeWtoUMUMDslSAvps0xXUjUAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/forte-alencar/06-17"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "parque-marista",
+  "ordem": 7,
+  "nome": "Parque Marista",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Centro",
+  "bairroId": 10,
+  "regiao": "oeste-centro",
+  "coord": {
+   "lat": -3.734928,
+   "lon": -38.52528
+  },
+  "coordAproximada": false,
+  "endereco": "R. Conselheiro Tristão, nº 60",
+  "status": "lancamento",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": null,
+  "areaMin": 38.8,
+  "areaMax": 40.44,
+  "elevador": true,
+  "unidades": 576,
+  "vagas": 170,
+  "vagasPorUnidade": 0.3,
+  "lazer": [
+   "academia",
+   "festas",
+   "verde",
+   "esportes",
+   "kids",
+   "piscina",
+   "pet"
+  ],
+  "lazerItens": [
+   "Academia Coberta",
+   "Churrasqueira",
+   "Espaço Piquenique",
+   "Salão de Jogos",
+   "Salão de Festas com Copa",
+   "Quadra Recreativa",
+   "Playground",
+   "Piscina Infantil",
+   "Piscina com Deck",
+   "Pet Place",
+   "Espaço Kids",
+   "Happy Hour",
+   "Espaço Zen",
+   "Espaço Pizza",
+   "Pista de Caminhada"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Praça",
+   "Horta",
+   "Espaço Market",
+   "Célula de segurança para pedestre",
+   "Lazer equipado",
+   "Tanque em louça",
+   "Revestimento parcial das áreas molhadas",
+   "Medição de água individualizada",
+   "Piso Laminado na Sala",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Playbaby",
+   "Vestiário da piscina",
+   "Mini Quadra",
+   "Pet Care",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Praia da Iracema, Beira Mar, Hospital Luís França - Emergência Pediátrica, Instituto Doutor José Frota - IJF (Hospital), Unidade Estácio, Centro de Humanidades II (UFC - Campus do Benfica), Parque da Liberdade Fortaleza, Assaí Atacadista",
+  "descricao": [
+   "Chegou a hora de conquistar o seu futuro e transformar o sonho da casa própria em realidade! Para ficar ainda melhor, o Parque Marista tem lazer de clube e representa a liberdade da vida confortável e bem localizada que você sempre desejou.",
+   "Com acesso facilitado pelas avenidas Domingos Olímpio, Duque de Caxias, Dom Manuel e Visconde do Rio Branco, viva no Centro de Fortaleza, ao lado da Aldeota e cercado de comodidades. Seu novo endereço está próximo do Parque da Liberdade, Hospital Luís Fraga, Instituto Doutor José Frota, Assaí Atacadista, Unidade Estácio, Praia de Iracema e Beira Mar. Você, no centro de tudo!",
+   "Para elevar seu estilo de vida, nada melhor que um condomínio completo e um apê confortável. Tenha seu apê de 2 quartos com opções de varanda ou área privativa, três elevadores por torre e a comodidade de um lazer diferenciado para a sua família. O empreendimento conta com mais de 20 itens para que vocês possam desfrutar de uma experiência completa com: piscina adulto com deck molhado, piscina infantil, academia, churrasqueiras, espaço pizza, happy hour, salão de jogos, quadra e muito mais."
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-parque-marista",
+  "imagens": {
+   "capa": {
+    "id": "07-01",
+    "n": 1,
+    "tipo": "portaria",
+    "alt": "Portaria do Parque Marista",
+    "w": 5000,
+    "h": 3337,
+    "cor": "#484848",
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAsAA4BaJZQCdAEClydzEQAA/mxMP+GtuKph/zzeZDsGq1NF0mnwL7YdX/FJxqUq/qrnWMD2zuHa6ruaqgxgAAA=",
+    "larguras": [
+     640,
+     1080,
+     1600,
+     2400
+    ],
+    "fallback": 1080,
+    "src": "/img/parque-marista/07-01"
+   },
+   "galeria": [
+    {
+     "id": "07-01",
+     "n": 1,
+     "tipo": "portaria",
+     "alt": "Portaria do Parque Marista",
+     "w": 5000,
+     "h": 3337,
+     "cor": "#484848",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAsAA4BaJZQCdAEClydzEQAA/mxMP+GtuKph/zzeZDsGq1NF0mnwL7YdX/FJxqUq/qrnWMD2zuHa6ruaqgxgAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600,
+      2400
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-01"
+    },
+    {
+     "id": "07-02",
+     "n": 2,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Parque Marista",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#a8a898",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAkAA4BaJQBOgMVuyR78ZQAAzi8rnu+0c2mzrxFVVegrpCqd0Y4tm9MwuQExiCwgVLPCK374w4q68YZ1Cv3+AAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-02"
+    },
+    {
+     "id": "07-03",
+     "n": 3,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Parque Marista",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#a89888",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJYwCdAEWrxlsAADOPY06rezK5kQKkziaYz5j4ARFJ1bPg3DGnmxGwaW1YET9V6FuHjAXwT1LWj/eTgG7AAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-03"
+    },
+    {
+     "id": "07-04",
+     "n": 4,
+     "tipo": "piscina",
+     "alt": "Piscina do Parque Marista",
+     "w": 5000,
+     "h": 2500,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAgAA4BaJbACdAEVrQ8IHmregAD+8/DRuyIAcRuYgRE7rVY3ODvombJSDoLktKMV53oCkbXlMue8ed42jc0tGiFz3/r7p5UAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-04"
+    },
+    {
+     "id": "07-05",
+     "n": 5,
+     "tipo": "fitness",
+     "alt": "Espaço fitness do Parque Marista",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#989868",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAkAA4BaJZgCdAEUipEZygAA/Kc6vw9fBpdIPdRWI12tddgfJcIGOs2yLcaDYOpNhJEe107V5aTMzXgtcAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-05"
+    },
+    {
+     "id": "07-06",
+     "n": 6,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Parque Marista",
+     "w": 5000,
+     "h": 2222,
+     "cor": "#484838",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAcAA4BaJQBOgCH/lP28QAD+q9x5Jm/68KzRqBrNf1FSLup8WqZhAq40ethnooDSrheyBr8+F+JaXgAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-06"
+    },
+    {
+     "id": "07-07",
+     "n": 7,
+     "tipo": "interno",
+     "alt": "Área privativa do Parque Marista",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#888878",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAQCdASoQAAkAA4BaJQBdgA/xhoAA/QGUKmqpmlSWnFO3+SbEE86+ehraWBvuaWm/iBLk8aCzZqcV7kx4gWpsUc3J4fekp2AETyNvjAAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-07"
+    },
+    {
+     "id": "07-08",
+     "n": 8,
+     "tipo": "interno",
+     "alt": "Quarto do Parque Marista",
+     "w": 5000,
+     "h": 3333,
+     "cor": "#887868",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAsAA4BaJQBOgB4angpIjmAA9mAukbh5UYtOqjFIfJ9zD3nzZ0nFSyXa3YAZFHLiCM1gg27z4SWyUi35Fm84Bz7aYFWAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-08"
+    },
+    {
+     "id": "07-09",
+     "n": 9,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Parque Marista",
+     "w": 6000,
+     "h": 4000,
+     "cor": "#b8b8a8",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJQBOgB7HNcsRRTcAAPvzVsLYASghzU0FZQ27voLwPUXFvFPudb2hegTIdt16qR6+ZEak4oGSP38Rv8XAJBf3hNWvFz7KCimQAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-09"
+    },
+    {
+     "id": "07-10",
+     "n": 10,
+     "tipo": "interno",
+     "alt": "Varanda do Parque Marista",
+     "w": 4000,
+     "h": 5000,
+     "cor": "#584838",
+     "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JQBOmUABldAmaLRxfopjQAP5HQzcKdfhxzNShIvJjlvFTB8eZYiyjHtZz45fKyHUpK+q8w+ET3T91xG/bm2K4qwVapQNsJZ1nh4ntcUPP3iw+suWXnx/yF8qMMJhQAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-10"
+    },
+    {
+     "id": "07-19",
+     "n": 19,
+     "tipo": "fachada",
+     "alt": "Fachada do Parque Marista",
+     "w": 5000,
+     "h": 3337,
+     "cor": "#585858",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAsAA4BaJYwCdAEOzahPeTPQAP7pPNWHdA4SJPXL3CiYiiHGGZCTIPgCNs7QtQeXf0MdRE4STgNgAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-19"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "07-14",
+     "n": 14,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Parque Marista",
+     "w": 6138,
+     "h": 3600,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAkAA4BaJYwAAu1+oXdfO7AAAP7g29rLOs+bijW2wwdqnzyFBE2oTJxJstqh64TBbr/bGjK6Y3k7hi1mlo9dCwokgAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-14"
+    },
+    {
+     "id": "07-15",
+     "n": 15,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Parque Marista",
+     "w": 6138,
+     "h": 3600,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAkAA4BaJZQAAp3EXbYAAP7okoIrFXwSMyG452W3SLuS2YNgK3qYbBhllMYu9s7bWj+ECx2Sh3YwyVXhnAaAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-15"
+    },
+    {
+     "id": "07-16",
+     "n": 16,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Parque Marista",
+     "w": 6138,
+     "h": 3600,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAkAA4BaJZwAAupC+eYAAP72S7pUrWNilFz7vLV6Hx18wcs8QW/5irtESn5NKpXChAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-16"
+    },
+    {
+     "id": "07-17",
+     "n": 17,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Parque Marista",
+     "w": 6138,
+     "h": 3600,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAkAA4BaJZwAAvenrw3x4AD+8/uV4bdxThfJ/doI6cd0eMA6b6SG9YbnxjvkcWJgbdi0/51+EgQA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-17"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "07-11",
+     "n": 11,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Parque Marista",
+     "w": 5116,
+     "h": 7000,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoQABYAPu1iqU2ppaOiMAgBMB2JZQDE2CK3ijrlivBEhUwAAP7v9M2d4/PTgUTpopiZYTWJNDZuHojXgjP0WTWT/Q/ORuwfTi9R9cvkEJ5qPLtuC7LVSHPZ7VLfy0ynNQWdLejYQ6Qlsg5Md6ftVcVHc7Jb0GKgAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-11"
+    },
+    {
+     "id": "07-12",
+     "n": 12,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Parque Marista",
+     "w": 5000,
+     "h": 2813,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAQCdASoQAAkAA4BaJaQAAOn4AAD++BVokBzYt03STZt00Gj6xrcjY1XOepme3JF8LyQBIkf1x39bWMV8OcC94ZgeNj6i3JdgAAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-12"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "07-13",
+     "n": 13,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Parque Marista",
+     "w": 5000,
+     "h": 2083,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAcAA4BaJZQCsADNHcK5AAD+2Gfv2EH0vsZyjqNTqkBT/fKxhhyM8gZo7f+qjmS21TPRtHmlQKsSKHPW7qAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-13"
+    },
+    {
+     "id": "07-18",
+     "n": 18,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Parque Marista",
+     "w": 5000,
+     "h": 2821,
+     "cor": "#88a8b8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAkAA4BaJQBOgCFnUeogAPKlBhrB6iv7tRtj3StHA3Qe8TwirqrePheQ9zGGXmR9c0CH0PFQUxGHYizgGcuW4AA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-18"
+    },
+    {
+     "id": "07-20",
+     "n": 20,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Parque Marista",
+     "w": 1438,
+     "h": 1172,
+     "cor": "#48a8d8",
+     "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQAA0AA4BaJbACdGuAAjEjIAD94OlV273nEdNzMrzIpkl6x4IXchMmM7q3JrfQUv+iFJmc8qJba6tD+4TeMWPz5LQyTeuaz46HO35H+gRdaDMAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/parque-marista/07-20"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "residencial-farol-do-atlantico",
+  "ordem": 8,
+  "nome": "Residencial Farol do Atlântico",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Cocó",
+  "bairroId": 11,
+  "regiao": "leste",
+  "coord": {
+   "lat": -3.7547098,
+   "lon": -38.467856275
+  },
+  "coordAproximada": false,
+  "endereco": "Rua Zuca Accioly, 830",
+  "status": "lancamento",
+  "quartos": [
+   2
+  ],
+  "suite": true,
+  "varanda": "sim",
+  "areaMin": 43.34,
+  "areaMax": 45.14,
+  "elevador": true,
+  "unidades": 204,
+  "vagas": 218,
+  "vagasPorUnidade": 1.07,
+  "lazer": [
+   "academia",
+   "festas",
+   "pet",
+   "piscina",
+   "kids"
+  ],
+  "lazerItens": [
+   "Academia Coberta",
+   "Espaço Funcional Descoberto",
+   "Espaço Gourmet",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina Infantil",
+   "Playground"
+  ],
+  "diferenciais": [
+   "Gazebo",
+   "Opção de Garagem Coberta",
+   "Bicicletário Coberto",
+   "Opção de duas vagas",
+   "Circuito fechado de TV",
+   "Coleta seletiva",
+   "Lazer equipado",
+   "Luminária com sensor de presença na guarita",
+   "Previsão para cancela na guarita",
+   "Célula de segurança para pedestre",
+   "Bancada da Cozinha em granito com cuba em inox",
+   "Bancada do banheiro em granito com cuba em louça",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Piso em Cerâmica na Sala",
+   "Piso Laminado no Quarto",
+   "Previsão para ar condicionado",
+   "Medição de água individualizada",
+   "Revestimento total das áreas molhadas",
+   "Opção Suíte",
+   "Medição de gás individualizado",
+   "Tanque em louça",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Fica a 5 minutos dos shoppings Iguatemi e Rio Mar, 5 minutos da Praia do futuro",
+  "descricao": [
+   "Descubra um novo cenário onde o seu sonho encontra um futuro de tranquilidade, comodidade e momentos únicos em seu futuro apartamento no Residencial Farol Do Atlântico. Localizado na região privilegiada de Cocó, este condomínio residencial possui apartamentos de 2 quartos com opção de suíte e varanda. Já os apês do térreo contam com opção de área privativa. More em um condomínio fechado com lazer completo e opção de vista para o mar ou para o Parque do Cocó.",
+   "Além de uma excelente localização, o condomínio também oferece ótima estrutura interna com um super lazer de clube. A área comum do condomínio conta com com um espaço gourmet, espaço com playground para as crianças aproveitarem, piscinas adulto e infantil e para quem gosta de manter uma vida saudável, o Farol do Atlântico conta com uma academia coberta e espaço crossfit.",
+   "Aproveite esta oportunidade o faça maior investimento de sua vida. Simule agora mesmo seu financiamento SBPE para este empreendimento e eleve sua qualidade de vida e moradia com a MRV!"
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-farol-do-atlantico",
+  "imagens": {
+   "capa": {
+    "id": "08-04",
+    "n": 4,
+    "tipo": "portaria",
+    "alt": "Portaria do Residencial Farol do Atlântico",
+    "w": 1189,
+    "h": 767,
+    "cor": "#585848",
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAoAA4BaJQBWABufKKJtMAD+OxSeblgcKKWNGSiBmuocLild14dRwvzmI1rNdjNxl0k+3Zs5UWsT9td5MSRzMCAAAA==",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/residencial-farol-do-atlantico/08-04"
+   },
+   "galeria": [
+    {
+     "id": "08-04",
+     "n": 4,
+     "tipo": "portaria",
+     "alt": "Portaria do Residencial Farol do Atlântico",
+     "w": 1189,
+     "h": 767,
+     "cor": "#585848",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAoAA4BaJQBWABufKKJtMAD+OxSeblgcKKWNGSiBmuocLild14dRwvzmI1rNdjNxl0k+3Zs5UWsT9td5MSRzMCAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-04"
+    },
+    {
+     "id": "08-05",
+     "n": 5,
+     "tipo": "pet",
+     "alt": "Pet place do Residencial Farol do Atlântico",
+     "w": 959,
+     "h": 767,
+     "cor": "#b8c8c8",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQAA0AA4BaJbACdADcV6crAAD+5npHoDynGVzMOFtHSufRTlzPJ1CYbGIY4NAIi+Dnuz36GEAfCCkA/X6jvWX4oBr7jWjO3B3THEZdCc1+PPtz0OAAAA==",
+     "larguras": [
+      640
+     ],
+     "fallback": 959,
+     "src": "/img/residencial-farol-do-atlantico/08-05"
+    },
+    {
+     "id": "08-06",
+     "n": 6,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Residencial Farol do Atlântico",
+     "w": 1363,
+     "h": 682,
+     "cor": "#c8d8d8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAwAgCdASoQAAgAA4BaJagCdAEWYVRPKIgGAAD+yjrTIRecNSCa5jI3zoMYD/jPOorIKwbsXgPvqwtsWvGjnXxxxY+o0Yeu55pgeFAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-06"
+    },
+    {
+     "id": "08-07",
+     "n": 7,
+     "tipo": "piscina",
+     "alt": "Piscina do Residencial Farol do Atlântico",
+     "w": 1150,
+     "h": 767,
+     "cor": "#4888c8",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAsAA4BaJbACdAEWUFLbvWNfAAD+wp3hjUu+pMOwhODNTxHlV4WParxpnl61ktWkmcClnCT/l9W8tpUQHxolZlI9WWe6R+X2OH73L1M7vxZfMXsAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-07"
+    },
+    {
+     "id": "08-08",
+     "n": 8,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Residencial Farol do Atlântico",
+     "w": 1150,
+     "h": 767,
+     "cor": "#486898",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAsAA4BaJagCdAD1TXrJoWAAAP7KMtl8iUbxyUB+FV+p1u/sUC+dicTi8ufMds+8rAj+Rx2w6bcrY9VNeHf7jfmxtpt4hyWOVdXMrWOPT8//oAAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-08"
+    },
+    {
+     "id": "08-11",
+     "n": 11,
+     "tipo": "interno",
+     "alt": "Área privativa do Residencial Farol do Atlântico",
+     "w": 1189,
+     "h": 767,
+     "cor": "#c8c8c8",
+     "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAoAA4BaJZAC7AD7Emx99ACAAAD+aKCknO11MZXGWetKn3XMR/Io9axRLGfD5ocwvLY1S+wHTvgvwsk3Paw5CaBafswbI9Jl2fyrF6aKA3YeP00B1oAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-11"
+    },
+    {
+     "id": "08-12",
+     "n": 12,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Residencial Farol do Atlântico",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAkAA4BaJYgCdAD1eLJHJQAA/PY5cym6y3eiU3rmAJKMuvEIvm0Qs+HZIDn6REzOalbFrdGXNGE4QD2M1DUpC3DVmaVUviBrH4lqExOAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-12"
+    },
+    {
+     "id": "08-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Residencial Farol do Atlântico",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8a898",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAkAA4BaJYgCdAfwBowNDV9XAAD4Q9oXArd2d/ncqWFp4IBD69QdArLt7Xla4cdf/9cuuuFF4zncSSWJ6vqhfEAcCHriORg1c0dgEMC3bTnMDc3AAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-13"
+    },
+    {
+     "id": "08-14",
+     "n": 14,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial Farol do Atlântico",
+     "w": 1150,
+     "h": 767,
+     "cor": "#e8e8e8",
+     "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAsAA4BaJYgCdAD8oDMiliAAAOJHbr8/KI2cczZutJamCiIFl64yct7z4k8p/w9153Zr4WxkF2Hr6AAOSt2oiv+VXJ2wqpEd/Jjg2KqK7opQlZQsAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-14"
+    },
+    {
+     "id": "08-15",
+     "n": 15,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial Farol do Atlântico",
+     "w": 1363,
+     "h": 767,
+     "cor": "#a89898",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAQCdASoQAAkAA4BaJZgCdABz2aSIAOJvpnjgcSL1GwnVPxvtfKnbm+/NI4B5tQ7Oy3g78J8m0O88zsKa4T8FIxGRvVFGZZTyy20pW9B7tdnTDeQ0AA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-15"
+    },
+    {
+     "id": "08-16",
+     "n": 16,
+     "tipo": "interno",
+     "alt": "Varanda do Residencial Farol do Atlântico",
+     "w": 767,
+     "h": 767,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQABAAA4BaJbACdAEOdOiJ1c5wAP7oZtVWZAaDK7Nyks0e+XoluBGXdJil7AlRIfFM5/wHMzHsPKP/F+2tajTMcUUkTe3zIf6CCCWhiFYsnSOIeBAAAA==",
+     "larguras": [
+      640
+     ],
+     "fallback": 767,
+     "src": "/img/residencial-farol-do-atlantico/08-16"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "08-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Farol do Atlântico",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAoAA4BaJYwAAtvducM5DkAA/vJv9BVykidEW683UZnAMzxdyNaitHsx+M35KMgYERalG8q4cnSPmdLrCJAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-01"
+    },
+    {
+     "id": "08-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Farol do Atlântico",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAoAA4BaJYwAAvmGE4tSvNAAAP7YUzbZj+VNlr7yBj45yCmLVLqqpifMQCQVuhZ7C4JDENXwDxWnbrf3l4AA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-02"
+    },
+    {
+     "id": "08-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Farol do Atlântico",
+     "w": 1920,
+     "h": 1152,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACQAQCdASoQAAoAA4BaJZwAAbJvgYAA/vCN1iA5AEpqz+U98tdxt+YCrlU91zQhuWy11CiBAyXIJQAAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-03"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "08-09",
+     "n": 9,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Residencial Farol do Atlântico",
+     "w": 1920,
+     "h": 1080,
+     "cor": "#d8d8d8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAkAA4BaJZQC7ADpeqkAAP7nVwMsYsmCHfa0rf19kNyahbmlEZYeN1+VzWWVpH6BmzRsiImfij6hX4AAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-09"
+    },
+    {
+     "id": "08-17",
+     "n": 17,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Residencial Farol do Atlântico",
+     "w": 5906,
+     "h": 3543,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoQAAoAA4BaJZQAAuZambEAAP7uPpeoA+WqJuWpETLK+MoLyd59qyNKG4H68heekk3A8GyCoBQkJgIAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-17"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "08-10",
+     "n": 10,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Residencial Farol do Atlântico",
+     "w": 8048,
+     "h": 5028,
+     "cor": "#f88828",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABwAgCdASoQAAoAA4BaJZACdH8IwABZpZDbD39gAP6yCUEPmbKF0rtFs1gHuB7xg4fuPaMXL+VfXjFKDOnQSjPRlPR0FY0ACoMI0OE1Ha4zf/IeNQAAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-farol-do-atlantico/08-10"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "sensia-reserva-vila-do-sol",
+  "ordem": 9,
+  "nome": "Sensia Reserva Vila do Sol",
+  "linha": "sensia",
+  "cidade": "Fortaleza",
+  "bairroNome": "Cocó",
+  "bairroId": 11,
+  "regiao": "leste",
+  "coord": {
+   "lat": -3.74943,
+   "lon": -38.4801
+  },
+  "coordAproximada": true,
+  "endereco": "Rua 9 do Loteamento – Gleba 40",
+  "status": "em_construcao",
+  "quartos": [
+   2
+  ],
+  "suite": true,
+  "varanda": "sim",
+  "areaMin": 54.58,
+  "areaMax": 54.8,
+  "elevador": null,
+  "unidades": 264,
+  "vagas": 293,
+  "vagasPorUnidade": 1.11,
+  "lazer": [
+   "festas",
+   "kids",
+   "piscina",
+   "pet",
+   "verde"
+  ],
+  "lazerItens": [
+   "Salão de festas",
+   "Playground",
+   "Piscina Infantil",
+   "Piscina com Deck",
+   "Piscina Adulto",
+   "Pet Place",
+   "Espaço Gourmet",
+   "Espaço Piquenique"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto"
+  ],
+  "proximoA": "A 5 min da Praia do Futuro, ao lado do Parque Ecológico do Cocó, próximo ao Shopping Iguatemi e a UNIFOR",
+  "descricao": [
+   "O imóvel ideal precisa se adaptar ao seu estilo de vida. Os empreendimentos Sensia contam com plantas flexíveis, liberdade na escolha dos acabamentos e lazer premium para você escolher como quer viver.",
+   "O Sensia Reserva Vila do Sol oferece um mundo de possiblidades. Apartamentos de dois quartos e opções com Garden para quem precisa de mais espaço, tudo isso em um condomínio moderno com lazer premium: piscina, espaço gourmet, academia, salão de festas e outras comodidades.",
+   "E que tal deixar os ambientes com a sua cara antes mesmo de se mudar? Isso é possível por meio do nosso serviço de Consultoria de Personalização. Escolha os acabamentos, adicione armários planejados e muito mais.",
+   "More cercado pela natureza, mas com a cidade aos seus pés. Na região do Cocó, qualidade de vida é o padrão!"
+  ],
+  "mcmv": false,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-sensia-reserva-vila-do-sol",
+  "imagens": {
+   "capa": {
+    "id": "09-01",
+    "n": 1,
+    "tipo": "piscina",
+    "alt": "Piscina do Sensia Reserva Vila do Sol",
+    "w": 1200,
+    "h": 675,
+    "cor": "#b8a898",
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJQBdgBl6t/OEAADvsT5D7Y9Lxxbtrwzv8gB1dlKEfzaAzi5wRGkF26FX6ItMAP08vaVuY///2EpGJ4GuAAAA",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/sensia-reserva-vila-do-sol/09-01"
+   },
+   "galeria": [
+    {
+     "id": "09-01",
+     "n": 1,
+     "tipo": "piscina",
+     "alt": "Piscina do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#b8a898",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJQBdgBl6t/OEAADvsT5D7Y9Lxxbtrwzv8gB1dlKEfzaAzi5wRGkF26FX6ItMAP08vaVuY///2EpGJ4GuAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-01"
+    },
+    {
+     "id": "09-02",
+     "n": 2,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#c8c8c8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJQBWACHuBicJAAD+fVq9GL94+a/HkwrdYwLIPXBFt2Nm3VAr93qcaHPhW1X1P9rSVCehPNurTkklK5opRRjkAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-02"
+    },
+    {
+     "id": "09-03",
+     "n": 3,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#887878",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAkAA4BaJZQCsADcX2l/8AAAzIk9QtcAvPojpCRxM7NOqafkUKPO31GFFCo6lyo6wr7zCCT0AblgN7PFPDeMZXUEQFky79UAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-03"
+    },
+    {
+     "id": "09-04",
+     "n": 4,
+     "tipo": "pet",
+     "alt": "Pet place do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#e8e8e8",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAkAA4BaJYgCdAEXfuhaGfGAAP6fxxVdaHCH+ST1yTcEoMXOyP5ePbaBxKLz7C0zuVjDsZdVhfs86/j/0ImmOPItOIk3cwbQjD7ux3K59pSKk3RoAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-04"
+    },
+    {
+     "id": "09-06",
+     "n": 6,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#88d8f8",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAkAA4BaJbACdAD1a3/mdAAA/q26QWj8OPucftI82A6DSEKIOC+uLgAAv5tz5DgGZtaVAuBj0LY+YaNHU/qEWFYJePw17T612p2bUp1130Cxs3AAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-06"
+    },
+    {
+     "id": "09-07",
+     "n": 7,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#68a8d8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAkAA4BaJZgCdAEDyHNA12gQAPtvPAFBPOWoDjXh91R9pahb3ipQCKj8w/RNc2eBPF/g86idYJP+LKZ5cEcuHO0WqZAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-07"
+    },
+    {
+     "id": "09-08",
+     "n": 8,
+     "tipo": "portaria",
+     "alt": "Portaria do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#a8c8e8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJYwCdAEPCUPY5rLgAOA2CCkGmiVDqKkJkQKevXh1XN1Scj7Ro3Z3Y/eu2rM30bt6MvZtJ/AfFPBiGHirdEqygAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-08"
+    },
+    {
+     "id": "09-09",
+     "n": 9,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#988878",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAkAA4BaJQBOgCLWivlEL1gAAP7cdl10kHUTWgGIBVt3xtpzXWgivGu/OUMrqENVvFG0YEVawCzn/x3DhNVcGYzlZSAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-09"
+    },
+    {
+     "id": "09-10",
+     "n": 10,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#b8b8a8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJQBOgCFKtTtBAAAA/QFcl8grV/58khpO41FdzXuuXTs546ORu7oNrs45Bzd/BrAlC/B+ObRkQsqb5rZxwAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-10"
+    },
+    {
+     "id": "09-11",
+     "n": 11,
+     "tipo": "interno",
+     "alt": "Varanda do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#d8e8f8",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJZQC7ADHjxVVoADN+9zhzXsw3xAcLBsjhkhIgi2KEvAhmDICj2/ikCDCvUTjejPGfkAi2DrvXPCR6XAUgHc4t3bmHAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-11"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "09-12",
+     "n": 12,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAkAA4BaJZwAAiFqNbQcAAD+9nWFZe9GftY5vw1+wzB7TY8ayX7y92GRUt4zdR3cgM20CAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-12"
+    },
+    {
+     "id": "09-13",
+     "n": 13,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJZwAAn24sXkycAAA/u5t4A8akInYiOPemH1k7JesudVEOf0swnmnhvgFuGBn/e6cbnL141zOFsPqC0CAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-13"
+    },
+    {
+     "id": "09-14",
+     "n": 14,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAQCdASoQAAkAA4BaJZwAApo3+QAA/uJHmDF179CKyk/JBJnSs2RGeRa9j/+N9BX7715nklxUZViXjjkS57gXAZ4GLwgA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-14"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "09-15",
+     "n": 15,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAkAA4BaJaQAD4lpT3NGAAD+916rDcGLb3q7s28VSm5wCB+vKOyrInLp9rWiyjgI9uvjX6webKgcAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-15"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "09-05",
+     "n": 5,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Sensia Reserva Vila do Sol",
+     "w": 1200,
+     "h": 675,
+     "cor": "#5888b8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJbACdADPvvE6eAD9rpThih0XY16zM6bj/mhz5ug12nofTcgOX5ng/yN4ItTfIOJmp7XwUv76nmYyYPg1NeAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/sensia-reserva-vila-do-sol/09-05"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "ville-de-porto",
+  "ordem": 10,
+  "nome": "Ville de Porto",
+  "linha": "mrv",
+  "cidade": "Caucaia",
+  "bairroNome": "Parque Albano",
+  "bairroId": null,
+  "regiao": "caucaia",
+  "coord": {
+   "lat": -3.745539083651339,
+   "lon": -38.61449715131225
+  },
+  "coordAproximada": false,
+  "endereco": "Avenida Dom Lustosa",
+  "status": "lancamento",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": "sim",
+  "areaMin": null,
+  "areaMax": null,
+  "elevador": true,
+  "unidades": 320,
+  "vagas": 127,
+  "vagasPorUnidade": 0.4,
+  "lazer": [
+   "festas",
+   "academia",
+   "pet",
+   "piscina",
+   "kids",
+   "verde"
+  ],
+  "lazerItens": [
+   "Churrasqueira",
+   "Espaço Funcional Descoberto",
+   "Pet Place",
+   "Piscina Adulto",
+   "Playground",
+   "Espaço Piquenique"
+  ],
+  "diferenciais": [
+   "Espaço Market",
+   "Bicicletário Descoberto",
+   "Circuito fechado de TV",
+   "Coleta seletiva",
+   "Luminária com sensor de presença na guarita",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Previsão para ar condicionado",
+   "Medição de água individualizada",
+   "Tanque em mármore sintético",
+   "Medição de gás individualizado",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Em frente ao SESC Caucaia e próximo ao Assaí Atacadista, Mix Mateus, fácil acesso para a Avenida Mister Hall",
+  "descricao": [
+   "Venha morar na cidade de Caucaia e comece a construir sua história de vida hoje no Ville de Porto! A MRV trouxe mais um empreendimento com infra-estrutura completa para você, que deseja sair do aluguel e conquistar um apartamento de 2 quartos, com opções de varanda ou área privativa.",
+   "A área de lazer é um verdadeiro convite para viver momentos incríveis com a família e os amigos: piscinas adulto e infantil, churrasqueira, espaço funcional, playground e muito mais. Tudo isso em um condomínio fechado, que oferece segurança e bem-estar para todas as fases da vida.",
+   "Aproveite nossas condições especiais para conquistar a tão sonhada casa própria com auxílio dos programas Minha Casa Minha Vida com subsídio de até R$ 55 mil e incentivo do programa Entrada Moradia Ceará de R$20 mil."
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/caucaia/apartamentos-ville-de-porto",
+  "imagens": {
+   "capa": {
+    "id": "10-11",
+    "n": 11,
+    "tipo": "portaria",
+    "alt": "Portaria do Ville de Porto",
+    "w": 1363,
+    "h": 767,
+    "cor": "#b8c8e8",
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAQCdASoQAAkAA4BaJQBOgB3cq+eAAP5WBEK5oHTfIDpRqLN1LOmBRgTFIR3shi+ZdUo67xZR14tZXQ6cQHNP8HICvKAA",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/ville-de-porto/10-11"
+   },
+   "galeria": [
+    {
+     "id": "10-11",
+     "n": 11,
+     "tipo": "portaria",
+     "alt": "Portaria do Ville de Porto",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8c8e8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAQCdASoQAAkAA4BaJQBOgB3cq+eAAP5WBEK5oHTfIDpRqLN1LOmBRgTFIR3shi+ZdUo67xZR14tZXQ6cQHNP8HICvKAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-11"
+    },
+    {
+     "id": "10-05",
+     "n": 5,
+     "tipo": "piscina",
+     "alt": "Piscina do Ville de Porto",
+     "w": 1362,
+     "h": 767,
+     "cor": "#888888",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAkAA4BaJaACdAEecH71+b6gAPEs8m77HYxD8wOXqsaBfYZ4GZW14paNbGRNObp9F3sCaLZBdhOKBiIKGftaboUaQifJDAAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-05"
+    },
+    {
+     "id": "10-06",
+     "n": 6,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Ville de Porto",
+     "w": 1363,
+     "h": 767,
+     "cor": "#d8d8c8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoQAAkAA4BaJZAC7ADwhfENKaAAAOJkzDFYN6tr1q8yZTT9Dd814McWmwYSbElRkorc5fm0ch149PBbGt6wAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-06"
+    },
+    {
+     "id": "10-07",
+     "n": 7,
+     "tipo": "pet",
+     "alt": "Pet place do Ville de Porto",
+     "w": 1362,
+     "h": 767,
+     "cor": "#a8b8c8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJYgCw7D0SRcvQAD+ji2rYaactyMuBU7bHuJasUbPdWNHJnYXWwvnVlNDDajXT8rlFwKGFYAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-07"
+    },
+    {
+     "id": "10-08",
+     "n": 8,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Ville de Porto",
+     "w": 1363,
+     "h": 767,
+     "cor": "#a8b8d8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJbACdAEfACZBrkAA/mtOcyqRAPwa9J2WKIyYaGngu+Pz5vOG50YSVLGcHUPp/nNHdonGL0g8jSWRRB3EAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-08"
+    },
+    {
+     "id": "10-09",
+     "n": 9,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Ville de Porto",
+     "w": 1363,
+     "h": 767,
+     "cor": "#98a8c8",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAkAA4BaJaACdAEe6oC/iiwAAPjHdSCt+5DYHW1UMcprgrXTj6UjAPLeNrPTFiV8/8lw0OTatIXrPo+QgItAEnZrBRN1Q+QG46HgpxekOkgA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-09"
+    },
+    {
+     "id": "10-12",
+     "n": 12,
+     "tipo": "interno",
+     "alt": "Área privativa do Ville de Porto",
+     "w": 1035,
+     "h": 767,
+     "cor": "#b8b8b8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABQAgCdASoQAAwAA4BaJbAC/OEPdhIpjlqPeeAA/rSffgGsofrFIISjPbo6kI1IgqpGGE680fmcraKn941v3YVENPz787YthmHRU09JGUYdIkFuAAA=",
+     "larguras": [
+      640
+     ],
+     "fallback": 1035,
+     "src": "/img/ville-de-porto/10-12"
+    },
+    {
+     "id": "10-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Quarto do Ville de Porto",
+     "w": 1363,
+     "h": 767,
+     "cor": "#683828",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAkAA4BaJZACdAEUu9ghsAhGAADOI6xYJ5RR+uM90Xn9F9NOIkxz6HxVjAsoIIlmTJTLNejsK/QCXJQELHI3HWzkKGi+cjL2y7ZcDYfwAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-13"
+    },
+    {
+     "id": "10-14",
+     "n": 14,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Ville de Porto",
+     "w": 1363,
+     "h": 767,
+     "cor": "#785838",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAkAA4BaJYgCdACpXv7gAP6/yM/UcUBK1Eh4gkaYRuJXEtTjaJ+EM7SA6iJOSHNqcymBZuyVv6jrF4JGMJpJzKv76oQIAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-14"
+    },
+    {
+     "id": "10-15",
+     "n": 15,
+     "tipo": "interno",
+     "alt": "Varanda do Ville de Porto",
+     "w": 613,
+     "h": 767,
+     "cor": "#e8d8c8",
+     "blur": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JYgCdMoMxgEEyq/ulH5aFIRv816gA99beGgzmjUZx90ihMGHqQVIveRByHK3Nu6L72HQzeFhYepDIN0xhP4vjiCIUB1rM9LOc5xoIJhldG+4jjUWFbqyAAAA=",
+     "larguras": [
+      613
+     ],
+     "fallback": 613,
+     "src": "/img/ville-de-porto/10-15"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "10-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Ville de Porto",
+     "w": 1969,
+     "h": 1181,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAoAA4BaJZQAAujdTBep0TeAAP7t72VeGEizTM7b69R1kP1pipgeTjPjlpj2muRsbarR2endo5/fEqq5S0ZmRwnIit1CAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-01"
+    },
+    {
+     "id": "10-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Ville de Porto",
+     "w": 1969,
+     "h": 1181,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAoAA4BaJYwAAvae0GvTBAAA/uuxbeZ6TYtXHgQNgxF3M7uEuWNIgbCrZz9xnvtT14UcIamqVhkjxVgiAAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-02"
+    },
+    {
+     "id": "10-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Ville de Porto",
+     "w": 1969,
+     "h": 1181,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAoAA4BaJZwAAt0AnzgxQAAA/vVK8Vxj6r6aU6ci8bov3dfhu98OzwnbBXhdaX+CZYgAAAA=",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-03"
+    },
+    {
+     "id": "10-04",
+     "n": 4,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Ville de Porto",
+     "w": 1969,
+     "h": 1181,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAoAA4BaJZwAAudN98wQAAD+8KcvO8yAQltYVG4ArSnJYR3qevDLKQGihHlv8mL1TqvfgqUQMBIpdd06AAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-04"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "10-10",
+     "n": 10,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Ville de Porto",
+     "w": 3472,
+     "h": 1953,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAkAA4BaJaQAAudkmFAAAP74GeWF0BmTwx+BD0Lw/JoyFj7ayar6xLUwJfBcPy84AAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-10"
+    },
+    {
+     "id": "10-16",
+     "n": 16,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Ville de Porto",
+     "w": 3333,
+     "h": 1875,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQAAkAA4BaJZwAAxftVHqboAD+9zsA6R3v6qfuFVa6E9/+QwrXrF7Q9YETAiD3dCgAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/ville-de-porto/10-16"
+    }
+   ],
+   "aerea": []
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "torre-do-mar",
+  "ordem": 11,
+  "nome": "Torre do Mar",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Maraponga",
+  "bairroId": 82,
+  "regiao": "sul",
+  "coord": {
+   "lat": -3.816223699999999,
+   "lon": -38.5582749
+  },
+  "coordAproximada": false,
+  "endereco": "Rua Vereadora Zélia Correia de Sousa, 487",
+  "status": "em_construcao",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": null,
+  "areaMin": 36.88,
+  "areaMax": 36.88,
+  "elevador": true,
+  "unidades": 384,
+  "vagas": 409,
+  "vagasPorUnidade": 1.07,
+  "lazer": [
+   "festas",
+   "pet",
+   "kids"
+  ],
+  "lazerItens": [
+   "Espaço Gourmet",
+   "Pet Place",
+   "Playground",
+   "Salão de festas"
+  ],
+  "diferenciais": [
+   "Gazebo",
+   "Bicicletário Descoberto",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Piso em Cerâmica na Sala",
+   "Revestimento parcial das áreas molhadas",
+   "Tanque em mármore sintético",
+   "Medição de água individualizada",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Atacadão Lag, EMEIF Casimiro Montenegro, Lago Montenegro, Medeiros Supermercado, Hospital Distrital Gonzaga Mota e Posto Shell Cidade Jardim. Principais vias de acesso: Av. Presidente Costa e Silva, Av. Bernardo Manuel e Av. Pref. Evandro Ayres de Moura",
+  "descricao": [
+   "O Torre do Mar vai te surpreender com apartamento de 2 quartos que possuem ambientes integrados e opção de varanda. O lazer vai te proporcionar experiências em família e momentos para celebrar com amigos, com área de lazer para toda a família incluindo piscina adulto e infantil, salão de festas, espaço de gourmet e muito mais.",
+   "Esse é o momento de comprar seu novo apê, seja para morar ou investir a MRV tem a opção certa para você. Conheça as condições especiais e facilidades do programa Minha Casa Minha Vida e faça uma simulação."
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-torre-do-mar",
+  "imagens": {
+   "capa": {
+    "id": "11-16",
+    "n": 16,
+    "tipo": "fachada",
+    "alt": "Fachada do Torre do Mar",
+    "w": 3375,
+    "h": 1898,
+    "cor": "#b89888",
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAkAA4BaJQBOgBgJ3KwA/e/mfFASwSFXLnoYQDx26ot78OvRw1TqWp+YiYdpgEhfHqczeHGAAoAA",
+    "larguras": [
+     640,
+     1080,
+     1600,
+     2400
+    ],
+    "fallback": 1080,
+    "src": "/img/torre-do-mar/11-16"
+   },
+   "galeria": [
+    {
+     "id": "11-16",
+     "n": 16,
+     "tipo": "fachada",
+     "alt": "Fachada do Torre do Mar",
+     "w": 3375,
+     "h": 1898,
+     "cor": "#b89888",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAkAA4BaJQBOgBgJ3KwA/e/mfFASwSFXLnoYQDx26ot78OvRw1TqWp+YiYdpgEhfHqczeHGAAoAA",
+     "larguras": [
+      640,
+      1080,
+      1600,
+      2400
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-16"
+    },
+    {
+     "id": "11-05",
+     "n": 5,
+     "tipo": "festas",
+     "alt": "Salão de festas do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#a8a8a8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJZQC7AEGEdfwAAD+ai0LgTmt9qDsxDmjFxqKBTqgVIKrwcmiayJhmfYfqXeAUr6dvJmYrEVEZeYz+UKRyAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-05"
+    },
+    {
+     "id": "11-06",
+     "n": 6,
+     "tipo": "piscina",
+     "alt": "Piscina do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#6888a8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJZgCdH8AFcNp9KkAAP5mOkto8b+dnDTbctwneovscLiRljLgGWkiXD83Qrsscb4p53kRT2ieUir4Tu8YhwVlgAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-06"
+    },
+    {
+     "id": "11-07",
+     "n": 7,
+     "tipo": "piscina",
+     "alt": "Piscina do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#988898",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJbACdAELYwj4fgAA9hxcUBbHx9mHShxW+3tGEexKEwgdnBXikMv6ZoPY2pQOugdk7eqttbabReBgInq3xy37tT1Zk6sVwAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-07"
+    },
+    {
+     "id": "11-08",
+     "n": 8,
+     "tipo": "pet",
+     "alt": "Pet place do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#081808",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJYgCdAC9j88qAAD+7OGlTs6wc8Nqnwql2NfrFS1J6oOXlOXbEf3DfP5Dp4EYNmdn73hhtE1ZWWU0LIpVsUTceayTvGAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-08"
+    },
+    {
+     "id": "11-09",
+     "n": 9,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQAAkAA4BaJZgCdB2gAifd71/SgAD+3f7QZMs02WT/GMphw7wsldrwF8ymieV7ioutb2+4uX/eUdwty4i6NRUh7U+Qxm9pFu1TsvpYm5v8dAZ/CEbr4V5SjF6CAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-09"
+    },
+    {
+     "id": "11-10",
+     "n": 10,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8a898",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAA4BaJZgCdACVB0PdAAD5Czx68SK/P4SRddbuqLLjTEO1gu1TZMpSm2QfTtESOxZHXA4IXu5XNZcp9jg+uyccv5fXiz8eXxlkd4AAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-10"
+    },
+    {
+     "id": "11-11",
+     "n": 11,
+     "tipo": "interno",
+     "alt": "Quarto do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAQCdASoQAAkAA4BaJZgCsACl76I6AAD+4kydVPOEFK0A8qLafIRZznXsa7Tj3oKy6ve0RZrrED8JVGX819Ktba4pv7XYk+uxLaQnrAQqLPTGLq2N4oXD9Unu9KKIAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-11"
+    },
+    {
+     "id": "11-12",
+     "n": 12,
+     "tipo": "interno",
+     "alt": "Quarto do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b89898",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAkAA4BaJZACdAENyZajc8AA/pbBK6mZNvCNtOlxz5Mhq5TanXqIkYpO915iksBI26a/pt0i/b0QszXKEGr8AAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-12"
+    },
+    {
+     "id": "11-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Área privativa do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#887888",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAkAA4BaJbACdH8AF8eeG4UGAADhmw3bQazp37yVbXbFEcIaA9TBJRL5JORyB4ObzEEAmVe5Vu2J//si9fj2hYNfQtGq9DuMcV0cZFVWGAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-13"
+    },
+    {
+     "id": "11-14",
+     "n": 14,
+     "tipo": "interno",
+     "alt": "Varanda do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAkAA4BaJbACdADmIgdEswAA/u4oXVj5Yguv1DJ6kRNoEnpEQTxMT+3k0V1T1610LlBuxXTiZ6pIUNDvmqLCkhmD+lC6KqQ801/K9B5aZBH5ESWAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-14"
+    },
+    {
+     "id": "11-17",
+     "n": 17,
+     "tipo": "portaria",
+     "alt": "Portaria do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#0868d8",
+     "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQAQCdASoQAAkAA4BaJbACdABzcZAA/sBDW5D3BJcyNlyp6hZ3c0f+d0Y2R/d8a5Uvzzue/VovI1b2MSK+doN5QNf+wp9/8hglJABIEL/5K9R15bsccKTRgIXWr8AAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-17"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "11-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAkAA4BaJZwAAp/R0oAA/vi6X5T9+T0MOy0B5+N3hMY7Ml+hLPScAFQ9H9qIUr1xSFNeTooKEAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-01"
+    },
+    {
+     "id": "11-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Torre do Mar",
+     "w": 1365,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAkAA4BaJaQAApMFJXbIAP738VOp09qnMMG5D29rtc5JobwRgVQAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-02"
+    },
+    {
+     "id": "11-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Torre do Mar",
+     "w": 1365,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAkAA4BaJaQAApMiZsgAAP73HR/+Xowy2Wov32WKyBhbwfR5tpnlfjyzILQAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-03"
+    },
+    {
+     "id": "11-04",
+     "n": 4,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Torre do Mar",
+     "w": 1365,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAkAA4BaJaQAAq4JnPgAAP738Zf1YX7ORBslOrHYgjm3BV+H+HIsYx7vgLdwNKHrsYQAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-04"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "11-15",
+     "n": 15,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Torre do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAkAA4BaJaQAAudjDvhfoAD+8BnyA9eU5HJj+ELKL2LXJv/kimuUYAAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/torre-do-mar/11-15"
+    }
+   ],
+   "aerea": []
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "porto-das-mares",
+  "ordem": 12,
+  "nome": "Porto das Marés",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Barra do Ceará",
+  "bairroId": 6,
+  "regiao": "oeste-centro",
+  "coord": {
+   "lat": -3.7089179,
+   "lon": -38.57386229999999
+  },
+  "coordAproximada": false,
+  "endereco": "Av. Vinte de Janeiro, 470",
+  "status": "em_construcao",
+  "quartos": [
+   2
+  ],
+  "suite": true,
+  "varanda": null,
+  "areaMin": 43.34,
+  "areaMax": 45.14,
+  "elevador": true,
+  "unidades": 576,
+  "vagas": 576,
+  "vagasPorUnidade": 1,
+  "lazer": [
+   "festas",
+   "kids",
+   "pet",
+   "piscina",
+   "verde"
+  ],
+  "lazerItens": [
+   "Espaço Gourmet",
+   "Espaço Kids",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina Infantil",
+   "Playground",
+   "Salão de Festas com Copa",
+   "Espaço Piquenique"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Circuito fechado de TV",
+   "Coleta seletiva",
+   "Lazer equipado",
+   "Luminária com sensor de presença na guarita",
+   "Previsão para cancela na guarita",
+   "Célula de segurança para pedestre",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Piso Laminado no Quarto",
+   "Previsão para ar condicionado",
+   "Medição de água individualizada",
+   "Revestimento parcial das áreas molhadas",
+   "Tanque em mármore sintético",
+   "Varanda",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Hospital Fernandes Távora, Colégio Presidente Médici, Posto Shell, Posto Ipiranga, UPA 24H – Cristo Redentor, Baratão Supermercados, Mercado do Carlito Pamplona, Praça Carlito Pamplona, Cometa Supermercados – Castelo Branco, Estádio Elzir Cabral, Calçadão Vila do Mar, ETI Nossa Senhora de Fátima. Principais vias de acesso: Av. Leste Oeste, Av. Francisco Sá, Av. 20 de Janeiro, Av. Ulisses Guimarães",
+  "descricao": [
+   "Viva sob o mais belo pôr do Sol na Barra do Ceará! Porto das Marés é seu novo Lar.",
+   "Localizado a 5 minutos da praia na Barra do Ceará, o Porto das Marés é o lugar ideal par você que busca conforto, praticidade, lazer supercompleto e torres com elevador. Contemple cada nascer ou pôr do sol da sua varanda e tenha opção de mais conforto ao escolher um apartamento com suíte.",
+   "Aprecie a bela vista do mar sem abrir mão do lazer garantido para toda a família, aqui você vai celebrar momentos especiais no salão de festas e espaço gourmet, aproveitar os dias de sol na piscina, além de ter inúmeras opções de lazer a sua disposição no condomínio.",
+   "Conheça mais sobre o financiamento SBPE. Compre com a MRV sem sair de casa! Acesse o chat e faça agora uma simulação. Acesse o chat, faça uma simulação e compre com a MRV sem sair de casa."
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-porto-das-mares",
+  "imagens": {
+   "capa": {
+    "id": "12-01",
+    "n": 1,
+    "tipo": "fachada",
+    "alt": "Fachada do Porto das Marés",
+    "w": 1280,
+    "h": 720,
+    "cor": "#c8c8b8",
+    "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoQAAkAA4BaJQBOgBo7tbcoAAD+kZQnpyksoYglJ8i3S3/1AjG4nvf5z3WTGqqrw1YIFyAA",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/porto-das-mares/12-01"
+   },
+   "galeria": [
+    {
+     "id": "12-01",
+     "n": 1,
+     "tipo": "fachada",
+     "alt": "Fachada do Porto das Marés",
+     "w": 1280,
+     "h": 720,
+     "cor": "#c8c8b8",
+     "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoQAAkAA4BaJQBOgBo7tbcoAAD+kZQnpyksoYglJ8i3S3/1AjG4nvf5z3WTGqqrw1YIFyAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-01"
+    },
+    {
+     "id": "12-07",
+     "n": 7,
+     "tipo": "festas",
+     "alt": "Salão de festas do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#c8b8b8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAkAA4BaJZQCw7Yp5ja8JPyQAP7goxM5ueEZh7Fp/JCVDEeWWCZ+ZrqqXSX3E1cQsTCOBVQ7aBmUaeogXHoAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-07"
+    },
+    {
+     "id": "12-08",
+     "n": 8,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#6888a8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJYgCdAEV9bhyAAD+70y9T9VvlYKEy3aMk1F5v0CZ2jH1FhviPkmwKHHYFuFNBA1ZXysno+dv+RDAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-08"
+    },
+    {
+     "id": "12-09",
+     "n": 9,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#c8c8b8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAkAA4BaJYgCdAEQEnpyJngA90+D8n+0sanPhkKArymO/GMSsMPy3KUqDuP8iuVgbrZAp+FIIn0ey/E16aBhwAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-09"
+    },
+    {
+     "id": "12-10",
+     "n": 10,
+     "tipo": "piscina",
+     "alt": "Piscina do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAkAA4BaJYwCdAD0Z/NOMiAA98fZsdNC+zSK5vS4m25ZsEUEt6TuX5fClN5LA4JA0LJNLqm+uEcbsAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-10"
+    },
+    {
+     "id": "12-11",
+     "n": 11,
+     "tipo": "piscina",
+     "alt": "Piscina do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#989888",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAkAA4BaJYwCsACh5r5AAP4nnwLpNeeAS3zpsn4gp+lnlb6cO42fAh4kYVxi5/OTeHtm8JQRFS4S8BN0fM8CD4oBagAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-11"
+    },
+    {
+     "id": "12-12",
+     "n": 12,
+     "tipo": "pet",
+     "alt": "Pet place do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#98a8c8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAkAA4BaJQBOiP/wPV51ruJAAP2dbRul50VM+i+UWZWa9siuYVrMpIroWBoP0VdiHSC5kVukMiYmQ8rKPl1BZnCMSAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-12"
+    },
+    {
+     "id": "12-13",
+     "n": 13,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#a8a8b8",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAkAA4BaJQBOkCYjCHs0FnQAAP6Z5VQ0tiyRpJEfoh+YfLxqCf5VpU1+Vw0rlTPKeg2kfus40Rhtzr/BzRZbOz7rSlyI9ICPa0C0RuQqAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-13"
+    },
+    {
+     "id": "12-14",
+     "n": 14,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#a89888",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAkAA4BaJYwCdAYtzTTfJB+gAPgvuD08vV5JbzLu58UdQQPCmj9Nf4CfaWBzHxtxKn7DdNZ5WPnCzBEhWRQJD2L4+QIHVAAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-14"
+    },
+    {
+     "id": "12-15",
+     "n": 15,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#c8c8b8",
+     "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoQAAkAA4BaJYgC7AED+jcyNeAA/DY/Blx+t5k3eW+2/yc9g7JjI1TuTFlhzPqynMkpI0icUJcAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-15"
+    },
+    {
+     "id": "12-18",
+     "n": 18,
+     "tipo": "portaria",
+     "alt": "Portaria do Porto das Marés",
+     "w": 1920,
+     "h": 767,
+     "cor": "#c8b8b8",
+     "blur": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAQCdASoQAAYAA4BaJYwCdACVFxoAAP5mNi3r8EnjJ03bGKj33JZL4LLljacnXYQCXNyZZ7AAAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-18"
+    },
+    {
+     "id": "12-19",
+     "n": 19,
+     "tipo": "portaria",
+     "alt": "Portaria do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#c8c8b8",
+     "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAQCdASoQAAkAA4BaJQBOgBN0+AAA/pGUJ6cpLYRDtUrQkxCiDbFrn4jGxz/3JzhHB/RpRDj5Cuc/EJAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-19"
+    },
+    {
+     "id": "12-20",
+     "n": 20,
+     "tipo": "fachada",
+     "alt": "Fachada do Porto das Marés",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8d8b8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJYgCdADjZmAw6AD+shY1W5FokI253X15gairIYf84e5QqHT5/EHPtthBPopJuP2NPe8804QAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-20"
+    },
+    {
+     "id": "12-21",
+     "n": 21,
+     "tipo": "interno",
+     "alt": "Varanda do Porto das Marés",
+     "w": 1362,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJQBOgB3sKWYhAADOPUzPsEx67n5F3jhuh0o+U6mVcirmpgLcv+AZJ0g9jke8DlVlzbB8eFEVbEVtlsvnAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-21"
+    },
+    {
+     "id": "12-22",
+     "n": 22,
+     "tipo": "interno",
+     "alt": "Varanda do Porto das Marés",
+     "w": 1362,
+     "h": 767,
+     "cor": "#e8d8c8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJQBOgCP6pOIfwADiLcWvGEgxW9BzhpPFv3FOjTdJ9ZPV55iNq4LMINoKEfAzvUWNvsHudUx0g+LQevnAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-22"
+    },
+    {
+     "id": "12-23",
+     "n": 23,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Porto das Marés",
+     "w": 1362,
+     "h": 767,
+     "cor": "#d8c8b8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJQBOgB+BIbpm2AD+4g7pLi8rPyY0JRV1n8DCcvj7uhCmwrgkE9T4TW3JIMk+SXjiTa9KSwLvuC7K1n+OTl3wqAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-23"
+    },
+    {
+     "id": "12-24",
+     "n": 24,
+     "tipo": "interno",
+     "alt": "Quarto do Porto das Marés",
+     "w": 1151,
+     "h": 767,
+     "cor": "#988878",
+     "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAsAA4BaJZACdAYuHlabo//Z4AD+GV9NTXOEhg9iFICHiMgPSVklmPpcZgsOs1o8ncaqCCR0qkIm6s2RWFdopR/Sjk5r1+/7k0j4JIlhg+AbzCq/q9p1AAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-24"
+    },
+    {
+     "id": "12-25",
+     "n": 25,
+     "tipo": "interno",
+     "alt": "Quarto do Porto das Marés",
+     "w": 1362,
+     "h": 767,
+     "cor": "#b8a878",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJZACdAELxqR2pAD8/8TaGEtkvROxusILvtUiirz/tzjYfAPcpbO3Q1GFC628/sCTvmHhF3M6otY4/QiLj6TiQSQU4sxAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-25"
+    },
+    {
+     "id": "12-26",
+     "n": 26,
+     "tipo": "interno",
+     "alt": "Área privativa do Porto das Marés",
+     "w": 1362,
+     "h": 767,
+     "cor": "#b8a898",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJYgCdADpGVvCLOAA/et0zuf6V5XPTT6DBajOmQv0mu7Gbo/qvWGjYPVvSZ6NGJTqs4uO490I3GkE23/OydhgAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-26"
+    },
+    {
+     "id": "12-27",
+     "n": 27,
+     "tipo": "interno",
+     "alt": "Área privativa do Porto das Marés",
+     "w": 1151,
+     "h": 767,
+     "cor": "#e8e8d8",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJYgCdADc+UPYr58AAP7yL9a0LW86qVebJKbaG0rv/nm97CKl34Zq/BgXmGoMdqDlHuZVPlqZwNNtFWzjShmiQpt+eUzZzBEAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-27"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "12-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJZQAAujc3mc5wdAA/vVJNC6roYDm5+jcV5flU2S6bseZgsB2uCCL2EjGsTQWQ2eGnNt0JJ7NbhnwAcAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-03"
+    },
+    {
+     "id": "12-04",
+     "n": 4,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAAkAA4BaJZwAAt4+zj3pRcAA/vVYV7ZZLqtWxsGJ237rQ9FOxZzCEVIpbTAmYPoWPjGCBKeeAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-04"
+    },
+    {
+     "id": "12-05",
+     "n": 5,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJZwAAv+44MHh4AD+8oVDma2m/7kNY+YuvUb98tVp7UHueZKFdnFr0MdJtoKTPZVPrRIgNyY/sXotcAoAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-05"
+    },
+    {
+     "id": "12-06",
+     "n": 6,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJZwAAhumWEK4AAD+9VhhpNiy1dAceCB4hBT0PdHu3Xyflg0g2/+u4h2Gnd1jB+YXcxc85YbGucVz0znJ30mBAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-06"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "12-02",
+     "n": 2,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAkAA4BaJZwAAtz3XrE1AAD+m7DSEekFaJk/RuIVkOyW6cs1Vp4fiup7gGAVtmhqNaNzhhm7ILubUYDOaEAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-02"
+    },
+    {
+     "id": "12-17",
+     "n": 17,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Porto das Marés",
+     "w": 1364,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAkAA4BaJZwAAt0Ke/5pO4AA/vCvwN1S58P3AQlQiivcvSKtzRJhRmzSPRGfXi7rcA7W7lfL15MCG5H2Po+ptr5svjLp3UAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-17"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "12-16",
+     "n": 16,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Porto das Marés",
+     "w": 2500,
+     "h": 1406,
+     "cor": "#98c8e8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJYgCdAEOymjp/gAAy0EeRkJ8yFYlg9VsI1CMH5PA1CsS7X4iLzGv1jNbU1HkMH8NxWZNUpcLsb4L2j9LgAAA",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/porto-das-mares/12-16"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "residencial-mandacaru",
+  "ordem": 13,
+  "nome": "Residencial Mandacaru",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Antônio Bezerra",
+  "bairroId": 40,
+  "regiao": "oeste-centro",
+  "coord": {
+   "lat": -3.7372716909137833,
+   "lon": -38.59483262883606
+  },
+  "coordAproximada": false,
+  "endereco": "Rua Pres. Prudente, 88",
+  "status": "em_construcao",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": "sim",
+  "areaMin": 36.88,
+  "areaMax": 36.88,
+  "elevador": true,
+  "unidades": 204,
+  "vagas": 93,
+  "vagasPorUnidade": 0.46,
+  "lazer": [
+   "academia",
+   "festas",
+   "pet",
+   "piscina",
+   "kids"
+  ],
+  "lazerItens": [
+   "Academia Coberta",
+   "Espaço Gourmet",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina Infantil",
+   "Playground",
+   "Salão de Festas com Copa"
+  ],
+  "diferenciais": [
+   "Gazebo",
+   "Bicicletário Descoberto",
+   "Circuito fechado de TV",
+   "Coleta seletiva",
+   "Lazer equipado",
+   "Luminária com sensor de presença na guarita",
+   "Célula de segurança para pedestre",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Piso em Cerâmica na Sala",
+   "Previsão para ar condicionado",
+   "Medição de água individualizada",
+   "Revestimento parcial das áreas molhadas",
+   "Tanque em mármore sintético",
+   "Varanda",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Ao lado do Terminal Rodoviário Antônio Bezerra (Viagens), a 2 min Terminal de Integração, a 3 min do Vapt Vupt, a 2 min do Assaí Atacadista, a 7 min do North Shopping, próxim do Cartório Jaime Araripe, do Supermercado Compre Max, da Farmácia Pague menos, do Hospital Frotinha Atônio Bezerra, do Parque Raquel de Queiroz, das escolas Escola José de Alencar, Escola Joaquim Nogueira e Escola Ant. Bezerra, da Universidade Federal do Ceará, do Colégio da PolÍcia Militar do Ceará, da Academia Body Coach, da Caixa Econômica Federal, próximo a postos de gasolina, da Estação Trem / VLT, de restaurantes e pizzarias",
+  "descricao": [
+   "Residencial Mandacaru – o caminho certo para uma vida mais completa em Fortaleza.",
+   "Esse incrível lançamento no Antônio Bezerra reúne o que há de melhor em moradia com uma localização excelente e um preço que cabe no seu bolso!",
+   "São apartamentos de 2 quartos com opção de varanda ou área privativa, em uma torre de 17 andares que oferece uma vista única da região. Descendo o elevador você encontra uma área de lazer completa, com piscinas, duas áreas fitness, espaço gourmet e muito mais.",
+   "Faça a diferença na sua vida e realize hoje mesmo o sonho de morar num apartamento da MRV com subsídio de até R$75 mil do programa Minha Casa Minha Vida!"
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-mandacaru",
+  "imagens": {
+   "capa": {
+    "id": "13-09",
+    "n": 9,
+    "tipo": "piscina",
+    "alt": "Piscina do Residencial Mandacaru",
+    "w": 1363,
+    "h": 767,
+    "cor": "#d8c8c8",
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJYwCdACZzlptAAD+xcy7Ba9YjQLHp7o8cDdEzZpUFrarWIdwuJ0NW6P5nMoV9aGW2be6zINR24RTSV+6Xatywvm4gAAA",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/residencial-mandacaru/13-09"
+   },
+   "galeria": [
+    {
+     "id": "13-09",
+     "n": 9,
+     "tipo": "piscina",
+     "alt": "Piscina do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#d8c8c8",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJYwCdACZzlptAAD+xcy7Ba9YjQLHp7o8cDdEzZpUFrarWIdwuJ0NW6P5nMoV9aGW2be6zINR24RTSV+6Xatywvm4gAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-09"
+    },
+    {
+     "id": "13-04",
+     "n": 4,
+     "tipo": "fachada",
+     "alt": "Fachada do Residencial Mandacaru",
+     "w": 1085,
+     "h": 767,
+     "cor": "#5878a8",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAsAA4BaJZACdADcNlqm9YAA/SHKddyTf6yFbpujl8cyOaBVYYi7YSdfa10CBItGJfu3Sr2GiM6zgmGWxnSH/ndp65GXcjdWEmvIDkiJAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-04"
+    },
+    {
+     "id": "13-06",
+     "n": 6,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#887868",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJYwCdAEC1VPnoSAAAP5mvSdohYMR1Jj3CiADgQjBVPzAm3LW2exQ7zMAODC8w3pcj8+rHVYfBCSeBoYVSm3woAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-06"
+    },
+    {
+     "id": "13-07",
+     "n": 7,
+     "tipo": "fitness",
+     "alt": "Espaço fitness do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#887888",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJQBOj+ADL62OC9YAAP7g263HMBVZ6MTwZcHl3ijKL+LW/rQIkFEalzQnruK57uN2JhTqrtRNBgb2oziM+rvZYAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-07"
+    },
+    {
+     "id": "13-08",
+     "n": 8,
+     "tipo": "fitness",
+     "alt": "Espaço fitness do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#686868",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAkAA4BaJZwAAm1TZNovgADx508qGwHv2opPVWeeuLqDNftku/Zp95FwhvgpwUieJuOoH/CsAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-08"
+    },
+    {
+     "id": "13-10",
+     "n": 10,
+     "tipo": "festas",
+     "alt": "Salão de festas do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#a89898",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAkAA4BaJQBOgCBvfU79NLAA/q/FovaVAeK5loxqZYeyNO+rVjhKtFrHaLIi0OPlzpff36Lo0WXk+6QAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-10"
+    },
+    {
+     "id": "13-11",
+     "n": 11,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8b8b8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJQBOgBo+qBszAAD+x16CPvvs7KAPpNX3dLZTbxJOY59Ng5x8inKXATe3Uz1wMNzgg7XRRiFZ3cBax7KAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-11"
+    },
+    {
+     "id": "13-12",
+     "n": 12,
+     "tipo": "interno",
+     "alt": "Área privativa do Residencial Mandacaru",
+     "w": 1363,
+     "h": 682,
+     "cor": "#9898a8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAgAA4BaJQAAS6SKLpPTAAD+xywDo8y71oIi9gec5dZ6KTmz3L9q62Y+zBK4c/WqslqG+xyZ+NfxpBFmDjWEAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-12"
+    },
+    {
+     "id": "13-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8b8c8",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAkAA4BaJQBdgCKufucDeJBgAP7WrDc4HxNWnfDldNkwS7PQBFi1TYGO5MzgZLideYChgAaU+msz3ZLT7tfROEsMcjJaR11NAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-13"
+    },
+    {
+     "id": "13-14",
+     "n": 14,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8b8c8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAQCdASoQAAkAA4BaJQAAQvIyLViAAP4LCzITMUDDJfP/xrJ1k+sUFT3JYMESIlX0O+AoIyVg87i/BYwND9J+N5HZMqhAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-14"
+    },
+    {
+     "id": "13-15",
+     "n": 15,
+     "tipo": "interno",
+     "alt": "Varanda do Residencial Mandacaru",
+     "w": 1363,
+     "h": 767,
+     "cor": "#989898",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAQCdASoQAAkAA4BaJZAC7ADWwkIQAP6Q2Wu/qcmrZ4edxqCZvVYpH2JL14LyAPWPhgigInT8m6fJrW0U1U9D2WAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-15"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "13-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Mandacaru",
+     "w": 1278,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAoAA4BaJZQAAusmeZjs7cOAAP7ifdgvmSktYuW0F5eVkQ7jeUFO0W6HebK1xFuMF/gEchp27WY054mlM62G/cdjoQAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-01"
+    },
+    {
+     "id": "13-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Mandacaru",
+     "w": 1278,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQAgCdASoQAAoAA4BaJZQC7AELYLOWy50AAP7wj4TSIG47SHNioyH3Dzl/S/IXLmwObJImkGjFRS4PDg81I3K2o6bw943lEogAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-02"
+    },
+    {
+     "id": "13-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Mandacaru",
+     "w": 1278,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAoAA4BaJZwAAu060o8gCUAA/vI+KfakgAdNO/VkqzCDwp3lMxk/YpCnSOCsqgGLD5VVeXtebh9AaKrF7eMCAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-03"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "13-16",
+     "n": 16,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Residencial Mandacaru",
+     "w": 1278,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAoAA4BaJZwAAtz9w5IhkAD+4n2USAJit5Rdt7kN5cTJDGaOxnZ4s1Wuu2RSVvsSjarcLzwAcni5m6hAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-16"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "13-05",
+     "n": 5,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Residencial Mandacaru",
+     "w": 1363,
+     "h": 660,
+     "cor": "#a8c8e8",
+     "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAgAA4BaJZACdAEU6fHpkQAA/ma/aEYW5k4HB0MUXXtlUn2YeHb2Y5skYvhYweyegUBZEBgx5AhfmNRWGjq4AAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-mandacaru/13-05"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "reserva-brisa-do-mar",
+  "ordem": 14,
+  "nome": "Reserva Brisa do Mar",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Cocó",
+  "bairroId": 11,
+  "regiao": "leste",
+  "coord": {
+   "lat": -3.7549438,
+   "lon": -38.4691782
+  },
+  "coordAproximada": false,
+  "endereco": "Rua dos cajueiros, 450",
+  "status": "em_construcao",
+  "quartos": [
+   1,
+   2
+  ],
+  "suite": false,
+  "varanda": null,
+  "areaMin": 38.05,
+  "areaMax": 46.74,
+  "elevador": true,
+  "unidades": 272,
+  "vagas": 223,
+  "vagasPorUnidade": 0.82,
+  "lazer": [
+   "festas",
+   "pet",
+   "piscina",
+   "kids",
+   "verde"
+  ],
+  "lazerItens": [
+   "Espaço Gourmet",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina Infantil",
+   "Playground",
+   "Salão de Festas com Copa",
+   "Espaço Piquenique"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Cerca elétrica",
+   "Circuito fechado de TV",
+   "Coleta seletiva",
+   "Lazer equipado",
+   "Luminária com sensor de presença na guarita",
+   "Previsão para cancela na guarita",
+   "Célula de segurança para pedestre",
+   "Bancada da Cozinha em granito com cuba em inox",
+   "Bancada do banheiro em granito com cuba em louça",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Piso Laminado na Sala",
+   "Piso Laminado no Quarto",
+   "Medição de água individualizada",
+   "Revestimento total das áreas molhadas",
+   "Tanque em aço inox",
+   "Varanda",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "Escola Municipal Odinilra Cruz Moreira, Cafeteria Prosa e Queijos, Super Lagoa, Farmácia Pague Menos, , Centro Universitário Unifanor, Cidade fortal, Unifor, Centro de Eventos do Ceará, Shopping Rio Mar, a 10 minutos da Praia do Futuro e do Shopping Iguatemi. Vias de acesso: Av. Doutor Aldy Mentor, Av. Santos Dumont, Av. Sebastião de Abreu",
+  "descricao": [
+   "Reserva Brisa do Mar: a transformação do seu mundo começa aqui. Localizado em Fortaleza, o empreendimento tem apartamentos planejados para melhorar a qualidade de vida da sua família. Venha se encantar com o novo apê da MRV!",
+   "Apartamentos com 2 quartos em condomínio fechado no Cocó, com elevador, opção de varanda, e opção de vaga de garagem. Toda a tranquilidade, segurança e conforto para você e sua família. Aqui a diversão não tem limites!",
+   "Mais que um apartamento, o novo jeito MRV de viver. O Reserva Brisa do Mar oferece lazer equipado, coleta seletiva, sistema de segurança, energia solar nas áreas comuns, piso laminado na sala e nos quartos, e muito mais.",
+   "Esse é o momento de comprar seu novo apê, seja para morar ou investir a MRV tem a opção certa para você. Conheça as condições especiais e facilidades do programa Minha casa minha vida e faça uma simulação."
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-reserva-brisa-do-mar",
+  "imagens": {
+   "capa": {
+    "id": "14-05",
+    "n": 5,
+    "tipo": "portaria",
+    "alt": "Portaria do Reserva Brisa do Mar",
+    "w": 1363,
+    "h": 767,
+    "cor": "#c8c8c8",
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoQAAkAA4BaJbACdADdKabWq9f6AAD2MlHvKaC3FogQ+GIlLXwy6gVEtsXkXw7n2lxT/CIlUJfKI1P9hwu1GjFGF0TDxiqr+7Dn6ZiUYAA=",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/reserva-brisa-do-mar/14-05"
+   },
+   "galeria": [
+    {
+     "id": "14-05",
+     "n": 5,
+     "tipo": "portaria",
+     "alt": "Portaria do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8c8c8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoQAAkAA4BaJbACdADdKabWq9f6AAD2MlHvKaC3FogQ+GIlLXwy6gVEtsXkXw7n2lxT/CIlUJfKI1P9hwu1GjFGF0TDxiqr+7Dn6ZiUYAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-05"
+    },
+    {
+     "id": "14-07",
+     "n": 7,
+     "tipo": "festas",
+     "alt": "Salão de festas do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8b8a8",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJQBOgCK592e6gi2AAP634EWvMBjFpt7OFrsdDvzjLz2uHtqU7e/1TIs/CA2caMFpcHHQm4tC9susSi9H8EVYQAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-07"
+    },
+    {
+     "id": "14-08",
+     "n": 8,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#a89888",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJQBOgCIGg1NOeQAA4da2VPbXjTHbg3dTpuPSUZCOPjPewS4J90J3I3agSxog9+omAcy4Rtr/sJqhlq/KgAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-08"
+    },
+    {
+     "id": "14-09",
+     "n": 9,
+     "tipo": "pet",
+     "alt": "Pet place do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8c8c8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJYgCdAEefbr9nQAA/kWTzQkrKVuiRT18/pqHLgOCnD2aTu6i5mQfPtZQQW4v/7tZvprTz5rt6leK4f6DHIjiIrjf6I3wAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-09"
+    },
+    {
+     "id": "14-10",
+     "n": 10,
+     "tipo": "piscina",
+     "alt": "Piscina do Reserva Brisa do Mar",
+     "w": 1364,
+     "h": 767,
+     "cor": "#0888c8",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABQAgCdASoQAAkAA4BaJbACdGuAt/8DXzrziqAA/oa0a3PUsTDYpmMSOLT6rTgqtwrBV0LmA5lilLg8BHrfalzCz8l4lVSLwiBj8duyX+aANGSWUAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-10"
+    },
+    {
+     "id": "14-11",
+     "n": 11,
+     "tipo": "piscina",
+     "alt": "Piscina do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8c8c8",
+     "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAQCdASoQAAkAA4BaJbACdAEQ6xNxKAD+SbA8/+0QDIwd1wl4PXUK1G5Zk4UkXK49sgCigGEs0qJ7zMt02V0XNM/W9A168ZNRAJBlNHHx4w5ByY34W4XAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-11"
+    },
+    {
+     "id": "14-12",
+     "n": 12,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Reserva Brisa do Mar",
+     "w": 1364,
+     "h": 767,
+     "cor": "#d8d8d8",
+     "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAkAA4BaJbACdH8AG5J/sFrAAP7BuzJPqrI2La6cc/IWxXQSmDs3/JUC+OLUAuSM4v4yssbDXVqjjDuMymNtl9eP91KcL3Iq7tIL/S144tFQAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-12"
+    },
+    {
+     "id": "14-13",
+     "n": 13,
+     "tipo": "lazer",
+     "alt": "Área de lazer do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJbACdADp07hlgAD9swQneY3rQpeSg8AE1U8pseEq8nKr7QE5PsRFMizISXbfiRGfDL4QUDMT9fgAEXCD2F+x6Ls+N2rgIAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-13"
+    },
+    {
+     "id": "14-15",
+     "n": 15,
+     "tipo": "fachada",
+     "alt": "Fachada do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#888898",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAkAA4BaJagCdADszS+EAAD+Ptnu5N+NbK5wI2OcvsTDg4v3cBlv1sHAKG8s9S/MEYd6VfXq4i+CkqQN+8AA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-15"
+    },
+    {
+     "id": "14-16",
+     "n": 16,
+     "tipo": "interno",
+     "alt": "Área privativa do Reserva Brisa do Mar",
+     "w": 1364,
+     "h": 767,
+     "cor": "#d8d8d8",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAkAA4BaJQBOj+ABrLLQ0YAA8opWiUHjWJPJo/EGxwao6NMyzgbxXXx94x0gk9e/IeeKRND3yYhGl9cYdyTGsDJ+RoqGD+SyTYAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-16"
+    },
+    {
+     "id": "14-17",
+     "n": 17,
+     "tipo": "interno",
+     "alt": "Quarto do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#c8b8b8",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJQBOgMXIiFOJXQAA/cX6BtQtPUePaIaJ3sVqhhkFSKGjJYVzlOZ2WqpNj2L5JgljYOieC37RvOQePy9cuhOqPxv2rXs9RBj1+AAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-17"
+    },
+    {
+     "id": "14-18",
+     "n": 18,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8a8a8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAkAA4BaJQBOgBopWeZgAAD9x0aHVRFP1ctXkxBeVJROom8BXxZmv5KeveZHM1mu1hnKXgf1wXzDgAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-18"
+    },
+    {
+     "id": "14-19",
+     "n": 19,
+     "tipo": "interno",
+     "alt": "Varanda do Reserva Brisa do Mar",
+     "w": 1364,
+     "h": 767,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAA4BaJYgCdAC3bFnIAAD+YT52ht9Xd0L8kncgz02bd3OTIVv0o/OMThPLFoPU/bDP+hfQjteonlWoZfp7cAotMjlpY7aIAEoHuThgAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-19"
+    },
+    {
+     "id": "14-20",
+     "n": 20,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#684838",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAkAA4BaJZgCdADp4535otgAAP7m5NMLJA+CBORjRx2a6ULW5GK9+5pfrfVmhh4f64FMkuJbYQO/or+ieOKcUYPMisNmykNNWm2TorgAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-20"
+    },
+    {
+     "id": "14-21",
+     "n": 21,
+     "tipo": "interno",
+     "alt": "Varanda do Reserva Brisa do Mar",
+     "w": 1364,
+     "h": 767,
+     "cor": "#6898b8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJbACdACqPl3CAAD+SawG275oAvZ1e0oYIr8x1TzNMvJkTREudA9/3oAdpn+JDRqVh6CzGbEgAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-21"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "14-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAkAA4BaJZwAAp/WhRfZ+AD+9/vb5M2ggrYF11tbc+wcFhviRSqDkUQBezlPRjqqR5QUQAAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-01"
+    },
+    {
+     "id": "14-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAkAA4BaJZwAAuQ6Gi/YBAD+91wcEfsylhVqHvxo66yn5RbtXoomh2F+/vr3BIzNXvLhX9lAAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-02"
+    },
+    {
+     "id": "14-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACQAQCdASoQAAkAA4BaJZwAAp0k/IAA/vf79Z9r9bYJ9tzUw3Ft3qoHAxS0Y7FvJ0ueyWKKAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-03"
+    },
+    {
+     "id": "14-04",
+     "n": 4,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAkAA4BaJaQAAuOqo7X1QAD+9nZ0vWpYtGt4rlmsn/j7Tdm/HxqEoCx70qwbx8E9mS6eXq8AAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-04"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "14-22",
+     "n": 22,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Reserva Brisa do Mar",
+     "w": 1364,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAkAA4BaJZQAAucJ0xjAAPfcXTm98U7CwRsQsLgB+QlHGEjvqijIaZz9w6Tiek5bVjKAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-22"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "14-06",
+     "n": 6,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Reserva Brisa do Mar",
+     "w": 1576,
+     "h": 767,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoQAAgAA4BaJZgCdAEPWvKU4fmmAAD6n6jj44i7Zp7jrDsNvC2aNqiDSWm3I9Iuu7fLU7Lpgu3VaeRjT8B8k5hNXqfs3yVjLzaAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-06"
+    },
+    {
+     "id": "14-14",
+     "n": 14,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Reserva Brisa do Mar",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAkAA4BaJaQAAqzVr51zAAD++BBMZis+tUO2yhkRb5FBhTZlpUDgl4Wu28tt34DpmPj59t64YZQAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/reserva-brisa-do-mar/14-14"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "residencial-valparaiso",
+  "ordem": 15,
+  "nome": "Residencial Valparaíso",
+  "linha": "mrv",
+  "cidade": "Fortaleza",
+  "bairroNome": "Jangurussu",
+  "bairroId": 61,
+  "regiao": "sul",
+  "coord": {
+   "lat": -3.849155647682819,
+   "lon": -38.504005171163946
+  },
+  "coordAproximada": false,
+  "endereco": "Av. Dionísio Leonel Alencar N&deg; 1572",
+  "status": "em_construcao",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": "sim",
+  "areaMin": 38.4,
+  "areaMax": 38.4,
+  "elevador": true,
+  "unidades": 240,
+  "vagas": 88,
+  "vagasPorUnidade": 0.37,
+  "lazer": [
+   "festas",
+   "pet",
+   "piscina",
+   "verde",
+   "kids"
+  ],
+  "lazerItens": [
+   "Churrasqueira",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina Infantil",
+   "Pista de Caminhada",
+   "Playground"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Medição de água individualizada",
+   "Tanque em mármore sintético",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "centro da messejana, da Rodoviária de Messejana, do Vapt Vupt Messejana, próximo a escolas estaduais e municipais, da BR 116, do Supermercado Ismael, de Farmácias, da UPA 24H, de Postos de saude, do CUCA JANGURUSSU, de Academias, do Areninha (Society publico) e de postos de gasolina na região",
+  "descricao": [
+   "Seja bem-vindo ao Residencial Valparaíso. Um empreendimento exclusivo da MRV no bairro Jangurussu! A próxima fase de sua vida é conquistar um apartamentos de 2 quartos com opção de varanda e área privativa no Residencial Valparaíso. Um condomínio fechado que vai proporcionar conforto e praticidade no seu dia a dia.",
+   "Aqui você encontrará tudo o que precisa: área de lazer com piscina adulto e infantil, para a criançada temos um espaço com playground, a área de lazer também conta com churrasqueiras para os master chefs de plantão soltarem a criatividade na cozinha, um cantinho só para nossos aumiguinhos com um pet place, área verde dentro do condomínio, bicicletário descoberto, churrasqueiras para receber os amigos e claro, uma pista de cooper para quem não abre mão de manter a saúde em dia.",
+   "Faça a diferença na sua vida e realize hoje mesmo o sonho de morar num apartamento da MRV com as melhores condições do Minha Casa Minha Vida!"
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/fortaleza/apartamentos-residencial-valparaiso",
+  "imagens": {
+   "capa": {
+    "id": "15-11",
+    "n": 11,
+    "tipo": "fachada",
+    "alt": "Fachada do Residencial Valparaíso",
+    "w": 1363,
+    "h": 767,
+    "cor": "#7898a8",
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAkAA4BaJYwCdABoUCAA/NXmo8NfZyc5UCcKWEipQg8bREV2gDLO9Nfz1IeSqL/DrbII71zpAAAA",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/residencial-valparaiso/15-11"
+   },
+   "galeria": [
+    {
+     "id": "15-11",
+     "n": 11,
+     "tipo": "fachada",
+     "alt": "Fachada do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#7898a8",
+     "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAQCdASoQAAkAA4BaJYwCdABoUCAA/NXmo8NfZyc5UCcKWEipQg8bREV2gDLO9Nfz1IeSqL/DrbII71zpAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-11"
+    },
+    {
+     "id": "15-06",
+     "n": 6,
+     "tipo": "piscina",
+     "alt": "Piscina do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#a8c8e8",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAkAA4BaJZACdAEenNzmeMwAAOH9qS5FCCu5iPvpyTvgD5K6i9RC3FSIOi7GpE4talS3z51lYUzeRsqrlEp1hZQy83yXPvaXlcAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-06"
+    },
+    {
+     "id": "15-08",
+     "n": 8,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#385848",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJYwCdH8AFmOKMQkAAPaZdOCRmxURdPbA1ptnDPsfvJ3NcoauUhIfctq9+7FtI5IJ35MA4YK4IkhjjbrPekGcxAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-08"
+    },
+    {
+     "id": "15-09",
+     "n": 9,
+     "tipo": "pet",
+     "alt": "Pet place do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#5888b8",
+     "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAQCdASoQAAkAA4BaJQBOgBxpxiuUIADN8cfUbZmAqK9TCi25WPyOqSXbY8lfVmyT2KeH0zwZKZRQFuVeWqDTWbxJ0uAjpYHsf635wxQz5XAUPQAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-09"
+    },
+    {
+     "id": "15-12",
+     "n": 12,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#887868",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJQBOgBuZNXpGAAD+6iJI+H23ilvhiEmfyKku4Lj4ipXYI3twzCT65T02Zvw0T4ZtYfyQMeAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-12"
+    },
+    {
+     "id": "15-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Quarto do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#988888",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAkAA4BaJZQCdACqGjdX0AD+SUx/tTqMEaxR1YJ5rK5LYqL5sD3zsTAeHn3Dc+tR4siisK9xk9XL/nsjOMT+R0dpez4A",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-13"
+    },
+    {
+     "id": "15-14",
+     "n": 14,
+     "tipo": "interno",
+     "alt": "Varanda do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#888888",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAkAA4BaJZQC7ACqw2MObAD6mCkdVG8rY/QS/U/EA7aLbK5P4/0tUgv+5HWrO2pZGV1BV2wqr0QcCa+Uy0YovCsAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-14"
+    },
+    {
+     "id": "15-15",
+     "n": 15,
+     "tipo": "interno",
+     "alt": "Área privativa do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#989898",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoQAAkAA4BaJZQAAgHcGHIAAP5NB0VBVO1SMtVg/UH+PwaCja1zuu9yy1e71fhxTCnGvmU5rusO+ih/W6bEw/tcQbRgwAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-15"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "15-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Valparaíso",
+     "w": 1279,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoQAAoAA4BaJaQAAt0A6c9bpwwAAP7uZgem9iudWG1ht3sBF5fuQIB8qeniDFDhhWS9jplhhkoV2GI0qOI7vQAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-02"
+    },
+    {
+     "id": "15-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Valparaíso",
+     "w": 1279,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAoAA4BaJZwAAlxdL+yEAAD++BSyh7Ro5Bf493ucGVULGFvNY2kRoL6I4GvJsPLj90F0Bj5k4nctosTwbeNcddLv+bh+IFAgAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-03"
+    },
+    {
+     "id": "15-04",
+     "n": 4,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Valparaíso",
+     "w": 1279,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAoAA4BaJZwAAwDd/gQEuO0AAP7uaqh7k0EHfCMjrdHDprUcLc0u3u2Wo/Q21f73N3gbCxeQnGS7+IPzAuRsfDhFhRAX5AAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-04"
+    },
+    {
+     "id": "15-05",
+     "n": 5,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Residencial Valparaíso",
+     "w": 1279,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoQAAoAA4BaJaQAAvqo+eI/M7IAAP7ykCltM7Wj8ZHIPVes6GmrxVwjtOfoDgu7a01EypXOmUNTo3JLlJAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-05"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "15-01",
+     "n": 1,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Residencial Valparaíso",
+     "w": 1279,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQAAoAA4BaJZwAAvem3cKvoAD+9yAOYbq2K4phfQwROjJdXgTc85AAAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-01"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "15-07",
+     "n": 7,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Residencial Valparaíso",
+     "w": 800,
+     "h": 450,
+     "cor": "#c8d8e8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJYwCdAEOe3jwzrAA/tUWkt1gemAc4rW+yHft06FMhbgI4ywM//ap+s1tIon8YazUrAMs4+XwEHU8VjwAAA==",
+     "larguras": [
+      640
+     ],
+     "fallback": 800,
+     "src": "/img/residencial-valparaiso/15-07"
+    },
+    {
+     "id": "15-10",
+     "n": 10,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Residencial Valparaíso",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJaQAAdLgPKgAAP74uj8mHx7upb188dttvMNYuN2PFA16dx/D3ybj6iFWzla6XPieJ2knwWD+NyI4v3AAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/residencial-valparaiso/15-10"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ },
+ {
+  "slug": "eco-park",
+  "ordem": 16,
+  "nome": "Eco Park",
+  "linha": "mrv",
+  "cidade": "Eusébio",
+  "bairroNome": "Urucunema",
+  "bairroId": null,
+  "regiao": "eusebio",
+  "coord": {
+   "lat": -3.9028823,
+   "lon": -38.4552025
+  },
+  "coordAproximada": false,
+  "endereco": "Rua Córrego do Matias, 280",
+  "status": "em_construcao",
+  "quartos": [
+   2
+  ],
+  "suite": false,
+  "varanda": null,
+  "areaMin": 41.4,
+  "areaMax": 41.4,
+  "elevador": null,
+  "unidades": 200,
+  "vagas": 200,
+  "vagasPorUnidade": 1,
+  "lazer": [
+   "festas",
+   "pet",
+   "piscina",
+   "kids"
+  ],
+  "lazerItens": [
+   "Churrasqueira",
+   "Espaço Gourmet",
+   "Pet Place",
+   "Piscina Adulto",
+   "Piscina Infantil",
+   "Playground",
+   "Salão de festas"
+  ],
+  "diferenciais": [
+   "Bicicletário Descoberto",
+   "Circuito fechado de TV",
+   "Coleta seletiva",
+   "Lazer equipado",
+   "Luminária com sensor de presença na guarita",
+   "Célula de segurança para pedestre",
+   "Piso da Cozinha e Banheiro em Cerâmica",
+   "Piso em Cerâmica na Sala",
+   "Piso em Cerâmica no Quarto",
+   "Piso Laminado na Sala",
+   "Previsão para ar condicionado",
+   "Medição de água individualizada",
+   "Revestimento parcial das áreas molhadas",
+   "Tanque em mármore sintético",
+   "Varanda",
+   "Medição de gás individualizado",
+   "Dispositivos economizadores de água e energia"
+  ],
+  "proximoA": "1,2Km da Prefeitura do Eusébio",
+  "descricao": [
+   "A gente sabe: o sonho de morar no que é seu vai muito além de sair do aluguel. É poder morar em uma localização estratégica para um dia a dia mais prático. No Eco Park a vida se torna mais prática: um apartamento de 2 quartos com opção de varanda para você e sua família desfrutarem de momentos inesquecíveis!",
+   "E o lazer é incrível! Tem piscinas adulto e infantil para dias mais refrescantes, playground para a criançada e churrasqueira e um espaçoso salão de festas, para você reunir quem você mais gosta. Além de pet place e bicicletário. Aproveite a entrada facilitada e viva a liberdade de morar no que é seu: você pode economizar até R$51 mil reais com o novo Minha Casa Minha Vida e ainda garante as menores taxas de juros!"
+  ],
+  "mcmv": true,
+  "urlOficial": "https://www.mrv.com.br/imoveis/ceara/eusebio/apartamentos-eco-park",
+  "imagens": {
+   "capa": {
+    "id": "16-11",
+    "n": 11,
+    "tipo": "fachada",
+    "alt": "Fachada do Eco Park",
+    "w": 1363,
+    "h": 767,
+    "cor": "#d8b8a8",
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJQBOgCIfs5nocvAA/rXug6fE/XeP+Fj91MpXh3qL5/DaSc0N3b7sni0T2mexjor4bWbPIyZb5oGks7AAAA==",
+    "larguras": [
+     640,
+     1080
+    ],
+    "fallback": 1080,
+    "src": "/img/eco-park/16-11"
+   },
+   "galeria": [
+    {
+     "id": "16-11",
+     "n": 11,
+     "tipo": "fachada",
+     "alt": "Fachada do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#d8b8a8",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJQBOgCIfs5nocvAA/rXug6fE/XeP+Fj91MpXh3qL5/DaSc0N3b7sni0T2mexjor4bWbPIyZb5oGks7AAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-11"
+    },
+    {
+     "id": "16-04",
+     "n": 4,
+     "tipo": "piscina",
+     "alt": "Piscina do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8c8c8",
+     "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAQCdASoQAAkAA4BaJQBOgCIe5P+q5VgA/O7ah6dnBXzk9h8qPtnrHOP9zjxokP7cRk/85ORocw99ozqMQ3zEs50EEzFd6Yc7A9tqTLQW336cbKEIHV7APDMP4AAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-04"
+    },
+    {
+     "id": "16-06",
+     "n": 6,
+     "tipo": "kids",
+     "alt": "Playground e espaço kids do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#082848",
+     "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQAgCdASoQAAkAA4BaJbACdDBKyIXK07n5nYgA/uhRijSZpimpFnGDDkvKtp/ri/UH6dRBofPk1fDQE78rgGVWfrIlfUf8Ze6vu73J19w9WdtkKOD8lCZnAAA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-06"
+    },
+    {
+     "id": "16-07",
+     "n": 7,
+     "tipo": "pet",
+     "alt": "Pet place do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJQBYdiPqSDjMDpYgAP6Zh/iF6HFrYh6PfPVHZAjsXm6nXmfYolUIfA1u3Nk7awKe3BJjd+F7cJoah0jP25Qf4AA=",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-07"
+    },
+    {
+     "id": "16-08",
+     "n": 8,
+     "tipo": "gourmet",
+     "alt": "Espaço gourmet do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#b8a898",
+     "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJQBOgB9laL3yYuAA/tO2EBPCBt1PQ0flwqMrAeIVH0zr040Puipi5QQgw2saZU8pAt1HTrprEkxJMohKsAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-08"
+    },
+    {
+     "id": "16-10",
+     "n": 10,
+     "tipo": "portaria",
+     "alt": "Portaria do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8e8",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAQCdASoQAAkAA4BaJQBOgBsVMTAA/ryV2BaqVulb72X/FwLNc3pt5CJXBR46uG9fQDNsy2rQtkc4AMOiw4Q+/ikUPtkx/AiI6h/XSUAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-10"
+    },
+    {
+     "id": "16-12",
+     "n": 12,
+     "tipo": "interno",
+     "alt": "Varanda do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#d8c8b8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAkAA4BaJYgCdAD8v99BmgAA/rY/p4prkBtMIeNeU34bLurgXv/1efXa98sB8h5bcj6KTbhB2kK1y3qDXwAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-12"
+    },
+    {
+     "id": "16-13",
+     "n": 13,
+     "tipo": "interno",
+     "alt": "Sala e cozinha do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#583818",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAkAA4BaJYgCdAD6JFkwcNsAAP7qJ8paSOyEsbpYXnyyJXtyR53rdTB7QsVf9XzBCKVf06g86W69t/87A6bakSD3SHCXqrJfkAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-13"
+    },
+    {
+     "id": "16-14",
+     "n": 14,
+     "tipo": "interno",
+     "alt": "Quarto do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#282818",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJQBOgBjUIhNPEADOP5WZzbIjA5sQrCz0vWgkg6NuO2T2p7hy4H00pZmBRAMrdqkl4WpSxD2dH6D43Oq3pR8ArknAgAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-14"
+    },
+    {
+     "id": "16-15",
+     "n": 15,
+     "tipo": "interno",
+     "alt": "Quarto do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#987868",
+     "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJQBOgCBS+FUgAPaWaEccKUUpd62D9qUIpxkj6URykDu37riONm/qPAqH/s7lOS4EKg421qtHRPsJ2AAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-15"
+    },
+    {
+     "id": "16-16",
+     "n": 16,
+     "tipo": "interno",
+     "alt": "Área privativa do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#080808",
+     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJQBOgBmCfMRyAAD5cIAf2WUgVaxvMj/yvjrsad8vQAdNy2EExRr62SIrMlIrku37JxdtUly2kIGXx/hExAXJy79xK0AA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-16"
+    }
+   ],
+   "plantas": [
+    {
+     "id": "16-01",
+     "n": 1,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Eco Park",
+     "w": 1278,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAQCdASoQAAoAA4BaJZwAAtz011pwVgAA/vKGM91EVtjC2Q/k/WyPR0BkapIOKOIe8KNOO9tTr3BGcRPCLjc109PHAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-01"
+    },
+    {
+     "id": "16-02",
+     "n": 2,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Eco Park",
+     "w": 1278,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoQAAoAA4BaJZwAAu19uiMrcZxIAP72dxv0Si09zgI3bHFbrGd3hBrs4MWV6Yz9VMo3zRh2X1TiEVC58dBPqzVQGetNT8cu9AAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-02"
+    },
+    {
+     "id": "16-03",
+     "n": 3,
+     "tipo": "planta",
+     "alt": "Planta do apartamento do Eco Park",
+     "w": 1278,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAoAA4BaJZwAAujb3L4MUAD+4j9Utvv+ZIX76YKULD4GJiETJhI69HbZwqMxHbxfRoAQAKufsvC3aK9l9U4mV6DShfSyI0cAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-03"
+    }
+   ],
+   "implantacao": [
+    {
+     "id": "16-09",
+     "n": 9,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Eco Park",
+     "w": 1363,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAgCdASoQAAkAA4BaJZwC7AYtfwldSys5qQgAAP7rsXIQalw0ss67LzxNwaxwuaaOv4sbUwr4U7Lm79bGzAQXKg5NEuPeWZ7tb42rUcMnx5kgksbNAAAA",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-09"
+    },
+    {
+     "id": "16-17",
+     "n": 17,
+     "tipo": "implantacao",
+     "alt": "Implantação do condomínio do Eco Park",
+     "w": 1278,
+     "h": 767,
+     "cor": "#f8f8f8",
+     "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAoAA4BaJaQAAucbfdzQgAD+9yAVfn4gV4+UeV1n8O+bkMVaieRfOY+XrRTT9IwF94rOgAAAAA==",
+     "larguras": [
+      640,
+      1080
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-17"
+    }
+   ],
+   "aerea": [
+    {
+     "id": "16-05",
+     "n": 5,
+     "tipo": "aerea",
+     "alt": "Vista aérea com o entorno do Eco Park",
+     "w": 1920,
+     "h": 767,
+     "cor": "#383828",
+     "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAYAA4BaJQBdgB9fYy0WGwAAykFMcElnsmM41L1VJPiN5DhHZs/whkBb9Q+/ZlmxiBawd1jCxKMC0hgUAA==",
+     "larguras": [
+      640,
+      1080,
+      1600
+     ],
+     "fallback": 1080,
+     "src": "/img/eco-park/16-05"
+    }
+   ]
+  },
+  "fonte": {
+   "extraidoEm": "2026-10-05"
+  }
+ }
+]
