@@ -1,9 +1,10 @@
 import type { NotaBairro, PoloId, RegiaoSlug } from "@/lib/types";
-import type { LazerEscolhivel, Moradores, Onde, Prazo, Respostas, Transporte } from "./types";
+import type { Entrada, LazerEscolhivel, Moradores, Onde, Prazo, Renda, Respostas, Transporte } from "./types";
 
 /**
  * Respostas <-> query string legível e compartilhável:
- *   ?o=regioes&g=leste,sul&d=unifor&t=onibus&m=filhos&p=1&l=piscina,kids&b=saude&z=logo
+ *   ?o=regioes&g=leste,sul&d=unifor&t=onibus&m=filhos&p=1&l=piscina,kids&b=saude&z=logo&r=r3&e=e2
+ * Renda e entrada vão como código de faixa (r3, e2), nunca como valor em reais.
  * Valores desconhecidos são descartados em silêncio: um link editado à mão não quebra a página.
  */
 const ONDE: Onde[] = ["fortaleza", "metropolitana", "regioes"];
@@ -14,6 +15,8 @@ const MORADORES: Moradores[] = ["so", "casal", "filhos"];
 const LAZER: LazerEscolhivel[] = ["piscina", "academia", "kids", "festas", "esportes", "verde"];
 const BAIRRO: NotaBairro[] = ["saude", "escolas", "comercio", "lazer", "mobilidade"];
 const PRAZO: Prazo[] = ["logo", "medio", "tanto_faz"];
+const RENDA: Renda[] = ["r1", "r2", "r3", "r4", "r5", "nao_informar"];
+const ENTRADA: Entrada[] = ["e0", "e1", "e2", "e3", "e4"];
 
 const um = <T extends string>(v: string | null, ok: readonly T[]) => (v && (ok as readonly string[]).includes(v) ? (v as T) : undefined);
 const varios = <T extends string>(v: string | null, ok: readonly T[], max: number) => {
@@ -32,6 +35,8 @@ export function codificar(r: Respostas): string {
   if (r.lazer?.length) p.set("l", r.lazer.join(","));
   if (r.bairro?.length) p.set("b", r.bairro.join(","));
   if (r.prazo) p.set("z", r.prazo);
+  if (r.renda) p.set("r", r.renda);
+  if (r.entrada && r.renda !== "nao_informar") p.set("e", r.entrada);
   return p.toString();
 }
 
@@ -40,6 +45,7 @@ export function decodificar(q: URLSearchParams | string): Respostas {
   const onde = um(p.get("o"), ONDE);
   const d = p.get("d") ?? "";
   // "b24" = bairro de id 24 (os 121 bairros); id inexistente cai no scoring como critério sem dado.
+  const renda = um(p.get("r"), RENDA);
   const destino = d === "casa" ? "casa" : /^b\d{1,3}$/.test(d) ? (d as `b${number}`) : um(d, POLOS);
   return {
     onde,
@@ -51,6 +57,8 @@ export function decodificar(q: URLSearchParams | string): Respostas {
     lazer: varios(p.get("l"), LAZER, 3),
     bairro: varios(p.get("b"), BAIRRO, 2),
     prazo: um(p.get("z"), PRAZO),
+    renda,
+    entrada: renda === "nao_informar" ? undefined : um(p.get("e"), ENTRADA),
   };
 }
 

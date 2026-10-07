@@ -1,6 +1,6 @@
 # Descubra seu MRV
 
-Consultor digital da MRV para a Grande Fortaleza: 7 perguntas sobre a rotina da pessoa e, no fim, os 3 empreendimentos que mais combinam, com o motivo de cada um. Produto oficial MRV de uso interno (fora dos buscadores).
+Consultor digital da MRV para a Grande Fortaleza: 9 perguntas sobre a rotina e o orçamento da pessoa e, no fim, os 3 empreendimentos que mais combinam, com o motivo de cada um. Produto oficial MRV de uso interno (fora dos buscadores).
 
 O plano completo está em [`docs/spec/PLANO.md`](docs/spec/PLANO.md); o que ainda falta confirmar com a MRV, em [`docs/duvidas/Dúvidas.md`](docs/duvidas/Dúvidas.md).
 

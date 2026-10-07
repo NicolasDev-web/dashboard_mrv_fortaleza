@@ -23,7 +23,7 @@ export default function Home() {
           <p className="entra mb-4 text-sm font-semibold uppercase tracking-[0.08em] text-green-700">Grande Fortaleza · 16 empreendimentos</p>
           <h1 className="entra t-display text-green-900">Vamos descobrir qual MRV combina com você</h1>
           <p className="entra mt-5 text-lg text-muted" style={{ "--atraso": "90ms" } as CSSProperties}>
-            7 perguntas rápidas sobre a sua rotina. No fim, você vê os 3 empreendimentos que mais combinam e o porquê de cada um.
+            9 perguntas rápidas sobre a sua rotina e o seu orçamento. No fim, você vê os 3 empreendimentos que mais combinam e o porquê de cada um.
           </p>
           <div className="entra mt-8 flex flex-col gap-3 sm:flex-row" style={{ "--atraso": "180ms" } as CSSProperties}>
             <LinkButton href="/descobrir" className="w-full sm:w-auto">

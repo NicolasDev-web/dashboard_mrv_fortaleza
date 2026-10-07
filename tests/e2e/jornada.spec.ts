@@ -30,7 +30,13 @@ test("quiz completo leva ao resultado e ao detalhe", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Quando você quer se mudar?" })).toBeVisible();
   await page.getByText("O quanto antes").click();
 
-  await expect(page).toHaveURL(/\/descobrir\/resultado\?/);
+  // Orçamento em faixas: a pessoa informa, o resultado nunca mostra preço.
+  await expect(page.getByRole("heading", { name: "Quanto a família ganha por mês?" })).toBeVisible();
+  await page.getByText("De R$ 4.700 a R$ 8.600").click();
+  await expect(page.getByRole("heading", { name: "Quanto dá para dar de entrada?" })).toBeVisible();
+  await page.getByText("De R$ 10 mil a R$ 30 mil").click();
+
+  await expect(page).toHaveURL(/\/descobrir\/resultado\?.*r=r3&e=e2/);
   // Revelação do ranking no mapa, pulável
   await expect(page.getByRole("status", { name: /Encontramos o seu MRV/ })).toBeVisible();
   await page.getByRole("button", { name: "Pular" }).click();
@@ -45,11 +51,19 @@ test("quiz completo leva ao resultado e ao detalhe", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Também combinam com você" })).toBeVisible();
   await expect(page.getByRole("article")).toHaveCount(4);
   await expect(page.getByText(/até a Unifor/).first()).toBeVisible();
+  await expect(page.getByText(/R\$/)).toHaveCount(0);
 
   await page.getByRole("link", { name: /Detalhes/ }).click();
   await expect(page.getByRole("heading", { name: "Por que combina com você" })).toBeVisible();
   await page.getByRole("link", { name: "Voltar ao meu resultado" }).click();
   await expect(page).toHaveURL(/\/descobrir\/resultado\?/);
+});
+
+test("quem prefere não informar a renda vai direto ao resultado", async ({ page }) => {
+  await page.goto("/descobrir?o=fortaleza&d=centro&t=onibus&m=so&z=tanto_faz&passo=8");
+  await expect(page.getByRole("heading", { name: "Quanto a família ganha por mês?" })).toBeVisible();
+  await page.getByText("Prefiro não informar").click();
+  await expect(page).toHaveURL(/\/descobrir\/resultado\?.*r=nao_informar/);
 });
 
 test("o voltar do navegador volta uma pergunta, sem perder a resposta", async ({ page }) => {

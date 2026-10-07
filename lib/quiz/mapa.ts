@@ -1,5 +1,5 @@
 import type { NotaBairro, RegiaoSlug } from "@/lib/types";
-import { recomendar, type Dados } from "@/lib/scoring/score";
+import { recomendar, type Dados, type Recomendacao } from "@/lib/scoring/score";
 import { FAIXAS } from "@/lib/scoring/config";
 import { LAZER_FRASE, type Respostas } from "./types";
 import { destinoDe, destinoNome, ehBairro, idBairro } from "./destino";
@@ -37,7 +37,7 @@ function distanciaKm(a: { lat: number; lon: number }, b: { lat: number; lon: num
 const lista = (l: string[]) => (l.length > 1 ? `${l.slice(0, -1).join(", ")} e ${l.at(-1)}` : l[0] ?? "");
 
 /** Frase curta sobre a última resposta: o cliente entende por que o mapa mudou. */
-function fraseDa(pergunta: Pergunta["id"] | undefined, r: Respostas, dados: Dados): string {
+function fraseDa(pergunta: Pergunta["id"] | undefined, r: Respostas, dados: Dados, ranking: Recomendacao[]): string {
   switch (pergunta) {
     case "onde":
       if (r.onde === "fortaleza") return "Só Fortaleza: Caucaia e Eusébio saíram do mapa.";
@@ -62,6 +62,14 @@ function fraseDa(pergunta: Pergunta["id"] | undefined, r: Respostas, dados: Dado
     case "prazo":
       if (r.prazo === "logo") return "Sobem os que já estão em construção.";
       return "Prazo anotado.";
+    case "renda":
+      if (r.renda === "nao_informar") return "Tudo bem: as sugestões seguem só a sua rotina.";
+      return "Sobem os que cabem no seu bolso.";
+    case "entrada": {
+      const cabem = ranking.filter((x) => x.orcamento === "cabe").length;
+      if (!cabem) return "Nenhum cabe folgado hoje: mostramos os mais próximos do seu orçamento.";
+      return cabem === 1 ? "1 empreendimento cabe no seu orçamento." : `${cabem} empreendimentos cabem no seu orçamento.`;
+    }
     default:
       return "Os 16 empreendimentos MRV da Grande Fortaleza.";
   }
@@ -114,6 +122,6 @@ export function estadoDoMapa(r: Respostas, dados: Dados, ultima?: Pergunta["id"]
     destino,
     combinam: temCriterio ? ranking.filter((x) => x.score >= NOTA_BEM).length : ranking.length,
     total,
-    frase: fraseDa(ultima, r, dados),
+    frase: fraseDa(ultima, r, dados, ranking),
   };
 }

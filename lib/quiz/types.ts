@@ -4,6 +4,10 @@ export type Onde = "fortaleza" | "metropolitana" | "regioes";
 export type Transporte = "onibus" | "carro" | "bike" | "app";
 export type Moradores = "so" | "casal" | "filhos";
 export type Prazo = "logo" | "medio" | "tanto_faz";
+/** Faixas de renda familiar mensal (as do Minha Casa Minha Vida, mais "acima" e "prefiro não informar"). */
+export type Renda = "r1" | "r2" | "r3" | "r4" | "r5" | "nao_informar";
+/** Quanto dá para dar de entrada, somando economias e FGTS. */
+export type Entrada = "e0" | "e1" | "e2" | "e3" | "e4";
 export type LazerEscolhivel = Exclude<Lazer, "pet">;
 
 export interface Respostas {
@@ -16,6 +20,8 @@ export interface Respostas {
   lazer?: LazerEscolhivel[];
   bairro?: NotaBairro[];
   prazo?: Prazo;
+  renda?: Renda;
+  entrada?: Entrada;
 }
 
 /** Artigo + nome curto, para frases como "até a Unifor" ou "até o Centro". */

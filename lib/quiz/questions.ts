@@ -15,7 +15,7 @@ export interface Opcao<V extends string = string> {
 }
 
 export interface Pergunta {
-  id: "onde" | "destino" | "transporte" | "moradores" | "lazer" | "bairro" | "prazo";
+  id: "onde" | "destino" | "transporte" | "moradores" | "lazer" | "bairro" | "prazo" | "renda" | "entrada";
   titulo: string;
   ajuda?: string;
   tipo: "unica" | "multipla" | "destino";
@@ -115,7 +115,37 @@ export const PERGUNTAS: Pergunta[] = [
       { valor: "tanto_faz", rotulo: "Tanto faz", icone: "tanto_faz" },
     ],
   },
+  {
+    id: "renda",
+    titulo: "Quanto a família ganha por mês?",
+    ajuda: "Some o que ganham as pessoas que vão comprar juntas. Não mostramos preços: isso só ajusta as sugestões ao que cabe no bolso.",
+    tipo: "unica",
+    opcoes: [
+      { valor: "r1", rotulo: "Até R$ 2.850" },
+      { valor: "r2", rotulo: "De R$ 2.850 a R$ 4.700" },
+      { valor: "r3", rotulo: "De R$ 4.700 a R$ 8.600" },
+      { valor: "r4", rotulo: "De R$ 8.600 a R$ 12.000" },
+      { valor: "r5", rotulo: "Mais de R$ 12.000" },
+      { valor: "nao_informar", rotulo: "Prefiro não informar", descricao: "As sugestões ficam só pela sua rotina" },
+    ],
+  },
+  {
+    id: "entrada",
+    titulo: "Quanto dá para dar de entrada?",
+    ajuda: "Conte suas economias e o saldo do FGTS.",
+    tipo: "unica",
+    opcoes: [
+      { valor: "e0", rotulo: "Por enquanto, nada" },
+      { valor: "e1", rotulo: "Até R$ 10 mil" },
+      { valor: "e2", rotulo: "De R$ 10 mil a R$ 30 mil" },
+      { valor: "e3", rotulo: "De R$ 30 mil a R$ 60 mil" },
+      { valor: "e4", rotulo: "Mais de R$ 60 mil" },
+    ],
+  },
 ];
+
+/** Quem prefere não informar a renda não precisa responder a entrada: o quiz termina ali. */
+export const terminaAqui = (p: Pergunta, r: Respostas) => p.id === "renda" && r.renda === "nao_informar";
 
 /** Uma pergunta está respondida? Múltipla escolha aceita "nenhuma" explicitamente (lista vazia). */
 export function respondida(p: Pergunta, r: Respostas): boolean {

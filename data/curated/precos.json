@@ -1,0 +1,22 @@
+{
+  "_leia": "Tabela de preços MRV, uso interno: o valor nunca aparece na tela, só entra no critério de orçamento do quiz. 'preco' = Preço Tabela; 'faixas' = faixas do Minha Casa Minha Vida que o imóvel atende ([] = fora do MCMV); 'estoque' fica só como referência. Atualizou? Rode `npm run data:build` e `npm test`.",
+  "atualizadoEm": "2026-10-07",
+  "precos": {
+    "residencial-fortitudine": { "preco": 306691.35, "faixas": [2, 3], "estoque": 165 },
+    "residencial-flor-do-sertao": { "preco": 305587.89, "faixas": [2, 3], "estoque": 134 },
+    "ville-de-lisboa": { "preco": 268166.91, "faixas": [1, 2], "estoque": 133 },
+    "reserva-da-lagoa": { "preco": 314547.42, "faixas": [2, 3], "estoque": 131 },
+    "residencial-la-serena": { "preco": 261864.93, "faixas": [1, 2], "estoque": 107 },
+    "forte-alencar": { "preco": 324988.89, "faixas": [3], "estoque": 95 },
+    "parque-marista": { "preco": 331121.83, "faixas": [2, 3], "estoque": 84 },
+    "residencial-farol-do-atlantico": { "preco": 389111.24, "faixas": [3], "estoque": 72 },
+    "sensia-reserva-vila-do-sol": { "preco": 523090.0, "faixas": [4], "estoque": 60 },
+    "ville-de-porto": { "preco": 252665.07, "faixas": [1, 2], "estoque": 57 },
+    "torre-do-mar": { "preco": 340990.0, "faixas": [2, 3], "estoque": 11 },
+    "porto-das-mares": { "preco": 317740.0, "faixas": [2, 3], "estoque": 4 },
+    "residencial-mandacaru": { "preco": 351041.25, "faixas": [3], "estoque": 4 },
+    "reserva-brisa-do-mar": { "preco": 337990.0, "faixas": [3], "estoque": 2 },
+    "residencial-valparaiso": { "preco": 253378.0, "faixas": [1, 2], "estoque": 1 },
+    "eco-park": { "preco": 256502.0, "faixas": [1, 2], "estoque": 1 }
+  }
+}

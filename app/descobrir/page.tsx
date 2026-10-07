@@ -6,7 +6,7 @@ import type { PinMapa } from "@/components/mapa/CidadeMapa";
 
 export const metadata: Metadata = {
   title: "Descobrir",
-  description: "7 perguntas rápidas para encontrar o empreendimento MRV que combina com a sua rotina.",
+  description: "9 perguntas rápidas para encontrar o empreendimento MRV que combina com a sua rotina.",
 };
 
 const pins: PinMapa[] = empreendimentos.map(({ slug, nome, bairroNome, cidade, status, coord, coordAproximada, imagens }) => ({

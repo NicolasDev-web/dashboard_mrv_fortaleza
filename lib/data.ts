@@ -31,6 +31,7 @@ export function resumir(e: Empreendimento): EmpreendimentoResumo {
     bairroId: e.bairroId, regiao: e.regiao, coord: e.coord, coordAproximada: e.coordAproximada, status: e.status, quartos: e.quartos, suite: e.suite,
     varanda: e.varanda, areaMin: e.areaMin, areaMax: e.areaMax, elevador: e.elevador, unidades: e.unidades,
     vagas: e.vagas, vagasPorUnidade: e.vagasPorUnidade, lazer: e.lazer, lazerItens: e.lazerItens, mcmv: e.mcmv,
+    preco: e.preco, faixasMcmv: e.faixasMcmv,
     urlOficial: e.urlOficial, imagens: { capa: e.imagens.capa },
   };
 }

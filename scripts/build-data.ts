@@ -3,13 +3,14 @@
  *
  *   data/raw/mrv/*.json             extraído das páginas oficiais (scripts/extract-mrv.ts)
  * + data/curated/empreendimentos.json  correções revisadas à mão (vencem o extraído)
+ * + data/curated/precos.json        tabela de preços e faixas MCMV (uso interno do scoring)
  * + data/imagens.json               variantes geradas (scripts/build-images.ts)
  *
  *   npx tsx scripts/build-data.ts
  */
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import type { Empreendimento, Imagem, Lazer, Regiao, Status, TipoImagem } from "../lib/types";
+import type { Empreendimento, FaixaMcmv, Imagem, Lazer, Regiao, Status, TipoImagem } from "../lib/types";
 
 const RAIZ = path.resolve(import.meta.dirname, "..");
 const lerJson = async <T,>(rel: string): Promise<T> => JSON.parse(await readFile(path.join(RAIZ, rel), "utf-8"));
@@ -67,6 +68,7 @@ function diferenciais(brutos: Bruto["diferenciais"]) {
 async function main() {
   const curado = await lerJson<{ regioes: Regiao[]; empreendimentos: Curado[] }>("data/curated/empreendimentos.json");
   const imagens = await lerJson<Record<string, Omit<Imagem, "src">[]>>("data/imagens.json");
+  const { precos } = await lerJson<{ precos: Record<string, { preco: number; faixas: FaixaMcmv[] }> }>("data/curated/precos.json");
   const arquivos = (await readdir(path.join(RAIZ, "data/raw/mrv"))).filter((f) => f.endsWith(".json"));
   const brutos = new Map<number, Bruto>();
   for (const f of arquivos) {
@@ -119,6 +121,8 @@ async function main() {
       proximoA: b.proximoA?.replace(/^Pr[oó]xim[oa]s?\s+(a|ao|à|do|da)\s+/i, "").replace(/\s+/g, " ").replace(/[.\s]+$/, "") ?? null,
       descricao: (b.descricao ?? "").split(/\n\s*\n/).map((p) => p.replace(/\s+/g, " ").trim()).filter(Boolean),
       mcmv: b.mcmv,
+      preco: precos[c.slug]?.preco ?? null,
+      faixasMcmv: precos[c.slug]?.faixas ?? [],
       urlOficial: b.url,
       imagens: {
         capa,

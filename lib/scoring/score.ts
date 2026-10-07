@@ -2,7 +2,8 @@ import type { Bairro, Destino, DestinoId, Empreendimento, NotaBairro, Polo, Regi
 import { LAZER_FRASE, NOTA_FRASE, type Respostas } from "@/lib/quiz/types";
 import { destinoAte, destinoNome, ehBairro, idBairro } from "@/lib/quiz/destino";
 import {
-  DIVERSIDADE_FOLGA, ESTIMATIVA_TEMPO, FAIXAS, LIMIAR_ATENCAO, LIMIAR_MOTIVO, PESOS, PRAZO, SUITE, TEMPO, TOP, VAGA,
+  DIVERSIDADE_FOLGA, ENTRADA, ESTIMATIVA_TEMPO, FAIXAS, FINANCIAMENTO, LIMIAR_ATENCAO, LIMIAR_MOTIVO, ORCAMENTO, PESOS, PRAZO,
+  RENDA, SUITE, TEMPO, TOP, VAGA,
 } from "./config";
 
 export interface Criterio {
@@ -24,12 +25,17 @@ export interface Recomendacao {
   atencoes: string[];
   /** minutos até o destino escolhido; `estimado` quando vem da distância, não do GTFS */
   tempo?: Tempo;
+  /** só quando a pessoa informou a renda e o empreendimento tem preço */
+  orcamento?: Orcamento;
 }
+
+export type Orcamento = "cabe" | "limite" | "fora";
 
 /** Só os campos que o scoring lê: funciona com o Empreendimento completo e com o resumo do cliente. */
 export type EmpScoring = Pick<
   Empreendimento,
   "slug" | "cidade" | "regiao" | "bairroId" | "bairroNome" | "coord" | "vagasPorUnidade" | "lazer" | "lazerItens" | "suite" | "status"
+  | "preco" | "faixasMcmv"
 >;
 
 export interface Dados {
@@ -99,11 +105,48 @@ function filtrar(e: EmpScoring, r: Respostas): boolean {
   return true;
 }
 
-export function criterios(e: EmpScoring, r: Respostas, dados: Dados): { lista: Criterio[]; penalidade: number; tempo?: Recomendacao["tempo"] } {
+/**
+ * Quanto a pessoa consegue pagar neste empreendimento: financiamento + subsídio + entrada.
+ * Usa as condições do MCMV da faixa dela quando o imóvel está no programa e não é de uma faixa abaixo da dela
+ * (imóvel só de faixa 3 está acima do teto das faixas 1 e 2); o subsídio só vale quando o imóvel atende a faixa dela.
+ * Sem renda informada, não há conta.
+ */
+export function poderDeCompra(e: Pick<EmpScoring, "faixasMcmv">, r: Respostas): { valor: number; mcmv: boolean } | undefined {
+  if (!r.renda || r.renda === "nao_informar") return undefined;
+  const { mensal, faixa } = RENDA[r.renda];
+  const mcmv = faixa != null && e.faixasMcmv.length > 0 && faixa >= Math.min(...e.faixasMcmv);
+  const cond = mcmv ? FINANCIAMENTO.faixas[faixa] : undefined;
+  const i = (1 + (cond?.juros ?? FINANCIAMENTO.jurosForaMcmv)) ** (1 / 12) - 1;
+  const financiado = (mensal * FINANCIAMENTO.comprometimento * (1 - (1 + i) ** -FINANCIAMENTO.meses)) / i;
+  const subsidio = cond && e.faixasMcmv.includes(faixa!) ? cond.subsidio : 0;
+  return { valor: financiado + subsidio + ENTRADA[r.entrada ?? "e0"], mcmv };
+}
+
+export function criterios(e: EmpScoring, r: Respostas, dados: Dados): { lista: Criterio[]; penalidade: number; tempo?: Recomendacao["tempo"]; orcamento?: Orcamento } {
   const lista: Criterio[] = [];
   const bairro = e.bairroId != null ? dados.bairros.find((b) => b.id === e.bairroId) : undefined;
   let penalidade = 1;
   let tempo: Recomendacao["tempo"];
+  let orcamento: Orcamento | undefined;
+
+  // O valor nunca aparece: só "cabe", "no limite" ou "acima" do orçamento.
+  const poder = poderDeCompra(e, r);
+  if (poder && e.preco) {
+    const razao = poder.valor / e.preco;
+    orcamento = razao >= 1 ? "cabe" : razao >= ORCAMENTO.limite ? "limite" : "fora";
+    if (orcamento === "limite") penalidade *= ORCAMENTO.penalidadeLimite;
+    if (orcamento === "fora") penalidade *= ORCAMENTO.penalidadeFora;
+    lista.push({
+      id: "orcamento",
+      peso: PESOS.orcamento,
+      nota: limitar(((razao - ORCAMENTO.piso) / (1 - ORCAMENTO.piso)) * 100),
+      motivo: orcamento === "cabe" ? (poder.mcmv ? "Cabe no seu orçamento, com as condições do Minha Casa Minha Vida" : "Cabe no orçamento que você informou") : undefined,
+      atencao:
+        orcamento === "limite" ? "No limite do seu orçamento: pode pedir um pouco mais de entrada ou o uso do FGTS"
+        : orcamento === "fora" ? "Acima do orçamento que você informou: vale simular com um corretor"
+        : undefined,
+    });
+  }
 
   if (r.destino && r.destino !== "casa") {
     tempo = tempoAte(e, r.destino, dados);
@@ -195,11 +238,11 @@ export function criterios(e: EmpScoring, r: Respostas, dados: Dados): { lista: C
 
   if (r.pet) lista.push({ id: "pet", peso: 0, nota: 100, motivo: "Pet place para o seu bicho" });
 
-  return { lista, penalidade, tempo };
+  return { lista, penalidade, tempo, orcamento };
 }
 
 export function pontuar(e: EmpScoring, r: Respostas, dados: Dados): Recomendacao {
-  const { lista, penalidade, tempo } = criterios(e, r, dados);
+  const { lista, penalidade, tempo, orcamento } = criterios(e, r, dados);
   const comPeso = lista.filter((c) => c.peso > 0);
   const somaPesos = comPeso.reduce((s, c) => s + c.peso, 0);
   // Sem nenhum critério ativo (ex.: só respondeu "trabalho de casa" e "tanto faz"), todos empatam em 70.
@@ -210,7 +253,7 @@ export function pontuar(e: EmpScoring, r: Respostas, dados: Dados): Recomendacao
     .sort((a, b) => b.peso * b.nota - a.peso * a.nota)
     .map((c) => c.motivo!);
   const atencoes = lista.filter((c) => c.atencao).map((c) => c.atencao!);
-  return { slug: e.slug, score, faixa: faixa(score), criterios: lista, motivos, atencoes, tempo };
+  return { slug: e.slug, score, faixa: faixa(score), criterios: lista, motivos, atencoes, tempo, orcamento };
 }
 
 export function recomendar(r: Respostas, dados: Dados): Resultado {
@@ -219,6 +262,9 @@ export function recomendar(r: Respostas, dados: Dados): Resultado {
     .filter((e) => filtrar(e, r))
     .map((e) => pontuar(e, r, dados))
     .sort((a, b) => {
+      // Fora do orçamento vai para o fim, por melhor que combine com a rotina.
+      const fa = a.orcamento === "fora" ? 1 : 0, fb = b.orcamento === "fora" ? 1 : 0;
+      if (fa !== fb) return fa - fb;
       if (b.score !== a.score) return b.score - a.score;
       const ta = a.tempo?.minutos ?? Infinity, tb = b.tempo?.minutos ?? Infinity;
       if (ta !== tb) return ta - tb;
@@ -233,7 +279,9 @@ export function recomendar(r: Respostas, dados: Dados): Resultado {
       const bairro = porSlug.get(c.slug)!.bairroNome;
       if (!top.some((t) => porSlug.get(t.slug)!.bairroNome === bairro)) return true;
       const proximo = restantes.find((o) => o !== c && !top.some((t) => porSlug.get(t.slug)!.bairroNome === porSlug.get(o.slug)!.bairroNome));
-      return !proximo || c.score - proximo.score >= DIVERSIDADE_FOLGA;
+      // A diversidade nunca troca um que cabe no orçamento por um que está fora.
+      if (!proximo || (proximo.orcamento === "fora" && c.orcamento !== "fora")) return true;
+      return c.score - proximo.score >= DIVERSIDADE_FOLGA;
     });
     top.push(...restantes.splice(i === -1 ? 0 : i, 1));
   }

@@ -67,7 +67,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
     return (
       <div className="contem py-16 text-center">
         <h1 className="t-h2 text-green-900">Ainda não sabemos o que você procura</h1>
-        <p className="mt-3 text-muted">Responda 7 perguntas rápidas e mostramos os empreendimentos que combinam com você.</p>
+        <p className="mt-3 text-muted">Responda 9 perguntas rápidas e mostramos os empreendimentos que combinam com você.</p>
         <LinkButton href="/descobrir" className="mt-8">Começar o quiz</LinkButton>
       </div>
     );

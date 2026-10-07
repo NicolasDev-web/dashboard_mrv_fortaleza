@@ -83,6 +83,53 @@ describe("regras", () => {
   });
 });
 
+describe("orçamento (renda e entrada)", () => {
+  it("sem renda informada, o orçamento não entra na conta", () => {
+    for (const q of ["d=centro&t=onibus", "d=centro&t=onibus&r=nao_informar&e=e4"]) {
+      expect(rodar(q).ranking.every((r) => r.orcamento === undefined && !r.criterios.some((c) => c.id === "orcamento"))).toBe(true);
+    }
+  });
+
+  it("quem está fora do orçamento vai para o fim do ranking", () => {
+    const { ranking } = rodar("o=metropolitana&d=b11&t=onibus&r=r2&e=e2");
+    const primeiroFora = ranking.findIndex((r) => r.orcamento === "fora");
+    expect(primeiroFora).toBeGreaterThan(0);
+    expect(ranking.slice(primeiroFora).every((r) => r.orcamento === "fora")).toBe(true);
+  });
+
+  it("o Sensia não aparece no topo para quem vai ao Cocó com renda de faixa 2, mas aparece com renda alta", () => {
+    const baixa = rodar("o=metropolitana&d=b11&t=onibus&r=r2&e=e1");
+    const sensia = baixa.ranking.find((r) => r.slug === "sensia-reserva-vila-do-sol")!;
+    expect(sensia.orcamento).toBe("fora");
+    expect(baixa.top.map((t) => t.slug)).not.toContain("sensia-reserva-vila-do-sol");
+    expect(sensia.atencoes.join(" ")).toMatch(/Acima do orçamento/);
+    const alta = rodar("o=metropolitana&d=b11&t=onibus&r=r5&e=e3");
+    expect(alta.ranking.find((r) => r.slug === "sensia-reserva-vila-do-sol")!.orcamento).toBe("cabe");
+  });
+
+  it("mais entrada nunca piora a situação de um empreendimento", () => {
+    const ordem = { fora: 0, limite: 1, cabe: 2 } as const;
+    for (const renda of ["r1", "r2", "r3", "r4", "r5"]) {
+      const antes = rodar(`r=${renda}&e=e0`).ranking, depois = rodar(`r=${renda}&e=e4`).ranking;
+      for (const a of antes) expect(ordem[depois.find((d) => d.slug === a.slug)!.orcamento!]).toBeGreaterThanOrEqual(ordem[a.orcamento!]);
+    }
+  });
+
+  it("nenhum texto mostra valor em reais", () => {
+    const textos = ["r=r1&e=e0", "r=r3&e=e2&d=centro", "r=r5&e=e4"].flatMap((q) => rodar(q).ranking.flatMap((r) => [...r.motivos, ...r.atencoes]));
+    expect(textos.some((t) => /orçamento/.test(t))).toBe(true);
+    expect(textos.join(" ")).not.toMatch(/R\$|\d{3}\.\d{3}|renda/i);
+  });
+
+  it("URL guarda só o código da faixa e descarta a entrada de quem não informou a renda", () => {
+    const r = decodificar("r=r3&e=e2");
+    expect(r).toMatchObject({ renda: "r3", entrada: "e2" });
+    expect(decodificar(codificar(r))).toEqual(r);
+    expect(decodificar("r=nao_informar&e=e2").entrada).toBeUndefined();
+    expect(decodificar("r=5000&e=muito").renda).toBeUndefined();
+  });
+});
+
 describe("URL e frase do perfil", () => {
   it("ida e volta pela URL preserva as respostas", () => {
     const r = decodificar("o=regioes&g=leste,sul&d=unifor&t=onibus&m=filhos&p=1&l=piscina,kids&b=saude&z=logo");
@@ -152,5 +199,11 @@ describe("frases do mapa do quiz", () => {
     const unifor = estadoDoMapa(decodificar("o=fortaleza&d=unifor&t=onibus"), dados, "destino");
     expect(unifor.combinam).toBeLessThan(13);
     expect(unifor.frase).toBe("Acendem os bairros perto da Unifor.");
+  });
+
+  it("depois da entrada, diz quantos cabem no orçamento sem citar valores", async () => {
+    const { estadoDoMapa } = await import("@/lib/quiz/mapa");
+    expect(estadoDoMapa(decodificar("r=r3&e=e2"), dados, "entrada").frase).toMatch(/^\d+ empreendimentos cabem no seu orçamento\.$/);
+    expect(estadoDoMapa(decodificar("r=r1&e=e0"), dados, "entrada").frase).toMatch(/^Nenhum cabe folgado/);
   });
 });

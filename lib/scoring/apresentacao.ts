@@ -41,6 +41,8 @@ export function motivosPorCapitulo(rec: Recomendacao, r: Respostas, disponiveis:
 /** Uma linha que explica por que este ficou atrás do 1º (ou o que tem de melhor que ele). */
 export function diferencaPara1(rec: Recomendacao, primeiro: Recomendacao, e: EmpScoring, e1: EmpScoring, r: Respostas, destinos: Destino[]): string {
   const partes: string[] = [];
+  if (rec.orcamento === "fora" && primeiro.orcamento !== "fora") partes.push("acima do seu orçamento");
+  else if (rec.orcamento === "limite" && primeiro.orcamento === "cabe") partes.push("no limite do seu orçamento");
   if (rec.tempo && primeiro.tempo && r.destino && r.destino !== "casa") {
     const d = Math.round((rec.tempo.minutos - primeiro.tempo.minutos) / 5) * 5;
     const ate = destinoAte(r.destino, destinos);

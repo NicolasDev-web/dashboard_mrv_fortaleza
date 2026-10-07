@@ -70,6 +70,8 @@ export interface Polo {
   lon: number;
 }
 
+export type FaixaMcmv = 1 | 2 | 3 | 4;
+
 export interface Empreendimento {
   slug: string;
   ordem: number;
@@ -100,6 +102,10 @@ export interface Empreendimento {
   proximoA: string | null;
   descricao: string[];
   mcmv: boolean;
+  /** Preço de tabela (data/curated/precos.json). Uso interno: só o scoring lê, nunca vai para a tela. */
+  preco: number | null;
+  /** Faixas do Minha Casa Minha Vida que o imóvel atende; vazio = fora do MCMV. */
+  faixasMcmv: FaixaMcmv[];
   urlOficial: string;
   imagens: {
     capa: Imagem;

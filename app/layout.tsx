@@ -11,7 +11,7 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { default: "Descubra seu MRV", template: "%s · Descubra seu MRV" },
-  description: "Responda 7 perguntas rápidas e veja os empreendimentos MRV da Grande Fortaleza que mais combinam com a sua rotina.",
+  description: "Responda 9 perguntas rápidas e veja os empreendimentos MRV da Grande Fortaleza que mais combinam com a sua rotina.",
   // Produto interno: fora dos buscadores, mas com título e capa caprichados para links compartilhados.
   robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
   openGraph: { type: "website", locale: "pt_BR", siteName: "Descubra seu MRV" },

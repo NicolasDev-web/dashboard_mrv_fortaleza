@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, LazyMotion, domAnimation, m, useReducedMotion } from "motion/react";
 import { ArrowLeft, Check, PawPrint, X } from "lucide-react";
-import { PERGUNTAS, respondida, type Opcao, type Pergunta } from "@/lib/quiz/questions";
+import { PERGUNTAS, respondida, terminaAqui, type Opcao, type Pergunta } from "@/lib/quiz/questions";
 import { CHAVE_REVELAR, codificar, decodificar } from "@/lib/quiz/url";
 import type { Respostas } from "@/lib/quiz/types";
 import type { RegiaoSlug } from "@/lib/types";
@@ -77,9 +77,9 @@ export function QuizShell({ regioes, bairros, mapa }: Props) {
 
   const avancar = useCallback((resp: Respostas = r) => {
     if (timer.current) clearTimeout(timer.current);
-    if (passo === TOTAL) return finalizar(resp);
+    if (passo === TOTAL || terminaAqui(pergunta, resp)) return finalizar(resp);
     window.history.pushState(null, "", url(resp, passo + 1));
-  }, [finalizar, passo, r, url]);
+  }, [finalizar, passo, pergunta, r, url]);
 
   const voltar = () => {
     if (passo > 1) window.history.pushState(null, "", url(r, passo - 1));
@@ -114,7 +114,7 @@ export function QuizShell({ regioes, bairros, mapa }: Props) {
   const multipla = pergunta.tipo === "multipla";
   const selecionados = multipla ? ((r[pergunta.id as "lazer" | "bairro"] ?? []) as string[]) : [];
   const ok = respondida(pergunta, r) || multipla;
-  const rotuloContinuar = passo === TOTAL ? "Ver meu resultado" : multipla && !selecionados.length && !vazias.has(pergunta.id) ? "Pular" : "Continuar";
+  const rotuloContinuar = passo === TOTAL || terminaAqui(pergunta, r) ? "Ver meu resultado" : multipla && !selecionados.length && !vazias.has(pergunta.id) ? "Pular" : "Continuar";
 
   const variantes = {
     entra: (d: number) => ({ opacity: 0, x: reduzir ? 0 : d * 24 }),
