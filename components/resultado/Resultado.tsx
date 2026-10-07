@@ -16,7 +16,7 @@ import { REGIAO_NOME, quartosTexto } from "@/lib/rotulos";
 import { Filme } from "@/components/filme/Filme";
 import { CidadeMapa, type DestinoMapa, type PinMapa } from "@/components/mapa/CidadeMapa";
 import { ContactCTA } from "@/components/empreendimento/ContactCTA";
-import { LinkButton } from "@/components/ui/Button";
+import { Button, LinkButton } from "@/components/ui/Button";
 import { Revela } from "@/components/ui/Revela";
 import { Revelacao } from "./Revelacao";
 import { RankingCard } from "./RankingCard";
@@ -112,7 +112,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
           sizes="(min-width: 1024px) 1200px, 200vw"
           className="h-[calc(100svh-56px-56px)] max-h-[860px] min-h-[540px] lg:h-[min(80vh,760px)] lg:rounded-xl"
           topo={
-            <span className="inline-flex h-8 items-center gap-1.5 rounded-full bg-green-300 px-3 text-[14px] font-extrabold text-green-950 shadow-e2">
+            <span className="inline-flex h-8 items-center gap-1.5 rounded-full bg-green-300 px-3 text-sm font-extrabold text-green-950 shadow-e2">
               #1 para você
             </span>
           }
@@ -159,16 +159,17 @@ export function Resultado({ dados, filmes, pins }: Props) {
           <div>
             <h2 id="onde-ficam" className="t-h2 text-green-900">Onde ficam</h2>
             <p className="mt-3 text-muted">
-              Os 5 que mais combinam com você, numerados.{ate ? ` O alvo é ${ate}, para onde você vai todo dia.` : ""} Toque num número para ver.
+              {top.length === 1 ? "O que mais combina com você." : `Os ${top.length} que mais combinam com você, numerados.`}{ate ? ` O alvo é ${ate}, para onde você vai todo dia.` : ""} Toque num número para ver.
             </p>
           </div>
-          <div className="rounded-xl bg-green-950 p-3 md:p-5">
+          <div className="escuro rounded-xl bg-green-950 p-3 md:p-5">
             <CidadeMapa
               pins={pinsRanking}
               destino={destino}
               linha={destino && r1.tempo && !r1.tempo.mesmoBairro ? { slug: r1.slug, texto: `~${minutosTexto(r1.tempo.minutos)}` } : undefined}
               acesos={[...new Set(top.map((t) => porSlug.get(t.slug)!.bairroId).filter((id): id is number => id != null))]}
               titulo="Mapa com o seu ranking"
+              query={query}
             />
           </div>
         </div>
@@ -178,7 +179,7 @@ export function Resultado({ dados, filmes, pins }: Props) {
       {resto.length > 0 && (
         <section aria-labelledby="tambem" className="contem pb-12">
           <h2 id="tambem" className="t-h2 text-green-900">Também combinam com você</h2>
-          <Revela as="ol" className="mt-5 grid gap-4 lg:grid-cols-2">
+          <Revela as="ol" className="mt-5 grid grid-cols-[minmax(0,1fr)] gap-4 lg:grid-cols-[repeat(2,minmax(0,1fr))]">
             {resto.map((rec, k) => {
               const e = porSlug.get(rec.slug)!;
               const caps = filmes[rec.slug] ?? [];
@@ -204,10 +205,10 @@ export function Resultado({ dados, filmes, pins }: Props) {
 
           {foraDoTop.length > 0 && (
             <div className="mt-6">
-              <button type="button" onClick={() => setCompleto((c) => !c)} aria-expanded={completo} className="inline-flex h-11 items-center gap-2 rounded-md px-3 font-semibold text-green-900 hover:bg-selected">
+              <Button variante="ghost" tamanho="md" onClick={() => setCompleto((c) => !c)} aria-expanded={completo}>
                 {completo ? "Esconder o ranking completo" : `Ver o ranking completo (${ranking.length})`}
                 <ChevronDown className={`size-5 transition-transform duration-[var(--t-base)] ${completo ? "rotate-180" : ""}`} aria-hidden />
-              </button>
+              </Button>
               {completo && (
                 <PreviaFlutuante itens={foraDoTop.map((rec) => { const e = porSlug.get(rec.slug)!; return { slug: rec.slug, nome: e.nome, score: rec.score, capa: e.imagens.capa }; })}>
                 <ol start={top.length + 1} className="desdobra mt-3 divide-y divide-line rounded-lg border border-line">

@@ -73,7 +73,7 @@ export function DestinoPicker({ pergunta, bairros, valor, onEscolher }: Props) {
           spellCheck={false}
           value={busca}
           onChange={(e) => setBusca(e.target.value)}
-          onFocus={(e) => e.currentTarget.scrollIntoView({ block: "center", behavior: "smooth" })}
+          onFocus={(e) => e.currentTarget.scrollIntoView({ block: "center", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" })}
           onKeyDown={(e) => {
             if (e.key === "Enter" && resultados[0]) {
               e.preventDefault();
@@ -82,7 +82,7 @@ export function DestinoPicker({ pergunta, bairros, valor, onEscolher }: Props) {
           }}
           placeholder="Digite o bairro: Meireles, Benfica…"
           aria-controls={busca ? listaId : undefined}
-          className="h-14 w-full rounded-lg border-[1.5px] border-line-strong bg-white pl-12 pr-12 text-[16px] text-ink outline-none transition-colors placeholder:text-muted focus:border-green-900 [&::-webkit-search-cancel-button]:hidden"
+          className="h-14 w-full rounded-lg border-[1.5px] border-line-strong bg-white pl-12 pr-12 text-base text-ink transition-colors placeholder:text-muted focus:border-green-900 [&::-webkit-search-cancel-button]:hidden"
         />
         {busca && (
           <button type="button" onClick={() => { setBusca(""); campo.current?.focus(); }} aria-label="Limpar busca" className="absolute right-2 top-1/2 flex size-10 -translate-y-1/2 items-center justify-center rounded-full text-muted hover:bg-selected">
@@ -92,14 +92,18 @@ export function DestinoPicker({ pergunta, bairros, valor, onEscolher }: Props) {
       </label>
 
       {busca ? (
-        <div id={listaId} className="mt-3" aria-live="polite">
+        <div id={listaId} className="mt-3">
+          {/* anuncia só a contagem: a lista inteira a cada tecla seria ruído para o leitor de tela */}
+          <p className="sr-only" aria-live="polite">
+            {resultados.length === 0 ? "Nenhum resultado" : resultados.length === 1 ? "1 resultado" : `${resultados.length} resultados`}
+          </p>
           {resultados.length === 0 ? (
             <p className="rounded-lg bg-bg-subtle px-4 py-4 text-muted">Não achamos “{busca}”. Confira a grafia ou escolha um dos lugares abaixo.</p>
           ) : (
             <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line">
               {resultados.map((i) => (
                 <li key={i.valor}>
-                  <label className="flex min-h-14 cursor-pointer items-center gap-3 px-4 py-2 transition-colors hover:bg-selected has-[:checked]:bg-selected has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:-outline-offset-2 has-[:focus-visible]:outline-green-500">
+                  <label className="flex min-h-14 cursor-pointer items-center gap-3 px-4 py-2 transition-colors hover:bg-selected has-[:checked]:bg-selected has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:-outline-offset-2 has-[:focus-visible]:outline-foco">
                     <input type="radio" name="destino" value={i.valor} checked={valor === i.valor} onChange={() => onEscolher(i.valor)} className="sr-only" />
                     {i.tipo === "lugar" ? <Building2 className="size-5 shrink-0 text-green-900" strokeWidth={1.75} aria-hidden /> : <MapPin className="size-5 shrink-0 text-green-900" strokeWidth={1.75} aria-hidden />}
                     <span className="flex-1">
@@ -132,10 +136,10 @@ export function DestinoPicker({ pergunta, bairros, valor, onEscolher }: Props) {
       )}
 
       <div className="mt-5">
-        <label className="group flex min-h-16 cursor-pointer select-none items-center gap-4 rounded-lg border-[1.5px] border-line bg-white px-4 py-3 transition-[border-color,background-color] has-[:checked]:border-2 has-[:checked]:border-green-900 has-[:checked]:bg-selected has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-green-500">
+        <label className="group flex min-h-16 cursor-pointer select-none items-center gap-4 rounded-lg border-[1.5px] border-line bg-white px-4 py-3 transition-[border-color,background-color] has-[:checked]:border-2 has-[:checked]:border-green-900 has-[:checked]:bg-selected has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-foco">
           <input type="radio" name="destino" value="casa" checked={valor === "casa"} onChange={() => onEscolher("casa")} className="sr-only" />
           {(() => { const I = ICONES[casa.icone ?? "casa"]; return <span className="flex size-11 shrink-0 items-center justify-center rounded-md bg-bg-subtle text-green-900 group-has-[:checked]:bg-green-900 group-has-[:checked]:text-white"><I className="size-6" strokeWidth={1.75} aria-hidden /></span>; })()}
-          <span className="flex-1 text-[16px] font-semibold text-ink">{casa.rotulo}</span>
+          <span className="flex-1 text-base font-semibold text-ink">{casa.rotulo}</span>
         </label>
       </div>
     </div>
@@ -144,7 +148,7 @@ export function DestinoPicker({ pergunta, bairros, valor, onEscolher }: Props) {
 
 function Atalho({ opcao, marcada, onEscolher }: { opcao: Opcao; marcada: boolean; onEscolher: (v: string) => void }) {
   return (
-    <label className="flex min-h-14 cursor-pointer select-none items-center justify-center rounded-lg border-[1.5px] border-line px-3 text-center text-[15px] font-semibold text-ink transition-[border-color,background-color,color,transform] duration-[var(--t-fast)] active:scale-[0.98] has-[:checked]:border-green-900 has-[:checked]:bg-green-900 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-green-500 lg:hover:border-line-strong">
+    <label className="flex min-h-14 cursor-pointer select-none items-center justify-center rounded-lg border-[1.5px] border-line px-3 text-center text-[15px] font-semibold text-ink transition-[border-color,background-color,color,transform] duration-[var(--t-fast)] active:scale-[0.98] has-[:checked]:border-green-900 has-[:checked]:bg-green-900 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-foco lg:hover:border-line-strong">
       <input type="radio" name="destino" value={opcao.valor} checked={marcada} onChange={() => onEscolher(opcao.valor)} className="sr-only" />
       {opcao.rotulo}
     </label>

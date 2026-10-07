@@ -25,12 +25,12 @@ export function Sheet({ trigger, titulo, descricao, children, modo = "folha", op
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       {trigger && <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>}
       <Dialog.Portal>
-        <Dialog.Overlay className="overlay fixed inset-0 z-50 bg-[rgb(0_51_31/0.4)]" />
+        <Dialog.Overlay className="overlay fixed inset-0 z-50 bg-green-950/40" />
         <Dialog.Content
           onCloseAutoFocus={retornarFoco ? (e) => { e.preventDefault(); retornarFoco.current?.focus(); } : undefined}
           className={
             modo === "tela"
-              ? "folha fixed inset-0 z-50 flex flex-col bg-ink text-white"
+              ? "folha escuro fixed inset-0 z-50 flex flex-col bg-ink text-white"
               : "folha fixed inset-x-0 bottom-0 z-50 max-h-[90dvh] overflow-y-auto rounded-t-xl bg-white p-5 pb-[calc(20px+env(safe-area-inset-bottom))] shadow-e3 md:inset-x-auto md:bottom-auto md:left-1/2 md:top-1/2 md:w-[520px] md:-translate-x-1/2 md:-translate-y-1/2 md:rounded-xl md:p-6"
           }
         >

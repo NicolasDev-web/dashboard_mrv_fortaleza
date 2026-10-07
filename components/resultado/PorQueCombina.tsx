@@ -19,7 +19,7 @@ export function PorQueCombina({ e, bairros, polos, destinos }: { e: Empreendimen
     <section aria-labelledby="por-que" className="rounded-lg bg-bg-subtle p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 id="por-que" className="t-card text-green-900">Por que combina com você</h2>
-        <span className="text-sm font-semibold text-green-700">
+        <span className="text-sm font-semibold text-green-900">
           {rec.faixa} · {rec.score} de 100
         </span>
       </div>

@@ -77,7 +77,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
               // eslint-disable-next-line @next/next/no-img-element -- PNG de marca já no tamanho final
               <img src="/brand/sensia.png" alt="Sensia Incorporadora" width={86} height={20} className="mt-4 h-5 w-auto" />
             )}
-            <h1 className="t-h2 mt-3 text-green-900 lg:text-[2.25rem]">{e.nome}</h1>
+            <h1 className="t-pergunta mt-3 text-green-900">{e.nome}</h1>
             <p className="mt-1 flex items-center gap-1.5 text-muted">
               <MapPin className="size-4" aria-hidden /> {e.bairroNome} · {e.cidade}
             </p>
@@ -91,7 +91,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
         </div>
       </div>
 
-      <div className="contem mt-8 space-y-10 pb-28 lg:mt-12 lg:max-w-[calc(1200px+4rem)] lg:pb-16">
+      <div className="contem mt-8 space-y-10 pb-10 lg:mt-12 lg:pb-16">
         <div className="lg:max-w-[calc(100%-400px)]">
           <Suspense fallback={null}>
             <PorQueCombina e={resumir(e)} bairros={bairros} polos={polos} destinos={destinos} />
@@ -168,8 +168,8 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
         </div>
       </div>
 
-      <ContactCTA nome={e.nome} bairro={e.bairroNome} urlOficial={e.urlOficial} fixo />
       <Rodape />
+      <ContactCTA nome={e.nome} bairro={e.bairroNome} urlOficial={e.urlOficial} fixo />
     </>
   );
 }

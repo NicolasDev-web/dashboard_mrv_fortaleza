@@ -23,7 +23,7 @@ export function QuizMapa({ pins, estado }: { pins: PinMapa[]; estado: EstadoMapa
   const origem = useMemo<[number, number]>(() => [ox, oy], [ox, oy]);
 
   return (
-    <div className="flex items-center gap-3 rounded-xl bg-green-950 p-2.5 text-white lg:block lg:p-5">
+    <div className="escuro flex items-center gap-3 rounded-xl bg-green-950 p-2.5 text-white lg:block lg:p-5">
       <div className="hidden items-end justify-between gap-4 pb-3 lg:flex">
         <Contador combinam={estado.combinam} total={estado.total} reduzir={!!reduzir} grande />
       </div>
@@ -49,19 +49,23 @@ export function QuizMapa({ pins, estado }: { pins: PinMapa[]; estado: EstadoMapa
             animate={{ opacity: 1, y: 0, transition: { duration: 0.24 } }}
             exit={{ opacity: 0, transition: { duration: 0.12 } }}
             className="mt-1 text-[13px] leading-snug text-white/75 lg:mt-0 lg:text-[15px]"
-            aria-live="polite"
+            aria-hidden
           >
             {estado.frase}
           </m.p>
         </AnimatePresence>
       </div>
+      {/* Um só anúncio, num elemento estável: o texto animado é remontado a cada frase e não seria lido */}
+      <p className="sr-only" aria-live="polite">
+        {estado.combinam} de {estado.total} combinam com você. {estado.frase}
+      </p>
     </div>
   );
 }
 
 function Contador({ combinam, total, reduzir, grande }: { combinam: number; total: number; reduzir: boolean; grande?: boolean }) {
   return (
-    <p className="flex items-baseline gap-2" aria-live="polite">
+    <p className="flex items-baseline gap-2" aria-hidden>
       <span className={`relative inline-flex overflow-hidden font-extrabold tabular-nums text-green-300 ${grande ? "text-5xl" : "text-3xl"}`}>
         <AnimatePresence mode="popLayout" initial={false}>
           <m.span

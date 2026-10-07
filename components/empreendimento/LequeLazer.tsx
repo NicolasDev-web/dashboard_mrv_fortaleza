@@ -130,7 +130,7 @@ export function LequeLazer({ nome, fotos, galeria }: { nome: string; fotos: Imag
               onBlur={soltar}
               className="carta relative block w-full overflow-hidden rounded-lg border-4 border-white bg-white shadow-e2"
             >
-              <Img img={f} alt="" sizes="200px" className="aspect-[4/5] w-full rounded-[8px]" />
+              <Img img={f} alt="" sizes="200px" className="aspect-[4/5] w-full rounded-md" />
               <span className={`absolute bottom-2 ${posRotulo}`}>
                 <Badge tom="neutro" className="shadow-e1">{rotulo}</Badge>
               </span>

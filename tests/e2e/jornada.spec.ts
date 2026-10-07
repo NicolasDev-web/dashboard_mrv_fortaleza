@@ -54,7 +54,8 @@ test("quiz completo leva ao resultado e ao detalhe", async ({ page }) => {
   await expect(page.getByText(/R\$/)).toHaveCount(0);
 
   await page.getByRole("link", { name: /Detalhes/ }).click();
-  await expect(page.getByRole("heading", { name: "Por que combina com você" })).toBeVisible();
+  // No `next dev` esta navegação leva ~10 s (renderização sob demanda); no build de produção, ~150 ms.
+  await expect(page.getByRole("heading", { name: "Por que combina com você" })).toBeVisible({ timeout: 20_000 });
   await page.getByRole("link", { name: "Voltar ao meu resultado" }).click();
   await expect(page).toHaveURL(/\/descobrir\/resultado\?/);
 });

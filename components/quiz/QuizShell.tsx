@@ -61,10 +61,14 @@ export function QuizShell({ regioes, bairros, mapa }: Props) {
   const editar = useCallback((resp: Respostas) => window.history.replaceState(null, "", url(resp, passo)), [passo, url]);
 
   useEffect(() => { router.prefetch("/descobrir/resultado"); }, [router]);
-  // Ao trocar de pergunta (não no carregamento), o foco vai para o título: o leitor de tela lê a nova pergunta.
+  // Ao trocar de pergunta (não no carregamento), a página volta ao topo e o foco vai para o título:
+  // quem tocou numa opção lá embaixo vê a nova pergunta do começo, e o leitor de tela a lê.
   const montado = useRef(false);
   useEffect(() => {
-    if (montado.current) titulo.current?.focus({ preventScroll: true });
+    if (montado.current) {
+      window.scrollTo({ top: 0, behavior: "instant" });
+      titulo.current?.focus({ preventScroll: true });
+    }
     montado.current = true;
   }, [passo]);
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
@@ -171,7 +175,7 @@ export function QuizShell({ regioes, bairros, mapa }: Props) {
               </legend>
               {pergunta.ajuda && <p className="mt-2 text-muted">{pergunta.ajuda}</p>}
               {multipla && (
-                <p className="mt-1 text-sm font-semibold text-green-700" aria-live="polite">
+                <p className="mt-1 text-sm font-semibold text-green-900" aria-live="polite">
                   {selecionados.length} de {pergunta.max} escolhidas
                 </p>
               )}
@@ -203,7 +207,7 @@ export function QuizShell({ regioes, bairros, mapa }: Props) {
                       {regioes.map((g) => {
                         const on = r.regioes?.includes(g.slug) ?? false;
                         return (
-                          <label key={g.slug} className="inline-flex h-11 cursor-pointer select-none items-center gap-2 rounded-full border border-line-strong bg-white px-4 text-[15px] font-semibold text-ink transition-[background-color,border-color,color,transform] duration-[var(--t-fast)] ease-mrv active:scale-[0.97] has-[:checked]:border-green-900 has-[:checked]:bg-green-900 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-green-500">
+                          <label key={g.slug} className="inline-flex h-11 cursor-pointer select-none items-center gap-2 rounded-full border border-line-strong bg-white px-4 text-[15px] font-semibold text-ink transition-[background-color,border-color,color,transform] duration-[var(--t-fast)] ease-mrv active:scale-[0.97] has-[:checked]:border-green-900 has-[:checked]:bg-green-900 has-[:checked]:text-white has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-foco">
                             <input type="checkbox" className="sr-only" checked={on} onChange={() => alternarRegiao(g.slug)} />
                             {on && <Check className="size-4" aria-hidden />}
                             {g.nome}
@@ -215,8 +219,8 @@ export function QuizShell({ regioes, bairros, mapa }: Props) {
                 )}
 
                 {pergunta.id === "moradores" && (
-                  <label className="mt-5 flex min-h-14 cursor-pointer items-center gap-3 rounded-lg border border-line px-4 transition-colors has-[:checked]:border-green-900 has-[:checked]:bg-selected has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-green-500">
-                    <input type="checkbox" className="size-5 accent-[var(--color-green-900)]" checked={!!r.pet} onChange={(e) => editar({ ...r, pet: e.target.checked || undefined })} />
+                  <label className="mt-5 flex min-h-14 cursor-pointer items-center gap-3 rounded-lg border border-line px-4 transition-colors has-[:checked]:border-green-900 has-[:checked]:bg-selected has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-foco">
+                    <input type="checkbox" className="size-5 accent-green-900" checked={!!r.pet} onChange={(e) => editar({ ...r, pet: e.target.checked || undefined })} />
                     <PawPrint className="size-5 text-green-900" aria-hidden />
                     <span className="font-semibold">Tenho pet</span>
                   </label>
@@ -248,7 +252,7 @@ function OpcaoTile({ opcao, nome, tipo, marcada, desabilitada, compacta, onChang
     <label
       className={`group relative flex cursor-pointer select-none rounded-lg border-[1.5px] border-line bg-white transition-[border-color,background-color,transform] duration-[var(--t-fast)] ease-mrv active:scale-[0.98]
         has-[:checked]:border-2 has-[:checked]:border-green-900 has-[:checked]:bg-selected
-        has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-green-500
+        has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-foco
         has-[:disabled]:cursor-not-allowed has-[:disabled]:opacity-45 lg:hover:border-line-strong
         ${compacta ? "min-h-[104px] flex-col items-start justify-between gap-3 p-4" : "min-h-16 items-center gap-4 px-4 py-3"}`}
     >
@@ -259,7 +263,7 @@ function OpcaoTile({ opcao, nome, tipo, marcada, desabilitada, compacta, onChang
         </span>
       )}
       <span className="min-w-0 flex-1">
-        <span className="block text-[16px] font-semibold leading-snug text-ink">{opcao.rotulo}</span>
+        <span className="block text-base font-semibold leading-snug text-ink">{opcao.rotulo}</span>
         {opcao.descricao && <span className="mt-0.5 block text-sm text-muted">{opcao.descricao}</span>}
       </span>
       <span

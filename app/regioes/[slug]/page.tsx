@@ -62,15 +62,15 @@ export default async function RegiaoPage({ params }: PageProps<"/regioes/[slug]"
 
   return (
     <>
-      <section className="bg-green-900 text-white">
+      <section className="escuro bg-green-900 text-white">
         <div className="contem grid gap-8 py-8 md:py-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
-            <Link href="/regioes" className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-green-300 hover:underline">
+            <Link href="/regioes" className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-sage-200 hover:underline">
               <ChevronLeft className="size-4" aria-hidden /> Todas as regiões
             </Link>
             <h1 className="t-display mt-2">{regiao.nome}</h1>
             <p className="mt-4 max-w-md text-lg text-white/85">{regiao.resumo}</p>
-            <p className="mt-3 text-white/70">
+            <p className="mt-3 text-white/85">
               {lista.length} empreendimento{lista.length > 1 ? "s" : ""} em {nomesBairros.join(", ").replace(/, ([^,]*)$/, " e $1")}
             </p>
           </div>

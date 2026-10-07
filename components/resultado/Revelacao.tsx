@@ -38,7 +38,7 @@ export function Revelacao({ pins, top, destino, nome1, onFim }: {
 
   return (
     <div
-      className="revelacao fixed inset-0 z-50 flex flex-col items-center justify-center bg-green-950 px-5 text-white"
+      className="revelacao escuro fixed inset-0 z-50 flex flex-col items-center justify-center bg-green-950 px-5 text-white"
       role="status"
       aria-label={`Encontramos o seu MRV: ${nome1}`}
       onClick={onFim}

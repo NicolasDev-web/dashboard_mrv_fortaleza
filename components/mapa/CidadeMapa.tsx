@@ -44,6 +44,8 @@ type Props = {
   linha?: { slug: string; texto: string };
   /** sem seleção nem cartão: só mostra (faixa do quiz) */
   somenteLeitura?: boolean;
+  /** respostas do quiz (query string) levadas para o detalhe, para ele mostrar "Por que combina com você" */
+  query?: string;
   className?: string;
   titulo?: string;
 };
@@ -100,7 +102,7 @@ type Motor = {
 
 export function CidadeMapa({
   pins, acesos, brilho, vizinhos = VIZINHOS_PADRAO, origem = ORIGEM_PADRAO, destino, linha,
-  somenteLeitura = false, className = "", titulo = "Mapa de Fortaleza com os empreendimentos MRV",
+  somenteLeitura = false, query, className = "", titulo = "Mapa de Fortaleza com os empreendimentos MRV",
 }: Props) {
   const caixa = useRef<HTMLDivElement>(null);
   const tela = useRef<HTMLCanvasElement>(null);
@@ -266,7 +268,7 @@ export function CidadeMapa({
         )}
         {posDestino && posLinha && linha && (
           <span
-            className="pointer-events-none absolute z-[1] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-green-950/85 px-2 py-0.5 text-[12px] font-semibold text-green-300"
+            className="pointer-events-none absolute z-[1] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-green-950/85 px-2 py-0.5 text-xs font-semibold text-green-300"
             style={{ left: `${((posLinha[0] + posDestino[0]) / 2) * 100}%`, top: `${((posLinha[1] + posDestino[1]) / 2) * 100}%` }}
           >
             {linha.texto}
@@ -276,7 +278,7 @@ export function CidadeMapa({
           <div className="pointer-events-none absolute z-[1]" style={{ left: `${posDestino[0] * 100}%`, top: `${posDestino[1] * 100}%` }} aria-hidden>
             <span className="pulso-destino absolute -left-3 -top-3 size-6 rounded-full border-2 border-white" />
             <span className="absolute -left-[5px] -top-[5px] size-2.5 rounded-full bg-white" />
-            {!mini && <span className="absolute left-3 top-1 whitespace-nowrap rounded-full bg-white px-2 py-0.5 text-[12px] font-semibold text-green-950 shadow-e2">{destino.rotulo}</span>}
+            {!mini && <span className="absolute left-3 top-1 whitespace-nowrap rounded-full bg-white px-2 py-0.5 text-xs font-semibold text-green-950 shadow-e2">{destino.rotulo}</span>}
           </div>
         )}
 
@@ -290,7 +292,7 @@ export function CidadeMapa({
             // No mapa mini, cada empreendimento é só um ponto: 16 ícones não cabem em 150 px.
             const marcador = mini ? (
               <span
-                className="block size-2 rounded-[2px] bg-white shadow-[0_0_0_2px_rgb(0_51_31)] transition-[transform,opacity] duration-[var(--t-emph)] ease-saida"
+                className="block size-2 rounded-[2px] bg-white ring-2 ring-green-950 transition-[transform,opacity] duration-[var(--t-emph)] ease-saida"
                 style={{ transform: `scale(${p.apagado ? 0.6 : 0.8 + 0.6 * k})`, opacity: p.apagado ? 0.2 : 0.45 + 0.55 * k }}
               />
             ) : (
@@ -337,12 +339,12 @@ export function CidadeMapa({
           <div className="flex items-stretch overflow-hidden rounded-lg bg-white text-ink shadow-e3">
             <Img img={atual.imagens.capa} sizes="112px" className="w-28 shrink-0" />
             <div className="min-w-0 flex-1 p-3">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.04em] text-green-700">
+              <p className="text-xs font-semibold uppercase tracking-[0.04em] text-green-900">
                 {atual.numero ? `${atual.numero}º para você · ` : ""}{STATUS_ROTULO[atual.status]}
               </p>
               <p className="mt-0.5 truncate font-semibold leading-snug">{atual.nome}</p>
               <p className="truncate text-sm text-muted">{atual.bairroNome} · {atual.cidade}{atual.coordAproximada ? " · local aproximado" : ""}</p>
-              <Link href={`/empreendimentos/${atual.slug}`} className="mt-1.5 inline-flex min-h-9 items-center gap-1 text-sm font-semibold text-green-900 hover:underline">
+              <Link href={`/empreendimentos/${atual.slug}${query ? `?${query}` : ""}`} className="mt-1.5 inline-flex min-h-9 items-center gap-1 text-sm font-semibold text-green-900 hover:underline">
                 Conhecer <ArrowRight className="seta size-4" aria-hidden />
               </Link>
             </div>

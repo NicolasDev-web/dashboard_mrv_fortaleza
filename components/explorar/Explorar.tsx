@@ -7,6 +7,7 @@ import type { RegiaoSlug, Status } from "@/lib/types";
 import { REGIAO_NOME, STATUS_ROTULO } from "@/lib/rotulos";
 import { PropertyCard } from "@/components/empreendimento/PropertyCard";
 import { CidadeMapa } from "@/components/mapa/CidadeMapa";
+import { Button } from "@/components/ui/Button";
 import { LayoutGrid, Map as IconeMapa } from "lucide-react";
 
 type Filtros = { regiao: RegiaoSlug | null; status: Status | null; vaga: boolean; suite: boolean };
@@ -72,9 +73,9 @@ export function Explorar({ lista }: { lista: EmpreendimentoResumo[] }) {
         <p className="text-muted" aria-live="polite">
           {visiveis.length} empreendimento{visiveis.length === 1 ? "" : "s"}
           {algum && (
-            <button type="button" onClick={() => setF(VAZIO)} className="ml-2 h-11 rounded-md px-2 text-sm font-semibold text-green-900 hover:bg-selected">
+            <Button variante="ghost" tamanho="md" onClick={() => setF(VAZIO)} className="ml-2">
               Limpar filtros
-            </button>
+            </Button>
           )}
         </p>
         <div className="inline-flex rounded-full border border-line-strong p-1" role="group" aria-label="Ver como">
@@ -88,7 +89,7 @@ export function Explorar({ lista }: { lista: EmpreendimentoResumo[] }) {
       </div>
 
       {modo === "mapa" ? (
-        <div className="funde mt-4 rounded-xl bg-green-950 p-3 md:p-5">
+        <div className="funde escuro mt-4 rounded-xl bg-green-950 p-3 md:p-5">
           <CidadeMapa
             className="mx-auto max-w-[760px]"
             pins={lista.map((e) => ({ ...e, apagado: !visiveis.includes(e) }))}

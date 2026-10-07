@@ -27,7 +27,7 @@ export function RegionMap({ destaque, contagens, className = "" }: Props) {
   const texto = (r: RegiaoSlug) => (destaque === r ? "#fff" : "var(--color-ink)");
   const cidade = (["oeste-centro", "leste", "sul"] as const).map((r) => ({ r, bairros: mapa.bairros.filter((b) => b.regiao === r) }));
   return (
-    <svg viewBox="-270 -10 1530 890" className={className} role="img" aria-label="Mapa das regiões com empreendimentos MRV na Grande Fortaleza">
+    <svg viewBox="-270 -10 1530 890" className={className} role="group" aria-label="Mapa das regiões com empreendimentos MRV na Grande Fortaleza">
       {cidade.map(({ r, bairros }) => (
         <a key={r} href={`/regioes/${r}`} aria-label={`${REGIAO_NOME[r]}: ${contagens[r]} empreendimentos`} className="group">
           <g className="transition-opacity duration-[var(--t-base)] group-hover:opacity-85">

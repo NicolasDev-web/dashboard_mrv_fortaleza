@@ -89,7 +89,7 @@ export function Filme({ slug, nome, capitulos, motivos, autoplay = true, classNa
   return (
     <div
       ref={raiz}
-      className={`filme relative overflow-hidden bg-ink text-white ${className}`}
+      className={`filme escuro relative overflow-hidden bg-ink text-white ${className}`}
       role="region"
       aria-roledescription="carrossel"
       aria-label={`Fotos do ${nome}`}
@@ -132,14 +132,14 @@ export function Filme({ slug, nome, capitulos, motivos, autoplay = true, classNa
       })}
 
       {/* véus para legibilidade do texto em cima da foto */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-28 bg-gradient-to-b from-[rgb(0_51_31/0.65)] to-transparent" />
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-3/5 bg-gradient-to-t from-[rgb(0_51_31/0.92)] via-[rgb(0_51_31/0.5)] to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-28 bg-gradient-to-b from-green-950/65 to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-3/5 bg-gradient-to-t from-green-950/92 via-green-950/50 to-transparent" />
 
       {/* zonas de toque: esquerda volta, direita avança, segurar pausa */}
-      <button type="button" aria-label="Foto anterior" className="absolute inset-y-0 left-0 z-[3] w-[30%] cursor-w-resize outline-none"
+      <button type="button" aria-label="Foto anterior" className="absolute inset-y-0 left-0 z-[3] w-[30%] cursor-w-resize outline-none focus-visible:outline-2 focus-visible:outline-solid focus-visible:-outline-offset-4 focus-visible:outline-foco"
         onPointerDown={onPointerDown} onPointerUp={() => soltar(-1)} onPointerLeave={() => segurando && setSegurando(false)}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); ir(i - 1); } }} />
-      <button type="button" aria-label="Próxima foto" className="absolute inset-y-0 right-0 z-[3] w-[70%] cursor-e-resize outline-none"
+      <button type="button" aria-label="Próxima foto" className="absolute inset-y-0 right-0 z-[3] w-[70%] cursor-e-resize outline-none focus-visible:outline-2 focus-visible:outline-solid focus-visible:-outline-offset-4 focus-visible:outline-foco"
         onPointerDown={onPointerDown} onPointerUp={() => soltar(1)} onPointerLeave={() => segurando && setSegurando(false)}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); ir(i + 1); } }} />
 
@@ -189,7 +189,7 @@ export function Filme({ slug, nome, capitulos, motivos, autoplay = true, classNa
               const primeiro = quadros.findIndex((q) => q.cap === c.id);
               return (
                 <button key={c.id} type="button" role="tab" aria-selected={ativo} onClick={() => ir(primeiro)}
-                  className={`h-9 shrink-0 rounded-full px-3.5 text-[14px] font-semibold transition-colors duration-[var(--t-base)] ${ativo ? "bg-white text-green-950" : "bg-white/15 text-white hover:bg-white/25"}`}>
+                  className={`h-9 shrink-0 rounded-full px-3.5 text-sm font-semibold transition-colors duration-[var(--t-base)] ${ativo ? "bg-white text-green-950" : "bg-white/15 text-white hover:bg-white/25"}`}>
                   {c.rotulo}
                 </button>
               );

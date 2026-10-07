@@ -34,9 +34,14 @@ export function ContactCTA({ nome, bairro, urlOficial, fixo }: Props) {
     </Sheet>
   );
   if (!fixo) return folha;
+  // No celular a barra fica em cima da navegação inferior (56 px); do tablet em diante essa navegação não existe.
+  // O espaçador reserva a altura da barra no fim da página, para ela não cobrir o rodapé.
   return (
-    <div className="fixed inset-x-0 bottom-[calc(56px+env(safe-area-inset-bottom))] z-20 border-t border-line bg-white/95 px-5 py-3 backdrop-blur-sm lg:hidden">
-      {folha}
-    </div>
+    <>
+      <div aria-hidden className="h-20 lg:hidden" />
+      <div className="fixed inset-x-0 bottom-[calc(56px+env(safe-area-inset-bottom))] z-20 border-t border-line bg-white/95 px-5 py-3 backdrop-blur-sm md:bottom-0 md:pb-[calc(0.75rem+env(safe-area-inset-bottom))] lg:hidden">
+        {folha}
+      </div>
+    </>
   );
 }

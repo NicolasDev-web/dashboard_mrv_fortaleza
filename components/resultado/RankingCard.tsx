@@ -59,7 +59,7 @@ export function RankingCard({ posicao, slug, nome, local, score, faixa, diferenc
       </div>
       <div className="flex min-w-0 flex-1 flex-col">
         <h3 className="t-card text-ink">
-          <Link href={href} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:rounded-lg focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-green-500">
+          <Link href={href} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:rounded-lg focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-foco">
             {nome}
           </Link>
         </h3>
@@ -74,7 +74,7 @@ export function RankingCard({ posicao, slug, nome, local, score, faixa, diferenc
           <span className="text-sm font-semibold tabular-nums text-green-900">{score}%</span>
         </div>
         <p className="sr-only">{faixa}</p>
-        <p className="mt-1.5 text-[14px] leading-snug text-ink">{diferenca}</p>
+        <p className="mt-1.5 text-sm leading-snug text-ink">{diferenca}</p>
         <Link href={`/comparar?ids=${slug1},${slug}${query ? `&${query}` : ""}`} className="relative z-10 mt-auto inline-flex min-h-10 items-center gap-1.5 self-start pt-1 text-sm font-semibold text-green-900 hover:underline">
           <GitCompareArrows className="size-4" aria-hidden /> Comparar com o 1º
         </Link>

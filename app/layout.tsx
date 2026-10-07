@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR" className={marca.variable}>
+    <html lang="pt-BR" className={marca.variable} data-scroll-behavior="smooth">
       <body className="flex min-h-dvh flex-col">
         <a href="#conteudo" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:shadow-e2">
           Pular para o conteúdo

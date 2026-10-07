@@ -20,10 +20,10 @@ export default function Home() {
     <>
       <section className="contem grid items-center gap-10 pb-12 pt-8 md:pt-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-20">
         <div className="max-w-xl">
-          <p className="entra mb-4 text-sm font-semibold uppercase tracking-[0.08em] text-green-700">Grande Fortaleza · 16 empreendimentos</p>
+          <p className="entra mb-4 text-sm font-semibold uppercase tracking-[0.08em] text-green-900">Grande Fortaleza · 16 empreendimentos</p>
           <h1 className="entra t-display text-green-900">Vamos descobrir qual MRV combina com você</h1>
           <p className="entra mt-5 text-lg text-muted" style={{ "--atraso": "90ms" } as CSSProperties}>
-            9 perguntas rápidas sobre a sua rotina e o seu orçamento. No fim, você vê os 3 empreendimentos que mais combinam e o porquê de cada um.
+            9 perguntas rápidas sobre a sua rotina e o seu orçamento. No fim, você vê os empreendimentos que mais combinam e o porquê de cada um.
           </p>
           <div className="entra mt-8 flex flex-col gap-3 sm:flex-row" style={{ "--atraso": "180ms" } as CSSProperties}>
             <LinkButton href="/descobrir" className="w-full sm:w-auto">
@@ -33,12 +33,12 @@ export default function Home() {
               Ver todos os empreendimentos
             </LinkButton>
           </div>
-          <p className="entra mt-4 text-sm text-muted" style={{ "--atraso": "240ms" } as CSSProperties}>Leva cerca de 2 minutos. Não pedimos nenhum dado pessoal.</p>
+          <p className="entra mt-4 text-sm text-muted" style={{ "--atraso": "240ms" } as CSSProperties}>Leva cerca de 2 minutos. Não pedimos nome, telefone nem e-mail.</p>
         </div>
 
         <div className="relative">
           <Shape className="entra-forma pointer-events-none absolute -left-12 -top-12 hidden w-36 lg:block" />
-          <div className="relative overflow-hidden rounded-xl bg-green-950 p-3 text-white md:p-5">
+          <div className="escuro relative overflow-hidden rounded-xl bg-green-950 p-3 text-white md:p-5">
             <div className="flex items-baseline justify-between gap-3 px-1 pb-2">
               <p className="font-semibold">Onde estão os 16 MRV</p>
               <p className="text-sm text-white/70">Toque num ponto</p>
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-green-900 py-12 text-white md:py-16" aria-labelledby="regioes">
+      <section className="escuro bg-green-900 py-12 text-white md:py-16" aria-labelledby="regioes">
         <div className="contem">
           <h2 id="regioes" className="t-h2">Escolha pela região</h2>
           <Revela as="ul" className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
@@ -105,7 +105,7 @@ export default function Home() {
                 >
                   <span>
                     <span className="block font-semibold">{r.nome}</span>
-                    <span className="text-sm text-white/75">{daRegiao(r.slug).length} empreendimento{daRegiao(r.slug).length > 1 ? "s" : ""}</span>
+                    <span className="text-sm text-white/85">{daRegiao(r.slug).length} empreendimento{daRegiao(r.slug).length > 1 ? "s" : ""}</span>
                   </span>
                   <ChevronRight className="seta size-5 shrink-0 text-green-300" aria-hidden />
                 </Link>

@@ -24,9 +24,12 @@
   --color-bg: #ffffff;
   --color-bg-subtle: rgb(0 107 63 / 0.04);
   --color-selected: rgb(0 107 63 / 0.06);
-  --color-muted: rgb(26 66 54 / 0.68);
+  /* 0,72 e não 0,68: com 0,68 o texto secundário fica em 4,37:1 no branco, abaixo do AA (4,5:1) */
+  --color-muted: rgb(26 66 54 / 0.72);
   --color-line: rgb(26 66 54 / 0.18);
   --color-line-strong: rgb(26 66 54 / 0.32);
+  /* Anel de foco: green-900 no claro (6,6:1). Superfícies escuras trocam para green-500 com .escuro */
+  --color-foco: var(--color-green-900);
 
   --font-sans: var(--font-marca), "Averta", "Manrope", system-ui, sans-serif;
 
@@ -77,6 +80,10 @@ body {
   line-height: 1.05;
   font-weight: 800;
   letter-spacing: -0.02em;
+  /* Abaixo de 360 px o piso de 36 px estoura palavras longas ("Empreendimentos") */
+  @media (width < 360px) {
+    font-size: 2rem;
+  }
 }
 @utility t-pergunta {
   font-size: clamp(1.625rem, 1.23rem + 1.74vw, 2.25rem);
@@ -109,10 +116,15 @@ body {
 /* Em @layer base para que utilitários (ex.: outline-none no título focado pelo quiz) possam sobrescrever */
 @layer base {
   :focus-visible {
-    outline: 2px solid var(--color-green-500);
+    outline: 2px solid var(--color-foco);
     outline-offset: 2px;
     border-radius: 4px;
   }
+}
+
+/* Superfície escura (green-950, ink, fotos com degradê): o foco precisa da cor clara para ter contraste */
+@utility escuro {
+  --color-foco: var(--color-green-500);
 }
 
 /* Skeleton: pulso lento de opacidade, desligado em reduced motion */

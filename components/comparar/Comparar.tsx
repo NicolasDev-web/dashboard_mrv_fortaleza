@@ -12,7 +12,7 @@ import { LAZER_FRASE } from "@/lib/quiz/types";
 import { destinoNome } from "@/lib/quiz/destino";
 import { REGIAO_NOME, STATUS_ROTULO, areaTexto, quartosTexto, vagaTexto } from "@/lib/rotulos";
 import { Img } from "@/components/ui/Img";
-import { LinkButton } from "@/components/ui/Button";
+import { Button, LinkButton } from "@/components/ui/Button";
 
 type Props = { dados: { empreendimentos: EmpreendimentoResumo[]; bairros: Bairro[]; polos: Polo[]; destinos: Destino[] } };
 
@@ -22,7 +22,7 @@ export function Comparar({ dados }: Props) {
   const params = useSearchParams();
   const r = useMemo(() => decodificar(params), [params]);
   const [tudo, setTudo] = useState(false);
-  const ids = (params.get("ids") ?? "").split(",").filter(Boolean).slice(0, 3);
+  const ids = [...new Set((params.get("ids") ?? "").split(",").filter(Boolean))].slice(0, 3);
   const lista = ids.map((id) => dados.empreendimentos.find((e) => e.slug === id)).filter((e): e is EmpreendimentoResumo => !!e);
   const quiz = respondeuAlgo(r);
   const query = codificar(r);
@@ -43,9 +43,11 @@ export function Comparar({ dados }: Props) {
     return (
       <div className="contem py-16 text-center">
         <h1 className="t-h2 text-green-900">Escolha 2 ou 3 empreendimentos para comparar</h1>
-        <p className="mt-3 text-muted">Marque “Comparar” nos cards do seu resultado.</p>
-        <LinkButton href={quiz ? `/descobrir/resultado?${query}` : "/empreendimentos"} className="mt-8">
-          {quiz ? "Voltar ao resultado" : "Ver empreendimentos"}
+        <p className="mt-3 text-muted">
+          {quiz ? "No seu resultado, toque em “Comparar com o 1º” em qualquer um dos outros empreendimentos." : "Faça o quiz: no resultado, cada sugestão pode ser comparada com a sua 1ª opção."}
+        </p>
+        <LinkButton href={quiz ? `/descobrir/resultado?${query}` : "/descobrir"} className="mt-8">
+          {quiz ? "Voltar ao resultado" : "Começar o quiz"}
         </LinkButton>
       </div>
     );
@@ -104,22 +106,23 @@ export function Comparar({ dados }: Props) {
       <dl className="mt-2">
         {exibidas.map((l) => (
           // as linhas iguais, quando aparecem, descem de onde estava o botão
-          <div key={l.rotulo} className={`border-b border-line py-4 ${tudo && !diferentes.includes(l) ? "desdobra" : ""}`}>
-            <dt className="mb-2 text-[13px] font-semibold uppercase tracking-[0.04em] text-muted">{l.rotulo}</dt>
-            <div className="grid gap-3" style={colunas}>
-              {l.valores.map((v, i) => (
-                <dd key={i} className="min-w-0 text-[15px] leading-snug text-ink">{v}</dd>
-              ))}
-            </div>
+          // dt e dd são filhos diretos da linha (HTML válido); o nome escondido diz ao leitor de tela de quem é cada valor
+          <div key={l.rotulo} className={`grid gap-x-3 border-b border-line py-4 ${tudo && !diferentes.includes(l) ? "desdobra" : ""}`} style={colunas}>
+            <dt className="col-span-full mb-2 text-[13px] font-semibold uppercase tracking-[0.04em] text-muted">{l.rotulo}</dt>
+            {l.valores.map((v, i) => (
+              <dd key={lista[i].slug} className="min-w-0 break-words text-[15px] leading-snug text-ink">
+                <span className="sr-only">{lista[i].nome}: </span>{v}
+              </dd>
+            ))}
           </div>
         ))}
       </dl>
       {exibidas.length === 0 && <p className="py-6 text-muted">Estes empreendimentos são iguais em tudo o que comparamos.</p>}
 
       {diferentes.length < linhas.length && (
-        <button type="button" onClick={() => setTudo((t) => !t)} className="mt-4 h-11 rounded-md px-3 text-sm font-semibold text-green-900 hover:bg-selected">
+        <Button variante="ghost" tamanho="md" onClick={() => setTudo((t) => !t)} className="mt-4">
           {tudo ? "Mostrar só as diferenças" : `Mostrar também o que é igual (${linhas.length - diferentes.length})`}
-        </button>
+        </Button>
       )}
       {linhas.some((l) => l.valores.some((v) => v.endsWith("*"))) && (
         <p className="mt-4 text-sm text-muted">* Estimativa pela distância, fora de Fortaleza.</p>

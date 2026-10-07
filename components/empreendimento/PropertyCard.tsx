@@ -49,7 +49,7 @@ export function PropertyCard({ e, query, priority, sizes, selo, children, titulo
       </div>
       <div className="flex flex-1 flex-col gap-1 p-4">
         <H className="t-card text-ink">
-          <Link href={href} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:rounded-lg focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-green-500">
+          <Link href={href} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:rounded-lg focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-foco">
             {e.nome}
           </Link>
         </H>
