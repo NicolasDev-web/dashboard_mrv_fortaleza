@@ -1,0 +1,123 @@
+{
+  "_leia": "Lazer do condomínio revisado à mão. Vence o automático (lista 'diferenciaisNew' de data/raw/mrv/NN.json). Só entra aqui o que foi CONFERIDO: conflitos, correções e decisões. Por empreendimento (slug): 'grupos' decide um grupo (piscina, academia, kids, festas, esportes, verde, pet) com { tem, fonte, trecho?, conferidoEm, pendente?, obs? }; 'itensExtras' acrescenta itens à lista exibida (lazerItens), cada um com fonte; 'fotos' corrige tipo e/ou alt de uma foto (id NN-NN de data/imagens.json) sem precisar dos originais em assets-src/. 'fonte' é obrigatória em tudo: o build falha sem ela (scripts/lazer-regras.ts). 'pendente: true' = vale o que está aqui, mas falta reconferir; o build só avisa. Regras fixas: (1) 'Espaço Funcional Descoberto' e crossfit ao ar livre NÃO são academia (decisão do time MRV, 07/10/2026); (2) 'Próximo a' (proximoA) é o entorno e nunca conta como lazer do condomínio. Ordem das fontes: lista oficial > outros textos da página oficial > legenda da implantação > fotos > busca na web. Relatório completo: docs/duvidas/Conferencia-lazer.md.",
+  "empreendimentos": {
+    "forte-alencar": {
+      "grupos": {
+        "academia": {
+          "tem": true,
+          "fonte": "site oficial MRV, informado pelo usuário (time MRV) em 07/10/2026",
+          "trecho": "\"dentro do site já fala que tem academia\"",
+          "conferidoEm": "2026-10-08",
+          "pendente": true,
+          "obs": "NÃO confirmado na conferência: a lista oficial extraída em 05/10/2026 (06.json), a legenda da implantação oficial (foto 06-05, 19 itens) e as buscas na web de 08/10/2026 não citam academia; 'academias' só aparece no 'Próximo a' (entorno). Reconferir na página oficial assim que o acesso ao site for liberado (formato novo: /imoveis/apartamentos/ceara/fortaleza/cajazeiras/forte-alencar)."
+        }
+      },
+      "itensExtras": [
+        { "item": "Academia", "grupo": "academia", "fonte": "site oficial MRV, informado pelo usuário (time MRV) em 07/10/2026", "conferidoEm": "2026-10-08", "pendente": true }
+      ]
+    },
+    "torre-do-mar": {
+      "grupos": {
+        "piscina": {
+          "tem": true,
+          "fonte": "descrição da página oficial (data/raw/mrv/11.json) + legenda da implantação oficial (foto 11-15: itens 14 'Piscina Infantil' e 15 'Piscina Adulto') + fotos 11-06 e 11-07 (piscinas adulto e infantil)",
+          "trecho": "área de lazer para toda a família incluindo piscina adulto e infantil, salão de festas, espaço de gourmet",
+          "conferidoEm": "2026-10-08",
+          "obs": "A lista oficial de diferenciais (Espaço Gourmet, Pet Place, Playground, Salão de festas) omite as piscinas. Pedir à MRV para corrigir a lista do site."
+        }
+      },
+      "itensExtras": [
+        { "item": "Piscina Adulto", "grupo": "piscina", "fonte": "legenda da implantação oficial (foto 11-15, item 15) e descrição oficial", "conferidoEm": "2026-10-08" },
+        { "item": "Piscina Infantil", "grupo": "piscina", "fonte": "legenda da implantação oficial (foto 11-15, item 14) e descrição oficial", "conferidoEm": "2026-10-08" }
+      ]
+    },
+    "sensia-reserva-vila-do-sol": {
+      "grupos": {
+        "academia": {
+          "tem": true,
+          "fonte": "descrição da página oficial (data/raw/mrv/09.json) + legenda da implantação oficial (foto 09-15, item 19 'Academia')",
+          "trecho": "condomínio moderno com lazer premium: piscina, espaço gourmet, academia, salão de festas",
+          "conferidoEm": "2026-10-08",
+          "obs": "A lista oficial de diferenciais omite a academia. Anúncios de terceiros (busca de 08/10/2026) citam 'Academia' / 'Fitness coberto'."
+        }
+      },
+      "itensExtras": [
+        { "item": "Academia", "grupo": "academia", "fonte": "legenda da implantação oficial (foto 09-15, item 19) e descrição oficial", "conferidoEm": "2026-10-08" }
+      ]
+    },
+    "residencial-fortitudine": {
+      "grupos": {
+        "academia": {
+          "tem": false,
+          "fonte": "lista oficial (data/raw/mrv/01.json) + decisão do time MRV de 07/10/2026 (funcional não é academia)",
+          "trecho": "Espaço Funcional Descoberto",
+          "conferidoEm": "2026-10-08",
+          "obs": "A foto 01-07 (antes 'Espaço fitness') mostra barras, rampa e cordas ao ar livre: é o espaço funcional. Não há imagem de implantação deste empreendimento para conferir a legenda."
+        }
+      },
+      "fotos": {
+        "01-07": { "tipo": "lazer", "alt": "Espaço funcional ao ar livre do Residencial Fortitudine", "fonte": "conferência visual da foto em 08/10/2026 (barras e rampa ao ar livre)", "conferidoEm": "2026-10-08" }
+      }
+    },
+    "ville-de-lisboa": {
+      "grupos": {
+        "academia": {
+          "tem": false,
+          "fonte": "lista oficial (data/raw/mrv/03.json) + legenda da implantação oficial (foto 03-19, item 8 'Funcional') + decisão do time MRV de 07/10/2026 (funcional não é academia)",
+          "trecho": "Espaço Funcional Descoberto",
+          "conferidoEm": "2026-10-08"
+        },
+        "kids": {
+          "tem": true,
+          "fonte": "lista oficial (data/raw/mrv/03.json: 'Playground' como 'Diferenciais de Card', 'Playbaby' sem tipo) + legenda da implantação oficial (foto 03-19, itens 1 'Playground' e 2 'Playbaby') + foto 03-11",
+          "trecho": "O lazer do seu novo endereço conta com piscinas adulto e infantil, churrasqueiras, espaço funcional, playground, playbaby",
+          "conferidoEm": "2026-10-08",
+          "obs": "Antes ficava fora porque o build só olhava itens do tipo 'Diferenciais de Lazer'."
+        }
+      },
+      "fotos": {
+        "03-08": { "tipo": "lazer", "alt": "Espaço funcional ao ar livre do Ville de Lisboa", "fonte": "conferência visual da foto em 08/10/2026 (barras e rampa ao ar livre, junto à pista de caminhada)", "conferidoEm": "2026-10-08" }
+      }
+    },
+    "ville-de-porto": {
+      "grupos": {
+        "academia": {
+          "tem": false,
+          "fonte": "lista oficial (data/raw/mrv/10.json) + legenda da implantação oficial (foto 10-16, item 3 'Espaço Funcional') + decisão do time MRV de 07/10/2026 (funcional não é academia)",
+          "trecho": "Espaço Funcional Descoberto",
+          "conferidoEm": "2026-10-08"
+        }
+      },
+      "itensExtras": [
+        { "item": "Piscina Infantil", "grupo": "piscina", "fonte": "legenda da implantação oficial (foto 10-16, item 8) e descrição oficial ('piscinas adulto e infantil')", "conferidoEm": "2026-10-08" },
+        { "item": "Pista de Caminhada", "grupo": "verde", "fonte": "legenda da implantação oficial (foto 10-16, item 11)", "conferidoEm": "2026-10-08" }
+      ]
+    },
+    "residencial-farol-do-atlantico": {
+      "grupos": {
+        "academia": {
+          "tem": true,
+          "fonte": "lista oficial (data/raw/mrv/08.json: 'Academia Coberta') + legenda da implantação oficial (foto 08-17, item 12 'Academia Coberta') + descrição oficial",
+          "trecho": "o Farol do Atlântico conta com uma academia coberta e espaço crossfit",
+          "conferidoEm": "2026-10-08"
+        }
+      }
+    },
+    "residencial-flor-do-sertao": {
+      "fotos": {
+        "02-03": { "tipo": "lazer", "alt": "Espaço funcional ao ar livre do Residencial Flor do Sertão", "fonte": "conferência visual da foto em 08/10/2026 (barras e rampa ao ar livre; a academia coberta é o item 8 da implantação 02-17)", "conferidoEm": "2026-10-08" }
+      }
+    },
+    "parque-marista": {
+      "fotos": {
+        "07-05": { "tipo": "lazer", "alt": "Quadra recreativa do Parque Marista", "fonte": "conferência visual da foto em 08/10/2026 (quadra com traves e bola, não academia)", "conferidoEm": "2026-10-08" }
+      }
+    },
+    "residencial-mandacaru": {
+      "fotos": {
+        "13-07": { "alt": "Crossfit ao ar livre, com a academia coberta ao fundo, do Residencial Mandacaru", "fonte": "conferência visual da foto em 08/10/2026 + legenda da implantação 13-16 (itens 2 'Crossfit' e 3 'Academia Coberta')", "conferidoEm": "2026-10-08" },
+        "13-08": { "alt": "Academia coberta do Residencial Mandacaru", "fonte": "conferência visual da foto em 08/10/2026 (sala fechada com equipamentos)", "conferidoEm": "2026-10-08" }
+      }
+    }
+  }
+}

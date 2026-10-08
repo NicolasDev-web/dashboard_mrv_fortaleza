@@ -30,8 +30,7 @@
    "festas",
    "piscina",
    "kids",
-   "pet",
-   "academia"
+   "pet"
   ],
   "lazerItens": [
    "Churrasqueira",
@@ -40,7 +39,7 @@
    "Happy Hour",
    "Playground",
    "Pet Place",
-   "Espaço Funcional Descoberto"
+   "Espaço funcional ao ar livre"
   ],
   "diferenciais": [
    "Bicicletário Descoberto",
@@ -117,8 +116,8 @@
     {
      "id": "01-07",
      "n": 7,
-     "tipo": "fitness",
-     "alt": "Espaço fitness do Residencial Fortitudine",
+     "tipo": "lazer",
+     "alt": "Espaço funcional ao ar livre do Residencial Fortitudine",
      "w": 5000,
      "h": 2810,
      "cor": "#080808",
@@ -443,8 +442,8 @@
     {
      "id": "02-03",
      "n": 3,
-     "tipo": "fitness",
-     "alt": "Espaço fitness do Residencial Flor do Sertão",
+     "tipo": "lazer",
+     "alt": "Espaço funcional ao ar livre do Residencial Flor do Sertão",
      "w": 5000,
      "h": 2812,
      "cor": "#68a8d8",
@@ -752,21 +751,23 @@
   "vagas": 109,
   "vagasPorUnidade": 0.36,
   "lazer": [
+   "kids",
    "verde",
    "piscina",
    "pet",
    "festas",
-   "esportes",
-   "academia"
+   "esportes"
   ],
   "lazerItens": [
+   "Playground",
    "Espaço Piquenique",
    "Piscina Adulto",
    "Pet Place",
    "Churrasqueira",
+   "Playbaby",
    "Happy Hour",
    "Futmesa",
-   "Espaço Funcional Descoberto",
+   "Espaço funcional ao ar livre",
    "Piscina Infantil",
    "Espaço Zen",
    "Pista de Caminhada"
@@ -778,9 +779,7 @@
    "Previsão para ar condicionado",
    "Cerâmica Cozinha e Banheiro",
    "Luminária com sensor de presença na guarita",
-   "Playground",
    "Tanque em louça",
-   "Playbaby",
    "Horta",
    "Praça",
    "Car Wash",
@@ -942,8 +941,8 @@
     {
      "id": "03-08",
      "n": 8,
-     "tipo": "fitness",
-     "alt": "Espaço fitness do Ville de Lisboa",
+     "tipo": "lazer",
+     "alt": "Espaço funcional ao ar livre do Ville de Lisboa",
      "w": 5000,
      "h": 2812,
      "cor": "#686868",
@@ -1866,7 +1865,8 @@
    "kids",
    "pet",
    "piscina",
-   "verde"
+   "verde",
+   "academia"
   ],
   "lazerItens": [
    "Espaço Gourmet",
@@ -1876,7 +1876,8 @@
    "Piscina Infantil",
    "Playground",
    "Salão de Festas com Copa",
-   "Espaço Piquenique"
+   "Espaço Piquenique",
+   "Academia"
   ],
   "diferenciais": [
    "Bicicletário Descoberto",
@@ -2261,8 +2262,11 @@
    "Pet Place",
    "Espaço Kids",
    "Happy Hour",
+   "Playbaby",
    "Espaço Zen",
    "Espaço Pizza",
+   "Mini Quadra",
+   "Pet Care",
    "Pista de Caminhada"
   ],
   "diferenciais": [
@@ -2277,10 +2281,7 @@
    "Medição de água individualizada",
    "Piso Laminado na Sala",
    "Piso da Cozinha e Banheiro em Cerâmica",
-   "Playbaby",
    "Vestiário da piscina",
-   "Mini Quadra",
-   "Pet Care",
    "Dispositivos economizadores de água e energia"
   ],
   "proximoA": "Praia da Iracema, Beira Mar, Hospital Luís França - Emergência Pediátrica, Instituto Doutor José Frota - IJF (Hospital), Unidade Estácio, Centro de Humanidades II (UFC - Campus do Benfica), Parque da Liberdade Fortaleza, Assaí Atacadista",
@@ -2388,8 +2389,8 @@
     {
      "id": "07-05",
      "n": 5,
-     "tipo": "fitness",
-     "alt": "Espaço fitness do Parque Marista",
+     "tipo": "lazer",
+     "alt": "Quadra recreativa do Parque Marista",
      "w": 5000,
      "h": 2813,
      "cor": "#989868",
@@ -2704,7 +2705,7 @@
   ],
   "lazerItens": [
    "Academia Coberta",
-   "Espaço Funcional Descoberto",
+   "Espaço funcional ao ar livre",
    "Espaço Gourmet",
    "Pet Place",
    "Piscina Adulto",
@@ -3085,7 +3086,8 @@
    "kids",
    "piscina",
    "pet",
-   "verde"
+   "verde",
+   "academia"
   ],
   "lazerItens": [
    "Salão de festas",
@@ -3095,7 +3097,8 @@
    "Piscina Adulto",
    "Pet Place",
    "Espaço Gourmet",
-   "Espaço Piquenique"
+   "Espaço Piquenique",
+   "Academia"
   ],
   "diferenciais": [
    "Bicicletário Descoberto"
@@ -3412,7 +3415,6 @@
   "vagasPorUnidade": 0.4,
   "lazer": [
    "festas",
-   "academia",
    "pet",
    "piscina",
    "kids",
@@ -3420,11 +3422,13 @@
   ],
   "lazerItens": [
    "Churrasqueira",
-   "Espaço Funcional Descoberto",
+   "Espaço funcional ao ar livre",
    "Pet Place",
    "Piscina Adulto",
    "Playground",
-   "Espaço Piquenique"
+   "Espaço Piquenique",
+   "Piscina Infantil",
+   "Pista de Caminhada"
   ],
   "diferenciais": [
    "Espaço Market",
@@ -3771,13 +3775,16 @@
   "lazer": [
    "festas",
    "pet",
-   "kids"
+   "kids",
+   "piscina"
   ],
   "lazerItens": [
    "Espaço Gourmet",
    "Pet Place",
    "Playground",
-   "Salão de festas"
+   "Salão de festas",
+   "Piscina Adulto",
+   "Piscina Infantil"
   ],
   "diferenciais": [
    "Gazebo",
@@ -4788,7 +4795,7 @@
      "id": "13-07",
      "n": 7,
      "tipo": "fitness",
-     "alt": "Espaço fitness do Residencial Mandacaru",
+     "alt": "Crossfit ao ar livre, com a academia coberta ao fundo, do Residencial Mandacaru",
      "w": 1363,
      "h": 767,
      "cor": "#887888",
@@ -4804,7 +4811,7 @@
      "id": "13-08",
      "n": 8,
      "tipo": "fitness",
-     "alt": "Espaço fitness do Residencial Mandacaru",
+     "alt": "Academia coberta do Residencial Mandacaru",
      "w": 1363,
      "h": 767,
      "cor": "#686868",

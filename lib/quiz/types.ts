@@ -40,6 +40,10 @@ export const POLO_FRASE: Record<PoloId, string> = {
   aeroporto: "o Aeroporto",
 };
 
+/**
+ * "academia" só vale para academia de verdade (coberta / fitness). Espaço funcional e crossfit ao ar livre
+ * não contam (decisão do time MRV; data/curated/lazer.json e scripts/lazer-regras.ts).
+ */
 export const LAZER_FRASE: Record<Lazer, string> = {
   piscina: "piscina",
   academia: "academia",

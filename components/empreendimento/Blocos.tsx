@@ -1,5 +1,5 @@
 import {
-  BedDouble, BusFront, Car, Check, Clock, Dumbbell, Fence, PawPrint, Ruler, Trees, Trophy, UtensilsCrossed, Waves, Blocks, Sparkles,
+  BedDouble, BusFront, Car, Check, Clock, Dumbbell, Fence, PawPrint, PersonStanding, Ruler, Trees, Trophy, UtensilsCrossed, Waves, Blocks, Sparkles,
   type LucideIcon,
 } from "lucide-react";
 import type { Empreendimento, PoloId } from "@/lib/types";
@@ -27,13 +27,18 @@ export function PropertyFacts({ e }: { e: Empreendimento }) {
   );
 }
 
+/**
+ * Ícone de cada item de lazer. O haltere é só para academia de verdade (coberta / fitness): espaço funcional e
+ * crossfit ao ar livre não são academia (data/curated/lazer.json) e ganham outro ícone.
+ */
 const ICONE_LAZER: [RegExp, LucideIcon][] = [
   [/piscina/i, Waves],
-  [/academia|funcional|crossfit/i, Dumbbell],
-  [/playground|kids/i, Blocks],
+  [/academia|fitness/i, Dumbbell],
+  [/funcional|crossfit/i, PersonStanding],
+  [/playground|playbaby|kids/i, Blocks],
   [/churrasqueira|gourmet|pizza|festas|happy/i, UtensilsCrossed],
   [/quadra|jogos|futmesa/i, Trophy],
-  [/caminhada|piquenique|pomar|zen/i, Trees],
+  [/caminhada|cooper|piquenique|pomar|zen/i, Trees],
   [/pet/i, PawPrint],
 ];
 

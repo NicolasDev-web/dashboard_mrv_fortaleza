@@ -5,8 +5,14 @@
  *   npx tsx scripts/extract-mrv.ts            baixa as 16 páginas
  *   npx tsx scripts/extract-mrv.ts --cache    usa os HTML já baixados em data/raw/mrv/html/
  *
+ * Grava dois arquivos por empreendimento:
+ *   data/raw/mrv/<ordem>.json           resumo com os campos que o build usa
+ *   data/raw/mrv/<ordem>.completo.json  o item INTEIRO do JSON da página, sem descartar nada. Serve de prova
+ *                                       e de consulta (ex.: um item de lazer citado fora de "diferenciaisNew"),
+ *                                       e scripts/build-data.ts procura termos de lazer nele (exceto entorno).
+ *
  * O resultado é só a matéria-prima: o que o app usa é montado por scripts/build-data.ts,
- * que aplica as correções de data/curated/empreendimentos.json por cima.
+ * que aplica as correções de data/curated/empreendimentos.json e data/curated/lazer.json por cima.
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -42,10 +48,16 @@ function limpar(s: unknown): string | null {
 
 type Bruto = Record<string, unknown>;
 
-function extrair(html: string) {
+/** Formato de data/raw/mrv/<ordem>.completo.json: o item da página como veio, mais a origem. */
+type ExtracaoCompleta = { ordem: number; url: string; extraidoEm: string; item: Bruto };
+
+function itemDaPagina(html: string): Bruto {
   const m = /<script id="mrv-property-details" type="application\/json">([\s\S]*?)<\/script>/.exec(html);
   if (!m) throw new Error("JSON mrv-property-details não encontrado");
-  const item = JSON.parse(m[1]).empreendimentosList.items[0] as Bruto;
+  return JSON.parse(m[1]).empreendimentosList.items[0] as Bruto;
+}
+
+function resumir(item: Bruto) {
   const lista = <T,>(v: unknown) => (Array.isArray(v) ? (v as T[]) : []);
   const diferenciais = lista<Bruto>(item.diferenciaisNew).map((d) => ({ titulo: limpar(d.titulo), tipo: limpar(d.tipo) }));
   return {
@@ -89,8 +101,12 @@ async function main() {
       buf = Buffer.from(await res.arrayBuffer());
       await writeFile(arqHtml, buf);
     }
-    const dados = { ordem: Number(ordem), url, extraidoEm: new Date().toISOString().slice(0, 10), ...extrair(decodificar(buf)) };
+    const item = itemDaPagina(decodificar(buf));
+    const origem = { ordem: Number(ordem), url, extraidoEm: new Date().toISOString().slice(0, 10) };
+    const dados = { ...origem, ...resumir(item) };
     await writeFile(path.join(SAIDA, `${id}.json`), JSON.stringify(dados, null, 2) + "\n");
+    const completo: ExtracaoCompleta = { ...origem, item };
+    await writeFile(path.join(SAIDA, `${id}.completo.json`), JSON.stringify(completo, null, 2) + "\n");
     console.log(`${id} ${dados.nome} · ${dados.bairro} · ${dados.status} · ${dados.tipologias.length} tipologia(s)`);
   }
 }

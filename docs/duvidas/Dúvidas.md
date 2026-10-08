@@ -2,6 +2,8 @@
 
 ## Em aberto
 
+- [ ] **Lazer conferido (08/10/2026).** Veja [Conferencia-lazer.md](Conferencia-lazer.md). Pontos para a MRV: (1) a academia do **Forte Alencar** está marcada como pendente, porque a lista oficial, a implantação e a busca na web só citam "academias" no entorno; (2) faltam itens na lista do site: as piscinas do **Torre do Mar**, a academia do **Sensia Reserva Vila do Sol** e a piscina infantil do **Ville de Porto**. Decisão já aplicada: espaço funcional ao ar livre não conta como academia.
+
 - [ ] **Preço e orçamento.** Existe "a partir de" ou faixa do Minha Casa Minha Vida por empreendimento? Com isso, entra uma 8ª pergunta (renda ou parcela). Hoje o quiz não pergunta orçamento.
 - [ ] **Linha Sensia.** O guia do repositório só cobre MRV e MRV Class. Hoje: logo Sensia no detalhe e selo "Sensia" no card. Aguardando o book para fechar o visual.
 - [ ] **Averta.** A fonte ainda é Manrope (`app/layout.tsx`). Falta receber os arquivos WOFF2 com licença web.
