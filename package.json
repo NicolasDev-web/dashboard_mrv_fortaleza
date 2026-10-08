@@ -14,7 +14,8 @@
     "data:build": "tsx scripts/build-data.ts",
     "data": "npm run data:mrv && npm run data:bairros && npm run data:imagens && npm run data:build && npm run data:grade",
     "test:e2e": "playwright test",
-    "data:grade": "tsx scripts/build-grade.ts"
+    "data:grade": "tsx scripts/build-grade.ts",
+    "data:ficha": "tsx scripts/build-ficha.ts"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",
