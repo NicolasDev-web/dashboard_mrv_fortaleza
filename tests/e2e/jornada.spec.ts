@@ -120,3 +120,22 @@ test("leque do lazer abre a galeria na foto tocada e devolve o foco ao fechar", 
   await expect(galeria).toBeHidden();
   await expect(carta).toBeFocused();
 });
+
+test("vitrine do detalhe: foto abre a galeria nela e o movimento pode ser pausado", async ({ page }) => {
+  await page.goto("/empreendimentos/reserva-brisa-do-mar");
+  await expect(page.getByRole("heading", { level: 1, name: "Reserva Brisa do Mar" })).toBeVisible();
+  // o mouse em cima para as colunas (como faz quem vai tocar numa foto)
+  const vitrine = page.locator(".vitrine");
+  await vitrine.hover();
+  const foto = vitrine.getByRole("button", { name: /^Ver foto:/ }).nth(2);
+  const alt = (await foto.getAttribute("aria-label"))!.replace("Ver foto: ", "");
+  await foto.click();
+  const galeria = page.getByRole("dialog", { name: /Fotos do Reserva Brisa do Mar/ });
+  await expect(galeria.locator("li", { hasText: alt }).first()).toBeInViewport();
+  await page.keyboard.press("Escape");
+  await expect(galeria).toBeHidden();
+  await expect(foto).toBeFocused();
+
+  await page.getByRole("button", { name: "Pausar fotos" }).click();
+  await expect(page.getByRole("button", { name: "Retomar fotos" })).toHaveAttribute("aria-pressed", "true");
+});

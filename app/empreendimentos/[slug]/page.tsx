@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { ChevronRight, ExternalLink, MapPin } from "lucide-react";
+import { ChevronRight, ExternalLink } from "lucide-react";
 import { bairros, destinos, empreendimentoPorSlug, empreendimentos, polos, regiaoPorSlug, resumir } from "@/lib/data";
-import { Badge, StatusBadge } from "@/components/ui/Badge";
-import { Filme } from "@/components/filme/Filme";
-import { capitulosDo, fotosDeLazer } from "@/lib/filme";
+import { fotosDeLazer } from "@/lib/filme";
 import { FloorPlans } from "@/components/empreendimento/FloorPlans";
-import { CommuteInfo, PropertyFacts } from "@/components/empreendimento/Blocos";
-import { FaixasDestaques } from "@/components/empreendimento/FaixasDestaques";
+import { CommuteInfo } from "@/components/empreendimento/Blocos";
+import { ListaDestaques } from "@/components/empreendimento/Destaques";
+import { Vitrine } from "@/components/empreendimento/Vitrine";
 import { agruparDestaques } from "@/lib/destaques";
 import { ContactCTA } from "@/components/empreendimento/ContactCTA";
 import { LequeLazer } from "@/components/empreendimento/LequeLazer";
@@ -53,55 +52,16 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
 
   return (
     <>
-      <div className="lg:contem lg:pt-6">
-        <nav aria-label="Você está em" className="contem hidden py-3 text-sm text-muted lg:block lg:px-0">
-          <ol className="flex items-center gap-1">
-            <li><Link href="/empreendimentos" className="text-green-900 hover:underline">Empreendimentos</Link></li>
-            <li aria-hidden><ChevronRight className="size-4" /></li>
-            <li aria-current="page" className="text-ink">{e.nome}</li>
-          </ol>
-        </nav>
-        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-10">
-          <Filme
-            slug={e.slug}
-            nome={e.nome}
-            capitulos={capitulosDo(e)}
-            galeria={galeria}
-            priority
-            className="aspect-[4/3] lg:aspect-[16/10] lg:rounded-lg"
-          />
-
-          <aside className="contem pt-5 lg:sticky lg:top-24 lg:self-start lg:px-0 lg:pt-0">
-            <div className="flex flex-wrap gap-1.5">
-              <StatusBadge status={e.status} />
-              {e.mcmv && <Badge tom="neutro" className="border border-line">Minha Casa Minha Vida</Badge>}
-            </div>
-            {e.linha === "sensia" && (
-              // eslint-disable-next-line @next/next/no-img-element -- PNG de marca já no tamanho final
-              <img src="/brand/sensia.png" alt="Sensia Incorporadora" width={86} height={20} className="mt-4 h-5 w-auto" />
-            )}
-            <h1 className="t-pergunta mt-3 text-green-900">{e.nome}</h1>
-            <p className="mt-1 flex items-center gap-1.5 text-muted">
-              <MapPin className="size-4" aria-hidden /> {e.bairroNome} · {e.cidade}
-            </p>
-            <div className="mt-5">
-              <PropertyFacts e={e} />
-            </div>
-            <div className="mt-6 hidden lg:block">
-              <ContactCTA nome={e.nome} bairro={e.bairroNome} urlOficial={e.urlOficial} />
-            </div>
-          </aside>
-        </div>
-      </div>
+      <Vitrine e={e} />
 
       <div className="contem mt-8 space-y-10 pb-10 lg:mt-12 lg:pb-16">
-        <div className="lg:max-w-[calc(100%-400px)]">
+        <div className="lg:max-w-4xl">
           <Suspense fallback={null}>
             <PorQueCombina e={resumir(e)} bairros={bairros} polos={polos} destinos={destinos} />
           </Suspense>
         </div>
 
-        <div className="space-y-10 lg:max-w-[calc(100%-400px)]">
+        <div className="space-y-10 lg:max-w-4xl">
           <Secao id="regiao" titulo="A região">
             <CommuteInfo e={e} />
             {e.proximoA && (
@@ -123,7 +83,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
 
           {destaques.length > 0 && (
             <Secao id="diferenciais" titulo="O que vem com ele">
-              <FaixasDestaques faixas={destaques} />
+              <ListaDestaques faixas={destaques} />
             </Secao>
           )}
 

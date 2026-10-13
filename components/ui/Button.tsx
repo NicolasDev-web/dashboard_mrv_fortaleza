@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 
-type Variante = "primary" | "secondary" | "ghost" | "inverse";
+type Variante = "primary" | "secondary" | "ghost" | "inverse" | "contornoClaro";
 type Tamanho = "md" | "lg";
 
 const BASE =
@@ -15,6 +15,8 @@ const VARIANTES: Record<Variante, string> = {
   secondary: "border border-green-900 text-green-900 bg-white hover:bg-selected",
   ghost: "text-green-900 hover:bg-selected",
   inverse: "bg-white text-green-900 hover:bg-sage-200",
+  // secundário sobre fundo escuro (green-950, fotos): par do inverse
+  contornoClaro: "border border-white/40 text-white hover:bg-white/10",
 };
 
 const TAMANHOS: Record<Tamanho, string> = {

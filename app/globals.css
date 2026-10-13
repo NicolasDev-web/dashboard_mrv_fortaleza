@@ -166,30 +166,26 @@ body {
 .trilho > * { scroll-snap-align: start; }
 
 /*
- * Faixas que rolam sozinhas (components/empreendimento/FaixasDestaques): duas cópias lado a lado andam
- * meia trilha e recomeçam sem emenda. Param no hover, no foco e com o botão de pausa;
- * com reduced motion viram lista parada (a cópia some).
+ * Vitrine do empreendimento (components/empreendimento/VitrineFotos): duas colunas de fotos, uma sobe e
+ * a outra desce. Cada trilha tem a lista duplicada e anda meia altura: o laço recomeça sem emenda.
+ * Param no hover, no foco e com o botão de pausa; com reduced motion ficam paradas (a cópia some).
  */
-@keyframes marquee { to { transform: translateX(-50%); } }
-.marquee {
+@keyframes vitrine-sobe { to { transform: translateY(-50%); } }
+.vitrine-coluna {
+  height: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
 }
-.marquee-trilha {
-  display: flex;
-  width: max-content;
-  animation: marquee var(--duracao, 30s) linear infinite;
-}
-.marquee[data-sentido="volta"] .marquee-trilha { animation-direction: reverse; }
-.marquee-grupo { display: flex; gap: 0.75rem; padding-right: 0.75rem; white-space: nowrap; }
-.marquee:hover .marquee-trilha,
-.marquee:focus-within .marquee-trilha,
-[data-pausado] .marquee-trilha { animation-play-state: paused; }
+.vitrine-trilha { animation: vitrine-sobe var(--duracao, 40s) linear infinite; }
+.vitrine-coluna[data-sentido="desce"] .vitrine-trilha { animation-direction: reverse; }
+.vitrine-grupo { display: flex; flex-direction: column; gap: 0.75rem; padding-bottom: 0.75rem; }
+.vitrine:hover .vitrine-trilha,
+.vitrine:focus-within .vitrine-trilha,
+.vitrine[data-pausado] .vitrine-trilha { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) {
-  .marquee { overflow: visible; mask-image: none; margin-inline: 0; }
-  .marquee-trilha { animation: none !important; width: auto; }
-  .marquee-grupo { flex-wrap: wrap; padding-right: 0; white-space: normal; }
-  .marquee-grupo[aria-hidden], .marquee-pausa { display: none; }
+  .vitrine-trilha { animation: none !important; }
+  .vitrine-coluna[data-sentido="desce"] .vitrine-trilha { transform: translateY(-2.5rem); }
+  .vitrine-grupo[aria-hidden], .vitrine-pausa { display: none; }
 }
 
 /*

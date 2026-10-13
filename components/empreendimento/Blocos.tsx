@@ -1,27 +1,20 @@
-import { BedDouble, BusFront, Car, Clock, Fence, Ruler, type LucideIcon } from "lucide-react";
+import { BedDouble, BusFront, Car, Clock, Fence, Ruler, Trees, type LucideIcon } from "lucide-react";
 import type { Empreendimento, PoloId } from "@/lib/types";
 import { areaTexto, quartosTexto, vagaTexto } from "@/lib/rotulos";
 import { minutosTexto, tempoAte } from "@/lib/scoring/score";
 import { dadosScoring, polos } from "@/lib/data";
 
-/** 2 quartos · m² · vaga · suíte, em linha: sem tabela. */
-export function PropertyFacts({ e }: { e: Empreendimento }) {
+/** Os 4 fatos da vitrine: quartos, área, vaga e lazer (varanda entra se faltar a área). */
+export function fatosDo(e: Empreendimento): [LucideIcon, string][] {
   const area = areaTexto(e);
   const fatos: [LucideIcon, string][] = [
     [BedDouble, quartosTexto(e.quartos) + (e.suite ? ", opção com suíte" : "")],
     ...(area ? [[Ruler, area] as [LucideIcon, string]] : []),
     [Car, vagaTexto(e.vagasPorUnidade)],
+    [Trees, `${e.lazerItens.length} itens de lazer`],
     ...(e.varanda ? [[Fence, e.varanda === "opcao" ? "Opção de varanda" : "Com varanda"] as [LucideIcon, string]] : []),
   ];
-  return (
-    <ul className="flex flex-wrap gap-x-5 gap-y-2">
-      {fatos.map(([I, t]) => (
-        <li key={t} className="flex items-center gap-2 text-[15px] text-ink">
-          <I className="size-5 text-green-900" strokeWidth={1.75} aria-hidden /> {t}
-        </li>
-      ))}
-    </ul>
-  );
+  return fatos.slice(0, 4);
 }
 
 /** Tempo até os polos mais procurados; com estimativa marcada quando não há tempo de ônibus calculado. */

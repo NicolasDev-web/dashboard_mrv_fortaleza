@@ -4,16 +4,16 @@ import { ExternalLink, MessageCircle } from "lucide-react";
 import { Sheet } from "@/components/ui/Sheet";
 import { classesBotao } from "@/components/ui/Button";
 
-type Props = { nome: string; bairro: string; urlOficial: string; fixo?: boolean };
+type Props = { nome: string; bairro: string; urlOficial: string; fixo?: boolean; /** "inverse" sobre fundo escuro */ variante?: "primary" | "inverse" };
 
 // Número do WhatsApp comercial: definido no ambiente da Vercel. Sem ele, só o link oficial aparece.
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP?.replace(/\D/g, "");
 
-export function ContactCTA({ nome, bairro, urlOficial, fixo }: Props) {
+export function ContactCTA({ nome, bairro, urlOficial, fixo, variante = "primary" }: Props) {
   const mensagem = encodeURIComponent(`Olá! Tenho interesse no ${nome}, no bairro ${bairro}. Vi no Descubra seu MRV.`);
   const utm = `${urlOficial}${urlOficial.includes("?") ? "&" : "?"}utm_source=descubra-seu-mrv&utm_medium=interno&utm_campaign=quiz`;
   const botao = (
-    <button type="button" className={classesBotao("primary", "lg", "w-full")}>
+    <button type="button" className={classesBotao(variante, "lg", "w-full")}>
       <span className="sm:hidden">Quero conhecer</span>
       <span className="hidden sm:inline">Quero conhecer este MRV</span>
     </button>
