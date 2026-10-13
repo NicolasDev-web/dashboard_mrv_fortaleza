@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { ArrowRight, ChevronDown, Info, RefreshCcw } from "lucide-react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useState, type CSSProperties } from "react";
+import { ArrowRight, Check, ChevronDown, Info, RefreshCcw, Sparkles } from "lucide-react";
 import type { EmpreendimentoResumo } from "@/lib/data";
 import type { Bairro, Destino, Polo } from "@/lib/types";
 import type { Capitulo } from "@/lib/filme";
 import { recomendar, minutosTexto } from "@/lib/scoring/score";
-import { diferencaPara1, motivosPorCapitulo } from "@/lib/scoring/apresentacao";
+import { diferencaPara1 } from "@/lib/scoring/apresentacao";
 import { CHAVE_REVELAR, codificar, decodificar, respondeuAlgo } from "@/lib/quiz/url";
 import { frasePerfil } from "@/lib/quiz/perfil";
 import { destinoAte, destinoNome, ehBairro, idBairro } from "@/lib/quiz/destino";
@@ -18,6 +18,8 @@ import { CidadeMapa, type DestinoMapa, type PinMapa } from "@/components/mapa/Ci
 import { ContactCTA } from "@/components/empreendimento/ContactCTA";
 import { Button, LinkButton } from "@/components/ui/Button";
 import { Revela } from "@/components/ui/Revela";
+import { AnelNota } from "@/components/efeitos/AnelNota";
+import { TextoDesfoque } from "@/components/efeitos/TextoDesfoque";
 import { Revelacao } from "./Revelacao";
 import { RankingCard } from "./RankingCard";
 import { PreviaFlutuante } from "./PreviaFlutuante";
@@ -86,7 +88,8 @@ export function Resultado({ dados, filmes, pins }: Props) {
   const r1 = top[0];
   const e1 = porSlug.get(r1.slug)!;
   const caps1 = filmes[r1.slug] ?? [];
-  const motivos1 = motivosPorCapitulo(r1, respostas, caps1.map((c) => c.id));
+  // a 1ª foto do filme: o portal da revelação abre nela e o topo continua nela
+  const capa1 = caps1[0]?.fotos[0] ?? e1.imagens.capa;
   const resto = top.slice(1);
   const foraDoTop = ranking.filter((x) => !top.some((t) => t.slug === x.slug));
   const pinsRanking = pins.map((p) => {
@@ -97,7 +100,12 @@ export function Resultado({ dados, filmes, pins }: Props) {
 
   return (
     <>
-      {revelando && <Revelacao pins={pins} top={top.map((t) => t.slug)} destino={destino} nome1={e1.nome} onFim={fimRevelacao} />}
+      {revelando && (
+        <Revelacao
+          pins={pins} top={top.map((t) => t.slug)} destino={destino} nome1={e1.nome}
+          capa1={capa1} score1={r1.score} faixa1={r1.faixa} motivo1={r1.motivos[0]} onFim={fimRevelacao}
+        />
+      )}
 
       {/* 1º lugar: o filme em tela cheia */}
       <section aria-labelledby="seu-mrv" className="lg:contem lg:pt-6">
@@ -105,35 +113,50 @@ export function Resultado({ dados, filmes, pins }: Props) {
           slug={e1.slug}
           nome={e1.nome}
           capitulos={caps1}
-          motivos={motivos1}
           autoplay={!revelando}
           priority
           galeria={caps1.flatMap((c) => c.fotos)}
           sizes="(min-width: 1024px) 1200px, 200vw"
           className="h-[calc(100svh-56px-56px)] max-h-[860px] min-h-[540px] lg:h-[min(80vh,760px)] lg:rounded-xl"
           topo={
-            <span className="inline-flex h-8 items-center gap-1.5 rounded-full bg-green-300 px-3 text-sm font-extrabold text-green-950 shadow-e2">
-              #1 para você
+            <span className="brilho-borda inline-flex h-9 items-center gap-1.5 rounded-full bg-green-300 px-3.5 text-sm font-extrabold text-green-950 shadow-e2">
+              <Sparkles className="size-4" aria-hidden /> #1 para você
             </span>
           }
         >
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.08em] text-green-300">Seu MRV</p>
-            <h1 id="seu-mrv" className="t-display mt-1 text-white">{e1.nome}</h1>
-            <p className="mt-2 text-white/85">
-              {e1.bairroNome} · {e1.cidade} · {quartosTexto(e1.quartos)}
-              {r1.tempo && ate && !r1.tempo.mesmoBairro && <> · ~{minutosTexto(r1.tempo.minutos)} até {ate}</>}
-            </p>
-            <p className="mt-3 flex items-baseline gap-2">
-              <span className="text-4xl font-extrabold tabular-nums text-green-300">{r1.score}%</span>
-              <span className="font-semibold text-white">{r1.faixa}</span>
-            </p>
-            <div className="mt-4 flex gap-2">
-              <div className="min-w-0 flex-1 sm:w-64 sm:flex-none"><ContactCTA nome={e1.nome} bairro={e1.bairroNome} urlOficial={e1.urlOficial} /></div>
-              <LinkButton href={`/empreendimentos/${e1.slug}?${query}`} variante="inverse" className="shrink-0 px-4">
-                Detalhes <ArrowRight className="seta size-5" aria-hidden />
-              </LinkButton>
+          <div className="flex items-end justify-between gap-4">
+            <div className="min-w-0 max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.08em] text-green-300">Seu MRV</p>
+              <h1 id="seu-mrv" className="t-display mt-1 text-white">
+                {/* anima ao montar: quem chega pela revelação já encontra o topo pronto quando ela some */}
+                <TextoDesfoque texto={e1.nome} atraso={150} />
+              </h1>
+              <p className="mt-2 text-white/85">
+                {e1.bairroNome} · {e1.cidade} · {quartosTexto(e1.quartos)}
+                {r1.tempo && ate && !r1.tempo.mesmoBairro && <> · ~{minutosTexto(r1.tempo.minutos)} até {ate}</>}
+              </p>
             </div>
+            <AnelNota score={r1.score} faixa={r1.faixa} tamanho="lg" atraso={0.3} className="shrink-0 max-sm:[&>span:last-child]:hidden" />
+          </div>
+          {r1.motivos.length > 0 && (
+            <ul className="mt-4 flex flex-wrap gap-2" aria-label="Por que combina">
+              {r1.motivos.slice(0, 3).map((m, k) => (
+                <li
+                  key={m}
+                  className={`flex max-w-full items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-sm ${k === 2 ? "max-sm:hidden" : ""} chip-entra`}
+                  style={{ "--atraso": `${500 + k * 120}ms` } as CSSProperties}
+                >
+                  <Check className="size-4 shrink-0 text-green-300" strokeWidth={2.5} aria-hidden />
+                  <span className="truncate">{m}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="mt-5 flex gap-2">
+            <div className="min-w-0 flex-1 sm:w-64 sm:flex-none"><ContactCTA nome={e1.nome} bairro={e1.bairroNome} urlOficial={e1.urlOficial} /></div>
+            <LinkButton href={`/empreendimentos/${e1.slug}?${query}`} variante="inverse" className="shrink-0 px-4">
+              Detalhes <ArrowRight className="seta size-5" aria-hidden />
+            </LinkButton>
           </div>
         </Filme>
       </section>

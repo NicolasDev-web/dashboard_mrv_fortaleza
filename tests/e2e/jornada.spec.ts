@@ -139,3 +139,31 @@ test("vitrine do detalhe: foto abre a galeria nela e o movimento pode ser pausad
   await page.getByRole("button", { name: "Pausar fotos" }).click();
   await expect(page.getByRole("button", { name: "Retomar fotos" })).toHaveAttribute("aria-pressed", "true");
 });
+
+test.describe("revelação do 1º", () => {
+  const q = "o=metropolitana&d=unifor&t=onibus&m=filhos&p=1&l=piscina%2Ckids&z=logo&r=r3&e=e2";
+
+  test("termina sozinha e entrega o topo já pronto, com a nota final", async ({ page }) => {
+    await page.goto("/");
+    await page.evaluate((q) => sessionStorage.setItem("descubra:revelar", q), q);
+    await page.goto(`/descobrir/resultado?${q}`);
+    const status = page.getByRole("status", { name: /Encontramos o seu MRV: .+, \d+% de compatibilidade/ });
+    await expect(status).toBeVisible();
+    await expect(status).toBeHidden({ timeout: 10_000 });
+    const anel = page.getByRole("img", { name: /^\d+% de compatibilidade/ }).first();
+    const rotulo = (await anel.getAttribute("aria-label"))!;
+    await expect(anel.getByText(rotulo.split(" ")[0])).toBeVisible();
+    await expect(page.getByText("#1 para você")).toBeVisible();
+  });
+
+  test("não aparece com movimento reduzido", async ({ browser }) => {
+    const ctx = await browser.newContext({ reducedMotion: "reduce" });
+    const page = await ctx.newPage();
+    await page.goto("/");
+    await page.evaluate((q) => sessionStorage.setItem("descubra:revelar", q), q);
+    await page.goto(`/descobrir/resultado?${q}`);
+    await expect(page.getByText("#1 para você")).toBeVisible();
+    await expect(page.getByRole("status", { name: /Encontramos o seu MRV/ })).toHaveCount(0);
+    await ctx.close();
+  });
+});

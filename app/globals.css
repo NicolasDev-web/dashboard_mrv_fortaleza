@@ -259,6 +259,59 @@ body {
   .pulso-destino, .linha-destino { animation: none !important; }
 }
 
+/*
+ * Revelação do 1º (components/resultado/Revelacao) e topo do resultado:
+ * - .onda: anéis que saem do pino do 1º (Ripple do Magic UI)
+ * - .portal: a foto abre em círculo a partir do pino (clip-path vem do componente)
+ * - .brilho-borda: luz correndo pela borda do selo "#1 para você" (Border Beam / Shine Border do Magic UI)
+ * - .chip-entra: motivos entram saindo do desfoque, em sequência por --atraso (Blur Fade do Magic UI)
+ */
+@keyframes onda {
+  from { transform: translate(-50%, -50%) scale(0.5); opacity: 0.8; }
+  to { transform: translate(-50%, -50%) scale(3.4); opacity: 0; }
+}
+.onda {
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  border: 2px solid var(--color-green-300);
+  pointer-events: none;
+  animation: onda 1.5s var(--ease-saida) infinite;
+}
+.onda:nth-child(2) { animation-delay: 0.35s; }
+.onda:nth-child(3) { animation-delay: 0.7s; }
+.portal { transition: clip-path 850ms var(--ease-saida); }
+
+@property --angulo-brilho { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+@keyframes brilho-gira { to { --angulo-brilho: 360deg; } }
+.brilho-borda { position: relative; }
+.brilho-borda::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--angulo-brilho), transparent 0 62%, var(--color-green-500) 78%, #fff 86%, transparent 94%);
+  /* mostra só o anel de 2 px entre a borda e o conteúdo */
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: brilho-gira 2.6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes chip-entra { from { opacity: 0; filter: blur(8px); transform: translateY(8px); } }
+@keyframes palavra-entra { from { opacity: 0; filter: blur(12px); transform: translateY(0.25em); } }
+.palavra-entra { animation: palavra-entra 700ms var(--ease-saida) both; }
+.chip-entra { animation: chip-entra 650ms var(--ease-saida) var(--atraso, 0ms) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .onda, .brilho-borda::before, .chip-entra, .palavra-entra { animation: none !important; }
+  .portal { transition: none; }
+}
+
 /* Filme do empreendimento: barra enche no tempo da foto; zoom lento (Ken Burns) em 4 variações */
 @keyframes encher { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .barra-filme { animation-name: encher; animation-timing-function: linear; animation-fill-mode: forwards; }
