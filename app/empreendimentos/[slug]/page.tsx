@@ -12,6 +12,8 @@ import { Vitrine } from "@/components/empreendimento/Vitrine";
 import { agruparDestaques } from "@/lib/destaques";
 import { ContactCTA } from "@/components/empreendimento/ContactCTA";
 import { LequeLazer } from "@/components/empreendimento/LequeLazer";
+import { Maquete3D } from "@/components/empreendimento/Maquete3D";
+import { maquetePorSlug } from "@/lib/maquete";
 import { PorQueCombina } from "@/components/resultado/PorQueCombina";
 import { Rodape } from "@/components/layout/Rodape";
 
@@ -49,6 +51,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
   const galeria = [...e.imagens.galeria, ...e.imagens.plantas];
   const lazer = fotosDeLazer(e);
   const destaques = agruparDestaques(e);
+  const maquete = maquetePorSlug(e.slug);
 
   return (
     <>
@@ -74,6 +77,12 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
               Conhecer a região {regiao.nome} <ChevronRight className="seta size-4" aria-hidden />
             </Link>
           </Secao>
+
+          {maquete && (
+            <Secao id="maquete" titulo="O condomínio em 3D">
+              <Maquete3D maquete={maquete} poster={e.imagens.aerea[0] ?? e.imagens.implantacao[0]} />
+            </Secao>
+          )}
 
           {lazer.length >= 3 && (
             <Secao id="lazer" titulo="Lazer no condomínio">

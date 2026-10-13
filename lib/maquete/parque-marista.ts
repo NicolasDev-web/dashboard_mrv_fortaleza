@@ -6,12 +6,13 @@ import type { Maquete } from "./tipos";
  * 3 torres ÷ 12 por andar = 16, conferido nas janelas da fachada (07-19).
  */
 export const parqueMarista: Maquete = {
+  nome: "Parque Marista",
   fonte: { imagem: "/img/parque-marista/07-11", largura: 1600 },
   escala: 11.4,
   peDireito: 2.85,
   lote: [[210, 760], [1322, 760], [1408, 815], [1408, 1990], [1335, 2075], [245, 2075], [162, 1990], [162, 815]],
   interno: [[228, 795], [1310, 795], [1368, 835], [1368, 1975], [1318, 2038], [262, 2038], [200, 1975], [200, 835]],
-  rua: [68, 660, 1515, 2155],
+  ruas: [[68, 660, 1515, 760], [68, 2075, 1515, 2155], [68, 660, 162, 2155], [1408, 660, 1515, 2155]],
   pisos: [
     { tipo: "piso", ret: [205, 785, 1005, 1010] },
     { tipo: "deck", ret: [1005, 785, 1365, 1005] },
@@ -34,9 +35,9 @@ export const parqueMarista: Maquete = {
     [1368, 1975, 1318, 2038], [1318, 2038, 262, 2038], [262, 2038, 200, 1975], [200, 1975, 200, 835], [200, 835, 228, 795],
   ],
   torres: [
-    { nome: "Torre 1", ret: [372, 1040, 1056, 1182], nucleo: [690, 742], andares: 16 },
-    { nome: "Torre 2", ret: [380, 1430, 1066, 1572], nucleo: [700, 752], andares: 16 },
-    { nome: "Torre 3", ret: [380, 1795, 1066, 1937], nucleo: [700, 752], andares: 16 },
+    { nome: "Torre 1", partes: [[372, 1040, 690, 1182], [742, 1040, 1056, 1182]], nucleo: [690, 1034, 742, 1188], andares: 16 },
+    { nome: "Torre 2", partes: [[380, 1430, 700, 1572], [752, 1430, 1066, 1572]], nucleo: [700, 1424, 752, 1578], andares: 16 },
+    { nome: "Torre 3", partes: [[380, 1795, 700, 1937], [752, 1795, 1066, 1937]], nucleo: [700, 1789, 752, 1943], andares: 16 },
   ],
   construcoes: [
     { ret: [235, 835, 415, 932], altura: 4.2 }, // salão de festas
@@ -45,7 +46,7 @@ export const parqueMarista: Maquete = {
     { ret: [968, 918, 1005, 1000], altura: 3 }, // vestiário da piscina
     { ret: [1140, 1022, 1200, 1068], altura: 3.2 }, // apoio administrativo
     { ret: [1205, 1022, 1300, 1082], altura: 3.2 }, // apoio técnico e pet care
-    { ret: [1295, 1470, 1362, 1545], altura: 3.2 }, // guarita
+    { ret: [1295, 1470, 1362, 1545], altura: 3.2, placa: true }, // guarita
     { ret: [1308, 1730, 1356, 1852], altura: 2.8 }, // depósito de lixo
     { ret: [1282, 1285, 1310, 1345], altura: 2.8 }, // espaço market
     { ret: [548, 835, 592, 872], altura: 3, tipo: "pergolado" }, // happy hour
@@ -78,13 +79,14 @@ export const parqueMarista: Maquete = {
     { de: 1165, ate: 1915, em: 1120, sentido: "v", ocupacao: 0.45 },
     { de: 1640, ate: 1955, em: 1243, sentido: "v", ocupacao: 0.45 },
   ],
+  guardaSois: [[1120, 815], [1180, 815], [1240, 815], [1300, 815]],
   rotulos: [
     { texto: "Piscinas", em: [1190, 915] },
-    { texto: "Mini quadra", em: [932, 825] },
-    { texto: "Salão de festas", em: [325, 885], altura: 5 },
-    { texto: "Playground", em: [480, 850] },
-    { texto: "Academia e jogos", em: [740, 888], altura: 5 },
-    { texto: "Reservatórios", em: [290, 1115], altura: 4 },
+    { texto: "Mini quadra", em: [932, 825], secundario: true },
+    { texto: "Salão de festas", em: [325, 885], altura: 5, secundario: true },
+    { texto: "Playground", em: [480, 850], secundario: true },
+    { texto: "Academia e jogos", em: [740, 888], altura: 5, secundario: true },
+    { texto: "Reservatórios", em: [290, 1115], altura: 4, secundario: true },
     { texto: "Portaria", em: [1330, 1505], altura: 4 },
   ],
   fachada: { parede: "#e9e7e2", faixa: "#8f8b86", paineis: ["#e3a36e", "#9dbb88", "#f0c9a3", "#d9d6cf"] },
