@@ -9,6 +9,7 @@ export const torreDoMar: Maquete = {
   fonte: { imagem: "/img/torre-do-mar/11-15", largura: 1080 },
   escala: 3.2,
   peDireito: 2.85,
+  norte: -17,
   vista: 170,
   lote: [[28, 56], [1028, 58], [1030, 196], [28, 192]],
   interno: [[31, 59], [1025, 61], [1027, 193], [31, 189]],

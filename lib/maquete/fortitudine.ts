@@ -11,6 +11,7 @@ export const fortitudine: Maquete = {
   estimada: true,
   escala: 10,
   peDireito: 2.85,
+  norte: 0,
   vista: 210,
   lote: [[0, 0], [1300, 0], [1300, 350], [900, 350], [900, 620], [0, 620]],
   interno: [[6, 6], [1294, 6], [1294, 344], [894, 344], [894, 614], [6, 614]],

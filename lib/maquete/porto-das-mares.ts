@@ -9,6 +9,7 @@ export const portoDasMares: Maquete = {
   fonte: { imagem: "/img/porto-das-mares/12-02", largura: 1080 },
   escala: 3.5,
   peDireito: 2.85,
+  norte: -21,
   vista: 15,
   lote: [[122, 5], [650, 100], [690, 447], [95, 447], [65, 120], [140, 118]],
   interno: [[127, 12], [645, 106], [684, 441], [100, 441], [71, 125], [143, 124]],

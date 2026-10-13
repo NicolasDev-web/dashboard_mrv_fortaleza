@@ -4,7 +4,8 @@ import { useEffect, useLayoutEffect, useMemo, useRef, type RefObject } from "rea
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Html, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import type { Construcao, Maquete, Ponto, Ret, TipoPiso, Torre } from "@/lib/maquete/tipos";
+import { MapPin, Sunrise, Sunset } from "lucide-react";
+import type { Construcao, Maquete, Ponto, Referencia, Ret, TipoPiso, Torre } from "@/lib/maquete/tipos";
 
 /** O que a interface de fora (botões) pode pedir à câmera */
 export interface ControleMaquete {
@@ -23,6 +24,11 @@ type Props = {
   intro: boolean;
   visivel: boolean;
   rotulos: boolean;
+  /** hora solar da luz e do sol no caminho (8, 12 ou 16) */
+  hora: number;
+  referencias: Referencia[];
+  /** rosa dos ventos da interface, girada a cada quadro conforme a câmera */
+  bussolaRef: RefObject<HTMLDivElement | null>;
   controleRef: RefObject<ControleMaquete | null>;
   aoInteragir(): void;
   aoCarregar(): void;
@@ -84,7 +90,8 @@ type Conversor = ReturnType<typeof fazConversor>;
 function enquadramento(m: Maquete, c: Conversor) {
   const az = THREE.MathUtils.degToRad(m.vista ?? 35);
   const el = THREE.MathUtils.degToRad(34);
-  const dist = c.raio * 1.8 + c.alturaMax * 0.9;
+  // folga para o anel dos pontos cardeais e as referências caberem no primeiro enquadramento
+  const dist = c.raio * 1.8 + 30 + c.alturaMax * 0.9;
   return {
     alvo: new THREE.Vector3(0, Math.min(12, c.alturaMax * 0.25), 0),
     dir: new THREE.Vector3(Math.sin(az) * Math.cos(el), Math.sin(el), -Math.cos(az) * Math.cos(el)),
@@ -94,6 +101,34 @@ function enquadramento(m: Maquete, c: Conversor) {
   };
 }
 type Enquadramento = ReturnType<typeof enquadramento>;
+
+const LATITUDE = THREE.MathUtils.degToRad(-3.73);
+
+/** Norte e leste verdadeiros na cena, a partir do ângulo do norte na planta */
+function eixos(norte: number) {
+  const t = THREE.MathUtils.degToRad(norte);
+  return { norte: new THREE.Vector3(Math.sin(t), 0, -Math.cos(t)), leste: new THREE.Vector3(Math.cos(t), 0, Math.sin(t)) };
+}
+
+/**
+ * Direção do sol em Fortaleza no equinócio (março e setembro), para a hora solar dada: nasce no leste,
+ * passa quase a pino ao meio-dia (3,7° ao norte) e se põe no oeste.
+ */
+function direcaoSol(hora: number, norte: number) {
+  const h = THREE.MathUtils.degToRad((hora - 12) * 15);
+  const { norte: n, leste: l } = eixos(norte);
+  return n
+    .multiplyScalar(-Math.sin(LATITUDE) * Math.cos(h))
+    .addScaledVector(l, -Math.sin(h))
+    .setY(Math.cos(LATITUDE) * Math.cos(h))
+    .normalize();
+}
+
+/** Direção horizontal de um rumo em graus a partir do norte */
+function direcaoRumo(rumo: number, norte: number) {
+  const t = THREE.MathUtils.degToRad(norte + rumo);
+  return new THREE.Vector3(Math.sin(t), 0, -Math.cos(t));
+}
 
 const retParaPontos = ([x1, y1, x2, y2]: Ret): Ponto[] => [[x1, y1], [x2, y1], [x2, y2], [x1, y2]];
 const ehPoligono = (r: Ret | Ponto[]): r is Ponto[] => Array.isArray(r[0]);
@@ -336,7 +371,7 @@ export function Cena(props: Props) {
   );
 }
 
-function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, controleRef, aoInteragir }: Props) {
+function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, hora, referencias, bussolaRef, controleRef, aoInteragir }: Props) {
   const c = useMemo(() => fazConversor(m), [m]);
   const e = useMemo(() => enquadramento(m, c), [m, c]);
   const fab = useMemo(() => criarFabrica(m), [m]);
@@ -344,12 +379,9 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, controleR
   const ceu = useMemo(() => fab.ceu(), [fab]);
   const torres = useRef<THREE.Group>(null!);
   const topo = 0.2 + m.pisos.length * 0.02;
-  const sombra = c.raio + 25;
-  // o sol vem de ~50° ao lado da câmera inicial: as fachadas que a pessoa vê primeiro ficam iluminadas
-  const sol = useMemo(() => {
-    const h = new THREE.Vector3(e.dir.x, 0, e.dir.z).normalize().applyAxisAngle(EIXO_Y, 0.85);
-    return h.multiplyScalar(0.7).setY(0.72).normalize().multiplyScalar(c.raio + 160);
-  }, [e.dir, c.raio]);
+  // sol baixo de manhã e à tarde: sombras compridas pedem uma área de sombra maior
+  const sombra = c.raio + 60;
+  const sol = useMemo(() => direcaoSol(hora, m.norte).multiplyScalar(c.raio + 200), [hora, m.norte, c.raio]);
 
   return (
     <>
@@ -358,8 +390,8 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, controleR
       <hemisphereLight args={["#e3efff", "#c8c2a8", 1.15]} />
       <directionalLight
         position={sol}
-        color="#fff1dc"
-        intensity={2.5}
+        color={hora === 12 ? "#fff6e8" : "#ffe2bf"}
+        intensity={hora === 12 ? 2.6 : 2.4}
         castShadow
         shadow-mapSize={[2048, 2048]}
         shadow-camera-left={-sombra}
@@ -367,7 +399,7 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, controleR
         shadow-camera-top={sombra}
         shadow-camera-bottom={-sombra}
         shadow-camera-near={10}
-        shadow-camera-far={c.raio * 2 + 400}
+        shadow-camera-far={c.raio * 2 + 500}
         shadow-bias={-0.0004}
         shadow-normalBias={0.04}
       />
@@ -401,6 +433,9 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, controleR
       <Arvores m={m} c={c} chao={topo} fab={fab} />
       <Carros m={m} c={c} chao={topo} />
       {rotulos && <Rotulos m={m} c={c} chao={topo} torres={torres} />}
+      <RosaNoChao m={m} c={c} rotulos={rotulos} />
+      {rotulos && <PontosDeReferencia lista={referencias} m={m} c={c} torres={torres} />}
+      <GiroDaBussola alvo={e.alvo} norte={m.norte} bussolaRef={bussolaRef} />
 
       {interativo && (
         <OrbitControls
@@ -1128,4 +1163,108 @@ function Rotulos({ m, c, chao, torres }: { m: Maquete; c: Conversor; chao: numbe
       ))}
     </>
   );
+}
+
+// ——— Orientação: sol, pontos cardeais e referências da cidade ———
+
+/** Círculo no chão em volta do lote com os pontos cardeais, o nascente e o poente e uma seta verde para o norte */
+function RosaNoChao({ m, c, rotulos }: { m: Maquete; c: Conversor; rotulos: boolean }) {
+  const raio = c.raio + 14;
+  const { norte, leste } = eixos(m.norte);
+  const pontos: [string, THREE.Vector3, string?][] = [
+    ["N", norte.clone()],
+    ["L", leste.clone(), "Nascente"],
+    ["S", norte.clone().negate()],
+    ["O", leste.clone().negate(), "Poente"],
+  ];
+  // triângulo deitado no chão: a ponta (eixo +y do círculo de 3 lados) gira para o norte
+  const giroSeta = Math.atan2(-norte.x, -norte.z);
+  return (
+    <>
+      <mesh rotation-x={-Math.PI / 2} position-y={0.3}>
+        <ringGeometry args={[raio - 0.35, raio + 0.35, 160]} />
+        <meshBasicMaterial color="#ffffff" transparent opacity={0.85} depthWrite={false} />
+      </mesh>
+      <group position={norte.clone().multiplyScalar(raio + 4).setY(0.32)} rotation-y={giroSeta}>
+        <mesh rotation-x={-Math.PI / 2}>
+          <circleGeometry args={[3.2, 3, Math.PI / 2]} />
+          <meshBasicMaterial color="#006b3f" />
+        </mesh>
+      </group>
+      {rotulos &&
+        pontos.map(([letra, d, sol]) => (
+          <Html key={letra} position={d.multiplyScalar(raio + 8).setY(2)} center zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
+            {sol ? (
+              <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white/95 py-1 pl-1 pr-2.5 text-xs font-semibold text-ink shadow-e2">
+                <span className="flex size-5 items-center justify-center rounded-full bg-green-900 text-[11px] font-bold text-white">{letra}</span>
+                {sol === "Nascente" ? <Sunrise className="size-4 text-orange-500" aria-hidden /> : <Sunset className="size-4 text-orange-500" aria-hidden />}
+                {sol}
+              </span>
+            ) : (
+              <span
+                className={`flex size-7 items-center justify-center rounded-full text-xs font-bold shadow-e2 ${letra === "N" ? "bg-green-900 text-white" : "bg-white/95 text-green-900"}`}
+              >
+                {letra}
+              </span>
+            )}
+          </Html>
+        ))}
+    </>
+  );
+}
+
+/**
+ * Pontos conhecidos da cidade num anel em volta do lote, na direção real de cada um, com a distância
+ * em linha reta. Rumos próximos sobem em degraus para os nomes não se sobreporem.
+ */
+function PontosDeReferencia({ lista, m, c, torres }: { lista: Referencia[]; m: Maquete; c: Conversor; torres: RefObject<THREE.Group> }) {
+  const estreito = useThree((s) => s.size.width < 560);
+  const raio = c.raio + 30;
+  const norte = m.norte;
+  const pinos = useMemo(() => {
+    const visiveis = estreito ? [...lista].sort((a, b) => a.km - b.km).slice(0, 2) : lista;
+    const ordem = [...visiveis].sort((a, b) => a.rumo - b.rumo);
+    const niveis: number[] = [];
+    for (let i = 0; i < ordem.length; i++) niveis.push(i > 0 && ordem[i].rumo - ordem[i - 1].rumo < 18 ? (niveis[i - 1] + 1) % 3 : 0);
+    return ordem.map((r, i) => ({ ...r, altura: 14 + niveis[i] * 9, base: direcaoRumo(r.rumo, norte).multiplyScalar(raio) }));
+  }, [lista, estreito, norte, raio]);
+  return (
+    <>
+      {pinos.map((r) => (
+        <group key={r.nome}>
+          <mesh position={[r.base.x, r.altura / 2, r.base.z]}>
+            <cylinderGeometry args={[0.22, 0.22, r.altura, 6]} />
+            <meshBasicMaterial color="#793f98" />
+          </mesh>
+          <mesh position={[r.base.x, 0.35, r.base.z]} rotation-x={-Math.PI / 2}>
+            <circleGeometry args={[1.6, 20]} />
+            <meshBasicMaterial color="#793f98" />
+          </mesh>
+          <Html position={[r.base.x, r.altura + 1.5, r.base.z]} center occlude={[torres]} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
+            <span className="flex items-center gap-1 whitespace-nowrap rounded-full bg-purple-700 px-2.5 py-1 text-xs font-semibold text-white shadow-e2">
+              <MapPin className="size-3.5" aria-hidden />
+              {r.nome} · {r.km.toLocaleString("pt-BR")} km
+            </span>
+          </Html>
+        </group>
+      ))}
+    </>
+  );
+}
+
+/** Gira a rosa dos ventos da interface para o norte apontar para o norte real na tela */
+function GiroDaBussola({ alvo, norte, bussolaRef }: { alvo: THREE.Vector3; norte: number; bussolaRef: RefObject<HTMLDivElement | null> }) {
+  const ultimo = useRef(NaN);
+  const n = useMemo(() => eixos(norte).norte, [norte]);
+  useFrame(({ camera }) => {
+    const el = bussolaRef.current;
+    if (!el) return;
+    const f = alvo.clone().sub(camera.position).setY(0).normalize();
+    // ângulo da frente da câmera até o norte, positivo no sentido horário visto de cima
+    const ang = THREE.MathUtils.radToDeg(Math.atan2(f.x * n.z - f.z * n.x, f.x * n.x + f.z * n.z));
+    if (Math.abs(ang - ultimo.current) < 0.2) return;
+    ultimo.current = ang;
+    el.style.transform = `rotate(${ang.toFixed(1)}deg)`;
+  });
+  return null;
 }

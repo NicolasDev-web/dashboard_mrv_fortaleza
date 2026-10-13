@@ -20,6 +20,7 @@ export const brisaDoMar: Maquete = {
   fonte: { imagem: "/img/reserva-brisa-do-mar/14-22", largura: 1080 },
   escala: 5.4,
   peDireito: 2.85,
+  norte: -30,
   vista: 220,
   lote: [[5, 28], [1045, 28], [1045, 345], [5, 345]],
   interno: [[8, 31], [1042, 31], [1042, 338], [8, 338]],

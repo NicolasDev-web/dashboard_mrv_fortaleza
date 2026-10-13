@@ -18,6 +18,7 @@ export const villeDeLisboa: Maquete = {
   fonte: { imagem: "/img/ville-de-lisboa/03-19", largura: 1600 },
   escala: 6,
   peDireito: 2.8,
+  norte: -9,
   vista: 165,
   lote: [[260, 465], [1385, 465], [1385, 840], [260, 840]],
   interno: [[298, 480], [1310, 480], [1310, 815], [298, 815]],

@@ -10,6 +10,7 @@ export const forteAlencar: Maquete = {
   fonte: { imagem: "/img/forte-alencar/06-05", largura: 1600 },
   escala: 4.4,
   peDireito: 2.85,
+  norte: -8,
   vista: 320,
   lote: [[66, 498], [912, 256], [842, 826], [66, 826]],
   interno: [[78, 500], [900, 272], [832, 815], [78, 815]],

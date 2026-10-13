@@ -26,6 +26,7 @@ export const ecoPark: Maquete = {
   fonte: { imagem: "/img/eco-park/16-17", largura: 1080 },
   escala: 3.4,
   peDireito: 2.8,
+  norte: 3,
   vista: 100,
   lote: [[383, 323], [675, 278], [662, 550], [372, 597]],
   interno: [[386, 327], [671, 283], [659, 547], [376, 593]],

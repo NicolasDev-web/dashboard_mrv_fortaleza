@@ -17,6 +17,7 @@ export const villeDePorto: Maquete = {
   fonte: { imagem: "/img/ville-de-porto/10-16", largura: 1600 },
   escala: 6,
   peDireito: 2.8,
+  norte: -7,
   vista: 30,
   lote: [[265, 435], [1410, 435], [1410, 800], [265, 800]],
   interno: [[285, 452], [1390, 452], [1390, 785], [285, 785]],

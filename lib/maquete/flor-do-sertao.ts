@@ -10,6 +10,7 @@ export const florDoSertao: Maquete = {
   fonte: { imagem: "/img/residencial-flor-do-sertao/02-17", largura: 1600 },
   escala: 10.5,
   peDireito: 2.85,
+  norte: 86,
   vista: 150,
   lote: [[130, 443], [1000, 490], [1270, 555], [1450, 685], [1335, 905], [190, 905]],
   interno: [[150, 460], [995, 505], [1260, 570], [1425, 690], [1325, 890], [205, 890]],

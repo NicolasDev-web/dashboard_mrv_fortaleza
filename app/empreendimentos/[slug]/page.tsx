@@ -14,6 +14,7 @@ import { ContactCTA } from "@/components/empreendimento/ContactCTA";
 import { LequeLazer } from "@/components/empreendimento/LequeLazer";
 import { Maquete3D } from "@/components/empreendimento/Maquete3D";
 import { maquetePorSlug } from "@/lib/maquete";
+import { referenciasDe } from "@/lib/maquete/referencias";
 import { PorQueCombina } from "@/components/resultado/PorQueCombina";
 import { Rodape } from "@/components/layout/Rodape";
 
@@ -80,7 +81,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
 
           {maquete && (
             <Secao id="maquete" titulo="O condomínio em 3D">
-              <Maquete3D maquete={maquete} poster={e.imagens.aerea[0] ?? e.imagens.implantacao[0]} />
+              <Maquete3D maquete={maquete} poster={e.imagens.aerea[0] ?? e.imagens.implantacao[0]} referencias={referenciasDe(e)} />
             </Secao>
           )}
 

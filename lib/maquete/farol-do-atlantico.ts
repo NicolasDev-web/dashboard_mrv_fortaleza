@@ -10,6 +10,7 @@ export const farolDoAtlantico: Maquete = {
   fonte: { imagem: "/img/residencial-farol-do-atlantico/08-17", largura: 1600 },
   escala: 8.4,
   peDireito: 2.85,
+  norte: -29,
   vista: 230,
   lote: [[215, 215], [945, 215], [945, 815], [215, 815]],
   interno: [[222, 222], [938, 222], [938, 808], [222, 808]],

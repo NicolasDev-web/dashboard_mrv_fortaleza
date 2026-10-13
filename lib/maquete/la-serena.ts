@@ -19,6 +19,7 @@ export const laSerena: Maquete = {
   fonte: { imagem: "/img/residencial-la-serena/05-12", largura: 1600 },
   escala: 5.5,
   peDireito: 2.8,
+  norte: -22,
   vista: 150,
   lote: [[12, 592], [1442, 592], [1442, 795], [12, 795]],
   interno: [[16, 597], [1437, 597], [1437, 790], [16, 790]],

@@ -58,6 +58,8 @@ export interface Maquete {
   escala: number;
   /** pé-direito médio por andar, em metros */
   peDireito: number;
+  /** para onde aponta o norte, em graus no sentido horário a partir do topo da planta (lido na rosa dos ventos dela) */
+  norte: number;
   /** de onde a câmera olha no início, em graus no sentido horário a partir do topo da planta (0 = de cima, 90 = da direita) */
   vista?: number;
   /** contorno do lote (calçada incluída) */
@@ -86,4 +88,11 @@ export interface Maquete {
   fachada: { parede: string; faixa: string; paineis: string[] };
   /** descrição em texto da maquete, para leitores de tela */
   descricao: string;
+}
+
+/** Ponto de referência da cidade, já com rumo (graus a partir do norte) e distância a partir do empreendimento */
+export interface Referencia {
+  nome: string;
+  km: number;
+  rumo: number;
 }

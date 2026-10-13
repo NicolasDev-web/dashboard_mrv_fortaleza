@@ -10,6 +10,7 @@ export const mandacaru: Maquete = {
   fonte: { imagem: "/img/residencial-mandacaru/13-16", largura: 1080 },
   escala: 5.4,
   peDireito: 2.85,
+  norte: 7,
   vista: 120,
   lote: [[140, 92], [380, 92], [510, 135], [510, 548], [490, 572], [180, 572], [140, 380]],
   interno: [[144, 96], [379, 96], [506, 138], [506, 546], [488, 568], [183, 568], [144, 380]],

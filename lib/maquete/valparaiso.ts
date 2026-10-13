@@ -19,6 +19,7 @@ export const valparaiso: Maquete = {
   fonte: { imagem: "/img/residencial-valparaiso/15-01", largura: 1080 },
   escala: 3.7,
   peDireito: 2.8,
+  norte: -25,
   vista: 150,
   lote: [[85, 347], [1030, 347], [1030, 486], [85, 486]],
   interno: [[89, 350], [1026, 350], [1026, 482], [89, 482]],
