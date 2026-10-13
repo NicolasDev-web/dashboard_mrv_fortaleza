@@ -207,3 +207,29 @@ describe("frases do mapa do quiz", () => {
     expect(estadoDoMapa(decodificar("r=r1&e=e0"), dados, "entrada").frase).toMatch(/^Nenhum cabe folgado/);
   });
 });
+
+describe("faixas de destaques do detalhe", async () => {
+  const { agruparDestaques } = await import("@/lib/destaques");
+  const chave = (t: string) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+
+  it("todo item de lazer e diferencial aparece exatamente uma vez", () => {
+    for (const e of empreendimentos) {
+      const saida = agruparDestaques(e).flatMap((f) => f.itens).map(chave);
+      const entrada = [...new Set([...e.lazerItens, ...e.diferenciais].map(chave))];
+      expect(saida.sort()).toEqual(entrada.sort());
+    }
+  });
+
+  it("separa lazer, apartamento e condomínio", () => {
+    const faixas = agruparDestaques({ lazerItens: ["Piscina Adulto"], diferenciais: ["Playground", "Piso Laminado na Sala", "Circuito fechado de TV", "piscina adulto"] });
+    expect(faixas).toEqual([
+      { id: "lazer", titulo: "Lazer", itens: ["Piscina Adulto", "Playground"] },
+      { id: "apartamento", titulo: "No apartamento", itens: ["Piso Laminado na Sala"] },
+      { id: "condominio", titulo: "No condomínio", itens: ["Circuito fechado de TV"] },
+    ]);
+  });
+
+  it("não cria faixa vazia", () => {
+    expect(agruparDestaques({ lazerItens: [], diferenciais: [] })).toEqual([]);
+  });
+});

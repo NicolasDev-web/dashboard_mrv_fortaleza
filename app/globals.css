@@ -166,6 +166,33 @@ body {
 .trilho > * { scroll-snap-align: start; }
 
 /*
+ * Faixas que rolam sozinhas (components/empreendimento/FaixasDestaques): duas cópias lado a lado andam
+ * meia trilha e recomeçam sem emenda. Param no hover, no foco e com o botão de pausa;
+ * com reduced motion viram lista parada (a cópia some).
+ */
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.marquee-trilha {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--duracao, 30s) linear infinite;
+}
+.marquee[data-sentido="volta"] .marquee-trilha { animation-direction: reverse; }
+.marquee-grupo { display: flex; gap: 0.75rem; padding-right: 0.75rem; white-space: nowrap; }
+.marquee:hover .marquee-trilha,
+.marquee:focus-within .marquee-trilha,
+[data-pausado] .marquee-trilha { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow: visible; mask-image: none; margin-inline: 0; }
+  .marquee-trilha { animation: none !important; width: auto; }
+  .marquee-grupo { flex-wrap: wrap; padding-right: 0; white-space: normal; }
+  .marquee-grupo[aria-hidden], .marquee-pausa { display: none; }
+}
+
+/*
  * Vocabulário de movimento das páginas:
  * - .entra: 1º contato (hero da Home), uma vez só, em cascata por --atraso
  * - [data-revela]: seções abaixo da dobra entram na ordem de leitura ao chegar na tela (components/ui/Revela)

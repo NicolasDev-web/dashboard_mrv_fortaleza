@@ -8,7 +8,9 @@ import { Badge, StatusBadge } from "@/components/ui/Badge";
 import { Filme } from "@/components/filme/Filme";
 import { capitulosDo, fotosDeLazer } from "@/lib/filme";
 import { FloorPlans } from "@/components/empreendimento/FloorPlans";
-import { AmenityList, CommuteInfo, ListaSimples, PropertyFacts } from "@/components/empreendimento/Blocos";
+import { CommuteInfo, PropertyFacts } from "@/components/empreendimento/Blocos";
+import { FaixasDestaques } from "@/components/empreendimento/FaixasDestaques";
+import { agruparDestaques } from "@/lib/destaques";
 import { ContactCTA } from "@/components/empreendimento/ContactCTA";
 import { LequeLazer } from "@/components/empreendimento/LequeLazer";
 import { PorQueCombina } from "@/components/resultado/PorQueCombina";
@@ -47,6 +49,7 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
   const visaoGeral = [...e.imagens.implantacao, ...e.imagens.aerea];
   const galeria = [...e.imagens.galeria, ...e.imagens.plantas];
   const lazer = fotosDeLazer(e);
+  const destaques = agruparDestaques(e);
 
   return (
     <>
@@ -112,14 +115,17 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
             </Link>
           </Secao>
 
-          <Secao id="lazer" titulo="Lazer no condomínio">
-            {lazer.length >= 3 && (
-              <div className="mb-6">
-                <LequeLazer nome={e.nome} fotos={lazer} galeria={galeria} />
-              </div>
-            )}
-            <AmenityList itens={e.lazerItens} />
-          </Secao>
+          {lazer.length >= 3 && (
+            <Secao id="lazer" titulo="Lazer no condomínio">
+              <LequeLazer nome={e.nome} fotos={lazer} galeria={galeria} />
+            </Secao>
+          )}
+
+          {destaques.length > 0 && (
+            <Secao id="diferenciais" titulo="O que vem com ele">
+              <FaixasDestaques faixas={destaques} />
+            </Secao>
+          )}
 
           {e.imagens.plantas.length > 0 && (
             <Secao id="plantas" titulo="Plantas">
@@ -130,12 +136,6 @@ export default async function EmpreendimentoPage({ params }: PageProps<"/empreen
           {visaoGeral.length > 0 && (
             <Secao id="condominio" titulo="O condomínio por cima">
               <FloorPlans nome={e.nome} imagens={visaoGeral} rotulo="Vista" />
-            </Secao>
-          )}
-
-          {e.diferenciais.length > 0 && (
-            <Secao id="diferenciais" titulo="Diferenciais">
-              <ListaSimples itens={e.diferenciais} />
             </Secao>
           )}
 
