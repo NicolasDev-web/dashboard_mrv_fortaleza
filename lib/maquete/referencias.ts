@@ -32,7 +32,7 @@ const lugares: Record<string, Lugar> = {
   castelao: { nome: "Arena Castelão", lat: -3.8072, lon: -38.5222, marco: "castelao" }, // aprox.
   coco: { nome: "Parque do Cocó", lat: -3.7485, lon: -38.4875 }, // aprox.
   dragaoMar: { nome: "Dragão do Mar", lat: -3.7222, lon: -38.5205 }, // aprox.
-  terminalAntonioBezerra: { nome: "Terminal Antônio Bezerra", lat: -3.7382, lon: -38.5885 }, // aprox.
+  terminalAntonioBezerra: { nome: "Terminal Antônio Bezerra", lat: -3.73752, lon: -38.58417, marco: "terminalAntonioBezerra" },
   prefeituraEusebio: { nome: "Prefeitura do Eusébio", lat: -3.89, lon: -38.456 }, // aprox.
   centroCaucaia: { nome: "Centro de Caucaia", lat: -3.7361, lon: -38.6531 }, // aprox.
   icarai: { nome: "Praia do Icaraí", lat: -3.687, lon: -38.663 }, // aprox.
