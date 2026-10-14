@@ -6,6 +6,7 @@ import { Iguatemi } from "./Iguatemi";
 import { Messejana } from "./Messejana";
 import { NorthShopping } from "./NorthShopping";
 import { RioMarFortaleza, RioMarKennedy } from "./RioMar";
+import { Unifor } from "./Unifor";
 
 /**
  * Miniaturas 3D de lugares da cidade. Cada modelo é feito em metros, centrado na origem, com ~50 m de
@@ -25,4 +26,5 @@ export const marcos: Record<string, Marco> = {
   northShopping: { Modelo: NorthShopping, altura: 13 },
   riomarFortaleza: { Modelo: RioMarFortaleza, altura: 22 },
   riomarKennedy: { Modelo: RioMarKennedy, altura: 15 },
+  unifor: { Modelo: Unifor, altura: 7 },
 };

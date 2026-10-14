@@ -40,7 +40,7 @@ const lugares: Record<string, Lugar> = {
   iguatemi: { ...polo("iguatemi", "Shopping Iguatemi"), marco: "iguatemi" },
   beiraMar: polo("beira_mar", "Beira-Mar"),
   centro: polo("centro", "Centro"),
-  unifor: polo("unifor", "Unifor"),
+  unifor: { ...polo("unifor", "Unifor"), marco: "unifor" },
   centroEventos: polo("centro_eventos", "Centro de Eventos"),
   aeroporto: { ...polo("aeroporto", "Aeroporto"), marco: "aeroporto" },
   // o centro de Messejana divide a miniatura com a lagoa (igreja matriz + lagoa com a Iracema)
