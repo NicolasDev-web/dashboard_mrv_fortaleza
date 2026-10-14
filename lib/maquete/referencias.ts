@@ -88,13 +88,9 @@ function rumoEDistancia(de: { lat: number; lon: number }, para: Lugar) {
   return { rumo: Math.round(rumo), km: Math.round(km * 10) / 10 };
 }
 
-/** Em teste: só estes empreendimentos trocam o pino pela miniatura 3D do lugar */
-const MARCOS_ATIVOS = new Set(["reserva-da-lagoa"]);
-
 export function referenciasDe(e: Pick<Empreendimento, "slug" | "coord">): Referencia[] {
-  const comMarco = MARCOS_ATIVOS.has(e.slug);
   return (porEmpreendimento[e.slug] ?? []).map((id) => {
     const l = lugares[id];
-    return { nome: l.nome, ...rumoEDistancia(e.coord, l), ...(comMarco && l.marco ? { marco: l.marco } : {}) };
+    return { nome: l.nome, ...rumoEDistancia(e.coord, l), ...(l.marco ? { marco: l.marco } : {}) };
   });
 }

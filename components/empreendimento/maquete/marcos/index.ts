@@ -16,8 +16,8 @@ export interface Marco {
 }
 
 export const marcos: Record<string, Marco> = {
-  castelao: { Modelo: Castelao, altura: 14 },
-  aeroporto: { Modelo: Aeroporto, altura: 14 },
-  iguatemi: { Modelo: Iguatemi, altura: 12 },
-  messejana: { Modelo: Messejana, altura: 16 },
+  castelao: { Modelo: Castelao, altura: 12 },
+  aeroporto: { Modelo: Aeroporto, altura: 16 },
+  iguatemi: { Modelo: Iguatemi, altura: 9 },
+  messejana: { Modelo: Messejana, altura: 14 },
 };

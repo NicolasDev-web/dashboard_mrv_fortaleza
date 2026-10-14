@@ -263,6 +263,9 @@ function formaAsa(meia: number, raiz: number, flecha: number, ponta: number) {
   return s;
 }
 
+/** mergeGeometries exige todas iguais: tira o índice só de quem tem (as extrusões já vêm sem) */
+const semIndice = (g: THREE.BufferGeometry) => (g.index ? g.toNonIndexed() : g);
+
 /** Peças do avião já posicionadas, com o nariz em −z: corpo branco, deriva colorida e motores */
 function geometriasDoAviao() {
   const fuselagem = new THREE.CapsuleGeometry(0.42, 5.3, 4, 14).rotateX(Math.PI / 2).translate(0, 0.95, 0);
@@ -272,7 +275,7 @@ function geometriasDoAviao() {
   const profundor = new THREE.ExtrudeGeometry(formaAsa(1.25, 0.9, 0.55, 0.35), { depth: 0.07, bevelEnabled: false })
     .rotateX(-Math.PI / 2)
     .translate(0, 1.12, 2.75);
-  const corpo = mergeGeometries([fuselagem.toNonIndexed(), asa.toNonIndexed(), profundor.toNonIndexed()]);
+  const corpo = mergeGeometries([semIndice(fuselagem), semIndice(asa), semIndice(profundor)]);
   const perfil = new THREE.Shape();
   perfil.moveTo(0, 0);
   perfil.lineTo(1.2, 0);
