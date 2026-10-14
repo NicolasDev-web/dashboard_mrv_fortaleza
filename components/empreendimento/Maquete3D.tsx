@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { Component, useEffect, useRef, useState, useSyncExternalStore, type ReactNode, type RefObject } from "react";
-import { Check, Hand, RotateCcw, Sun, Sunrise, Sunset, Tag, ZoomIn, ZoomOut, type LucideIcon } from "lucide-react";
+import { Check, Hand, Maximize2, Minimize2, RotateCcw, Sun, Sunrise, Sunset, Tag, ZoomIn, ZoomOut, type LucideIcon } from "lucide-react";
 import type { Maquete, Referencia } from "@/lib/maquete/tipos";
 import type { Imagem } from "@/lib/types";
 import { Img } from "@/components/ui/Img";
@@ -44,6 +44,36 @@ const HORARIOS: { hora: number; rotulo: string; Icone: LucideIcon }[] = [
   { hora: 12, rotulo: "Meio-dia", Icone: Sun },
   { hora: 16, rotulo: "Tarde", Icone: Sunset },
 ];
+
+/** Manhã, meio-dia e tarde; em tela cheia flutua no alto da maquete */
+function SeletorSol({ hora, setHora, flutuante }: { hora: number; setHora(h: number): void; flutuante?: boolean }) {
+  return (
+    <div
+      className={
+        flutuante
+          ? "absolute bottom-3 left-3 z-10 flex items-center gap-1 rounded-full bg-white/95 p-1 shadow-e2 sm:bottom-auto sm:left-1/2 sm:top-3 sm:-translate-x-1/2"
+          : "mt-3 flex flex-wrap items-center gap-1.5"
+      }
+      role="group"
+      aria-label="Posição do sol"
+    >
+      {!flutuante && <span className="mr-1 text-sm font-semibold text-ink">Sol:</span>}
+      {HORARIOS.map(({ hora: h, rotulo, Icone }) => (
+        <button
+          key={h}
+          type="button"
+          onClick={() => setHora(h)}
+          aria-pressed={hora === h}
+          className={`flex min-h-11 items-center gap-1.5 rounded-full border px-3 text-sm font-semibold transition-colors duration-[var(--t-fast)] ${
+            hora === h ? "border-green-900 bg-selected text-green-900" : `${flutuante ? "border-transparent" : "border-line"} text-ink hover:border-line-strong`
+          }`}
+        >
+          <Icone className="size-4 text-orange-500" aria-hidden /> <span className={flutuante ? "max-sm:sr-only" : undefined}>{rotulo}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
 
 /** Rosa dos ventos da interface: a cena gira o elemento interno para o N apontar para o norte real */
 /** Onde fica o sol na rosa, por horário: de manhã a leste, ao meio-dia quase a pino, à tarde a oeste */
@@ -90,6 +120,47 @@ export function Maquete3D({ maquete, poster, referencias }: { maquete: Maquete; 
   const [mexeu, setMexeu] = useState(false);
   const [rotulos, setRotulos] = useState(true);
   const [hora, setHora] = useState(8);
+  // tela cheia: a do navegador quando existe; senão (Safari do iPhone) a maquete cobre a janela
+  const [cheia, setCheia] = useState(false);
+  const [cobrindo, setCobrindo] = useState(false);
+
+  useEffect(() => {
+    const aoMudar = () => setCheia(document.fullscreenElement === caixa.current);
+    document.addEventListener("fullscreenchange", aoMudar);
+    return () => document.removeEventListener("fullscreenchange", aoMudar);
+  }, []);
+
+  useEffect(() => {
+    if (!cobrindo) return;
+    const aoTeclar = (e: KeyboardEvent) => e.key === "Escape" && setCobrindo(false);
+    const rolagem = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", aoTeclar);
+    return () => {
+      document.body.style.overflow = rolagem;
+      window.removeEventListener("keydown", aoTeclar);
+    };
+  }, [cobrindo]);
+
+  const emTelaCheia = cheia || cobrindo;
+  async function alternarTelaCheia() {
+    if (emTelaCheia) {
+      if (document.fullscreenElement) await document.exitFullscreen().catch(() => {});
+      setCobrindo(false);
+      return;
+    }
+    setMexeu(true);
+    const el = caixa.current!;
+    if (el.requestFullscreen && document.fullscreenEnabled) {
+      try {
+        await el.requestFullscreen({ navigationUI: "hide" });
+        return;
+      } catch {
+        // recusado (iframe, permissão): cai na cobertura da janela
+      }
+    }
+    setCobrindo(true);
+  }
 
   useEffect(() => {
     const io = new IntersectionObserver(
@@ -103,11 +174,17 @@ export function Maquete3D({ maquete, poster, referencias }: { maquete: Maquete; 
     return () => io.disconnect();
   }, []);
 
-  const interativo = !toque || ativoNoToque;
+  // em tela cheia não há página para rolar: o dedo já gira e a pinça aproxima
+  const interativo = !toque || ativoNoToque || emTelaCheia;
 
   return (
     <figure>
-      <div ref={caixa} className="relative isolate aspect-square overflow-hidden rounded-lg border border-line bg-bg-subtle sm:aspect-[4/3] lg:aspect-[16/10]">
+      <div
+        ref={caixa}
+        className={`isolate overflow-hidden bg-bg-subtle ${
+          cobrindo ? "fixed inset-0 z-[100] h-dvh w-screen" : "relative aspect-square rounded-lg border border-line sm:aspect-[4/3] lg:aspect-[16/10] [&:fullscreen]:rounded-none [&:fullscreen]:border-0"
+        }`}
+      >
         <div role="img" aria-label={maquete.descricao} className="absolute inset-0">
           {poster && (
             <Img
@@ -122,7 +199,7 @@ export function Maquete3D({ maquete, poster, referencias }: { maquete: Maquete; 
               <Cena
                 m={maquete}
                 interativo={interativo}
-                zoomLivre={toque && ativoNoToque}
+                zoomLivre={emTelaCheia || (toque && ativoNoToque)}
                 girando={!reduzir && !mexeu}
                 intro={!reduzir}
                 visivel={visivel}
@@ -153,6 +230,11 @@ export function Maquete3D({ maquete, poster, referencias }: { maquete: Maquete; 
 
         {pronto && !falhou && (
           <>
+            <button type="button" onClick={alternarTelaCheia} aria-pressed={emTelaCheia} className={`${botao} absolute right-16 top-3 z-10`}>
+              {emTelaCheia ? <Minimize2 className="size-5" aria-hidden /> : <Maximize2 className="size-5" aria-hidden />}
+              <span className="sr-only">{emTelaCheia ? "Sair da tela cheia" : "Ver a maquete em tela cheia"}</span>
+            </button>
+            {emTelaCheia && <SeletorSol hora={hora} setHora={setHora} flutuante />}
             <button type="button" onClick={() => setRotulos((r) => !r)} aria-pressed={rotulos} className={`${botao} absolute right-3 top-3 z-10`}>
               <Tag className="size-5" aria-hidden />
               <span className="sr-only">Mostrar nomes e pontos de referência</span>
@@ -160,7 +242,7 @@ export function Maquete3D({ maquete, poster, referencias }: { maquete: Maquete; 
             <RosaDosVentos giroRef={bussola} hora={hora} />
 
             <div className="absolute bottom-3 left-3 z-10">
-              {toque ? (
+              {toque && !emTelaCheia ? (
                 <button
                   type="button"
                   onClick={() => {
@@ -194,22 +276,7 @@ export function Maquete3D({ maquete, poster, referencias }: { maquete: Maquete; 
           </>
         )}
       </div>
-      <div className="mt-3 flex flex-wrap items-center gap-1.5" role="group" aria-label="Posição do sol">
-        <span className="mr-1 text-sm font-semibold text-ink">Sol:</span>
-        {HORARIOS.map(({ hora: h, rotulo, Icone }) => (
-          <button
-            key={h}
-            type="button"
-            onClick={() => setHora(h)}
-            aria-pressed={hora === h}
-            className={`flex min-h-11 items-center gap-1.5 rounded-full border px-3 text-sm font-semibold transition-colors duration-[var(--t-fast)] ${
-              hora === h ? "border-green-900 bg-selected text-green-900" : "border-line text-ink hover:border-line-strong"
-            }`}
-          >
-            <Icone className="size-4 text-orange-500" aria-hidden /> {rotulo}
-          </button>
-        ))}
-      </div>
+      <SeletorSol hora={hora} setHora={setHora} />
       <p className="mt-2 text-sm text-muted">
         O sol nasce no leste e se põe no oeste. Escolha o horário para ver quais fachadas e áreas pegam sol: a luz segue a posição de março e setembro (em junho
         ele passa um pouco mais ao norte e, em dezembro, mais ao sul). Os marcadores roxos apontam a direção e a distância em linha reta até lugares conhecidos da cidade
