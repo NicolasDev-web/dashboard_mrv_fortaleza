@@ -39,7 +39,7 @@ const lugares: Record<string, Lugar> = {
   // polos do quiz, com os nomes curtos usados no mapa
   iguatemi: { ...polo("iguatemi", "Shopping Iguatemi"), marco: "iguatemi" },
   beiraMar: polo("beira_mar", "Beira-Mar"),
-  centro: polo("centro", "Centro"),
+  centro: { ...polo("centro", "Centro"), marco: "centro" },
   unifor: { ...polo("unifor", "Unifor"), marco: "unifor" },
   centroEventos: polo("centro_eventos", "Centro de Eventos"),
   aeroporto: { ...polo("aeroporto", "Aeroporto"), marco: "aeroporto" },

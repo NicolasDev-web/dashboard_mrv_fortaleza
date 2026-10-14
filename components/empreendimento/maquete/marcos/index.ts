@@ -2,6 +2,7 @@ import type { ComponentType } from "react";
 import type { Fabrica } from "../Cena";
 import { Aeroporto } from "./Aeroporto";
 import { Castelao } from "./Castelao";
+import { Centro } from "./Centro";
 import { Iguatemi } from "./Iguatemi";
 import { Messejana } from "./Messejana";
 import { NorthShopping } from "./NorthShopping";
@@ -30,4 +31,5 @@ export const marcos: Record<string, Marco> = {
   unifor: { Modelo: Unifor, altura: 7 },
   praiaIracema: { Modelo: PraiaDeIracema, altura: 7 },
   praiaFuturo: { Modelo: PraiaDoFuturo, altura: 6 },
+  centro: { Modelo: Centro, altura: 19 },
 };
