@@ -6,6 +6,7 @@ import { Html, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { MapPin, Sunrise, Sunset } from "lucide-react";
 import type { Construcao, Maquete, Ponto, Referencia, Ret, TipoPiso, Torre } from "@/lib/maquete/tipos";
+import { marcos } from "./marcos";
 
 /** O que a interface de fora (botões) pode pedir à câmera */
 export interface ControleMaquete {
@@ -310,7 +311,7 @@ function desenharCeu() {
 }
 
 /** Materiais e texturas compartilhados pela cena inteira, descartados juntos quando ela sai */
-function criarFabrica(m: Maquete) {
+export function criarFabrica(m: Maquete) {
   const cache = new Map<string, THREE.Material>();
   const texturas: THREE.Texture[] = [];
   const material = (chave: string, criar: () => THREE.Material) => {
@@ -350,7 +351,7 @@ function criarFabrica(m: Maquete) {
     },
   };
 }
-type Fabrica = ReturnType<typeof criarFabrica>;
+export type Fabrica = ReturnType<typeof criarFabrica>;
 
 // ——— Cena ———
 
@@ -379,8 +380,10 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, hora, ref
   const ceu = useMemo(() => fab.ceu(), [fab]);
   const torres = useRef<THREE.Group>(null!);
   const topo = 0.2 + m.pisos.length * 0.02;
-  // sol baixo de manhã e à tarde: sombras compridas pedem uma área de sombra maior
-  const sombra = c.raio + 60;
+  const lugares = useMemo(() => posicionarMarcos(referencias, m.norte, c.raio), [referencias, m.norte, c.raio]);
+  const clareiras = useMemo(() => lugares.map((l) => l.pos), [lugares]);
+  // sol baixo de manhã e à tarde: sombras compridas pedem uma área de sombra maior; as miniaturas também entram
+  const sombra = Math.max(c.raio + 60, ...lugares.map((l) => l.pos.length() + 40));
   const sol = useMemo(() => direcaoSol(hora, m.norte).multiplyScalar(c.raio + 200), [hora, m.norte, c.raio]);
 
   return (
@@ -405,7 +408,7 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, hora, ref
       />
 
       <Chao m={m} c={c} fab={fab} />
-      <Vizinhanca m={m} c={c} />
+      <Vizinhanca m={m} c={c} clareiras={clareiras} />
       <Postes m={m} c={c} />
       {m.piscinas.map((p, i) => (
         <Piscina key={i} pontos={p} m={m} c={c} chao={topo} fab={fab} />
@@ -434,7 +437,8 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, hora, ref
       <Carros m={m} c={c} chao={topo} />
       {rotulos && <Rotulos m={m} c={c} chao={topo} torres={torres} />}
       <RosaNoChao m={m} c={c} rotulos={rotulos} />
-      {rotulos && <PontosDeReferencia lista={referencias} m={m} c={c} torres={torres} />}
+      {rotulos && <PontosDeReferencia lista={referencias.filter((r) => !(r.marco && marcos[r.marco]))} m={m} c={c} torres={torres} />}
+      <MarcosDaCidade lugares={lugares} norte={m.norte} fab={fab} rotulos={rotulos} torres={torres} />
       <GiroDaBussola alvo={e.alvo} norte={m.norte} bussolaRef={bussolaRef} />
 
       {interativo && (
@@ -639,10 +643,12 @@ function FaixasVagas({ m, c, y }: { m: Maquete; c: Conversor; y: number }) {
  * Bairro genérico em volta: quadras de casas térreas com telhado de barro, alguns prédios mais
  * longe e árvores. Só dá escala e contexto; não representa o entorno real.
  */
-function Vizinhanca({ m, c }: { m: Maquete; c: Conversor }) {
+function Vizinhanca({ m, c, clareiras }: { m: Maquete; c: Conversor; clareiras: THREE.Vector3[] }) {
   const dados = useMemo(() => {
     // área livre: o lote e as ruas desenhadas, com uma folga (em metros, já convertidos)
     const livres = [m.lote, ...m.ruas.map(pontosDaRua)].map((p) => p.map(([px, py]): Ponto => [c.x(px), c.z(py)]));
+    // praça sem casas em volta de cada miniatura de lugar da cidade
+    for (const v of clareiras) livres.push(Array.from({ length: 16 }, (_, i): Ponto => [v.x + 36 * Math.cos((i * Math.PI) / 8), v.z + 36 * Math.sin((i * Math.PI) / 8)]));
     const pts = [...m.lote, ...m.ruas.flatMap(pontosDaRua)];
     const xs = pts.map((p) => p[0]);
     const ys = pts.map((p) => p[1]);
@@ -676,7 +682,7 @@ function Vizinhanca({ m, c }: { m: Maquete; c: Conversor }) {
       }
     }
     return { casas, predios, copas, ruas };
-  }, [m, c]);
+  }, [m, c, clareiras]);
 
   const paredes = useRef<THREE.InstancedMesh>(null);
   const telhados = useRef<THREE.InstancedMesh>(null);
@@ -1267,4 +1273,78 @@ function GiroDaBussola({ alvo, norte, bussolaRef }: { alvo: THREE.Vector3; norte
     el.style.transform = `rotate(${ang.toFixed(1)}deg)`;
   });
   return null;
+}
+
+/**
+ * Onde cada miniatura fica: na direção real do lugar, num anel além dos pinos. Lugares que dividem o
+ * mesmo modelo (lagoa e centro de Messejana) viram uma miniatura só; se duas caem perto demais, a
+ * segunda vai para um anel mais longe.
+ */
+function posicionarMarcos(lista: Referencia[], norte: number, raioLote: number) {
+  const grupos = new Map<string, Referencia[]>();
+  for (const r of lista) if (r.marco && marcos[r.marco]) grupos.set(r.marco, [...(grupos.get(r.marco) ?? []), r]);
+  const itens = [...grupos]
+    .map(([id, refs]) => {
+      const ordem = [...refs].sort((a, b) => a.km - b.km);
+      return { id, refs: ordem, rumo: ordem[0].rumo };
+    })
+    .sort((a, b) => a.rumo - b.rumo);
+  const postos: { id: string; refs: Referencia[]; pos: THREE.Vector3 }[] = [];
+  for (const it of itens) {
+    const dir = direcaoRumo(it.rumo, norte);
+    let raio = raioLote + 75;
+    while (postos.some((o) => o.pos.distanceTo(dir.clone().multiplyScalar(raio)) < 66) && raio < raioLote + 400) raio += 66;
+    postos.push({ id: it.id, refs: it.refs, pos: dir.multiplyScalar(raio) });
+  }
+  return postos;
+}
+
+/** Miniaturas dos lugares da cidade, cada uma sobre uma base redonda, com o nome e a distância real */
+function MarcosDaCidade({
+  lugares,
+  norte,
+  fab,
+  rotulos,
+  torres,
+}: {
+  lugares: ReturnType<typeof posicionarMarcos>;
+  norte: number;
+  fab: Fabrica;
+  rotulos: boolean;
+  torres: RefObject<THREE.Group>;
+}) {
+  const estreito = useThree((s) => s.size.width < 560);
+  const n = eixos(norte).norte;
+  // o modelo tem o próprio norte em −z: gira para coincidir com o norte da cena
+  const giro = Math.atan2(-n.x, -n.z);
+  return (
+    <>
+      {lugares.map(({ id, refs, pos }) => {
+        const { Modelo, altura } = marcos[id];
+        const nomes = estreito ? refs.slice(0, 1) : refs;
+        return (
+          <group key={id} position={[pos.x, 0, pos.z]}>
+            <mesh position-y={0.25} receiveShadow material={fab.cor("#e9e6df", 0.95)}>
+              <cylinderGeometry args={[33, 34, 0.5, 48]} />
+            </mesh>
+            <group position-y={0.5} rotation-y={giro}>
+              <Modelo fab={fab} />
+            </group>
+            {rotulos && (
+              <Html position={[0, altura + 6, 0]} center occlude={[torres]} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
+                <span className="flex flex-col items-center gap-1">
+                  {nomes.map((r) => (
+                    <span key={r.nome} className="flex items-center gap-1 whitespace-nowrap rounded-full bg-purple-700 px-2.5 py-1 text-xs font-semibold text-white shadow-e2">
+                      <MapPin className="size-3.5" aria-hidden />
+                      {r.nome} · {r.km.toLocaleString("pt-BR")} km
+                    </span>
+                  ))}
+                </span>
+              </Html>
+            )}
+          </group>
+        );
+      })}
+    </>
+  );
 }

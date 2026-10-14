@@ -46,3 +46,6 @@ next-env.d.ts
 /test-results/
 /playwright-report/
 /data/raw/mrv/html/
+
+# fotos e plantas de referência para modelar os marcos 3D (direitos de terceiros, não publicar)
+/pesquisa/

@@ -95,4 +95,6 @@ export interface Referencia {
   nome: string;
   km: number;
   rumo: number;
+  /** miniatura 3D do lugar (id do registro em components/empreendimento/maquete/marcos); sem ela, vira um pino */
+  marco?: string;
 }

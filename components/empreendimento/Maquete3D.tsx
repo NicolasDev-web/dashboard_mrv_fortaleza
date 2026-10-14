@@ -212,7 +212,10 @@ export function Maquete3D({ maquete, poster, referencias }: { maquete: Maquete; 
       </div>
       <p className="mt-2 text-sm text-muted">
         O sol nasce no leste e se põe no oeste. Escolha o horário para ver quais fachadas e áreas pegam sol: a luz segue a posição de março e setembro (em junho
-        ele passa um pouco mais ao norte e, em dezembro, mais ao sul). Os marcadores roxos apontam a direção e a distância em linha reta até lugares conhecidos da cidade.
+        ele passa um pouco mais ao norte e, em dezembro, mais ao sul). Os marcadores roxos apontam a direção e a distância em linha reta até lugares conhecidos da cidade
+        {referencias.some((r) => r.marco)
+          ? "; alguns aparecem em miniatura, bem mais perto e menores do que na realidade, mas na direção certa."
+          : "."}
       </p>
       <figcaption className="mt-2 text-sm text-muted">
         {maquete.estimada
