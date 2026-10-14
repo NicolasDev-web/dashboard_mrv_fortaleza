@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useMemo, useRef, type RefObject } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type RefObject } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Html, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
@@ -31,11 +31,15 @@ type Props = {
   /** rosa dos ventos da interface, girada a cada quadro conforme a câmera */
   bussolaRef: RefObject<HTMLDivElement | null>;
   controleRef: RefObject<ControleMaquete | null>;
+  /** miniatura em foco: a câmera voa até ela */
+  marcoEscolhido: string | null;
+  aoEscolherMarco(id: string): void;
   aoInteragir(): void;
   aoCarregar(): void;
 };
 
 const EIXO_Y = new THREE.Vector3(0, 1, 0);
+const FOV = 32;
 const COR = {
   ceuTopo: "#b9d9ef",
   horizonte: "#e7ede8",
@@ -363,7 +367,7 @@ export function Cena(props: Props) {
       dpr={[1, 1.75]}
       frameloop={!visivel ? "never" : girando ? "always" : "demand"}
       gl={{ antialias: true, toneMapping: THREE.NeutralToneMapping }}
-      camera={{ fov: 32, near: 1, far: 3000, position: [0, 200, -300] }}
+      camera={{ fov: FOV, near: 1, far: 3000, position: [0, 200, -300] }}
       onCreated={() => props.aoCarregar()}
       className="!absolute inset-0"
     >
@@ -372,7 +376,7 @@ export function Cena(props: Props) {
   );
 }
 
-function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, hora, referencias, bussolaRef, controleRef, aoInteragir }: Props) {
+function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, hora, referencias, bussolaRef, controleRef, marcoEscolhido, aoEscolherMarco, aoInteragir }: Props) {
   const c = useMemo(() => fazConversor(m), [m]);
   const e = useMemo(() => enquadramento(m, c), [m, c]);
   const fab = useMemo(() => criarFabrica(m), [m]);
@@ -382,6 +386,7 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, hora, ref
   const topo = 0.2 + m.pisos.length * 0.02;
   const lugares = useMemo(() => posicionarMarcos(referencias, m.norte, c.raio), [referencias, m.norte, c.raio]);
   const clareiras = useMemo(() => lugares.map((l) => l.pos), [lugares]);
+  const foco = useMemo(() => lugares.find((l) => l.id === marcoEscolhido)?.pos ?? null, [lugares, marcoEscolhido]);
   // sol baixo de manhã e à tarde: sombras compridas pedem uma área de sombra maior; as miniaturas também entram
   const sombra = Math.max(c.raio + 60, ...lugares.map((l) => l.pos.length() + 40));
   const sol = useMemo(() => direcaoSol(hora, m.norte).multiplyScalar(c.raio + 200), [hora, m.norte, c.raio]);
@@ -438,73 +443,159 @@ function Conteudo({ m, interativo, zoomLivre, girando, intro, rotulos, hora, ref
       {rotulos && <Rotulos m={m} c={c} chao={topo} torres={torres} />}
       <RosaNoChao m={m} c={c} rotulos={rotulos} />
       {rotulos && <PontosDeReferencia lista={referencias.filter((r) => !(r.marco && marcos[r.marco]))} m={m} c={c} torres={torres} />}
-      <MarcosDaCidade lugares={lugares} norte={m.norte} fab={fab} rotulos={rotulos} torres={torres} />
-      <GiroDaBussola alvo={e.alvo} norte={m.norte} bussolaRef={bussolaRef} />
+      <MarcosDaCidade
+        lugares={lugares}
+        norte={m.norte}
+        raioLote={c.raio}
+        fab={fab}
+        rotulos={rotulos}
+        torres={torres}
+        escolhido={marcoEscolhido}
+        aoEscolher={aoEscolherMarco}
+      />
+      <GiroDaBussola norte={m.norte} bussolaRef={bussolaRef} />
 
       {interativo && (
         <OrbitControls
           makeDefault
-          target={e.alvo}
           enablePan={false}
           enableZoom={zoomLivre}
           enableDamping
           dampingFactor={0.08}
           rotateSpeed={0.6}
           minDistance={e.min}
-          maxDistance={e.max}
+          maxDistance={e.max * 1.8}
           minPolarAngle={0.15}
           maxPolarAngle={1.35}
           onStart={aoInteragir}
         />
       )}
-      <Rig e={e} controleRef={controleRef} girando={girando} intro={intro} />
+      <Rig e={e} foco={foco} controleRef={controleRef} girando={girando} intro={intro} />
     </>
   );
 }
 
-/** Voo de entrada, giro automático, zoom pelos botões e enquadramento conforme a proporção da tela */
-function Rig({ e, controleRef, girando, intro }: { e: Enquadramento; controleRef: RefObject<ControleMaquete | null>; girando: boolean; intro: boolean }) {
+/**
+ * Onde a câmera fica: no enquadramento do lote ou, com uma miniatura em foco, do lado de fora dela,
+ * olhando para dentro, com o condomínio ao fundo. A miniatura sai do caminho da ficha: vai para a
+ * direita na tela larga e para cima na tela alta do celular (em tela cheia); na maquete quadrada do
+ * celular a ficha fica fora, embaixo, e ela fica no centro.
+ */
+function vistaDe(e: Enquadramento, afastar: number, aspecto: number, ficha: "lado" | "baixo" | "fora", foco: THREE.Vector3 | null) {
+  if (!foco) return { alvo: e.alvo.clone(), pos: e.alvo.clone().addScaledVector(e.dir, e.dist * afastar) };
+  // distância para caber ~100 m de largura (a base tem 68 m) e ~85 m de altura com o nome em cima
+  const tg = 2 * Math.tan(THREE.MathUtils.degToRad(FOV / 2));
+  const dist = Math.max(100 / (tg * aspecto), 85 / tg);
+  // um pouco de lado, para a miniatura e as torres do lote não ficarem alinhadas e uma esconder a outra
+  const fora = foco.clone().setY(0).normalize().applyAxisAngle(EIXO_Y, 0.5);
+  const alvo = foco.clone().setY(ficha === "baixo" ? -25 : 5);
+  // na tela larga a ficha fica à esquerda: o alvo vai para a esquerda e a miniatura aparece à direita
+  if (ficha === "lado") alvo.add(new THREE.Vector3(-fora.z, 0, fora.x).multiplyScalar(dist * 0.16));
+  const el = 0.5;
+  const dir = fora.multiplyScalar(Math.cos(el)).setY(Math.sin(el));
+  return { alvo, pos: alvo.clone().addScaledVector(dir, dist) };
+}
+type Vista = ReturnType<typeof vistaDe>;
+
+/** Voo de entrada, giro automático, zoom pelos botões, voo até a miniatura escolhida e enquadramento conforme a proporção da tela */
+function Rig({
+  e,
+  foco,
+  controleRef,
+  girando,
+  intro,
+}: {
+  e: Enquadramento;
+  foco: THREE.Vector3 | null;
+  controleRef: RefObject<ControleMaquete | null>;
+  girando: boolean;
+  intro: boolean;
+}) {
   const { camera, invalidate, size } = useThree();
+  const controles = useThree((s) => s.controls) as unknown as { target: THREE.Vector3 } | null;
   // em tela estreita a maquete precisa de mais distância para caber de lado a lado
   const afastar = Math.round(THREE.MathUtils.clamp(1.5 / (size.width / size.height), 1, 1.8) * 20) / 20;
+  const aspecto = Math.round((size.width / size.height) * 20) / 20;
+  const ficha = size.width >= 640 ? "lado" : size.height > size.width * 1.2 ? "baixo" : "fora";
   const voo = useRef<{ t: number; de: THREE.Vector3 } | null>(null);
+  // para onde a câmera olha: o lote ou a miniatura em foco; o giro e o zoom acontecem em volta dele
+  const alvo = useRef(new THREE.Vector3());
+  const viagem = useRef<{ t: number; deP: THREE.Vector3; deA: THREE.Vector3; para: Vista } | null>(null);
+  const focoAtual = useRef(foco);
 
   useEffect(() => {
-    const inicial = () => e.alvo.clone().addScaledVector(e.dir, e.dist * afastar);
+    const v = vistaDe(e, afastar, aspecto, ficha, focoAtual.current);
     if (intro && !voo.current) {
       // começa mais alto, mais longe e girado: a maquete "pousa" no enquadramento
       const de = e.dir.clone().applyAxisAngle(EIXO_Y, -0.9);
       de.y += 0.5;
       voo.current = { t: 0, de: e.alvo.clone().addScaledVector(de.normalize(), e.dist * afastar * 1.9) };
       camera.position.copy(voo.current.de);
+      alvo.current.copy(e.alvo);
+    } else if (viagem.current) {
+      // a tela mudou de tamanho no meio de um voo: só troca o destino
+      viagem.current.para = v;
     } else if (!voo.current || voo.current.t >= 1) {
-      camera.position.copy(inicial());
+      camera.position.copy(v.pos);
+      alvo.current.copy(v.alvo);
     }
-    camera.lookAt(e.alvo);
+    camera.lookAt(alvo.current);
     invalidate();
+    const viajar = (para: Vista) => {
+      if (voo.current) voo.current.t = 1;
+      viagem.current = { t: 0, deP: camera.position.clone(), deA: alvo.current.clone(), para };
+      invalidate();
+    };
     controleRef.current = {
       zoom(fator) {
         if (voo.current) voo.current.t = 1;
-        const offset = camera.position.clone().sub(e.alvo);
+        viagem.current = null;
+        const offset = camera.position.clone().sub(alvo.current);
         const d = THREE.MathUtils.clamp(offset.length() * fator, e.min, e.max * afastar);
-        camera.position.copy(e.alvo).addScaledVector(offset.normalize(), d);
-        camera.lookAt(e.alvo);
+        camera.position.copy(alvo.current).addScaledVector(offset.normalize(), d);
+        camera.lookAt(alvo.current);
         invalidate();
       },
       resetar() {
-        if (voo.current) voo.current.t = 1;
-        camera.position.copy(inicial());
-        camera.lookAt(e.alvo);
-        invalidate();
+        viajar(vistaDe(e, afastar, aspecto, ficha, null));
       },
     };
     return () => {
       controleRef.current = null;
     };
-  }, [camera, controleRef, afastar, invalidate, e, intro]);
+  }, [camera, controleRef, afastar, aspecto, ficha, invalidate, e, intro]);
+
+  // escolheu (ou largou) uma miniatura: voa da posição atual até a nova vista
+  useEffect(() => {
+    if (foco === focoAtual.current) return;
+    focoAtual.current = foco;
+    if (voo.current) voo.current.t = 1;
+    viagem.current = { t: 0, deP: camera.position.clone(), deA: alvo.current.clone(), para: vistaDe(e, afastar, aspecto, ficha, foco) };
+    invalidate();
+  }, [foco, e, afastar, aspecto, ficha, camera, invalidate]);
+
+  // os controles de arrastar giram em volta do mesmo alvo da câmera
+  useEffect(() => {
+    if (controles) controles.target.copy(alvo.current);
+  }, [controles]);
 
   useFrame((_, dt) => {
     const passo = Math.min(dt, 0.1);
+    const g = viagem.current;
+    if (g) {
+      g.t = Math.min(1, g.t + passo / 1.4);
+      const k = g.t < 0.5 ? 4 * g.t ** 3 : 1 - (-2 * g.t + 2) ** 3 / 2;
+      const p = new THREE.Vector3().lerpVectors(g.deP, g.para.pos, k);
+      // sobe um pouco no meio do caminho, para passar por cima dos prédios
+      p.y += Math.sin(Math.PI * k) * 18;
+      camera.position.copy(p);
+      alvo.current.lerpVectors(g.deA, g.para.alvo, k);
+      camera.lookAt(alvo.current);
+      if (controles) controles.target.copy(alvo.current);
+      if (g.t >= 1) viagem.current = null;
+      else invalidate();
+      return;
+    }
     const v = voo.current;
     if (v && v.t < 1) {
       if (!girando) {
@@ -518,9 +609,9 @@ function Rig({ e, controleRef, girando, intro }: { e: Enquadramento; controleRef
       return;
     }
     if (!girando) return;
-    const offset = camera.position.clone().sub(e.alvo).applyAxisAngle(EIXO_Y, passo * 0.06);
-    camera.position.copy(e.alvo).add(offset);
-    camera.lookAt(e.alvo);
+    const offset = camera.position.clone().sub(alvo.current).applyAxisAngle(EIXO_Y, passo * 0.06);
+    camera.position.copy(alvo.current).add(offset);
+    camera.lookAt(alvo.current);
   });
   return null;
 }
@@ -1259,13 +1350,14 @@ function PontosDeReferencia({ lista, m, c, torres }: { lista: Referencia[]; m: M
 }
 
 /** Gira a rosa dos ventos da interface para o norte apontar para o norte real na tela */
-function GiroDaBussola({ alvo, norte, bussolaRef }: { alvo: THREE.Vector3; norte: number; bussolaRef: RefObject<HTMLDivElement | null> }) {
+function GiroDaBussola({ norte, bussolaRef }: { norte: number; bussolaRef: RefObject<HTMLDivElement | null> }) {
   const ultimo = useRef(NaN);
   const n = useMemo(() => eixos(norte).norte, [norte]);
   useFrame(({ camera }) => {
     const el = bussolaRef.current;
     if (!el) return;
-    const f = alvo.clone().sub(camera.position).setY(0).normalize();
+    // a frente da câmera, e não o alvo do lote: com uma miniatura em foco a câmera olha para outro lugar
+    const f = camera.getWorldDirection(new THREE.Vector3()).setY(0).normalize();
     // ângulo da frente da câmera até o norte, positivo no sentido horário visto de cima
     const ang = THREE.MathUtils.radToDeg(Math.atan2(f.x * n.z - f.z * n.x, f.x * n.x + f.z * n.z));
     if (Math.abs(ang - ultimo.current) < 0.2) return;
@@ -1299,52 +1391,134 @@ function posicionarMarcos(lista: Referencia[], norte: number, raioLote: number) 
   return postos;
 }
 
-/** Miniaturas dos lugares da cidade, cada uma sobre uma base redonda, com o nome e a distância real */
+/**
+ * Miniaturas dos lugares da cidade, cada uma sobre uma base redonda, com o nome e a distância real.
+ * Clicar na miniatura (ou no nome) leva a câmera até ela; um cilindro invisível do tamanho da base
+ * recebe o clique, para o raio do mouse testar uma peça só em vez de todas as do modelo.
+ */
 function MarcosDaCidade({
   lugares,
   norte,
+  raioLote,
   fab,
   rotulos,
   torres,
+  escolhido,
+  aoEscolher,
 }: {
   lugares: ReturnType<typeof posicionarMarcos>;
   norte: number;
+  raioLote: number;
   fab: Fabrica;
   rotulos: boolean;
   torres: RefObject<THREE.Group>;
+  escolhido: string | null;
+  aoEscolher(id: string): void;
 }) {
   const estreito = useThree((s) => s.size.width < 560);
+  const [sobre, setSobre] = useState<string | null>(null);
   const n = eixos(norte).norte;
   // o modelo tem o próprio norte em −z: gira para coincidir com o norte da cena
   const giro = Math.atan2(-n.x, -n.z);
+  const lugarEscolhido = lugares.find((l) => l.id === escolhido);
+  useEffect(() => {
+    if (!sobre) return;
+    document.body.style.cursor = "pointer";
+    return () => {
+      document.body.style.cursor = "";
+    };
+  }, [sobre]);
   return (
     <>
       {lugares.map(({ id, refs, pos }) => {
         const { Modelo, altura } = marcos[id];
         const nomes = estreito ? refs.slice(0, 1) : refs;
+        const destaque = id === escolhido || id === sobre;
         return (
           <group key={id} position={[pos.x, 0, pos.z]}>
             <mesh position-y={0.25} receiveShadow material={fab.cor("#e9e6df", 0.95)}>
               <cylinderGeometry args={[33, 34, 0.5, 48]} />
             </mesh>
+            {destaque && (
+              <mesh rotation-x={-Math.PI / 2} position-y={0.52}>
+                <ringGeometry args={[32, 34.4, 64]} />
+                <meshBasicMaterial color="#793f98" />
+              </mesh>
+            )}
             <group position-y={0.5} rotation-y={giro}>
               <Modelo fab={fab} />
             </group>
+            <mesh
+              visible={false}
+              position-y={altura / 2}
+              onClick={(ev) => {
+                // arrastar para girar também termina em clique: só conta o toque parado
+                if (ev.delta > 6) return;
+                ev.stopPropagation();
+                aoEscolher(id);
+              }}
+              onPointerOver={(ev) => {
+                ev.stopPropagation();
+                setSobre(id);
+              }}
+              onPointerOut={() => setSobre((s) => (s === id ? null : s))}
+            >
+              <cylinderGeometry args={[34, 34, altura + 2, 16]} />
+            </mesh>
             {rotulos && (
               <Html position={[0, altura + 6, 0]} center occlude={[torres]} zIndexRange={[5, 0]} style={{ pointerEvents: "none" }}>
-                <span className="flex flex-col items-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => aoEscolher(id)}
+                  aria-pressed={id === escolhido}
+                  aria-label={`Ver ${refs.map((r) => r.nome).join(" e ")} de perto`}
+                  className="pointer-events-auto flex flex-col items-center gap-1"
+                >
                   {nomes.map((r) => (
-                    <span key={r.nome} className="flex items-center gap-1 whitespace-nowrap rounded-full bg-purple-700 px-2.5 py-1 text-xs font-semibold text-white shadow-e2">
+                    <span
+                      key={r.nome}
+                      className={`flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-semibold text-white shadow-e2 transition-colors duration-[var(--t-fast)] ${
+                        destaque ? "bg-purple-900 ring-2 ring-white" : "bg-purple-700 hover:bg-purple-900"
+                      }`}
+                    >
                       <MapPin className="size-3.5" aria-hidden />
                       {r.nome} · {r.km.toLocaleString("pt-BR")} km
                     </span>
                   ))}
-                </span>
+                </button>
               </Html>
             )}
           </group>
         );
       })}
+      {lugarEscolhido && <Trilha ate={lugarEscolhido.pos} raioLote={raioLote} />}
     </>
+  );
+}
+
+/** Tracejado roxo no chão, do anel do lote até a base da miniatura em foco */
+function Trilha({ ate, raioLote }: { ate: THREE.Vector3; raioLote: number }) {
+  const PASSO = 5;
+  const de = raioLote + 16;
+  const n = Math.max(0, Math.floor((ate.length() - 36 - de) / PASSO));
+  const ref = useRef<THREE.InstancedMesh>(null);
+  useLayoutEffect(() => {
+    if (!ref.current) return;
+    const o = new THREE.Object3D();
+    const dir = ate.clone().setY(0).normalize();
+    o.rotation.set(-Math.PI / 2, Math.atan2(dir.x, dir.z), 0, "YXZ");
+    for (let i = 0; i < n; i++) {
+      o.position.copy(dir).multiplyScalar(de + i * PASSO + 1.5).setY(0.34);
+      o.updateMatrix();
+      ref.current.setMatrixAt(i, o.matrix);
+    }
+    ref.current.instanceMatrix.needsUpdate = true;
+  }, [ate, de, n]);
+  if (!n) return null;
+  return (
+    <instancedMesh key={n} ref={ref} args={[undefined, undefined, n]}>
+      <planeGeometry args={[0.9, 3]} />
+      <meshBasicMaterial color="#793f98" transparent opacity={0.85} depthWrite={false} />
+    </instancedMesh>
   );
 }

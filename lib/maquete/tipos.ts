@@ -97,4 +97,6 @@ export interface Referencia {
   rumo: number;
   /** miniatura 3D do lugar (id do registro em components/empreendimento/maquete/marcos); sem ela, vira um pino */
   marco?: string;
+  /** o que é o lugar, para a ficha que abre ao clicar na miniatura */
+  sobre?: string;
 }
