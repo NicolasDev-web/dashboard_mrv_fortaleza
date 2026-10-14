@@ -5,6 +5,7 @@ import { Castelao } from "./Castelao";
 import { Iguatemi } from "./Iguatemi";
 import { Messejana } from "./Messejana";
 import { NorthShopping } from "./NorthShopping";
+import { PraiaDeIracema, PraiaDoFuturo } from "./Praias";
 import { RioMarFortaleza, RioMarKennedy } from "./RioMar";
 import { Unifor } from "./Unifor";
 
@@ -27,4 +28,6 @@ export const marcos: Record<string, Marco> = {
   riomarFortaleza: { Modelo: RioMarFortaleza, altura: 22 },
   riomarKennedy: { Modelo: RioMarKennedy, altura: 15 },
   unifor: { Modelo: Unifor, altura: 7 },
+  praiaIracema: { Modelo: PraiaDeIracema, altura: 7 },
+  praiaFuturo: { Modelo: PraiaDoFuturo, altura: 6 },
 };
