@@ -15,7 +15,8 @@ const lugares: Record<string, Lugar> = {
   northShopping: { nome: "North Shopping Fortaleza", lat: -3.7349, lon: -38.5663, marco: "northShopping" },
   praiaIracema: { nome: "Praia de Iracema", lat: -3.7181, lon: -38.5169, marco: "praiaIracema" },
   praiaFuturo: { nome: "Praia do Futuro", lat: -3.7312, lon: -38.4564, marco: "praiaFuturo" },
-  mercadoCentral: { nome: "Mercado Central", lat: -3.7234, lon: -38.524 },
+  // o Mercado Central já faz parte da miniatura do Centro (com a Catedral e a Praça do Ferreira)
+  mercadoCentral: { nome: "Mercado Central", lat: -3.7234, lon: -38.524, marco: "centro" },
   lagoaMessejana: { nome: "Lagoa de Messejana", lat: -3.8276, lon: -38.4962, marco: "messejana" },
   rachelQueiroz: { nome: "Parque Rachel de Queiroz", lat: -3.7451, lon: -38.5696 },
   centroFashion: { nome: "Centro Fashion", lat: -3.7191, lon: -38.5429 },
