@@ -4,6 +4,7 @@ import { Aeroporto } from "./Aeroporto";
 import { Castelao } from "./Castelao";
 import { Iguatemi } from "./Iguatemi";
 import { Messejana } from "./Messejana";
+import { RioMarFortaleza, RioMarKennedy } from "./RioMar";
 
 /**
  * Miniaturas 3D de lugares da cidade. Cada modelo é feito em metros, centrado na origem, com ~50 m de
@@ -20,4 +21,6 @@ export const marcos: Record<string, Marco> = {
   aeroporto: { Modelo: Aeroporto, altura: 16 },
   iguatemi: { Modelo: Iguatemi, altura: 9 },
   messejana: { Modelo: Messejana, altura: 14 },
+  riomarFortaleza: { Modelo: RioMarFortaleza, altura: 22 },
+  riomarKennedy: { Modelo: RioMarKennedy, altura: 15 },
 };

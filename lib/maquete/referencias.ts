@@ -10,8 +10,8 @@ type Lugar = { nome: string; lat: number; lon: number; marco?: string };
  * com erro de algumas centenas de metros, o que não muda a direção vista de longe.
  */
 const lugares: Record<string, Lugar> = {
-  riomarFortaleza: { nome: "Shopping RioMar Fortaleza", lat: -3.7416, lon: -38.4733 },
-  riomarKennedy: { nome: "RioMar Kennedy", lat: -3.7264, lon: -38.567 },
+  riomarFortaleza: { nome: "Shopping RioMar Fortaleza", lat: -3.7411, lon: -38.4718, marco: "riomarFortaleza" },
+  riomarKennedy: { nome: "RioMar Kennedy", lat: -3.7262, lon: -38.567, marco: "riomarKennedy" },
   northShopping: { nome: "North Shopping Fortaleza", lat: -3.7349, lon: -38.566 },
   praiaIracema: { nome: "Praia de Iracema", lat: -3.7181, lon: -38.5168 },
   praiaFuturo: { nome: "Praia do Futuro", lat: -3.7312, lon: -38.4564 },
