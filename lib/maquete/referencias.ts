@@ -23,7 +23,7 @@ const lugares: Record<string, Lugar> = {
   ijf: { nome: "Hospital IJF", lat: -3.7341, lon: -38.5313 },
   elzirCabral: { nome: "Estádio Elzir Cabral", lat: -3.7089, lon: -38.5885 },
   cucaJangurussu: { nome: "Cuca Jangurussu", lat: -3.8314, lon: -38.5205 },
-  cambeba: { nome: "Centro Administrativo do Cambeba", lat: -3.8122, lon: -38.4875 },
+  cambeba: { nome: "Centro Administrativo do Cambeba", lat: -3.8117, lon: -38.4874, marco: "cambeba" },
   lagoaMaraponga: { nome: "Lagoa da Maraponga", lat: -3.7893, lon: -38.5689 },
   buenaVista: { nome: "Shopping Buena Vista", lat: -3.7656, lon: -38.5734 },
   unifanor: { nome: "UniFanor", lat: -3.7495, lon: -38.4628 },

@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import type { Fabrica } from "../Cena";
 import { Aeroporto } from "./Aeroporto";
+import { Cambeba } from "./Cambeba";
 import { Castelao } from "./Castelao";
 import { Centro } from "./Centro";
 import { Iguatemi } from "./Iguatemi";
@@ -34,4 +35,5 @@ export const marcos: Record<string, Marco> = {
   praiaFuturo: { Modelo: PraiaDoFuturo, altura: 6 },
   centro: { Modelo: Centro, altura: 19 },
   terminalAntonioBezerra: { Modelo: TerminalAntonioBezerra, altura: 5 },
+  cambeba: { Modelo: Cambeba, altura: 7 },
 };
