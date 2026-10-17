@@ -16,11 +16,14 @@ const GIRO = -0.09; // eixo maior ~5° a leste do norte verdadeiro
 const CAMPO = { w: 17.2, h: 25.6 }; // retângulo verde sob a base das arquibancadas
 const ESCALA = 21.5 / 105; // gramado de 105 × 68 m
 
+const POLI = 0.26; // fração do caminho do vazio até o pico coberta de policarbonato: ~20% da área da cobertura
+const NERVURAS = 280; // ondas da telha trapezoidal em volta da cobertura
+
 const CORES = {
   cobertura: "#E7ECEA",
-  policarbonato: "#BAC4C9",
+  policarbonato: "#E4ECEE",
   porticos: "#F2F3F1",
-  vidro: "#61737F",
+  concreto: "#8E918D",
   embasamento: "#2E373E",
   camarotes: "#3D4A54",
   esplanada: "#CFCBC2",
@@ -40,9 +43,10 @@ function mistura(p: Anel, q: Anel, f: number): Anel {
 /**
  * Superfície "torneada" sobre superelipses: cada ponto do perfil vira um anel fechado. A face aponta para
  * (sentido do perfil × avanço do anel): perfil subindo → normal para fora; indo para o centro → para cima.
- * O UV é em metros (u ao longo do anel, v ao longo do perfil), para texturas repetidas.
+ * O UV é em metros (u ao longo do anel, v ao longo do perfil), para texturas repetidas; com `voltasU`, u
+ * passa a ser a fração da volta vezes `voltasU`, para listras radiais que não entortam de um anel ao outro.
  */
-function anel(perfil: Anel[], seg = 160) {
+function anel(perfil: Anel[], seg = 160, voltasU?: number) {
   const pos: number[] = [];
   const uv: number[] = [];
   const idx: number[] = [];
@@ -61,7 +65,8 @@ function anel(perfil: Anel[], seg = 160) {
       px = x;
       pz = z;
       pos.push(x, y, z);
-      uv.push(u, v);
+      // com voltasU, u conta voltas inteiras de textura ao redor do anel, iguais em todos os anéis (nervuras radiais)
+      uv.push(voltasU ? (i / seg) * voltasU : u, v);
     }
   }
   const linha = seg + 1;
@@ -195,6 +200,41 @@ function desenharDegrau() {
   return cv;
 }
 
+/** Telha trapezoidal: crista clara e vale sombreado, uma onda por repetição */
+function desenharTelha(crista: string, vale: string) {
+  const { cv, g } = novoCanvas(16, 4);
+  g.fillStyle = crista;
+  g.fillRect(0, 0, 16, 4);
+  g.fillStyle = vale;
+  g.fillRect(10, 0, 6, 4);
+  return cv;
+}
+
+/**
+ * Pele da fachada: malha de aço inox esticada, prata e translúcida, com os montantes verticais a cada
+ * 3 m e uma travessa por pavimento. O alfa deixa ver a estrutura de concreto do estádio de 1973 atrás.
+ */
+function desenharMalha() {
+  const { cv, g } = novoCanvas(64, 64);
+  g.fillStyle = "rgba(218,224,227,0.7)";
+  g.fillRect(0, 0, 64, 64);
+  g.fillStyle = "rgba(236,240,241,0.95)";
+  g.fillRect(0, 0, 4, 64);
+  g.fillRect(0, 0, 64, 3);
+  return cv;
+}
+
+/** Estrutura de concreto por trás da pele: lajes das rampas e circulações, com vãos escuros entre elas */
+function desenharConcreto() {
+  const { cv, g } = novoCanvas(64, 64);
+  g.fillStyle = "#3B4247";
+  g.fillRect(0, 0, 64, 64);
+  g.fillStyle = CORES.concreto;
+  g.fillRect(0, 0, 64, 14);
+  g.fillRect(0, 0, 10, 64);
+  return cv;
+}
+
 function texturaDe(cv: HTMLCanvasElement) {
   const t = new THREE.CanvasTexture(cv);
   t.colorSpace = THREE.SRGBColorSpace;
@@ -202,25 +242,31 @@ function texturaDe(cv: HTMLCanvasElement) {
   return t;
 }
 
-/** Arena Castelão: anel de cobertura branco com o vazio oval, coroa de 60 pórticos e fachada de vidro escuro */
+/** Arena Castelão: anel de cobertura branco com o vazio oval, coroa de 60 pórticos e pele de malha metálica translúcida */
 export function Castelao({ fab }: { fab: Fabrica }) {
   const geo = useMemo(() => {
     const ext = (d: number, y: number, n = N_EXT): Anel => [A + d, B + d, y, n];
-    const poli = mistura(ABERTURA, PICO, 0.2);
+    const poli = mistura(ABERTURA, PICO, POLI);
+    // o mesmo recuo na face de baixo da cobertura, que vai reta do vazio (8,2 m) até a borda externa (8,6 m)
+    const fundoVazio: Anel = [ABERTURA[0], ABERTURA[1], 8.2, ABERTURA[3]];
+    const fundoPoli = mistura(fundoVazio, ext(0, 8.6), (poli[0] - ABERTURA[0]) / (A - ABERTURA[0]));
     return {
       // esplanada clara em volta, com o passeio mais escuro junto à fachada
       esplanadaTopo: anel([[26.8, 29.4, 0.22, 2.4], [0, 0, 0.22, 2.4]], 96),
       esplanadaBorda: anel([[26.8, 29.4, 0, 2.4], [26.8, 29.4, 0.22, 2.4]], 96),
       passeio: anel([ext(2.6, 0.235), ext(-2.9, 0.235)], 120),
-      // embasamento recuado e a pele de vidro, inclinada para fora
+      // embasamento recuado, a estrutura de concreto original e a pele de malha metálica, inclinada para fora
       embasamento: anel([ext(-2.8, 0.2), ext(-2.8, 1.4)]),
-      vidro: anel([ext(-2.5, 1.4), ext(-0.5, 8.6)]),
-      // cobertura: chapa branca com leve caimento para o vazio, faixa de policarbonato na borda interna
-      coberturaTopo: anel([ext(0, 9.4), PICO, ABERTURA]),
-      policarbonato: anel([[poli[0], poli[1], poli[2] + 0.04, poli[3]], [ABERTURA[0], ABERTURA[1], ABERTURA[2] + 0.04, ABERTURA[3]]]),
-      coberturaFundo: anel([[ABERTURA[0], ABERTURA[1], 8.2, ABERTURA[3]], ext(0, 8.6)]),
+      concreto: anel([ext(-3.4, 1.4), ext(-2.2, 8.5)]),
+      pele: anel([ext(-2.5, 1.4), ext(-0.5, 8.6)]),
+      // cobertura: chapa branca em telha trapezoidal com leve caimento para o vazio; a faixa junto ao vazio é
+      // de policarbonato translúcido, sem chapa por baixo, para a sombra no campo não ficar dura
+      coberturaTopo: anel([ext(0, 9.4), PICO, poli], 160, NERVURAS),
+      policarbonato: anel([poli, ABERTURA], 160, NERVURAS),
+      coberturaFundo: anel([fundoPoli, ext(0, 8.6)]),
       coberturaBorda: anel([ext(0, 8.6), ext(0, 9.4)]),
-      coberturaVazio: anel([ABERTURA, [ABERTURA[0], ABERTURA[1], 8.2, ABERTURA[3]]]),
+      anelCompressao: anel([poli, fundoPoli]),
+      coberturaVazio: anel([ABERTURA, fundoVazio]),
       // arquibancadas: anel inferior perto do campo, faixa de camarotes e anel superior sob a cobertura
       anelInferior: anel([[13.2, 17.6, 3.4, 3], [8.4, 12.6, 0.24, 4]]),
       camarotes: anel([[13.5, 17.9, 4.5, 3], [13.2, 17.6, 3.4, 3]]),
@@ -235,11 +281,27 @@ export function Castelao({ fab }: { fab: Fabrica }) {
     degrau.wrapS = degrau.wrapT = THREE.RepeatWrapping;
     degrau.repeat.set(1 / 4.5, 1 / 0.75);
     const campo = texturaDe(desenharCampo());
+    const telha = texturaDe(desenharTelha(CORES.cobertura, "#D5DBDA"));
+    const telhaPoli = texturaDe(desenharTelha("#F4F8F8", "#D3DEE2"));
+    for (const t of [telha, telhaPoli]) t.wrapS = t.wrapT = THREE.RepeatWrapping;
+    const malha = texturaDe(desenharMalha());
+    const concreto = texturaDe(desenharConcreto());
+    for (const t of [malha, concreto]) t.wrapS = t.wrapT = THREE.RepeatWrapping;
+    malha.repeat.set(1 / 3, 1 / 1.2);
+    concreto.repeat.set(1 / 4, 1 / 1.4);
     return {
       degrau,
       campo,
+      telha,
+      telhaPoli,
+      malha,
+      concreto,
       arquibancada: new THREE.MeshStandardMaterial({ map: degrau, roughness: 0.9 }),
       gramado: new THREE.MeshStandardMaterial({ map: campo, roughness: 0.95 }),
+      cobertura: new THREE.MeshStandardMaterial({ map: telha, roughness: 0.55 }),
+      policarbonato: new THREE.MeshStandardMaterial({ map: telhaPoli, roughness: 0.3, transparent: true, opacity: 0.86, side: THREE.DoubleSide, depthWrite: false }),
+      pele: new THREE.MeshStandardMaterial({ map: malha, roughness: 0.35, metalness: 0.55, transparent: true, side: THREE.DoubleSide, depthWrite: false }),
+      estrutura: new THREE.MeshStandardMaterial({ map: concreto, roughness: 0.9 }),
     };
   }, []);
 
@@ -292,12 +354,14 @@ export function Castelao({ fab }: { fab: Fabrica }) {
       <mesh geometry={geo.anelSuperior} material={tex.arquibancada} castShadow receiveShadow />
 
       <mesh geometry={geo.embasamento} material={fab.cor(CORES.embasamento, 0.6)} castShadow receiveShadow />
-      <mesh geometry={geo.vidro} material={fab.cor(CORES.vidro, 0.42)} castShadow receiveShadow />
+      <mesh geometry={geo.concreto} material={tex.estrutura} castShadow receiveShadow />
+      <mesh geometry={geo.pele} material={tex.pele} />
 
-      <mesh geometry={geo.coberturaTopo} material={branco} castShadow receiveShadow />
-      <mesh geometry={geo.policarbonato} material={fab.cor(CORES.policarbonato, 0.4)} receiveShadow />
+      <mesh geometry={geo.coberturaTopo} material={tex.cobertura} castShadow receiveShadow />
+      <mesh geometry={geo.policarbonato} material={tex.policarbonato} receiveShadow />
       <mesh geometry={geo.coberturaFundo} material={branco} castShadow receiveShadow />
       <mesh geometry={geo.coberturaBorda} material={branco} castShadow receiveShadow />
+      <mesh geometry={geo.anelCompressao} material={branco} castShadow receiveShadow />
       <mesh geometry={geo.coberturaVazio} material={branco} castShadow receiveShadow />
 
       <instancedMesh ref={porticos} args={[geo.portico, fab.cor(CORES.porticos, 0.45), PORTICOS]} castShadow receiveShadow />

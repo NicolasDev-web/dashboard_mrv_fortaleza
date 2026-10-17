@@ -84,6 +84,8 @@ const LAGOA = suavizar(CONTORNO_PX.map(px));
 const CALCADAO = deslocar(LAGOA, 1.5);
 const ALTURA_CALCADAO = 0.35;
 const NIVEL_AGUA = 0.2;
+/** Lagoa de água doce, verde-azulada e escura, e não o azul de piscina dos condomínios */
+const COR_LAGOA = "#3f7c80";
 
 /** Shape deitável: o ponto (x, z) vira (x, −z) para a rotação de −90° em x devolver o z certo */
 const forma = (p: Pt[]) => new THREE.Shape(p.map(([x, z]) => new THREE.Vector2(x, -z)));
@@ -124,6 +126,16 @@ const PALMEIRAS: { x: number; z: number; h: number; giro: number }[] = (() => {
   return lista.map(([x, z]) => ({ x, z, h: 5.5 + rnd() * 1.5, giro: rnd() * Math.PI }));
 })();
 
+/** Quiosques do calçadão leste, reformados na requalificação de 2024 (posições aproximadas) */
+const QUIOSQUES: { x: number; z: number; giro: number }[] = (() => {
+  const anel = deslocar(LAGOA, 4.4);
+  return [32, 40, 48, 64].map((i) => {
+    const [x, z] = anel[i];
+    const [x1, z1] = anel[i + 1];
+    return { x, z, giro: Math.atan2(x1 - x, z1 - z) };
+  });
+})();
+
 // ——— Modelo ———
 
 export function Messejana({ fab }: { fab: Fabrica }) {
@@ -135,11 +147,12 @@ export function Messejana({ fab }: { fab: Fabrica }) {
       <Lagoa fab={fab} />
       <Gradil fab={fab} />
       <Pier fab={fab} />
-      <Iracema fab={fab} />
+      <Iracema />
       <Praca fab={fab} />
       <group position={[IGREJA[0], 0, IGREJA[1]]}>
         <Igreja fab={fab} />
       </group>
+      <Quiosques fab={fab} />
       <Mata fab={fab} />
       <Palmeiras fab={fab} />
     </group>
@@ -166,7 +179,7 @@ function Lagoa({ fab }: { fab: Fabrica }) {
   return (
     <>
       <mesh geometry={geo.calcadao} rotation-x={-Math.PI / 2} position-y={0.02} castShadow receiveShadow material={fab.cor("#c9bca6")} />
-      <mesh geometry={geo.agua} rotation-x={-Math.PI / 2} position-y={NIVEL_AGUA} receiveShadow material={fab.agua()} />
+      <mesh geometry={geo.agua} rotation-x={-Math.PI / 2} position-y={NIVEL_AGUA} receiveShadow material={fab.cor(COR_LAGOA, 0.12)} />
     </>
   );
 }
@@ -221,62 +234,158 @@ function Pier({ fab }: { fab: Fabrica }) {
   );
 }
 
-// ——— Estátua "Banho de Iracema" ———
-
-const CIMA = new THREE.Vector3(0, 1, 0);
-
-/** Cápsula de um ponto a outro, como um osso de boneco */
-function Osso({ de, ate, r, material }: { de: [number, number, number]; ate: [number, number, number]; r: number; material: THREE.Material }) {
-  const a = new THREE.Vector3(...de);
-  const b = new THREE.Vector3(...ate);
-  const dir = b.clone().sub(a);
-  const comp = dir.length();
-  const q = new THREE.Quaternion().setFromUnitVectors(CIMA, dir.normalize());
+/** Quiosque de alvenaria com balcão voltado para a lagoa e telhado de quatro águas em telha de barro */
+function Quiosques({ fab }: { fab: Fabrica }) {
   return (
-    <mesh position={a.add(b).multiplyScalar(0.5)} quaternion={q} castShadow material={material}>
-      <capsuleGeometry args={[r, comp, 4, 10]} />
-    </mesh>
+    <>
+      {QUIOSQUES.map((q, i) => (
+        <group key={i} position={[q.x, 0, q.z]} rotation-y={q.giro}>
+          <mesh position-y={0.08} receiveShadow material={fab.cor("#d8cfc0")}>
+            <boxGeometry args={[3.2, 0.16, 3.2]} />
+          </mesh>
+          <mesh position-y={1.0} castShadow receiveShadow material={fab.cor("#f1eee7")}>
+            <boxGeometry args={[1.9, 1.7, 1.9]} />
+          </mesh>
+          <mesh position={[-0.97, 1.05, 0]} material={fab.cor("#3a3f44", 0.6)}>
+            <boxGeometry args={[0.04, 0.7, 1.4]} />
+          </mesh>
+          <mesh position-y={2.25} rotation-y={Math.PI / 4} castShadow material={fab.cor("#b4532f", 0.8)}>
+            <coneGeometry args={[2.0, 0.95, 4]} />
+          </mesh>
+        </group>
+      ))}
+    </>
   );
 }
 
-/**
- * Iracema sentada de lado sobre a rocha, de frente para o calçadão (leste, +x): pernas dobradas para o
- * sul e o braço erguido do lado norte com a cuia no alto, como se vê das fotos tiradas da margem.
- */
-function Iracema({ fab }: { fab: Fabrica }) {
-  const bronze = fab.cor("#4f7d58", 0.55);
-  const cabelo = fab.cor("#3b6347", 0.6);
+// ——— Estátua "Banho de Iracema" ———
+
+const CIMA = new THREE.Vector3(0, 1, 0);
+type V3 = [number, number, number];
+
+/** Membro que afina de `de` (raio r0) até `ate` (raio r1), com juntas redondas nas duas pontas */
+function Membro({ de, ate, r0, r1, material }: { de: V3; ate: V3; r0: number; r1: number; material: THREE.Material }) {
+  const a = new THREE.Vector3(...de);
+  const b = new THREE.Vector3(...ate);
+  const dir = b.clone().sub(a);
+  const q = new THREE.Quaternion().setFromUnitVectors(CIMA, dir.clone().normalize());
   return (
-    <group position={[IRACEMA[0], 0, IRACEMA[1]]}>
-      <mesh position-y={0.9} scale={[1.25, 0.75, 1.05]} castShadow receiveShadow material={fab.cor("#b9b7b0")}>
-        <dodecahedronGeometry args={[1.8, 0]} />
+    <>
+      <mesh position={a} castShadow material={material}>
+        <sphereGeometry args={[r0, 12, 8]} />
       </mesh>
-      <mesh position={[-0.8, 1.9, -0.7]} scale={[1, 0.9, 0.9]} castShadow material={fab.cor("#a8a69f")}>
-        <dodecahedronGeometry args={[1.0, 0]} />
+      <mesh position={a.clone().add(b).multiplyScalar(0.5)} quaternion={q} castShadow material={material}>
+        <cylinderGeometry args={[r1, r0, dir.length(), 12]} />
       </mesh>
-      {/* quadril e pernas dobradas para o lado */}
-      <mesh position={[0, 2.55, 0.1]} scale={[1, 0.7, 1.1]} castShadow material={bronze}>
-        <sphereGeometry args={[0.62, 12, 10]} />
+      <mesh position={b} castShadow material={material}>
+        <sphereGeometry args={[r1, 12, 8]} />
       </mesh>
-      <Osso de={[0.05, 2.5, 0.2]} ate={[1.0, 2.35, 0.9]} r={0.36} material={bronze} />
-      <Osso de={[1.0, 2.3, 0.95]} ate={[-0.1, 2.2, 1.45]} r={0.28} material={bronze} />
-      {/* tronco, pescoço e cabeça */}
-      <Osso de={[-0.05, 2.75, 0]} ate={[0.05, 4.3, 0]} r={0.48} material={bronze} />
-      <Osso de={[0, 4.35, -0.62]} ate={[0, 4.35, 0.62]} r={0.26} material={bronze} />
-      <Osso de={[0.05, 4.45, 0]} ate={[0.08, 4.8, 0]} r={0.17} material={bronze} />
-      <mesh position={[0.1, 5.05, 0]} castShadow material={bronze}>
-        <sphereGeometry args={[0.42, 14, 12]} />
+    </>
+  );
+}
+
+/** Tronco do quadril aos ombros (raio, altura a partir do quadril), girado em torno de y */
+const TRONCO = [
+  [0, -0.15], [0.5, -0.1], [0.6, 0.1], [0.55, 0.4], [0.45, 0.7], [0.5, 1.0],
+  [0.58, 1.3], [0.6, 1.55], [0.5, 1.75], [0.26, 1.9], [0, 1.95],
+].map(([r, y]) => new THREE.Vector2(r, y));
+
+/** Pedras da base, de granito cinza: centro, raio e achatamento vertical */
+const PEDRAS: { em: V3; r: number; achata: number; cor: string }[] = [
+  { em: [0, 0.9, 0], r: 1.8, achata: 0.75, cor: "#86817a" },
+  { em: [-0.9, 1.75, -0.6], r: 1.05, achata: 0.9, cor: "#77736c" },
+  { em: [1.3, 0.45, 1.2], r: 0.9, achata: 0.6, cor: "#918c84" },
+  { em: [-1.2, 0.4, 1.3], r: 0.75, achata: 0.55, cor: "#7d7870" },
+  { em: [1.1, 0.35, -1.5], r: 0.6, achata: 0.6, cor: "#8a857d" },
+];
+
+/**
+ * "Banho de Iracema" (2004): figura de 12 m sentada nas pedras dentro da lagoa, de frente para o
+ * calçadão leste (+x). Cabelo longo pelas costas, a mão do lado norte ergue a cuia que derrama água
+ * sobre a cabeça (a fonte foi religada no restauro de 2024) e a outra mão segura a lança apoiada na
+ * pedra. Desde o restauro o acabamento é bronze envelhecido, não mais o verde de antes.
+ */
+function Iracema() {
+  const mat = useMemo(
+    () => ({
+      bronze: new THREE.MeshStandardMaterial({ color: "#7a5a3a", metalness: 0.35, roughness: 0.45 }),
+      cabelo: new THREE.MeshStandardMaterial({ color: "#4e3a28", metalness: 0.3, roughness: 0.55 }),
+      cuia: new THREE.MeshStandardMaterial({ color: "#6d5034", metalness: 0.35, roughness: 0.5, side: THREE.DoubleSide }),
+      agua: new THREE.MeshStandardMaterial({ color: "#e6f4fb", roughness: 0.1, transparent: true, opacity: 0.4, emissive: "#9fc8dc", emissiveIntensity: 0.3, depthWrite: false }),
+      espuma: new THREE.MeshBasicMaterial({ color: "#f2f8fa", transparent: true, opacity: 0.5, depthWrite: false }),
+      pedras: PEDRAS.map((p) => new THREE.MeshStandardMaterial({ color: p.cor, roughness: 0.95, flatShading: true })),
+    }),
+    [],
+  );
+  useEffect(
+    () => () => {
+      for (const m of Object.values(mat)) for (const x of [m].flat()) x.dispose();
+    },
+    [mat],
+  );
+  const { bronze, cabelo } = mat;
+  return (
+    <group position={[IRACEMA[0], 0, IRACEMA[1]]} scale={1.15}>
+      {PEDRAS.map((p, i) => (
+        <mesh key={i} position={p.em} rotation-y={i * 1.3} scale={[1.2, p.achata, 1]} castShadow receiveShadow material={mat.pedras[i]}>
+          <dodecahedronGeometry args={[p.r, 1]} />
+        </mesh>
+      ))}
+      {/* espuma onde a água da fonte cai na lagoa */}
+      <mesh rotation-x={-Math.PI / 2} position-y={NIVEL_AGUA / 1.15 + 0.02} material={mat.espuma}>
+        <ringGeometry args={[2.1, 2.9, 32]} />
       </mesh>
-      <Osso de={[-0.2, 5.15, 0]} ate={[-0.45, 3.5, 0.05]} r={0.33} material={cabelo} />
-      {/* braço erguido com a cuia */}
-      <Osso de={[0, 4.4, -0.66]} ate={[0.1, 5.5, -0.82]} r={0.17} material={bronze} />
-      <Osso de={[0.1, 5.5, -0.82]} ate={[0.16, 6.6, -0.76]} r={0.15} material={bronze} />
-      <mesh position={[0.16, 6.95, -0.76]} scale={[1, 0.75, 1]} castShadow material={bronze}>
-        <sphereGeometry args={[0.4, 12, 10]} />
+
+      {/* pernas: a do norte com o joelho erguido, a do sul dobrada para trás sobre a pedra */}
+      <Membro de={[0.15, 2.55, -0.3]} ate={[1.05, 3.0, -0.38]} r0={0.32} r1={0.22} material={bronze} />
+      <Membro de={[1.05, 3.0, -0.38]} ate={[1.2, 1.95, -0.3]} r0={0.21} r1={0.12} material={bronze} />
+      <Membro de={[1.2, 1.95, -0.3]} ate={[1.45, 1.88, -0.32]} r0={0.11} r1={0.08} material={bronze} />
+      <Membro de={[0.15, 2.45, 0.3]} ate={[1.0, 2.35, 0.8]} r0={0.32} r1={0.22} material={bronze} />
+      <Membro de={[1.0, 2.35, 0.8]} ate={[0.15, 2.2, 1.25]} r0={0.21} r1={0.12} material={bronze} />
+      {/* tanga de penas */}
+      <mesh position={[0.05, 2.55, 0]} scale={[0.85, 1, 1]} castShadow material={cabelo}>
+        <cylinderGeometry args={[0.6, 0.74, 0.5, 14, 1, true]} />
       </mesh>
-      {/* braço apoiado na perna */}
-      <Osso de={[0, 4.35, 0.66]} ate={[0.3, 3.4, 0.9]} r={0.16} material={bronze} />
-      <Osso de={[0.3, 3.4, 0.9]} ate={[0.65, 2.75, 0.85]} r={0.14} material={bronze} />
+
+      {/* corpo do quadril para cima, levemente reclinado para trás */}
+      <group position={[0, 2.6, 0]} rotation-z={0.1}>
+        <mesh scale={[0.66, 1, 1]} castShadow material={bronze}>
+          <latheGeometry args={[TRONCO, 16]} />
+        </mesh>
+        {[-1, 1].map((s) => (
+          <mesh key={s} position={[0.27, 1.3, s * 0.21]} scale={[0.8, 1, 1]} castShadow material={bronze}>
+            <sphereGeometry args={[0.16, 12, 8]} />
+          </mesh>
+        ))}
+        <Membro de={[0, 1.85, 0]} ate={[0.02, 2.2, 0]} r0={0.15} r1={0.13} material={bronze} />
+        {/* cabeça um pouco erguida, olhando a cuia */}
+        <mesh position={[0.04, 2.45, 0]} rotation-z={0.2} scale={[1.05, 1.2, 0.92]} castShadow material={bronze}>
+          <sphereGeometry args={[0.32, 16, 12]} />
+        </mesh>
+        <mesh position={[-0.05, 2.52, 0]} scale={[1, 1.12, 0.98]} castShadow material={cabelo}>
+          <sphereGeometry args={[0.35, 16, 12]} />
+        </mesh>
+        {/* cabelo liso caindo até a cintura */}
+        <group scale={[0.8, 1, 1.5]}>
+          <Membro de={[-0.22, 2.4, 0]} ate={[-0.42, 0.75, 0]} r0={0.3} r1={0.2} material={cabelo} />
+        </group>
+
+        {/* braço do norte erguido com a cuia derramando água sobre a cabeça */}
+        <Membro de={[0, 1.7, -0.55]} ate={[0.12, 2.55, -0.78]} r0={0.17} r1={0.13} material={bronze} />
+        <Membro de={[0.12, 2.55, -0.78]} ate={[0.28, 3.35, -0.45]} r0={0.13} r1={0.1} material={bronze} />
+        <mesh position={[0.32, 3.58, -0.3]} rotation-x={1.1} castShadow material={mat.cuia}>
+          <sphereGeometry args={[0.34, 16, 8, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2]} />
+        </mesh>
+        <Membro de={[0.3, 3.45, -0.02]} ate={[0.16, 2.85, 0.06]} r0={0.05} r1={0.1} material={mat.agua} />
+
+        {/* braço do sul descendo até o joelho, segurando a lança fincada na pedra */}
+        <Membro de={[0, 1.7, 0.55]} ate={[0.12, 0.95, 0.78]} r0={0.16} r1={0.13} material={bronze} />
+        <Membro de={[0.12, 0.95, 0.78]} ate={[0.5, 0.42, 0.74]} r0={0.12} r1={0.1} material={bronze} />
+        <Membro de={[0.8, -1.0, 0.98]} ate={[0.3, 3.6, 0.56]} r0={0.045} r1={0.04} material={cabelo} />
+        <mesh position={[0.28, 3.78, 0.54]} rotation-z={0.11} castShadow material={cabelo}>
+          <coneGeometry args={[0.1, 0.38, 6]} />
+        </mesh>
+      </group>
     </group>
   );
 }
@@ -632,11 +741,45 @@ function Mata({ fab }: { fab: Fabrica }) {
   );
 }
 
-const FOLHAS = 7;
+const FOLHAS = 9;
+
+/** Folha de palmeira: tira dobrada em V, ~3 m em +z, que sobe e se curva para baixo afinando até a ponta */
+function geometriaFolha() {
+  const seg = 8;
+  const pos: number[] = [];
+  const idx: number[] = [];
+  for (let i = 0; i <= seg; i++) {
+    const t = i / seg;
+    const y = 0.9 * t - 1.7 * t * t;
+    const w = 0.42 * Math.sin(Math.PI * Math.min(1, t * 1.15 + 0.08));
+    pos.push(-w, y - 0.12 * w, t * 3, 0, y, t * 3, w, y - 0.12 * w, t * 3);
+  }
+  for (let i = 0; i < seg; i++) {
+    const a = i * 3;
+    const b = a + 3;
+    idx.push(a, b, a + 1, a + 1, b, b + 1, a + 1, b + 1, a + 2, a + 2, b + 1, b + 2);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+  g.setIndex(idx);
+  g.computeVertexNormals();
+  return g;
+}
 
 function Palmeiras({ fab }: { fab: Fabrica }) {
   const caule = useRef<THREE.InstancedMesh>(null);
   const folha = useRef<THREE.InstancedMesh>(null);
+  const { geoFolha, matFolha } = useMemo(
+    () => ({ geoFolha: geometriaFolha(), matFolha: new THREE.MeshStandardMaterial({ color: "#5d8f3a", roughness: 0.8, side: THREE.DoubleSide }) }),
+    [],
+  );
+  useEffect(
+    () => () => {
+      geoFolha.dispose();
+      matFolha.dispose();
+    },
+    [geoFolha, matFolha],
+  );
   useLayoutEffect(() => {
     const o = new THREE.Object3D();
     for (let i = 0; i < PALMEIRAS.length; i++) {
@@ -649,8 +792,9 @@ function Palmeiras({ fab }: { fab: Fabrica }) {
       o.scale.set(1, 1, 1);
       for (let f = 0; f < FOLHAS; f++) {
         const ang = p.giro + (f / FOLHAS) * Math.PI * 2;
-        o.rotation.set(0.45, ang, 0, "YXZ");
-        o.position.set(p.x + Math.sin(ang) * 1.2, p.h - 0.35, p.z + Math.cos(ang) * 1.2);
+        // folhas alternadas mais erguidas e mais caídas, como na copa de verdade
+        o.rotation.set(f % 2 ? -0.35 : 0.05, ang, 0, "YXZ");
+        o.position.set(p.x, p.h, p.z);
         o.updateMatrix();
         folha.current!.setMatrixAt(i * FOLHAS + f, o.matrix);
       }
@@ -663,9 +807,7 @@ function Palmeiras({ fab }: { fab: Fabrica }) {
       <instancedMesh ref={caule} args={[undefined, undefined, PALMEIRAS.length]} castShadow material={fab.cor("#8b7355")}>
         <cylinderGeometry args={[0.14, 0.22, 1, 6]} />
       </instancedMesh>
-      <instancedMesh ref={folha} args={[undefined, undefined, PALMEIRAS.length * FOLHAS]} castShadow material={fab.cor("#6b9b3f")}>
-        <boxGeometry args={[0.5, 0.08, 2.8]} />
-      </instancedMesh>
+      <instancedMesh ref={folha} args={[geoFolha, matFolha, PALMEIRAS.length * FOLHAS]} castShadow />
     </>
   );
 }
